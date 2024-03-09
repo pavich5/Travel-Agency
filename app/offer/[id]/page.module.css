@@ -1,0 +1,119 @@
+.offerDetailsContainer {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.hotelCoverImage {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.hotelCoverImage img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+}
+
+.hotelOffer {
+    margin-top: 30px;
+}
+
+.hotelOffer p {
+    margin-top: 8px;
+    color: rgb(167, 167, 167);
+}
+
+.buttonsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.buttonsContainer button {
+    margin-left: 10px !important;
+    border-radius: 14px;
+    height: 35px;
+}
+
+.detailItem {
+    display: flex;
+    justify-content: space-between;
+}
+
+.detailItem p:first-child {
+    font-weight: 400;
+    font-size: 14px;
+    width: 50vw;
+}
+
+.detailItem p:last-child {
+    font-weight: 400;
+    font-size: 14px;
+    overflow-wrap: break-word;
+    width: 15vw;
+}
+
+.priceDetail {
+    display: flex;
+}
+
+.priceDetail p:first-child {
+    font-weight: 400;
+    font-size: 14px;
+    width: 50vw;
+}
+
+.priceDetail p:last-child {
+    font-weight: 400;
+    font-size: 14px;
+    overflow-wrap: break-word;
+    width: 15vw;
+}
+
+.divider {
+    margin: 19px 0 !important;
+}
+
+.tabs {
+    margin-top: 50px;
+}
+
+.activity img {
+    width: 100px;
+}
+
+.roomType img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.roomType {
+    width: 25vw;
+}
+
+.card {
+    max-width: 67vw;
+}
+
+.roomType div:first-child {
+    margin-bottom: 5px;
+}
+
+.moreImages {
+    display: flex;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+.moreImages img {
+    height: 200px;
+    border-radius: 5px;
+}

@@ -1,0 +1,177 @@
+.pageWrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sectionWrapper {
+  margin-bottom: 100px;
+  margin-left: 50px;
+}
+
+.mainSection {
+  width: 67vw;
+  height: 60vh;
+  border-radius: 16px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  background-size: cover;
+  background-position: center; 
+}
+
+.sectionHeading {
+  color: white;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  font-size: 44px;
+}
+
+.mainSection p {
+  color: white;
+  font-size: 18px;
+}
+
+.buttonsWrapper button {
+  margin-right: 10px;
+  margin-top: 20px;
+  width: 95px;
+  height: 35px;
+}
+
+.buttonsWrapper button:first-child {
+  background-color: #34ace0 !important;
+}
+
+.oneVacationCard {
+  width: 26%; 
+  height: 200px; 
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  position: relative;
+  margin: 10px;
+  margin-left: 0px;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  color: white; 
+  padding: 20px;
+  display: flex; 
+  flex-direction: column;
+  justify-content: flex-end;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.vacationName {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.vacationDescription {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.availableList {
+  display: flex;
+  width: 67vw;
+}
+
+.availableVacationsWrapper {
+  margin-top: 30px;
+}
+
+.pageWrapper span {
+  cursor: pointer;
+}
+
+.availableVacationsWrapper h3 {
+  font-size: 22px;
+  margin-left: 2px;
+}
+
+.allOffers {
+  margin-top: 80px;
+}
+
+.allOffers h3 {
+  font-size: 22px;
+  margin-left: 2px;
+  margin-bottom: 10px;
+}
+
+.allOffers span {
+  background: rgb(247, 247, 247) !important;
+  color: black !important;
+}
+
+.oneOfferCard {
+  width: 22.5vw; 
+  height: 190px; 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 10px;
+  margin: 10px;
+  margin-left: 0px;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  color: white; 
+  padding: 20px;
+  display: flex; 
+  flex-direction: column;
+  justify-content: flex-end;
+  cursor: pointer;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.allOfferList {
+  display: flex;
+  flex-direction: row;
+  max-width: 70vw;
+  flex-wrap: wrap;
+}
+
+.offerWrapper {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 20px;
+  border-radius: 16px;
+  max-width: 67vw;
+  cursor: pointer;
+  flex-direction: row;
+}
+
+.offerName {
+  color: white;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.viewOfferButton {
+  width: 95px;
+  height: 31px;
+  border: none;
+  background-color: #34ace0;
+  border-radius: 4px;
+  color: white;
+  margin-top: 50px;
+  cursor: pointer;
+}
+
+.oneOfferCard,
+.oneVacationCard {
+  transition: transform 0.3s;
+}
+
+.oneOfferCard:hover,
+.oneVacationCard:hover {
+  transform: scale(1.025);
+}

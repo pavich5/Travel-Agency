@@ -1,0 +1,36 @@
+.reviewsWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.review {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    flex-direction: column;
+}
+
+.user {
+    display: flex;
+    align-items: flex-start;
+    margin-right: 20px;
+    flex-direction: row;
+}
+
+.userImg {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 5px;
+}
+
+.user p {
+    font-size: 14px;
+}
+
+.review p:last-child {
+    flex-grow: 1;
+    font-size: 12px;
+}

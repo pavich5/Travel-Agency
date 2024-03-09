@@ -1,0 +1,21 @@
+.divider {
+    margin: 19px 0 !important;
+}
+
+.detailItem {
+    display: flex;
+    justify-content: space-between;
+}
+
+.detailItem p:first-child {
+    font-weight: 400;
+    font-size: 14px;
+    width: 50vw;
+}
+
+.detailItem p:last-child {
+    font-weight: 400;
+    font-size: 14px;
+    overflow-wrap: break-word;
+    width: 15vw;
+}

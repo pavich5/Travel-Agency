@@ -1,0 +1,165 @@
+.homePageWrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mainSection {
+  width: 67vw;
+  height: 60vh;  
+  background-image: url('https://www.tripsavvy.com/thmb/1dPRHkcNAQByn-CkJKljEMN1Qvs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/beachesinspainibiza-48cfd3457bae4f4d8c00f0a441a13997.jpg');
+  border-radius: 16px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  background-size: cover;
+  background-position: center; 
+}
+
+.wrapper {
+  margin-bottom: 100px;
+  margin-left: 30px;
+}
+
+.textTitle h1 {
+  color: white;
+  margin-bottom: 15px;
+}
+
+.vaicationButtons button {
+  border-radius: 25px;
+  border: none;
+  padding: 10px;
+  background-color: rgb(248, 248, 248);
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.vaicationButtons {
+  padding: 20px;
+  padding-left: 0px;
+}
+
+.oneCategoryCard,
+.oneVacationCard {
+  width: 26%; 
+  height: 200px; 
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  position: relative;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.oneCategoryCard:hover,
+.oneVacationCard:hover {
+  transform: scale(1.025);
+}
+
+.categoryName {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  margin: 0;
+  padding: 0;
+  color: white; 
+  font-size: 20px;
+  font-weight: bold; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.vacationCardsWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.availableVacationsWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.oneVacationCard {
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex; 
+  flex-direction: column;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+.vacationName {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.vacationDescription {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.availableList {
+  display: flex;
+  width: 67vw;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button,
+.pagination span {
+  margin: 0 3px;
+  padding: 3px 8px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pagination button.active,
+.pagination span.active {
+  background-color: #1890ff;
+  color: #fff;
+}
+
+.pagination button:hover,
+.pagination span:hover {
+  background-color: #d9d9d9;
+}
+
+.pagination button:focus,
+.pagination span:focus {
+  outline: none;
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+.searchItem {
+  display: flex;
+}
+
+.searchItem img {
+  border-radius: 12px;
+}
+
+.searchItemInfo {
+  display: flex;
+  flex-direction: column;
+}
