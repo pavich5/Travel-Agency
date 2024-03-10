@@ -94,6 +94,7 @@
 .availableVacationsWrapper h3 {
   font-size: 22px;
   margin-left: 2px;
+  text-transform: capitalize;
 }
 
 .allOffers {
@@ -104,6 +105,7 @@
   font-size: 22px;
   margin-left: 2px;
   margin-bottom: 10px;
+  text-transform: capitalize;
 }
 
 .allOffers span {
@@ -112,7 +114,7 @@
 }
 
 .oneOfferCard {
-  width: 22.5vw; 
+  width: 21vw; 
   height: 190px; 
   background-size: cover;
   background-repeat: no-repeat;
@@ -132,19 +134,12 @@
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-.allOfferList {
-  display: flex;
-  flex-direction: row;
-  max-width: 70vw;
-  flex-wrap: wrap;
-}
 
 .offerWrapper {
   display: flex;
   align-items: flex-start;
   margin-top: 20px;
   border-radius: 16px;
-  max-width: 67vw;
   cursor: pointer;
   flex-direction: row;
 }
@@ -174,4 +169,10 @@
 .oneOfferCard:hover,
 .oneVacationCard:hover {
   transform: scale(1.025);
+}
+
+.allOfferList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }

@@ -5,11 +5,12 @@ import { Input, Button } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
 
 export default function TravelAI() {
+  const messegeRef = useRef(null);
   const [theInput, setTheInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [messages, setMessages] = useState(() => {
-    const savedMessages = localStorage.getItem("chatMessages");
-    return savedMessages ? JSON.parse(savedMessages) : [
+    const storedMessages = localStorage.getItem("chatMessages");
+    return storedMessages ? JSON.parse(storedMessages) : [
       {
         role: "assistant",
         content: "Hello! I'm Travel AI. How can I assist you with your travel plans today?",
@@ -17,16 +18,11 @@ export default function TravelAI() {
     ];
   });
 
-  const chatContainerRef = useRef(null);
-
-  const callGetResponse = async () => {
+  const callGetResponse = async (input: string) => {
     setIsLoading(true);
-    let temp = [...messages];
-    temp.push({ role: "user", content: theInput });
-    setMessages(temp);
+    messages.push({ role: "user", content: input });
     setTheInput("");
-    console.log("Calling OpenAI...");
-
+    console.log(messages);
     try {
       const response = await fetch("/api", {
         method: "POST",
@@ -35,7 +31,6 @@ export default function TravelAI() {
         },
         body: JSON.stringify({ messages }),
       });
-
       if (!response.ok) {
         throw new Error("Failed to fetch response from ChatGPT API");
       }
@@ -52,22 +47,26 @@ export default function TravelAI() {
     }
   };
 
-  const handleSubmit = (event: React.FormEvent) => {
-    event.preventDefault();
-    callGetResponse();
-  };
 
   useEffect(() => {
     localStorage.setItem("chatMessages", JSON.stringify(messages));
+    if (messegeRef.current) {
+      // @ts-ignore
+      messegeRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "center"
+      });
+    }
   }, [messages]);
 
   return (
     <main>
       <h1 className={styles.heading}>Travel AI</h1>
-      <div className={styles.chatContainer} ref={chatContainerRef}>
+      <div className={styles.chatContainer} >
         <div className={styles.chatMessages}>
-          {messages.map((e:any, index: number) => (
-            <div key={index} className={`${styles.chatMessage} ${e.role === "assistant" ? styles.assistant : styles.user}`}>
+          {messages.map((e: any, index: number) => (
+            <div key={index} className={`${styles.chatMessage} ${e.role === "assistant" ? styles.assistant : styles.user}`} ref={index === messages.length - 1 ? messegeRef : null}>
               {e.role === "assistant" ? (
                 <div className={styles.typingChat}>{e.content}</div>
               ) : (
@@ -85,18 +84,22 @@ export default function TravelAI() {
             </div>
           )}
         </div>
-        <form className={styles.inputContainer} onSubmit={handleSubmit}>
+        <div className={styles.inputContainer}>
           <Input
             value={theInput}
             onChange={(event: React.ChangeEvent<HTMLInputElement>) => setTheInput(event.target.value)}
             className={styles.textarea}
             placeholder="Type your message here..."
             prefix={<SearchOutlined />}
-            suffix={<Button type='primary' className={styles.sendButton} onClick={callGetResponse}>
+            suffix={<Button
+              type='primary'
+              className={styles.sendButton}
+              onClick={() => callGetResponse(theInput)}
+            >
               Send
             </Button>}
           />
-        </form>
+        </div>
       </div>
     </main>
   );

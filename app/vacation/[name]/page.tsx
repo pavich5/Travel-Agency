@@ -60,6 +60,7 @@ const Page = ({ params }: any) => {
       title: 'Hotel Name',
       dataIndex: 'HotelName',
       key: 'HotelName',
+      render: (text) => <div style={{width: '90px'}}>{text}</div>,
     },
     {
       title: 'Price',
@@ -77,18 +78,19 @@ const Page = ({ params }: any) => {
       title: 'Nights',
       dataIndex: 'Nights',
       key: 'Nights',
+      render: (text) => <div style={{width: '50px'}}>{text}</div>,
     },
     {
       title: 'Start',
       dataIndex: 'Start',
       key: 'Start',
-      render: (text) => <div>{text}</div>,
+      render: (text) => <div style={{width: '50px'}}>{text}</div>,
     },
     {
       title: 'End',
       dataIndex: 'End',
       key: 'End',
-      render: (text) => <div>{text}</div>,
+      render: (text) => <div style={{width: '50px'}}>{text}</div>,
     },
     {
       title: 'Transportation',

@@ -112,7 +112,7 @@ const Page = ({ params }: any) => {
             <img src={offerDetails.offerImage} alt="hotel cover image" />
           </div>
           <div className={styles.hotelOffer}>
-            <h2>Hotel</h2>
+            <h2>Essential Details for {offerDetails.hotelCity} Journey</h2>
             <p>{offerDetails.hotelStars}-star hotel, {offerDetails.hotelName} - {offerDetails.hotelCity}</p>
           </div>
           <div className={styles.buttonsContainer}>

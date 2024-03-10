@@ -13,7 +13,7 @@ export const vacationsCategories = {
             {
               id: 1,
               location: "400 Cannery Row, Canada, CA 93121",
-              hotelName: "Switzerland Hotel 1",
+              hotelName: "Serene Haven Hotel",
               pickUpLocation: "400 London Row 12:00 PM",
               hotelRoom: "2 Persons",
               startDate: "21-02-2023",
@@ -64,9 +64,63 @@ export const vacationsCategories = {
               ]
             },
             {
+              id: 2,
+              location: "10 Rue de la Paix, Geneva, Switzerland 1202",
+              hotelName: "Alpine View Resort",
+              pickUpLocation: "Geneva Airport 12:30 PM",
+              hotelRoom: "2 Persons",
+              startDate: "15-04-2023",
+              endDate: "22-04-2023",
+              totalCost: 1200,
+              arrivalTime: "15-04-2023 15:00",
+              hotelStars: 5,
+              hotelCity: "Geneva",
+              offerImage: "https://www.nationsonline.org/gallery/Switzerland/Sunrise-on-the-Matterhorn.jpg",
+              duration: "7 nights",
+              amenities: ["Free Wi-Fi", "Spa & Wellness Center", "Gourmet Dining", "Indoor Pool", "Fitness Club"],
+              hotelCoverImage: "https://www.swissqualityhotels.com/wp-content/uploads/2023/11/Eiger-Murren-1280x640.jpg",
+              person: 2,
+              hotelDescription: "Alpine View Resort is a luxurious 5-star hotel nestled in the picturesque landscapes of Geneva. With unparalleled views of the Alps and impeccable service, it offers guests a truly unforgettable experience. The resort features elegantly appointed rooms, a world-class spa, fine dining options, and recreational facilities for guests of all ages.",
+              roomType: "Executive Suite",
+              roomImage: "https://assets-global.website-files.com/5c6d6c45eaa55f57c6367749/65045f093c166fdddb4a94a5_x-65045f0266217.webp",
+              mealPlan: "All-Inclusive",
+              transportation: "Private Chauffeur Service",
+              activities: [
+                {
+                  img: "https://www.alpenwild.com/static/media/uploads/activity_images/large/hiking-swiss-alps.jpg",
+                  name: "Alpine Hiking Expedition",
+                  description: "Embark on a thrilling alpine hiking adventure amidst the breathtaking scenery of the Swiss Alps. Traverse rugged trails, cross alpine meadows, and discover hidden mountain lakes."
+                },
+                {
+                  img: "https://media.istockphoto.com/photos/extreme-sport-rafting-team-picture-id1270054671?b=1&k=20&m=1270054671&s=170667a&w=0&h=2fnEf7yP6Ae2JspNqqGxvC4EYDWcmWSy9PzYzI8hBno=",
+                  name: "White Water Rafting",
+                  description: "Experience the thrill of white water rafting on the pristine rivers of Switzerland. Navigate through exhilarating rapids and enjoy the adrenaline rush of this exciting outdoor activity."
+                }
+              ],
+              cancellationPolicy: "Free cancellation up to 14 days before arrival. Cancellations made within 14 days of arrival are subject to a penalty fee equivalent to 50% of the total booking cost.",
+              reviews: [
+                {
+                  username: "AdventureSeeker99",
+                  rating: 5,
+                  comment: "Absolutely stunning resort with impeccable service. The room was luxurious, the food was delicious, and the views were breathtaking. Highly recommend!"
+                },
+                {
+                  username: "NatureLover123",
+                  rating: 4,
+                  comment: "A perfect getaway amidst nature. The resort offers a wide range of activities and amenities, ensuring a memorable stay for guests of all ages."
+                }
+              ],
+              additionalImages: [
+                "https://cdn.pixabay.com/photo/2016/03/09/09/59/landscape-1246022_1280.jpg",
+                "https://media.istockphoto.com/photos/lake-landscape-picture-id1271961305?b=1&k=20&m=1271961305&s=170667a&w=0&h=gMWOQnZMQEIn-7nxtR1P4FMBecSTvoGXESYsfD2lQ74=",
+                "https://media.istockphoto.com/photos/swiss-alps-landscape-panorama-snowy-mountains-and-blue-sky-above-lake-picture-id1257457363?b=1&k=20&m=1257457363&s=170667a&w=0&h=YVcFg_t6H5oMwPirvR7G0k1bP-MjFVZG4-yxuE93VVI="
+              ]
+            }
+            ,
+            {
               id: 1,
               location: "400 Cannery Row, Canada, CA 93121",
-              hotelName: "Switzerland Hotel 1",
+              hotelName: "Azure Bay Resort",
               pickUpLocation: "400 London Row 12:00 PM",
               hotelRoom: "2 Persons",
               startDate: "21-02-2023",
@@ -126,7 +180,7 @@ export const vacationsCategories = {
             {
               id: 11,
               amenities: ["Free Wi-Fi", "Spa", "Fitness Center", "Restaurant", "Room Service"],
-              hotelName: "Canada Hotel 1",
+              hotelName: "Sunset Vista Inn",
               location: "400 Cannery Row, Canada, CA 93121",
               startDate: "21-02-2023",
               arrivalTime: "21-02-2023 14:00",
@@ -173,7 +227,112 @@ export const vacationsCategories = {
                 "https://cdn.pixabay.com/photo/2016/11/18/17/20/living-room-1835923_1280.jpg",
                 "https://media.istockphoto.com/id/655973354/photo/interior-of-studio-apartment.jpg?s=612x612&w=0&k=20&c=cvXEAyBIqDlyZPp0OQUhny2bH0zTVsBbLJeJlrQeh2E="
               ]
+            },
+            {
+              id: 13131,
+              location: "400 Cannery Row, Canada, CA 93121",
+              hotelName: "Serene Hotel",
+              pickUpLocation: "400 London Row 12:00 PM",
+              hotelRoom: "2 Persons",
+              startDate: "21-02-2023",
+              endDate: "29-03-2023",
+              totalCost: 1000,
+              arrivalTime: "21-02-2023 14:00",
+              hotelStars: 4,
+              hotelCity: "Bern",
+              offerImage: "https://switzerland-tour.com/storage/media/Zurich/Zurich-s-Old-Town.jpg",
+              duration: "6 nights",
+              amenities: ["Free Wi-Fi", "Spa", "Fitness Center", "Restaurant", "Room Service"],
+              hotelCoverImage: "https://media.istockphoto.com/id/104731717/photo/luxury-resort.jpg?s=612x612&w=0&k=20&c=cODMSPbYyrn1FHake1xYz9M8r15iOfGz9Aosy9Db7mI=",
+              person: 1,
+              hotelDescription: "Switzerland Hotel 1 is a luxurious 4-star hotel located in the heart of Zurich. With modern amenities and breathtaking views of the surrounding mountains, it offers a relaxing retreat for travelers. The hotel features spacious rooms, a state-of-the-art spa, fitness center, and gourmet restaurant serving delicious international cuisine.",
+              roomType: "Deluxe Room",
+              roomImage: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWwlMjByb29tfGVufDB8fDB8fHww",
+              mealPlan: "Breakfast Included",
+              transportation: "Complimentary Airport Transfers",
+              activities: [
+                {
+                  img: "https://www.altachalets.com/wp-content/uploads/2022/11/snowboarder-1920x1000-min.jpg",
+                  name: "Zurich City Tour",
+                  description: "Explore the historic landmarks and vibrant culture of Zurich with a guided city tour. Visit famous attractions such as Old Town, Lake Zurich, and Bahnhofstrasse."
+                },
+                {
+                  img: "https://www.altachalets.com/wp-content/uploads/2022/11/snowboarder-1920x1000-min.jpg",
+                  name: "Swiss Alps Hiking",
+                  description: "Embark on an exhilarating hiking adventure in the Swiss Alps. Enjoy panoramic views of snow-capped peaks, lush valleys, and alpine meadows."
+                }
+              ],
+              cancellationPolicy: "Free cancellation up to 7 days before arrival. Cancellations made within 7 days of arrival are subject to a penalty fee equivalent to one night's stay.",
+              reviews: [
+                {
+                  username: "JohnDoe123",
+                  rating: 5,
+                  comment: "Excellent hotel with top-notch service and amenities. The room was spacious and clean, and the staff went above and beyond to ensure a comfortable stay."
+                },
+                {
+                  username: "Traveler456",
+                  rating: 4,
+                  comment: "Great value for money. The hotel's location was convenient, and the breakfast buffet had a wide variety of options. Would definitely recommend."
+                }
+              ],
+              additionalImages: [
+                "https://media.istockphoto.com/id/1390233984/photo/modern-luxury-bedroom.jpg?s=612x612&w=0&k=20&c=po91poqYoQTbHUpO1LD1HcxCFZVpRG-loAMWZT7YRe4=",
+                "https://cdn.pixabay.com/photo/2016/11/18/17/20/living-room-1835923_1280.jpg",
+                "https://media.istockphoto.com/id/655973354/photo/interior-of-studio-apartment.jpg?s=612x612&w=0&k=20&c=cvXEAyBIqDlyZPp0OQUhny2bH0zTVsBbLJeJlrQeh2E="
+              ]
+            },
+            {
+              id: 12,
+              amenities: ["Free Wi-Fi", "Spa", "Fitness Center", "Restaurant", "Room Service"],
+              hotelName: "Northern Lights Lodge",
+              location: "600 Jasper Avenue, Vancouver, BC V6C 2T5, Canada",
+              startDate: "15-03-2023",
+              arrivalTime: "15-03-2023 15:00",
+              endDate: "22-03-2023",
+              offerImage: "https://d3hne3c382ip58.cloudfront.net/files/uploads/bookmundi/resized/cmsfeatured/canada-in-march-1689932772-785X440.jpg",
+              totalCost: 1100,
+              hotelStars: 4,
+              roomImage: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBISEhgSEhIYGRgYGRIYGBgSGBgYGBgYGBgZGhgYGBgcIy4lHB4rIRgYJjgmKy8xNTU1GiQ7QDs0Py40NTEBDAwMEA8QHxISHjQkJSs0NDE0NDQ6MTQxMTQ0NjQ2NDY0NDQ0NDQ0NDQ0NDQ0NDQ3NDQ0NDQ0NDQ0NDQ0NDQ0NP/AABEIALcBEwMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAFAAECBAYDBwj/xABLEAACAQIBBQgNCQgCAwEBAAABAgADEQQFEiExQQYiUWFxkbHRExUjMkJScoGSobLB0iQzU1RigpPC8AcUNGNzg6LhFkN0o/GEJf/EABkBAAMBAQEAAAAAAAAAAAAAAAABAgMEBf/EACcRAAICAQQCAgMAAwEAAAAAAAABAhEDEiExUQQTMkEiQmFxkaEj/9oADAMBAAIRAxEAPwDc2jhY9o4EiigflPJFHEqBUTSulHQlHQ8KONKmDP3nFYPRiA2IoDVWpr3ZB/Npr3w+2nnE0oEcrCgKWGxNOqgqU3V0bSGQgg+cROJQxmQwHNbCv2GodLZovSqH+bT0An7Qs3HKpy6tLeY1RQfYxN6L+RU2H7LWbl1zOSGmGQJICBhuowH1uj6a9cmN0+AOrFUjyODEky2wyBJAQQu6XBfWU550G6PB/WE9fVCiWwoBJWgsbo8H9YT19Ucbo8H9OvM3VHQrCgElaChuiwf068z9UkN0eD+mHoP8MdAFLRWgz/kWD+l/wqfDEN0WE+kP4dT4Y6AKWitBn/IsJ9I34dX4Ijuiwn0jfhVfghQrCWbERBn/ACLC/SP+FW+CI7ocL47/AINb4IqGEwJMLBI3RYXx3/BrfBJDdFhfHf8ABrfBKSEwrmyLLB3/ACPCeO/4Nb4JBt0eE8d/wa3wSqEW6qSjXWc6m6LC/SP+FW+CUsRl/DeO/wCFV+CYyRpFnRxA26QfJanIntrLD5ew/jP+FV+GCst5Wo1MO6IWzjm2ujqNDqdbKANUzpm8WrRiMONHo++X7bxZSwy6+VegwgBvR+tsGdUTli8QqOynSWpKAALnvLXPABwzTfswXRWP9P8ANM7iUAZzbSaA0/caaP8AZkd7W/t/mnV43J5flcMFbsBfKB5KfvnvOSvmKfkJ0CeC7rWHbC99lPXyz1bAbqRURaWBotXZVVS9ilFSABpci58w88qbSk7Jgm4qjYRTOjA5SbfHGIhPgrSUheIE6TFI1/xmmhdo5WkgI4EkBKMxgI5EcCPaFAcWWVqqS6wlaoJnJFROSJOirEok1ElIpsQE6ARASYEaQhgJICICStKoVjCPHtFaOhDR49orQoBoxkrRrQGNFHtFaICIj3itJWjQESZFjOlpBljYFWoZUrS9UWU6y6JlIuIPeBt0w+SP/b9tYbcQNumHySp/b9tZmbx+SPOsMNLfd/NL6d4P1tlDDjS39v8ANL9H5tf1tMUjriPjBpP9A/nHuhHcNimp06uYucTmW81+uD8f33/5z01IY/Z4u9q/2/zTq8Xk8vyvsBZWz6mM7ta5tcDUBpsJ9C5HoJToU0RQqhFsFAA1Dgng26Ff/wCh6PvnvuTvmqfkJ0CXJfkyU/xRaiiiiEZ4COBGAkxGIQEe0QElaAHJhOFQS0RONQSJLYpHFROgEZROgEhIoQEkBGAkwJSEMBJWiAkrQENFaPFKAa0UeK0AFaNaStFaADWitJRjACNo9opIQAa0iwnSRMBFd1lPErol9xKeJGiRJbFRe4LcQNukHySpyJ7aw2wgfdIPktTkX21mDOmPKPN8MNJ+575foDua/rbKWFG+I8j3whQHc1/W0yWdcRsoDSP/AB29qpC/7PTZKvLT/NBWUfB/8ep7TwluBNkqcqdBnX43J5vlfZS3Qn5eORffPfcB80nkJ7Inz/uhPy4cie+fQGCFqaD7CdAly+TM18UWIooogM+JMSIkxGIcRRxJQAgRONQSwZxqSGUjmokgIlkgJIxASYEYCTAlIQwEe0cCStGIjaK0laK0AI2itJWitABrRWjxWgA0YyVoiIARAjgR7RwIAK0iROlpEiMRxcSlihol9xKmJXRIlwXHkEuII3RfwtTkX2lhmpA26P8AhanIvtLOc6YfJHm+F748iQhh/m18/SYPwvfHyV6RCOHHcl5G9oxM7Iiyj4P9Cp7Ty/uFO8qctPoMoZQ8H+hV9p5d3DHeVPudBnV43J5flcsH5bN8aPu++fQuCPc08legT54y1/GD7vTPoXJ/zKeQnsiU/kyf1RZiiigIAiTEiJMShDiSjCPABjOFSWDOFSRIaIKJ0AkFnRZJRICSAiEkIANaKSitGhDRWj2itKENGkooCGijxRgNaKSigBESQijiAD2kSJKIwA4sJWxY3sttKmM1TKfBceQRUgfdEPktTyfeIYeCd0I+S1fJ94nPZ1xW6PNcINJ5KfSYSoDua/e9owbg9bclPpMKUPmx5+kxM64nLHnvf6NX2nl3cR3lT7nQYPxx3wH8mp6y8vbiTvH+50Tr8bk8ryuWD8tfxg+70z6Fyf8AMp5CeyJ89ZbPyz0OmfQuTvmU8hPZEp/Jk/qizFFFAQDEkJESYliJCPGEeADGcak7GcKkiQ0Ms6CcgZLOkFHZYIq7oFTEJh/3euQ5QCqEHYhn3zc5ydGrgvpHDD+BUEG42yeUKYNO1vCpn0XVvdIvcNjhKuMxq07XVmLGwVLXJsTtI4DLRMD5V+co/wBT8lSOUmlsVGKb3O3bNvq1X/1/HG7aP9Wq/wDr+OdypGsW5YrSt+ybXRwOU3+q1eel8cQylU+rVPSpfHO8a3AIU+wtdHEZRqfVqnpUfjjDKj3KjDVLi1xnU9F9WnPtLApMfBM50qDio5KmxzLHkFjCpdsVrogMo1PqlT06PxyXbCp9WqenR+Od82K0KfYWuiv2wqfVX/EpfHJLlCp9WfzvT+KdY4Q7AeYx0+wtdHNsoVALmg2gEnfps88u03zlDcIB5xKuIpsKbMRozW6DI4av3NPJXoELae46TWxLKmK7DReqELlFLBE75jsUcZlLB4itXS9TCvRY33rsjGwtrzTo1+oy3iTn0yOFqY/zWGqajgmUpW6LX47mTrUyDYixHDA+6AfJavkHpE0mWDaq33egTNZfPyar5DTCq2OqDumeaYVd839vpMKUPmxyt0mDcMdLfd9RhKge5jlf2zGdaKeLPdCP5L/nhDcV3r/c6IMxPzrf0m6HhPcZ3lT7k6/G5PJ8rlg7LR+Wej0z6Hyf8zT8hOgT52y0flfo9M+isn/NU/IToEp/JkfqixFFFAQDEmJESQlkEhHjCPALGMq1WloypUXTJkVESmSAkVk86RRR1TRJ3mZ3QbpmwzJTpUDVZzUGhwiqUzSwJsxJ33BslHIO7JsVVemaAVV/7FfOF9gKkAi/nktpFJNmxeqIFyriGXNZSQQ2gjyWmL3XbrcXhsX2OgFKZiNvkLG7FgdN+ACanKb3C+V+Vpjkk2jXHBJlqnlirbSwPKBJplap4qej/uDKSaJ3VYRcuwko9BIZWqeInMfNtk1ytU8VPX1ygqzqqy1KXZDUei6MoVDqCDzHrgallysuIq02a4VwACNFiisLDzkeaFKYmbxFO2Oq8YpN/hb3RSlJJOxxUW2qNIuUqh2jmi7YVPs+iJUpLJkSrfYqXRZ/f6vjAciiMMXVOuofMFHunIR1MLfYqXR1XOY75mPlEm07JTNpzpTo+KVNBjpfYrd7FiilpzxLkDQSOTRB+VsQO5h6mZTdiGYOUzmzSUQuLFQTfSCLlVGm9jVw+MU9kVHz6aFFVs8vv827qHbSwF12nSSNFrBTVRHF3IVZ4Iy4/wAnq+Q3RLFfGLqzhfguLwTlivehV8h+icqlZ2JUzCYZtLci++FcMe5+d/aMC4Z+++774Zwh7mRxv0maNG8WUcSe6H+m3Q0J7jG3r/d6IJxB7pf+XUHMGlrcxiBTRyfszs8ZWzy/LdNnHLP8X6PTPonJvzKeQnsifN2U64bE52ze9M+jckV0qUKbU3VlzE0oQw1cIjl8mQvii9FFFEADEmJASQmhmTEUQiMAIsZUq1AJ2rvYTO4zFnOAEznJRRpCLkwhi8cKdN6lr5qs1r2vYXteAq+XezIQBUXOXQyFAy32jOuL8oMllGoewP5D9EC46umEw6VHYW7mDfQbEaSBtIGycmSUpfE6ccYr5HPF5OwtRUV1xBzA9mLgsS5zmLE6yTpnCjk6nS/hnq07993jF+C5JFrcUG1N1uH8FXPlC3vleruwS4zaVxtJexHIM03mWnKa6sZosblQ06eaucXCjf1CLnZnFV0Xlvc89atQRs13765AJ03PmGyD9z2TKmVCKljToKwDOdJcg3KJcW4idIHGdE9TwOCSjTWlTQKiABVGwDpPHNcXjt7y2Iy50tluZ1cDibaKJ2a2QfmklwOK20h6adc1ObHzZ1LDHtnL7X0jOJgcT9GNnhrOy4DEbUXZ4Yh3NizZXqiL2MDpg648FfM4g+hkbEGvUqugs5XN36kqqqABo4wT55qbRWg8UWJZGgG2TK/gqus624uIR3yXiDfvNXjN8MOeeRNRBrZRykQ9UR65AYZLr/Y2eE3wxu1tfgTzMfeIaatTFruovquwF+ThiWshIAdSTqAYXPIIeuJPsYJTCVl1pzMvXMvujxLUsZROdbOWoCp4QU1jgOw8Rm9OJpiwNRNOgXZdJ4Bpg3dBkSjjaYBYLUTONOoLXUnYeFTYXHFwyJ41JUmaQyOLtoCY7DpVGZUw1OooIIzwpF7a80qbHSRIYfDJTUpTw1NFJuVSyC9gL2VRpsBzTL7pd1eLweLqYfsKELmFCVcllZVOdcMARnZwBA2W1gwSf2hYv6BPQqfHOd4/o1U3yauhueoU6hqLSu5ztL1He2cbm2cDKu6HDKlCpZbdzqMLNcb3NFrEfa9UzL7vMYRoppf+nUsOXfy5jst1K9Cp2QLopVLZgI74pwk8Elw3tmsZPhGOwz6fR6Icwj7xuVukzO4ZtPN0Qxhn3rD7RltG0JCKGpURAbZwYXte1zbVOOTcXTQFKmeAdqkG3KDO+FPdafKekTf47cxhcUucyZjkXz6dlYnhYam84vNsMnHg4/JipSpmFp5AGIa9HEI19huCOUaxCFLJWVcB3SmtQLrzqDFlPGyjX5xIZR3GYqic+iRUUaRmb1x90nT5jfinfJO7zH4Q9jqHsirYFMSpzwOANocHlvyS5LVvRlF6drLVP9pOPUZpqi4151MX8+iKFh+0HJzb6pgGzz32bmML8RNr8wimdM0tfw9AkgZC8cGdRynQGImQzpF2trgBwxZJWZbF11puL6TpEO5TxYVGJIAA0k6BPNMr5Seo9qdwATviNJueA6unknNnqjowptmkyji70X0eA3RBOUHVESpUs11pjNIXQttJFxqEDPiqwUhnJBBuLLq5oPxeVjUUIaefvVGsi9h55z1q+jp2j90FHxhNimCqMpAKutEFWU6Qy7zUdnDr1QrudyU2LYvUwxp01P8A2Iis58VVzbgcLc3EL3O7mziAK1agUo3sDn76oRe6oLAgaNLaOK+sehJVVFCoAFUABVFgANQAlrGuidb+mWajUsPTvmqqIAAqgAcAVRBOFr1MXUCXzRpaw71FGtjwnr2QXuwxhzKaX0MzMbfZAH55xyZimTB46qDvloFFO0Fw46QvNIlcpqP0WkowcvsFboN1TVGNLDO6UVY2KsQ9QjRnu402OxRYAep9yVKpjMTmVMRW7GitUqHsr94tt7e+i5PMDMVnzd7gm7Hg8dW2kUqY4r51/bHNOxtRjt9HIvylXZpMdlM1HuCQWIVVDEWGoDRNRh0CIqAk5oAuSSTwmeaZNrlsVSH21PonO903/wC88c5cF7yZ150k1GPCCFxELcA5oP8A3mL9545vZz6QkCODomey66rWQ2G+QbBsJHVCH71MruuxlqlLkb2l65nm3gzXCqmjvuspJVyctYqC2HqBQbeBUzQRyZzJzTB4XF9jdalM5rqQysuggjUZsf3jsmS8ap8FabczZ35Z5r2WdHjy/wDNWY5klkaPa8NjKeJw9PFqApclXC+BVXWRwA2uOUQzkvHCoCptnrr4xwzzvcXij2rxQv3lam44s4UwfZMt5CykRi0F++Dg+iT+UTmk9GalwzaK14rfKPQsdg1rIVNgdOa2vNPmOkcI2+ueVZYyxi8LUelVoIrJtD1cxl2OptqPWNYM9HXHW2zjlHDNi6bKgQVVRjTeoiuM4aka/gm+zVr5dXGMnbVmFyitmeTVN1WI19hTjs7m3GY2IxoqU6pzQpZGvYsbnRsY8U6NlTKYuOw01uCrAUgNB1g2aCqr1cx0emqXWwzFK30i41mZSglukaRn2wVhzpHKOiE6T6G8v3QcKLIw0cH6E70qou3KD6v9RM3gwjhm7qnldU9Zwrb0cgnlGRCHxNMaxc3nqlAi2iaQ4MM28i4DKeUMmUMQubVpq/ASN8ORhpHmlgGSDTWzAyNXcFhyTarUA2C4NudYpr7xQsAxeSEgWAnF6vHNTE7PUtqgrKeVEpC7G52KNfKeAccG5Vy+BvKWk6d9r9EbeU6ICClznMbk6dJJ08N9p45hPNW0TphhvdiyhiqmIO+NhsAuLcg4eM6eSDjRVB7/AHDjl2u4Qa9OwbT1CDsypVa1tHFqUfrzznpydyN3JRVRKlWm9Q5ijze8y3RyUlMbC2021cQhPD4VaYsus6ydZ/1OjLojb+kRV7s0eNQU6KIgIC3UfcAX8sGdk2XmowVQNTRhtAPPpl1XnTovezJZdKqjyvdSjs1LNRjbsl81SbXKa7cklhaNTtZjFFNyzCkAoRizb4alAudZnqnZI4eSsNS1WVLyG46aPnLtTivqtf8ABq/DNpuZwdZMl4pGpVFd61OyMjhyo7HpCkXI0Np4jPWs6LPmkoak0ZRnpkn0eQZJwtVcXTL03Ub7SyMo7xtpE2eeZrs6MHEzjh0qrNJeQ5O6MkXjdkmvzhGzxL9f9F7v4ZLsn6/QmY3WhmqUrKTofUCfCXinqnZBFnyZYdSqxxzU7o8uwFFzk/HL2N85qaBVzWuxs+hRa52apgxkjFnVhMQeShV+GfRvZYuyy4Y9MdJE8uqTlR5TuQyfiEyfi0fD1VZ2o5qvTdWYAi+apFz5pPJGTMSuKR2w9UKM+5ZHAG8cC5I4xPUw4khUkywqUlKy45nGLjXJmuxPtRuYy5kvOz7AG2ZUvxb3R67Q1njhnSk+mVoozeS1VGIyrgF7K+jw2PpG/vgfE5KVxYr/AK45p8Y61HZ0YMpLAFTcXU5rDzEGVHp8ETV8EqVGCx2SBT0MCVOo/rUYGxGTgOMcIvfkNp6VXw2cCGGgzOY/AGmbjSnHptxNMpQs2hkr/BlsAjUKgqJpI2HToPLN/kXLVOrZTvH8U7fJPu1zKPhrG4Gjg4JFqeo8xHvmKm4umdLjGatHpiVOGT5Jicmbonp2Svdl1BxpYcvjdPLNXh8SrqHRgynURq/+zaM1Lg5pQceS3nRSHZYpVkl3H46nSXOqNbgA0sx4FEyOUMr1K5Kjer4oNx94+EeLUJwqGpWYu7HTtOhiOADwRxD1SaUAo1eaZzyuWy4NoY1Hd8kKVMDSec6z+uaNWxWbotp9Q5eqRxNQ6hz6eYTnhcnGoc4kheGwueS/TFGH2xSyfSONPBtVJNtuliP1phOjSFMZqLbpJ4SZZShmiy6ANgidSNYhJNkRdFYt+rzk78XTJ1k4OaUqzW0G/wCuKRRpZcw2WK6VBTWoQmZcAhTY8AJ02hFcr1/pDzJ8My5xah1JU3zQujiHB5pZTHr4r8w65jKWROk2bRjBq6RoxlWv9J6l+GOuV6w/7P8AFfhmfGUF8R+Ydcl+/r4j8w64vZk7ZXrh0jRLlit9J6l6pPtvV8f1DqmaGPXxH5h1yQyiviPzL1w9mTti9cOkaUZWq+P6l6ohlSr455l6pnBlNfEfmXrjHKq+I/MvxQ9k+2L1x6RozlSr459XVOYytVziM/Yp2bS3UJnzlZfEfmX4pyGV0DnePqXYvC32o9c+2GiHRqO2VTxz6oxylU8czN9u0+jqcy/FItl5Po35k+KGufbFoh0aTtk/jtzmSGUKnjN6R65l+3y/RvzL1x+3y/Rv/j1x6p9v/YaI9Gp/fKh8NvSbrkTjKnjv6bdczS5fX6N/8euM+XgdVN+dYap9sWmPRpmx9Q+G3pN1xJlCoukO3nYnpMypy5/LbnEdctE6qZ87CGqff/R6I9Gh3PVM41VzVADs1lVV0sbk71RckmF83gEoZJycaWcS2dnm+q1rwpbRpnbjTUakcmSnK0V3TilWrQB0EaD5xL7LOb05UhIyOUskZl3TvdZHB/qCGTZ+jN7Up8UBZRyUO+Qcqj8vVMpRUtmaRk4u0Zh6eggjRq0xsLi6uHbOpsbbVOkHlG3plt0FrH/Y822VqlO052nFnQpKaD1LdbSsM6m19uaQR5opmuxg7BzCKX7WL1I1z1QDbb6hK1SsDq29MUU1xJWYZpMs4HJ/ZLO1s3g4be6FxTNrAC3BFFNmYomF4hEaQ4BFFJGcWog7Bzf7nNsIp8ERRR0hWyvUyTTY3Ki+y2g84kRkVOP0mv0xRSnCItckOciqOH0j1xDI6cfpN1xRSdEeg1y7JdpadtJbzM3XHOQ6eoFvTfriihoj0GuXY3aOntLem/XH7Rpsv6TdcUUfrj0GuXZLtKltvpNfpke0dLWVvo4T74ooaI9B7JdiOQ6WxRIjIVLxBFFHoiGuR0GQKPiLzCOMhUvEXmEUUNKFrY4yFS8UcwklyJS8QcwEUUWlC1MmMgUvEHMs70siUlPeLxb1eqKKNJDthFaYUeqPFFEykRZpHNiiiZRycSu6R4pDKQGypk4PvlsG9R5ePjmaqLYnRw3HJ74opnIqPJzzR/8AYooplpRtrZ//2Q==",
+              hotelCity: "Vancouver",
+              duration: "7 nights",
+              hotelCoverImage: "https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg?cs=srgb&dl=pexels-donald-tong-189296.jpg&fm=jpg",
+              person: 2,
+              hotelDescription: "Northern Lights Lodge is a charming 4-star hotel located in the heart of Vancouver, British Columbia. With its cozy ambiance and modern amenities, it offers a comfortable stay for travelers. The hotel features well-appointed rooms, a serene spa, fully-equipped fitness center, and an exquisite restaurant serving delectable cuisine.",
+              roomType: "Luxury Suite",
+              mealPlan: "Breakfast Included",
+              transportation: "Airport Shuttle Service",
+              activities: [
+                {
+                  img: "https://www.altachalets.com/wp-content/uploads/2022/11/snowboarder-1920x1000-min.jpg",
+                  name: "Vancouver City Tour",
+                  description: "Experience the vibrant culture and scenic beauty of Vancouver with a guided city tour. Visit popular attractions such as Stanley Park, Granville Island, and Capilano Suspension Bridge."
+                },
+                {
+                  img: "https://www.altachalets.com/wp-content/uploads/2022/11/snowboarder-1920x1000-min.jpg",
+                  name: "Whale Watching Excursion",
+                  description: "Embark on an unforgettable adventure to observe majestic whales in their natural habitat. Cruise along the coast of British Columbia and witness these magnificent creatures up close."
+                }
+              ],
+              cancellationPolicy: "Free cancellation up to 7 days before arrival. Cancellations made within 7 days of arrival are subject to a penalty fee equivalent to one night's stay.",
+              reviews: [
+                {
+                  username: "Explorer123",
+                  rating: 5,
+                  comment: "Absolutely loved our stay at Northern Lights Lodge! The hotel staff were extremely friendly and helpful, and the room was spacious and beautifully decorated. The breakfast buffet had a great variety of options. Highly recommend!"
+                },
+                {
+                  username: "NatureEnthusiast",
+                  rating: 4,
+                  comment: "Great location and wonderful amenities. The hotel's proximity to downtown Vancouver made it easy to explore the city. The room was clean and comfortable, and the views from the hotel were spectacular."
+                }
+              ],
+              additionalImages: [
+                "https://media.istockphoto.com/id/1390233984/photo/modern-luxury-bedroom.jpg?s=612x612&w=0&k=20&c=po91poqYoQTbHUpO1LD1HcxCFZVpRG-loAMWZT7YRe4=",
+                "https://cdn.pixabay.com/photo/2016/11/18/17/20/living-room-1835923_1280.jpg",
+                "https://media.istockphoto.com/id/655973354/photo/interior-of-studio-apartment.jpg?s=612x612&w=0&k=20&c=cvXEAyBIqDlyZPp0OQUhny2bH0zTVsBbLJeJlrQeh2E="
+              ]
             }
+
 
           ]
         },
@@ -184,7 +343,7 @@ export const vacationsCategories = {
           offers: [
             {
               id: 18,
-              hotelName: "Bulgaria Hotel 1",
+              hotelName: "Tranquil Oasis Lodge",
               amenities: ["Free Wi-Fi", "Spa", "Fitness Center", "Restaurant", "Room Service"],
               startDate: "21-02-2023",
               location: "400 Cannery Row, Canada, CA 93121",
@@ -225,6 +384,58 @@ export const vacationsCategories = {
                   username: "Explorer456",
                   rating: 5,
                   comment: "Excellent stay at Bulgaria Hotel 1! The facilities were clean and modern, and the service was exceptional. Would highly recommend to anyone visiting Sofia."
+                }
+              ],
+              additionalImages: [
+                "https://media.istockphoto.com/id/1390233984/photo/modern-luxury-bedroom.jpg?s=612x612&w=0&k=20&c=po91poqYoQTbHUpO1LD1HcxCFZVpRG-loAMWZT7YRe4=",
+                "https://cdn.pixabay.com/photo/2016/11/18/17/20/living-room-1835923_1280.jpg",
+                "https://media.istockphoto.com/id/655973354/photo/interior-of-studio-apartment.jpg?s=612x612&w=0&k=20&c=cvXEAyBIqDlyZPp0OQUhny2bH0zTVsBbLJeJlrQeh2E="
+              ]
+            },
+
+            {
+              id: 23,
+              hotelName: "Balkan Paradise Resort",
+              amenities: ["Free Wi-Fi", "Spa", "Fitness Center", "Restaurant", "Room Service"],
+              startDate: "21-02-2023",
+              location: "123 Sunny Beach, Bulgaria",
+              endDate: "29-03-2023",
+              totalCost: 950,
+              hotelStars: 5,
+              offerImage: "https://d3dqioy2sca31t.cloudfront.net/Projects/cms/production/000/030/077/original/4f38465b563cbfb25f179fd1b19e2d1e/article-bulgaria-veliko-tarnovo.jpg",
+              hotelCity: "Mena",
+              roomImage: "https://www.cvent.com/sites/default/files/image/2021-10/hotel%20room%20with%20beachfront%20view.jpg",
+              arrivalTime: "21-02-2023 14:00",
+              duration: "6 nights",
+              hotelCoverImage: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/107603618.jpg?k=1d6b55dac48b62f30a27ed707e2da97c96e05095a169ba6c3f7d958bc3d09245&o=&hp=1",
+              person: 1,
+              hotelDescription: "Balkan Paradise Resort is a luxurious 5-star hotel nestled in the picturesque setting of Sunny Beach, Bulgaria. With world-class amenities and stunning sea views, it offers an unforgettable retreat for travelers. The resort features elegant rooms, a state-of-the-art spa, fitness center, and gourmet dining options. Whether you're seeking relaxation or adventure, Balkan Paradise Resort promises an unforgettable experience.",
+              roomType: "Luxury Suite",
+              mealPlan: "All-Inclusive",
+              transportation: "Airport Shuttle Service",
+              activities: [
+                {
+                  img: "https://www.altachalets.com/wp-content/uploads/2022/11/snowboarder-1920x1000-min.jpg",
+                  name: "Sunny Beach Excursion",
+                  description: "Discover the vibrant atmosphere of Sunny Beach with an excursion along its golden shores. Enjoy water sports, beachfront cafes, and lively nightlife."
+                },
+                {
+                  img: "https://www.altachalets.com/wp-content/uploads/2022/11/snowboarder-1920x1000-min.jpg",
+                  name: "Nessebar Old Town Tour",
+                  description: "Explore the historic charm of Nessebar's Old Town, a UNESCO World Heritage Site. Wander through narrow cobblestone streets and admire ancient churches and medieval architecture."
+                }
+              ],
+              cancellationPolicy: "Free cancellation up to 7 days before arrival. Cancellations made within 7 days of arrival are subject to a penalty fee equivalent to one night's stay.",
+              reviews: [
+                {
+                  username: "Traveler789",
+                  rating: 5,
+                  comment: "An oasis of luxury in Sunny Beach! The resort exceeded all expectations with its impeccable service, elegant accommodations, and breathtaking views. Highly recommended for a memorable getaway."
+                },
+                {
+                  username: "AdventureLover",
+                  rating: 4,
+                  comment: "A wonderful stay at Balkan Paradise Resort! The facilities were top-notch, and the staff were attentive to every detail. The all-inclusive package was great value for money."
                 }
               ],
               additionalImages: [
@@ -292,8 +503,9 @@ export const vacationsCategories = {
               ]
             }
           ]
-        }
-        
+        },
+    
+
       ]
     },
     {
@@ -309,7 +521,7 @@ export const vacationsCategories = {
           offers: [
             {
               id: 25,
-              hotelName: 'Greece Hotel 1',
+              hotelName: 'Royal Palms Retreat',
               amenities: ["Free Wi-Fi", "Spa", "Fitness Center", "Restaurant", "Room Service"],
               startDate: "21-02-2023",
               endDate: '29-03-2023',
@@ -357,6 +569,108 @@ export const vacationsCategories = {
                 "https://cdn.pixabay.com/photo/2016/11/18/17/20/living-room-1835923_1280.jpg",
                 "https://media.istockphoto.com/id/655973354/photo/interior-of-studio-apartment.jpg?s=612x612&w=0&k=20&c=cvXEAyBIqDlyZPp0OQUhny2bH0zTVsBbLJeJlrQeh2E="
               ]
+            },
+            {
+              id: 25,
+              hotelName: 'Palms',
+              amenities: ["Free Wi-Fi", "Spa", "Fitness Center", "Restaurant", "Room Service"],
+              startDate: "21-02-2023",
+              endDate: '29-03-2023',
+              location: "400 Cannery Row, Canada, CA 93121",
+              totalCost: 1000,
+              offerImage: "https://iconicsantorini.com/wp-content/uploads/2023/02/IconicAlexandraAdonis-19.jpg",
+              hotelStars: 4,
+              hotelCity: 'Kalithea',
+              arrivalTime: "21-02-2023 14:00",
+              roomImage: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWwlMjByb29tfGVufDB8fDB8fHww",
+              duration: '7 nights',
+              hotelCoverImage: "https://img.freepik.com/free-photo/beautiful-luxury-outdoor-swimming-pool-hotel-resort_74190-7433.jpg",
+              person: 1,
+              hotelDescription: "Greece Hotel 1 is a luxurious 4-star hotel located in Athens, the capital city of Greece. Situated in a prime location, it offers stunning views of the city skyline and easy access to major attractions. The hotel features elegant rooms, world-class amenities, and personalized service, ensuring a memorable stay for guests.",
+              roomType: "Executive Suite",
+              mealPlan: "Full-Board",
+              transportation: "Private Airport Transfer",
+              activities: [
+                {
+                  img: "https://www.altachalets.com/wp-content/uploads/2022/11/snowboarder-1920x1000-min.jpg",
+                  name: "Acropolis Tour",
+                  description: "Discover the rich history of Athens with a guided tour of the Acropolis. Marvel at ancient landmarks such as the Parthenon, Erechtheion, and Temple of Athena Nike."
+                },
+                {
+                  img: "https://www.altachalets.com/wp-content/uploads/2022/11/snowboarder-1920x1000-min.jpg",
+                  name: "Greek Cuisine Cooking Class",
+                  description: "Learn to cook traditional Greek dishes with a hands-on cooking class. Experience the flavors of Greece and take home recipes to recreate the dishes."
+                }
+              ],
+              cancellationPolicy: "Free cancellation up to 7 days before arrival. Cancellations made within 7 days of arrival are subject to a penalty fee equivalent to one night's stay.",
+              reviews: [
+                {
+                  username: "Traveler567",
+                  rating: 5,
+                  comment: "Fantastic hotel with excellent service! The staff were friendly and attentive, and the room was spacious and comfortable. The hotel's location was convenient for exploring Athens."
+                },
+                {
+                  username: "Vacationer890",
+                  rating: 4,
+                  comment: "Enjoyed my stay at Greece Hotel 1. The facilities were top-notch, and the food at the restaurant was delicious. Would definitely stay here again."
+                }
+              ],
+              additionalImages: [
+                "https://media.istockphoto.com/id/1390233984/photo/modern-luxury-bedroom.jpg?s=612x612&w=0&k=20&c=po91poqYoQTbHUpO1LD1HcxCFZVpRG-loAMWZT7YRe4=",
+                "https://cdn.pixabay.com/photo/2016/11/18/17/20/living-room-1835923_1280.jpg",
+                "https://media.istockphoto.com/id/655973354/photo/interior-of-studio-apartment.jpg?s=612x612&w=0&k=20&c=cvXEAyBIqDlyZPp0OQUhny2bH0zTVsBbLJeJlrQeh2E="
+              ]
+            },
+            {
+              id: 222,
+              hotelName: 'Santorini Palms Retreat',
+              amenities: ["Free Wi-Fi", "Spa", "Fitness Center", "Restaurant", "Room Service"],
+              startDate: "21-02-2023",
+              endDate: '29-03-2023',
+              location: "400 Cannery Row, Canada, CA 93121",
+              totalCost: 1000,
+              offerImage: "https://a.cdn-hotels.com/gdcs/production109/d262/bd38cd57-bbd8-441a-80b6-6465c035d8db.jpg?impolicy=fcrop&w=800&h=533&q=medium",
+              hotelStars: 4,
+              hotelCity: 'Santorini',
+              arrivalTime: "21-02-2023 14:00",
+              roomImage: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUVFRgVFRUZGBgaGBgYGBgZGBkZGhgYGBoZGRgYGBgcIS4lHB4rIRgYJjgmKy8xNTU1GiQ7QDs0Py40NTEBDAwMEA8QHhISHjEkJSsxNDQ0NDQ0NDQ0NDQ0MTQ0NDQ0NDQxMTQ0MTQ0NDQ0NDQ0NDQ0NDQxNDQ0NDQ0MTQ0NP/AABEIALcBEwMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAFAAECAwQGB//EAEgQAAIBAgMEBQgHBQYFBQAAAAECAAMRBBIhBTFBUSJhcYGxBhNScpGhwdEjMjNCkrLwYnOC4fEUFUOzwtIWNKLD4iRTY4Oj/8QAGQEAAwEBAQAAAAAAAAAAAAAAAAECAwQF/8QAJhEBAQACAQQBBAIDAAAAAAAAAAECERIDEyExQSIyUWFxgQQjQ//aAAwDAQACEQMRAD8Aw0nDAFSCDuINwewywCcLQxGIwxvlZeYIOVu0HQ9s6vYu1RXVjkKFbBtQVN72ynu3H3zZlLsSji8dVvulgQ8oggGPOTDtHCSQWBkKrSYrmMFiCwCYxB5SwYnqlIWSCxGvGKHKOMSsoCx8sA0iuvOWLWXmJjyxZYg3ZxzjZxMWSPkgG0OJnbDl36TEoBoOu/slWWSAPOAbcPhFU3X9X/oJpFODkdh94yqvtOojWAUjrB+cWj2L+bjGnMC7Tqegp7yPhJjazcafsa/wgbUacgyTO22kvYowNifunQb+PXIrtdGNgDfsgFxWQMsz34StxGES8iCTJWkkEAYJJBJYFkwkAqCR8stCR8sA47aY6b+sfGYDCO1R9I/rGDzGk0UUUANoknSwgOeyiwyhrAX1BN7fe7JCk837J186f2lHsBE6rrLUrkm8d2B3/DbP06L02U+kWFmG8aKbf1j/APDuJG4Uj/8Aa4/7cP8Akwv0B/e1f8xoXyyJjjppcsnFDYuLH3U7q7fFBGOysWPut3Vh8SJ22WLLHwhc8nA4mniaYBdHVSyrmzowBY2FwHJ39U0YfDYh1zISRe29eHbDvlSv0I/e0/ziS2Ev0Q9ZpHCctL5XjsE/suKHA+xD8IvNYkfcJ/hX4TrLR8srtY/lHdyclbEj7h/AfgY3nK4/w/8Aof5zrssWWLtT8n3b+HIHF1Rvpj8Lj4yH95t6APYT8p2LjQ9k5XZdJWrWYAg30PquZGWGrJKvHPctUjajcaZ/Ef8AbH/vb/4z+L/xnSnZtL0B7/nInZVL0PefnDtZDuxzTbbUb0b2iFKL5lDWtfhB+38GiMAosOid5Ot+uFETKAOoeEzs1dNJdpCZsThyxve3HdNIhGjhEZQSupGupHgY5jcvQyymPsDs44Ie9h84xd/QU/xkf6YfOzk5H8b/ADkTs1P2h3/OV28kdzFz7Fje6WNiL5gd8pwNI5yCLWAPcb/KdIdlKfvuPw/7Zh2TQLZyxuQ2UaAaCTcbFY5Sr1WRYTS1O0rZYtK2z2k0WPlltJYEmqSwJLUSWZYlKMsWWXlI2WAcLtgfSP6xg0wrtsfSv6xgsykoRR4oAYp4Z+ADeqwb3DX3TfsAdGrf0x3aHSDQJu8lmvTc/tjwM1mVtjG4ySjPksPoD+8q/wCY0M5YI8lR9Af3lX/MaGrRyjSGWPlk7RWj5FxAPKsfQr+8p/mj+T4+iHrN4yXld9iv72n4x/J77Ees3jJ39SrPpEcsWWTjy9o4q8sWWWRRchxVVF0PYZymxf8AmB3/AJXnXVfqnsPhOQ2J/wAwv8X5HkZXzF4zxXW5YssmIiZfJHFyvlMOmOxfGbKg1HYvgJl8pvrjsXxmqvvHqr+UTDL3W+PqIw3hB0F7IDEO4M9BeyVhfKc54WZY4WPeLNNNs9FaCNijR/XPgIYvBWxPq1PXPgJGV8rxjRUEzuJrqCZnElam004dJQBNuFSTVRoRJPLLkSOVkqZysrZZoYSphAOD259tU9YwS0L7d+2f1jBDS0IxRRQAsJt8mj9E/rL+WD3cKNTa5t3ndI7LxypTK5rMWFhxOltO+Xj90ZZfbXWeSrjzG/8AxKv52hoOOc4jZVzSQj0qnvqPNaoQd9vfNphubTc5Lp1hcDeQO+ROIX0l9onNC3M9ul/GRDkaAC3XvPyi7dHPFf5WYpDSVQwJ86mg7TH2BiUFMKWAOZtCbcYB2yTkTS30iceuSpISq20tf8xhMPq1+hcvp27VXB3G8fPOSpki19bSZrNwYjnqZXbqO5HU5os0BYOqz9EtcgE352+OsE1Me6O5TM6qcrKWuTb7yHvAt1czM8rMcuNaYy5Y8o7Co2h7D4TlNiH/ANQv8X5XmmltAOLqbjw6iOEG4FiKpPK/vDCGWOsoWOW5f07bNGLznv7UY4xDdfvmvbZ91X5R/WHYvjNmJ3j1U/KIO2tcqhP66UKYtdR6ifkE5cvGVjqx8yVRDOGU5FNja2+2ntge0vDGwBJtyvDDe/Ay1ryLlH9FvwmMVb0T16HSBq2Ky/evyGa5vwvLNlYariahQuyoBnYg305ciSfjKuVntExl9C2GVnBZFLKpsWuANPrWJPSt1XmDYi9F/XPgJ2LUFp0SiCyqjAfhOp65yWxh0X9c+AkcuVXx001BMriaqsxO4lBECEsGsGo0K4QyMlYtyiM0cNKneSpBzKWMTvK88YcPtz7ap6xgloV259q/rGCWlINFFFACRAO8dffKcAvQJNrXHbe3PlLbynDfZH1x+UzXp/dGPU+2t+yalqS9r/nebA5PCZNjoxoiw4vr1io2k0ZH4zpws1HNnvawXj5TGI03n2yNuv3y9pYtsqciX/8AcTxluHXojXn4mUbX+qmo+0Tj1y/DKSotbjvPWZjb/s/pp/z/ALW+b64snXE6kcvaJR52a7Y600ILbiOI48dJVUwRsFVgMtgTYnUEXy24741NyxsozHfYAnQQpsqmWBZ1JN2sOA6z/Mzk/wAnW5XZ/i7ssBsUr51dAqgWDtmAst7AOttSbi3bGwxtUPf4NDuOouAERQBrfW4Avc2B1Ztd+g7ZzWJUkuBvJUDW2pbTWZY561+m2WG9/sXbE24GJcX1QCuOZG83VFmv9a45aE8D2zctuc7cc8cpuPPzxyxuq37QfMiH9fWhjGL0l9Sn+RYBrt9Gvb/qnRYiwBc7lRNOZyCw904up4yr0Ol5xn8MmX9dmkoemWbKCRc2PsvvkcDXvcHib36zqZHEOyvp18OJ4iHTtsuj6kks2ahgnZ0Qas5B4a311J7J6Ts3CClTRBa4AzEcW+8fbPPtiV2OIpgjTOPAz0uTlLPZ42X0pxv2b+o/5TOO2N9V/XPgJ2GN+zf1H/KZxWy6mVHNtcxIHPQaCGIyZ9oVnZyqEjINbG1yeH664Bx+LrpvBGoAvlNyTYe8w1s57UmqHezsTfQ9E2t23zTnqlU1aygnor0z+VRb9bossqrHGDuHdwASwOgvbdfjbql1XbYpWDZb8ibac5nwZzuF4bz2Dh4Dvi2vjcoJFgddba25w5U+MjfS26xRWKAZhe1ze3D3WPfI1Nt8Svv1nK7HqsyZ2N8xJF/RvoJoxFbSTs+IrV8oVG9D7RLsNtpH3Tjq9W+kt2U3TbqsPj8ZUpZRt2wb1HP7RgpoR2gekYPaWzQiiigG8NFs1GZDltow3sq8CPvEXlIeEdhUVam5YsLFdVF7aHfLxurtnZuWCXk5gmbDl8hfK9UEhwigh2Nz0hcDq3wuppLhwufMzliwDKRcdEKSRcgAkjrN5RsDDLRw5NVLkPUb6gY5GYsL33aHUdsDbT21mJyNkVxqq2HUOGmgmEmUzt3b+viNeOPGeJ/Py3NsguWNO1hbo5rkX4E21Oh9krq7MZCVdlUjgS5/Kpkdg7VqNVQM9RwGHQvdCLEEEbh0bjhOq2hhFqMOiSANLtltfeNN86Z17PFYXoS+ZHDbYw2VFIdT9JT0AqekOLKBL8HhlZASxGpFgoPHrYQl5TYBUoAhFH0lIXzMT9deZIgNMS6iymw7AfERdzeXLZ9uzHjqCf8AYk4u/wCFR/rM24LY9Jlvnca+ipB9kAHHVPTYdht4SDYxzvdz/G3zhepfyU6U+dO5w2y6Siwc9ZZSCT16QNimXD1WsSczX6O6wW4NvdObasTvJPabyJeY2bu63xupoWxG2XfN0MoLKtrcNdSePDqmCmVznNYjr3H63umfzkrFQXOvL4xa0e9rcbs9HqglgUIJupF1J4WPwksArJ0WYEDQHW9uHCRpNmIVekTuA1J7hCKbHrHXKAOtl+BlY5XH0nLCZe0MTdlWwJ67WB14XnQYlw9Ire1srH1Qi38DAm1fPqmdgnQUDS+vBfeQJnrVq7LlDUgbdIEMSOFtG1Ey6mfm7XhjqRoR7OoH3jcDlrr3QjicC7G+VrcLKd3bac3g8LVzBhVp3HHIWt3lzOzw1RwoL4wWG8JS91wIdLq63YfUw5eKG4JxSdHsTla9jpf5ToW8rjwpDvc/7YNxeFVxnR3djxZCL8N51HsmQbLc7yPaJrcuXms5jx8QRxG13r3bJYLYWW5Gtze3P+UwHFqd4B5zXgqPm1ILDU390jiVpv8AWyk8xa4798WvwqX8sb16R0JI4cbezdB/9zIXZ0qnMwAPSBFhuFuE1VdnITo79mUN77xDZlPiznvQeMXGntVhMLUpMWuHBFuR3g9+6B/KcVHQimjMxBFrgWvoTfduvD64OmPT/Gf9NpMUUH3Pa7N+Zo9Dk5HZ2JdECPTdSOoEe1SbSVbEhtx7p1uVfRX8IMkDbcPZZYcRycWMLUOopuR1I3yluyKTgFnR1JJNipFurUTrSx7O3WIN1iEx0Vy25zHjpGYWEI7Q+s3aZgaNKqKStFGCCP6LewwvsN2RWLIbZgRccRm1tHBj4qtkQaXJOg5kf1lyI2I1vKpKXQdM5bpfWAHK1iDykB5Zj7uGPcx+CTHs/C36TgEn3dQ6oaw1BR91fYIcIOeTNT8sXO7DH8Z+KS0eU1dvq4U/j/lClJByHsmgpaHHE+WX5cvtXHYnEIENBUXOjEljfoMG04cINfDVPQnZ10uJk8yJNxk9HLb7cn/Zn5RxhWnVHDDlINhYah7rmlwLc5NdnnnD/meYj+bWHGFugQ2aOZkl2ckMNTlGTWHGDdR2XhURw98uUEg9ota3YTBW29p1M5yPbXcGI91oUxFDMtj4wOmxAzFi7hV1bUbr6KDbeTp7TwmXUxyl8NenlNeTYGhiMSDncqmnSLFrsDmsq6XOndOhwexUpX0Z2O9na/haX4BRdFsAoFwBwULna3h1giF2Fye7uuL2/XOGOOvZ5XYLSpJT0RFX1VHZv3y9azek/tltSnM7EiXNM7td5wneGPabfGRKfsDvsZQanONnHK/eRGa435KIxH7XukBU/Z8T4mTFzuQ9trfyiBtOIJ9nyjpTDGwB/XMxjfiR7flHQ23N4wC+pSVN+p90zPWtuUDum+swZc3V7DxgV7kxbGlrYlj/AElfnG5xKssAhsaVFm5xsxl5WLJDY0AY8dI9swNCWPGpg5hGFdoo9ooAVBiY3dR+yT3k/wDjBRptvN/bNmF3p2MPeZW0cRzCiEqMGYXWFsOJe06aaG+XOba2+EZNOIiq1Bxk7VpnqVZR5yV4moJmWtCwQQV5YswpUl6PFpW2gqOUrahEKhj5oEoalaZshvCJ9kr82IbHFlNMnQbzumXaRCWprw1cji53+waDv5whicQKakj650S33ebnu3dfZOfZjJyy2eOOhXZJBVjxClfxgID7vfDlbcAN7tf+EkAf9I90CeTVMMzXP3l07MxHz7hDdJ85NU6Lrl7ALD5yVqK+8zKy85obcCeJv7byuoPkO2MMdRNZG1t8nTGax33v7B/SUVXzPlHeYbTpZ547hp4+2QJJ1Jj5ba/rtkSvCMLFEsUykGSFSAW1KpC24E3/AF+uEyh5dv4SpsIu8kjsYj4xUyzx80j5pODH23lLi24se4RBozyDVrdcwVWf7oHf/KZM+JuOihHaQfaYbNZj95g9puxx1MwtKShFFFALmfQ9klhBfL1X4yjNLcKfH5SvlPwPYPfC9IjnAOF7YUov+t0ohNGUc5GtXW2g9sykrx16rxqlQWsEA74aG2arWvymbPLWIGu6ZmqCOlGhHMvR5gFWWrUiDeryauJgFSWK8VVBEPLEN4PWtLkrSKqNj0Qwse48pZSwiW6YVuq1/wCkoWrLVe/GKqgagWi75VsrLbThcX0vCQcMiIv1bKL87Xv4eEni8CChYeifdecngtotSPNeV9xPFeRkbN0+K3oOv3zPiTbN+wpPeRJYeur5GW1tQO0A5VPLRcxjYlPo3tqWNusyiY1qZKIbiRlEooiwvvJ8Y+KF2VBqEAA5X/mdSe6WrYdFeA1b5dcZGbTt4/ITPnuWA6gTy/Wvsk6z5Uzdtpjz5KY5uSe6MLHriJK+v690GPVyqT1adu4fCTwVaxAOoMRCwe/E+HhHyiRQco+a0NBaIrSIMePQ2YrGyyUiTFobBcadTMLGa8adTMLGMFeKQvFAHUy3CzOH6pdgidb9XXzj+U/AtQM3p1mC6bds1oeoy0t2cDjIu4439kqU9UdqltwgDPa2498zEyTsTxlJHXHQmDLQZmDdckDEbSriSFUTMDJK8VONWeOlQiZQ8kKkmnBBaplqVTBwrGSWsZGS8RpMflUjfcHTunF4hXXeO/eIaNaVXvJUo2TiiHWx3kAidIahG89InQcRYcOodIk9Y5QEmFTMGGhBB/rD+RXX3aGxF+scISloMRLva5ueAO4bzduA6+M0qoy2Atc29+/2RygQmyhBYDMTckb7Dl/SVVKoHGWTBtOpewG7cPnMmJqZiANy6RsZUuwtwlKxkoxO5R139n9YwuJXWa725C3edflLFaKCjWFxAItL6h46AdcF4atlGg1minmY5mOkZNQqXjmpKlYHUd3wgvb2Jq00BpAMb68TbqHGFuptWOPK6F88Reefp5VVlNmCnmCtj7t06rZW0BXQOBl4EHmOR4iLHKZK6nRywm76/SrGNqZhYzVjDrMRMbMrx5CKMJqJpomwmRZopmEKtyPNCYiYFaWoZSRAYmLzwmVWkg0ZLXcSstIM8hmitOJ3kgZXnEjniNdmiDSrNFmgF2aIGV55HzkSmkVJLzkyM946vIqo1Z44IlAeK8lTUlSbcPibWN4IDy+i8k3RJVVxYjXfb4iDsfRKdK5IJOY8gRYX75VRq2NwYSpVw4sbX3EcD+uUcpWOVrrZiOuON0J7UwOUhlBK2142tuv+uEwrTvvNluATa9hxNuMvadA4Rg7NvBN7fKaEa813QaBQes63iaseGnZpHIVqmmD0rfdsGF9QTuuJsFS/EW7flOexVUJiUcmy1kam5voHUDKTy3J7TLaL6ga8jcnfwI6pn1erMNb+Txx5bdC1ZflMm0HzKO+CkZiCWupU9x7L/rSZ6eMKs6O5NyHS/oMNw7Dcd0WPVmW5Pg8sbjpsRQdSAe0XhDA1gTkI3jQ9kGUnBGhB79fZJiuEZSxtqFA4ksQNP1wlz2m+luLOsyMZqxZ1mNjNEGvFI3igFqzQhiihDq5TLViilJWACRYx4owqzxExRSTMJKKKIEJFxFFFVEhiLERRQBForxRSacIVDLBUNoopKyBlgqRRQC+nUmmnViikgQoYrcDx3H5x8Yi5HsANCdBbdFFHBXKVOqMj3iimlZsO0sOrqUIupseRBHFTwOpHfBNPCsgyis+UblZEe3YSdIopFVFnnyP8X/8AFf8AdMeJpFyC2J1W+X6K1r79xjxQkk9HV1FKg+rUpt2iop8DJJs+uayO+U2ZPqncAwPGKKVijKDmJOsyMYopaULx4ooB/9k=",
+              duration: '7 nights',
+              hotelCoverImage: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/459423896.jpg?k=1359393c84559e4aa500696c329391ab9a95e034fe028073e39f7b0f5317b15e&o=&hp=1",
+              person: 1,
+              hotelDescription: "Greece Hotel 1 is a luxurious 4-star hotel located in Athens, the capital city of Greece. Situated in a prime location, it offers stunning views of the city skyline and easy access to major attractions. The hotel features elegant rooms, world-class amenities, and personalized service, ensuring a memorable stay for guests.",
+              roomType: "Executive Suite",
+              mealPlan: "Full-Board",
+              transportation: "Private Airport Transfer",
+              activities: [
+                {
+                  img: "https://www.altachalets.com/wp-content/uploads/2022/11/snowboarder-1920x1000-min.jpg",
+                  name: "Acropolis Tour",
+                  description: "Discover the rich history of Athens with a guided tour of the Acropolis. Marvel at ancient landmarks such as the Parthenon, Erechtheion, and Temple of Athena Nike."
+                },
+                {
+                  img: "https://www.altachalets.com/wp-content/uploads/2022/11/snowboarder-1920x1000-min.jpg",
+                  name: "Greek Cuisine Cooking Class",
+                  description: "Learn to cook traditional Greek dishes with a hands-on cooking class. Experience the flavors of Greece and take home recipes to recreate the dishes."
+                }
+              ],
+              cancellationPolicy: "Free cancellation up to 7 days before arrival. Cancellations made within 7 days of arrival are subject to a penalty fee equivalent to one night's stay.",
+              reviews: [
+                {
+                  username: "Traveler567",
+                  rating: 5,
+                  comment: "Fantastic hotel with excellent service! The staff were friendly and attentive, and the room was spacious and comfortable. The hotel's location was convenient for exploring Athens."
+                },
+                {
+                  username: "Vacationer890",
+                  rating: 4,
+                  comment: "Enjoyed my stay at Greece Hotel 1. The facilities were top-notch, and the food at the restaurant was delicious. Would definitely stay here again."
+                }
+              ],
+              additionalImages: [
+                "https://media.istockphoto.com/id/1390233984/photo/modern-luxury-bedroom.jpg?s=612x612&w=0&k=20&c=po91poqYoQTbHUpO1LD1HcxCFZVpRG-loAMWZT7YRe4=",
+                "https://cdn.pixabay.com/photo/2016/11/18/17/20/living-room-1835923_1280.jpg",
+                "https://media.istockphoto.com/id/655973354/photo/interior-of-studio-apartment.jpg?s=612x612&w=0&k=20&c=cvXEAyBIqDlyZPp0OQUhny2bH0zTVsBbLJeJlrQeh2E="
+              ]
             }
 
           ]
@@ -369,7 +683,7 @@ export const vacationsCategories = {
           offers: [
             {
               id: 1111,
-              hotelName: "Portugal Hotel 1221",
+              hotelName: "Emerald Shores Hotel",
               startDate: "21-02-2023",
               amenities: ["Free Wi-Fi", "Spa", "Fitness Center", "Restaurant", "Room Service"],
               endDate: "29-03-2023",
@@ -417,18 +731,69 @@ export const vacationsCategories = {
                 "https://cdn.pixabay.com/photo/2016/11/18/17/20/living-room-1835923_1280.jpg",
                 "https://media.istockphoto.com/id/655973354/photo/interior-of-studio-apartment.jpg?s=612x612&w=0&k=20&c=cvXEAyBIqDlyZPp0OQUhny2bH0zTVsBbLJeJlrQeh2E="
               ]
+            },
+            {
+              id: 11121,
+              hotelName: "Shores Hotel",
+              startDate: "21-02-2023",
+              amenities: ["Free Wi-Fi", "Spa", "Fitness Center", "Restaurant", "Room Service"],
+              endDate: "29-03-2023",
+              totalCost: 950,
+              offerImage: "https://bubo.sk//uploads/galleries/784/lisabon-sunset.jpg",
+              location: "400 Cannery Row, Canada, CA 93121",
+              hotelStars: 4,
+              hotelCity: "Lisa",
+              arrivalTime: "21-02-2023 14:00",
+              duration: "7 nights",
+              hotelCoverImage: "data:image/jpeg;base64,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",
+              person: 1,
+              hotelDescription: "Portugal Hotel 1221 is a luxurious 4-star hotel located in the vibrant city of Lisbon. Situated in a prime location, it offers easy access to major attractions, shopping centers, and dining options. The hotel features elegant rooms, modern amenities, and personalized service, ensuring a comfortable and memorable stay for guests.",
+              roomType: "Executive Suite",
+              mealPlan: "Half-Board",
+              roomImage: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWwlMjByb29tfGVufDB8fDB8fHww",
+              transportation: "Shuttle Service",
+              activities: [
+                {
+                  img: "https://www.altachalets.com/wp-content/uploads/2022/11/snowboarder-1920x1000-min.jpg",
+                  name: "Historical Tour of Lisbon",
+                  description: "Explore the rich history and cultural heritage of Lisbon with a guided tour. Visit iconic landmarks such as Belem Tower, Jeronimos Monastery, and Sao Jorge Castle."
+                },
+                {
+                  img: "https://www.altachalets.com/wp-content/uploads/2022/11/snowboarder-1920x1000-min.jpg",
+                  name: "Fado Music Night",
+                  description: "Experience the soulful melodies of Fado music, a traditional Portuguese music genre. Enjoy an evening of live performances in authentic Fado clubs."
+                }
+              ],
+              cancellationPolicy: "Free cancellation up to 7 days before arrival. Cancellations made within 7 days of arrival are subject to a penalty fee equivalent to one night's stay.",
+              reviews: [
+                {
+                  username: "Traveler789",
+                  rating: 4,
+                  comment: "Had a wonderful stay at Portugal Hotel 1221. The room was spacious and well-equipped, and the staff were friendly and helpful. Great location with easy access to public transportation."
+                },
+                {
+                  username: "Vacationer234",
+                  rating: 5,
+                  comment: "Fantastic hotel with excellent amenities! The breakfast buffet was delicious, and the spa facilities were very relaxing. Highly recommend staying here."
+                }
+              ],
+              additionalImages: [
+                "https://media.istockphoto.com/id/1390233984/photo/modern-luxury-bedroom.jpg?s=612x612&w=0&k=20&c=po91poqYoQTbHUpO1LD1HcxCFZVpRG-loAMWZT7YRe4=",
+                "https://cdn.pixabay.com/photo/2016/11/18/17/20/living-room-1835923_1280.jpg",
+                "https://media.istockphoto.com/id/655973354/photo/interior-of-studio-apartment.jpg?s=612x612&w=0&k=20&c=cvXEAyBIqDlyZPp0OQUhny2bH0zTVsBbLJeJlrQeh2E="
+              ]
             }
           ]
         },
         {
           id: 6,
-          countryName: "Portugal 2",
+          countryName: "France",
           description: "Experience the beauty of Portugal's coastline and vibrant culture.",
           image: "https://theplanetd.com/images/Best-Cities-in-Portugal.jpg",
           offers: [
             {
               id: 50,
-              hotelName: "Portugal Hotel 1",
+              hotelName: "Whispering Pines Resort",
               startDate: "21-02-2023",
               amenities: ["Free Wi-Fi", "Spa", "Fitness Center", "Restaurant", "Room Service"],
               endDate: "29-03-2023",
@@ -494,7 +859,7 @@ export const vacationsCategories = {
           offers: [
             {
               id: 61,
-              hotelName: 'Italy Hotel 1',
+              hotelName: 'Paradise Cove Inn',
               startDate: "21-02-2023",
               offerImage: "https://www.thetrainline.com/cms/media/1365/italy-venice-basilica-di-santa-maria-della-salute-and-grand-canal.jpg?mode=crop&width=860&height=574&quality=70",
               arrivalTime: "21-02-2023 14:00",
@@ -542,7 +907,58 @@ export const vacationsCategories = {
                 "https://cdn.pixabay.com/photo/2016/11/18/17/20/living-room-1835923_1280.jpg",
                 "https://media.istockphoto.com/id/655973354/photo/interior-of-studio-apartment.jpg?s=612x612&w=0&k=20&c=cvXEAyBIqDlyZPp0OQUhny2bH0zTVsBbLJeJlrQeh2E="
               ]
-            }            
+            }
+            , {
+              id: 621,
+              hotelName: 'Cove Inn',
+              startDate: "21-02-2023",
+              offerImage: "https://www.italia.it/content/dam/tdh/en/interests/lombardia/milano/milano-in-48-ore/media/20220119115535-piazza-del-duomo-all-alba-milano-lombardia-shutterstock-1161075943-rid.jpg",
+              arrivalTime: "21-02-2023 14:00",
+              endDate: '29-03-2023',
+              amenities: ["Free Wi-Fi", "Spa", "Fitness Center", "Restaurant", "Room Service"],
+              totalCost: 1200,
+              location: "400 Cannery Row, Canada, CA 93121",
+              hotelStars: 5,
+              person: 2,
+              hotelCity: 'Milano',
+              roomImage: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWwlMjByb29tfGVufDB8fDB8fHww",
+              duration: '6 nights',
+              hotelCoverImage: "https://cdn.britannica.com/96/115096-050-5AFDAF5D/Bellagio-Hotel-Casino-Las-Vegas.jpg",
+              hotelDescription: "Italy Hotel 1 is a luxurious 5-star hotel located in the heart of Rome. With its elegant decor, impeccable service, and world-class amenities, it offers guests an unforgettable stay in the Eternal City. The hotel features spacious rooms, a state-of-the-art spa, fine dining restaurants, and panoramic views of Rome's iconic landmarks.",
+              roomType: "Executive Suite",
+              mealPlan: "Half Board",
+              transportation: "Private Car Service",
+              activities: [
+                {
+                  img: "https://www.altachalets.com/wp-content/uploads/2022/11/snowboarder-1920x1000-min.jpg",
+                  name: "Vatican City Tour",
+                  description: "Explore the Vatican City with a knowledgeable guide and discover its rich history, art, and architecture. Visit St. Peter's Basilica, the Sistine Chapel, and other iconic landmarks."
+                },
+                {
+                  img: "https://www.altachalets.com/wp-content/uploads/2022/11/snowboarder-1920x1000-min.jpg",
+                  name: "Colosseum Guided Tour",
+                  description: "Step back in time with a guided tour of the Colosseum. Learn about the gladiators, emperors, and ancient Roman history as you explore this iconic amphitheater."
+                }
+              ],
+              cancellationPolicy: "Free cancellation up to 14 days before arrival. Cancellations made within 14 days of arrival are subject to a penalty fee equivalent to one night's stay.",
+              reviews: [
+                {
+                  username: "Traveler789",
+                  rating: 5,
+                  comment: "Absolutely stunning hotel with impeccable service! The room was spacious and elegantly furnished, and the staff were extremely attentive. The location is perfect for exploring Rome's top attractions."
+                },
+                {
+                  username: "Vacationer987",
+                  rating: 4,
+                  comment: "Wonderful experience at Italy Hotel 1. The facilities were excellent, and the food at the hotel's restaurant was delicious. Would highly recommend this hotel to anyone visiting Rome."
+                }
+              ],
+              additionalImages: [
+                "https://media.istockphoto.com/id/1390233984/photo/modern-luxury-bedroom.jpg?s=612x612&w=0&k=20&c=po91poqYoQTbHUpO1LD1HcxCFZVpRG-loAMWZT7YRe4=",
+                "https://cdn.pixabay.com/photo/2016/11/18/17/20/living-room-1835923_1280.jpg",
+                "https://media.istockphoto.com/id/655973354/photo/interior-of-studio-apartment.jpg?s=612x612&w=0&k=20&c=cvXEAyBIqDlyZPp0OQUhny2bH0zTVsBbLJeJlrQeh2E="
+              ]
+            }
           ]
         },
         {
@@ -553,7 +969,7 @@ export const vacationsCategories = {
           offers: [
             {
               id: 70,
-              hotelName: "Austria Hotel 1",
+              hotelName: "Moonlight Manor Hotel",
               startDate: "21-02-2023",
               endDate: "29-03-2023",
               offerImage: "https://media.nomadicmatt.com/2018/austriaguide.jpg",
@@ -601,7 +1017,58 @@ export const vacationsCategories = {
                 "https://cdn.pixabay.com/photo/2016/11/18/17/20/living-room-1835923_1280.jpg",
                 "https://media.istockphoto.com/id/655973354/photo/interior-of-studio-apartment.jpg?s=612x612&w=0&k=20&c=cvXEAyBIqDlyZPp0OQUhny2bH0zTVsBbLJeJlrQeh2E="
               ]
-            }            
+            },
+            {
+              id: 720,
+              hotelName: "Moonlight Hotel",
+              startDate: "21-02-2023",
+              endDate: "29-03-2023",
+              offerImage: "https://static.independent.co.uk/2022/08/03/17/iStock-1176796753.jpg",
+              location: "400 Cannery Row, Canada, CA 93121",
+              totalCost: 1100,
+              hotelStars: 4,
+              person: 2,
+              amenities: ["Free Wi-Fi", "Spa", "Fitness Center", "Restaurant", "Room Service"],
+              hotelCity: "Concre",
+              roomImage: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWwlMjByb29tfGVufDB8fDB8fHww",
+              arrivalTime: "21-02-2023 14:00",
+              duration: "6 nights",
+              hotelCoverImage: "https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+              hotelDescription: "Austria Hotel 1 is a charming 4-star hotel nestled in the heart of Vienna. Combining traditional Austrian hospitality with modern comforts, it offers guests a delightful stay in the vibrant capital city. The hotel boasts elegant rooms, a cozy restaurant serving authentic Viennese cuisine, and a convenient location within walking distance of major attractions.",
+              roomType: "Standard Double Room",
+              mealPlan: "Breakfast Buffet",
+              transportation: "Shuttle Service",
+              activities: [
+                {
+                  img: "https://www.altachalets.com/wp-content/uploads/2022/11/snowboarder-1920x1000-min.jpg",
+                  name: "Vienna City Tour",
+                  description: "Discover the rich history and cultural heritage of Vienna with a guided city tour. Visit landmarks such as Schönbrunn Palace, Hofburg Palace, and St. Stephen's Cathedral."
+                },
+                {
+                  img: "https://www.altachalets.com/wp-content/uploads/2022/11/snowboarder-1920x1000-min.jpg",
+                  name: "Vienna Concert Experience",
+                  description: "Immerse yourself in Vienna's classical music tradition with a concert at one of the city's famous concert halls. Enjoy performances of Mozart, Beethoven, and Strauss by talented musicians."
+                }
+              ],
+              cancellationPolicy: "Free cancellation up to 7 days before arrival. Cancellations made within 7 days of arrival are subject to a penalty fee equivalent to one night's stay.",
+              reviews: [
+                {
+                  username: "Explorer123",
+                  rating: 4,
+                  comment: "Lovely hotel with friendly staff and comfortable rooms. The breakfast buffet had a great selection of items, and the location was convenient for exploring Vienna's attractions."
+                },
+                {
+                  username: "Traveler567",
+                  rating: 5,
+                  comment: "Exceptional service and attention to detail at Austria Hotel 1. The rooms were spacious and well-appointed, and the staff were always helpful with recommendations for dining and sightseeing."
+                }
+              ],
+              additionalImages: [
+                "https://media.istockphoto.com/id/1390233984/photo/modern-luxury-bedroom.jpg?s=612x612&w=0&k=20&c=po91poqYoQTbHUpO1LD1HcxCFZVpRG-loAMWZT7YRe4=",
+                "https://cdn.pixabay.com/photo/2016/11/18/17/20/living-room-1835923_1280.jpg",
+                "https://media.istockphoto.com/id/655973354/photo/interior-of-studio-apartment.jpg?s=612x612&w=0&k=20&c=cvXEAyBIqDlyZPp0OQUhny2bH0zTVsBbLJeJlrQeh2E="
+              ]
+            }
           ]
         },
         {
@@ -612,14 +1079,14 @@ export const vacationsCategories = {
           offers: [
             {
               id: 73,
-              hotelName: "Germany Hotel 1",
+              hotelName: "Ocean Breeze Resort",
               startDate: "21-02-2023",
               endDate: "29-03-2023",
               totalCost: 1200,
               location: "400 Cannery Row, Canada, CA 93121",
               hotelStars: 5,
               hotelCity: "Berlin",
-              person:2,
+              person: 2,
               offerImage: "https://www.internationalcitizens.com/wp-content/uploads/2018/06/Berlin-Germany.jpg",
               amenities: ["Free Wi-Fi", "Spa", "Fitness Center", "Restaurant", "Room Service"],
               duration: "6 nights",
@@ -660,7 +1127,58 @@ export const vacationsCategories = {
                 "https://cdn.pixabay.com/photo/2016/11/18/17/20/living-room-1835923_1280.jpg",
                 "https://media.istockphoto.com/id/655973354/photo/interior-of-studio-apartment.jpg?s=612x612&w=0&k=20&c=cvXEAyBIqDlyZPp0OQUhny2bH0zTVsBbLJeJlrQeh2E="
               ]
-            }            
+            },
+            {
+              id: 7321,
+              hotelName: "Breeze Resort",
+              startDate: "21-02-2023",
+              endDate: "29-03-2023",
+              totalCost: 1200,
+              location: "400 Cannery Row, Canada, CA 93121",
+              hotelStars: 5,
+              hotelCity: "Minhen",
+              person: 2,
+              offerImage: "https://cdn.mappr.co/wp-content/uploads/2023/05/capital-of-austria-vienna.jpg",
+              amenities: ["Free Wi-Fi", "Spa", "Fitness Center", "Restaurant", "Room Service"],
+              duration: "6 nights",
+              roomImage: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWwlMjByb29tfGVufDB8fDB8fHww",
+              arrivalTime: "21-02-2023 14:00",
+              hotelCoverImage: "https://media.istockphoto.com/id/119926339/photo/resort-swimming-pool.jpg?s=612x612&w=0&k=20&c=9QtwJC2boq3GFHaeDsKytF4-CavYKQuy1jBD2IRfYKc=",
+              hotelDescription: "Germany Hotel 1 is a luxurious 5-star hotel located in the heart of Berlin. With its sleek modern design and world-class amenities, it offers discerning travelers a sophisticated urban retreat. The hotel features spacious rooms, a rooftop infinity pool with panoramic views of the city skyline, a Michelin-starred restaurant, and a wellness spa offering a range of treatments.",
+              roomType: "Executive Suite",
+              mealPlan: "Half Board",
+              transportation: "Limousine Service",
+              activities: [
+                {
+                  img: "https://www.altachalets.com/wp-content/uploads/2022/11/snowboarder-1920x1000-min.jpg",
+                  name: "Berlin Wall Tour",
+                  description: "Explore the iconic Berlin Wall and learn about its history with a guided tour. Visit famous sites such as Checkpoint Charlie, East Side Gallery, and the Berlin Wall Memorial."
+                },
+                {
+                  img: "https://www.altachalets.com/wp-content/uploads/2022/11/snowboarder-1920x1000-min.jpg",
+                  name: "Museum Island Visit",
+                  description: "Discover the cultural treasures of Berlin with a visit to Museum Island, home to world-renowned museums and galleries showcasing art, history, and archaeology."
+                }
+              ],
+              cancellationPolicy: "Free cancellation up to 7 days before arrival. Cancellations made within 7 days of arrival are subject to a penalty fee equivalent to one night's stay.",
+              reviews: [
+                {
+                  username: "Explorer123",
+                  rating: 5,
+                  comment: "An exceptional stay at Germany Hotel 1. The accommodations were top-notch, and the service was impeccable. The rooftop pool and views of Berlin were breathtaking. Highly recommended!"
+                },
+                {
+                  username: "Traveler567",
+                  rating: 4,
+                  comment: "Great experience overall. The hotel's central location made it easy to explore Berlin's attractions. The staff were friendly and attentive, and the room was spacious and comfortable."
+                }
+              ],
+              additionalImages: [
+                "https://media.istockphoto.com/id/1390233984/photo/modern-luxury-bedroom.jpg?s=612x612&w=0&k=20&c=po91poqYoQTbHUpO1LD1HcxCFZVpRG-loAMWZT7YRe4=",
+                "https://cdn.pixabay.com/photo/2016/11/18/17/20/living-room-1835923_1280.jpg",
+                "https://media.istockphoto.com/id/655973354/photo/interior-of-studio-apartment.jpg?s=612x612&w=0&k=20&c=cvXEAyBIqDlyZPp0OQUhny2bH0zTVsBbLJeJlrQeh2E="
+              ]
+            }
           ]
         }
       ]
@@ -678,7 +1196,7 @@ export const vacationsCategories = {
           offers: [
             {
               id: 25,
-              hotelName: 'Greece Hotel 1',
+              hotelName: 'Mountain Majesty Lodge',
               amenities: ["Free Wi-Fi", "Spa", "Fitness Center", "Restaurant", "Room Service"],
               startDate: "21-02-2023",
               endDate: '29-03-2023',
@@ -738,14 +1256,14 @@ export const vacationsCategories = {
           offers: [
             {
               id: 73,
-              hotelName: "Germany Hotel 1",
+              hotelName: "Golden Sands Hotel",
               startDate: "21-02-2023",
               endDate: "29-03-2023",
               totalCost: 1200,
               location: "400 Cannery Row, Canada, CA 93121",
               hotelStars: 5,
               hotelCity: "Berlin",
-              person:2,
+              person: 2,
               offerImage: "https://www.internationalcitizens.com/wp-content/uploads/2018/06/Berlin-Germany.jpg",
               amenities: ["Free Wi-Fi", "Spa", "Fitness Center", "Restaurant", "Room Service"],
               duration: "6 nights",
@@ -786,7 +1304,7 @@ export const vacationsCategories = {
                 "https://cdn.pixabay.com/photo/2016/11/18/17/20/living-room-1835923_1280.jpg",
                 "https://media.istockphoto.com/id/655973354/photo/interior-of-studio-apartment.jpg?s=612x612&w=0&k=20&c=cvXEAyBIqDlyZPp0OQUhny2bH0zTVsBbLJeJlrQeh2E="
               ]
-            }            
+            }
           ]
         },
         {
@@ -797,7 +1315,7 @@ export const vacationsCategories = {
           offers: [
             {
               id: 79,
-              hotelName: 'Mexico Hotel 1',
+              hotelName: 'Silver Lake Retreat',
               startDate: "21-02-2023",
               endDate: '29-03-2023',
               totalCost: 1200,
@@ -845,12 +1363,12 @@ export const vacationsCategories = {
                 "https://cdn.pixabay.com/photo/2016/11/18/17/20/living-room-1835923_1280.jpg",
                 "https://media.istockphoto.com/id/655973354/photo/interior-of-studio-apartment.jpg?s=612x612&w=0&k=20&c=cvXEAyBIqDlyZPp0OQUhny2bH0zTVsBbLJeJlrQeh2E="
               ]
-            }            
+            }
           ]
         },
       ]
     },
-    
+
   ]
 };
 

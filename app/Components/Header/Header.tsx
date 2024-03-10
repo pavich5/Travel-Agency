@@ -17,6 +17,7 @@ const Header = () => {
             <Link href="/vacation/list/summer">Summer Vacations</Link>
             <Link href="/vacation/list/winter">Winter Escapes</Link>
             <Link href="/vacation/list/easter">Easter Holidays</Link>
+            <Link href="/vacation/list/Spring">Spring Break</Link>
           </div>
         </div>
         <div className={styles.menuItem}>

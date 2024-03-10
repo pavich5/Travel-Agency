@@ -13,8 +13,11 @@ const Page = ({ params }: any) => {
     category.name.toLowerCase().includes(params.type.toLowerCase())
   );
   const filteredVacations = vacationType ? vacationType.countrys.filter(vacation =>
-    vacation.countryName.toLowerCase().includes(searchQuery.toLowerCase())
+    vacation.offers.some(offer =>
+      offer.hotelName.toLowerCase().includes(searchQuery.toLowerCase())
+    )
   ) : [];
+
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(e.target.value);
@@ -73,23 +76,19 @@ const Page = ({ params }: any) => {
           />
           <div className={styles.allOfferList}>
             {vacationType && filteredVacations.map((vacation, index) => (
-              <div className={styles.offerWrapper} key={index}>
-                {vacation.offers.map((offer, offerIndex) => (
-                  // @ts-ignore
-                  <div onClick={() => router.push(`/offer/${offer.id}`, { shallow: true })
-                  } className={styles.oneOfferCard} key={offerIndex} style={{ backgroundImage: `url(${offer.offerImage})` }}>
-                    <div>
-                      <p className={styles.offerName}>{offer.hotelName}</p>
-                      <p style={{ fontSize: '15px', marginTop: '10px', fontWeight: 600 }}>Price: ${offer.totalCost}</p>
-                      <p style={{ fontSize: '15px', marginTop: '2px', fontWeight: 600 }}>City: {offer.hotelCity}</p>
-                      <button className={styles.viewOfferButton}>View Offer</button>
-                    </div>
+              vacation.offers.map((offer, offerIndex) => (
+                // @ts-ignore
+                <div onClick={() => router.push(`/offer/${offer.id}`, { shallow: true })} className={styles.oneOfferCard} key={offerIndex} style={{ backgroundImage: `url(${offer.offerImage})` }}>
+                  <div>
+                    <p className={styles.offerName}>{offer.hotelName}</p>
+                    <p style={{ fontSize: '15px', marginTop: '10px', fontWeight: 600 }}>Price: ${offer.totalCost}</p>
+                    <p style={{ fontSize: '15px', marginTop: '2px', fontWeight: 600 }}>City: {offer.hotelCity}</p>
+                    <button className={styles.viewOfferButton}>View Offer</button>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))
             ))}
           </div>
-
         </div>
       </div>
     </div >
