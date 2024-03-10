@@ -20,6 +20,9 @@ const Header = () => {
           </div>
         </div>
         <div className={styles.menuItem}>
+          <Link href='/ai' className={styles.menuItemText}>Travel AI</Link>
+        </div>
+        <div className={styles.menuItem}>
           <Link href='/vacation/search' className={styles.menuItemText}>Destinations</Link>
         </div>
         <div className={styles.menuItem}>
