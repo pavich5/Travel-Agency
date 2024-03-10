@@ -100,15 +100,13 @@ const LandingPage = () => {
                 }))}
                 suffixIcon={<Button onClick={() => router.push(`/search?searchValue=${searchValue}`)} type='primary'>Search</Button>}
               />
-
-
             </div>
           </div>
         </div>
         <div className={styles.vaicationsWrapper}>
           <div className={styles.vaicationButtons}>
             {vacationsCategories.categories.map((vacation, index) => (
-              <button onClick={() => router.push(`vacation/list/${vacation.name}`)} key={index}>{vacation.name}</button>
+              <button onClick={() => router.push(`vacation/list/${vacation.name.split(' ')[0]}`)} key={index}>{vacation.name}</button>
             ))}
           </div>
           <div className={styles.vacationCardsWrapper}>
