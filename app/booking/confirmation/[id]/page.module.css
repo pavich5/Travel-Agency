@@ -57,3 +57,7 @@
     text-align: center;
     color: rgb(138, 138, 138);
   }
+
+  .payButton{
+    margin-top: 5px;
+  }

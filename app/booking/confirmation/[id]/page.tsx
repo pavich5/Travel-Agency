@@ -26,8 +26,12 @@ const Page = ({ params }: any) => {
       setOfferDetails(null);
     }
   }, [params.id]);
+  const idToPaymentLinkMap = new Map([
+    [1, 'https://buy.stripe.com/test_3csg1Z9IS8Zi4M0eUW'],
+    [2, 'https://example.com/page2'],
+    [3, 'https://example.com/page3'],
+  ]);
   const handlePayWithStripe = () => {
-    // Save user data and offer details in local storage
     const dataToSave = {
       firstName,
       lastName,
@@ -36,11 +40,19 @@ const Page = ({ params }: any) => {
       offerDetails
     };
     localStorage.setItem("bookingData", JSON.stringify(dataToSave));
-
-    // Perform additional actions like redirecting to Stripe payment page
-    // For now, just log a message
+    const paymentLink = idToPaymentLinkMap.get(offerDetails.id);
+    if (paymentLink) {
+      router.push(`${paymentLink}?prefilled_email=${email}`);
+    } else {
+      console.error("Payment link not found for offer ID:", offerDetails.id);
+    }
     console.log("Data saved in local storage:", dataToSave);
   };
+
+  const handleContactUsOnViber = () => {
+    window.location.href = "viber://add?number=1234567890";
+  };
+
   return (
     <div className={styles.page}>
       <div className={styles.container}>
@@ -55,12 +67,12 @@ const Page = ({ params }: any) => {
         <div className={styles.inputGroup}>
           <Input className={styles.input} placeholder='Phone Number' type='number' value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
         </div>
-        <Button onClick={() => {
+        <Button onClick={() =>
           handlePayWithStripe()
-          router.push(`${STRIPE_PAYMENT_LINK}?prefilled_email=${email}`)
-        }} className={styles.payButton} type='primary'>Pay with stripe</Button>
-        <p className={styles.agreement}>By continuing, you agree with Globetortters's Terms and Conditions, Payments <br/>
-        Terms of services,Privace Policy,and Nondiscrimination Policy
+        } className={styles.payButton} type='primary'>Pay with stripe</Button>
+        <Button onClick={handleContactUsOnViber} className={styles.payButton} type='default'>Contact us on Viber</Button>
+        <p className={styles.agreement}>By continuing, you agree with Globetortters's Terms and Conditions, Payments <br />
+          Terms of services,Privace Policy,and Nondiscrimination Policy
         </p>
       </div>
     </div>
