@@ -1381,3 +1381,5 @@ export const startsList = [
     1: "Terrible"
   }
 ]
+
+export const STRIPE_PAYMENT_LINK = 'https://buy.stripe.com/test_5kA5nl9IS1wQ2DS9AB'

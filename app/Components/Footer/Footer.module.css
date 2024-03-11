@@ -1,65 +1,77 @@
 .footer {
-    background-color: #333;
-    color: #fff;
-    padding: 40px 0;
-    margin-top: 50px;
-  }
-  
-  .footerContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
-  .workingHours,
-  .locations,
-  .staff,
-  .socialMedia {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .icon {
-    font-size: 32px;
-    margin-bottom: 15px;
-  }
-  
-  .info {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .days,
-  .locationList,
-  .teamList {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .day {
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
+  position: relative;
+  width: 100%;
+  background: #3586ff;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 200px;
+  max-height: 60px;
+}
 
-  .days div {
-    padding: 5px;
-    padding-left: 0px;
-  }
 
-  .teamList li {
-    padding: 5px;
-    padding-left: 0;
-    font-weight: 400;
-  }
 
-  .socialMedia a svg {
-    fill: #34ace0;
-  }
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
 
-  
+.wave {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: url("https://i.ibb.co/wQZVxxk/wave.png");
+  background-size: 1000px 100px;
+}
+
+.wave {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 4s linear infinite !important;
+}
+
+.wave {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}

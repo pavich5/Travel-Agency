@@ -119,7 +119,7 @@ const Page = ({ params }: any) => {
             <Button onClick={() => router.push(`/hotel/${offerDetails.hotelName}`)} className={styles.primaryButton} type='primary'>
               View Hotel
             </Button>
-            <Button className={styles.primaryButton} type='primary'>
+            <Button onClick={() => router.push(`/booking/confirmation/${offerDetails.id}`)} className={styles.primaryButton} type='primary'>
               Book Now
             </Button>
           </div>
