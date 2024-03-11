@@ -27,7 +27,6 @@ const Page = ({ params }: any) => {
     }
   }, [params.id]);
   const idToPaymentLinkMap = new Map([
-    [1, 'https://buy.stripe.com/test_3csg1Z9IS8Zi4M0eUW'],
     [2, 'https://example.com/page2'],
     [3, 'https://example.com/page3'],
   ]);
