@@ -4,7 +4,7 @@ const stripe = new Stripe(process.env.STRIPE_ACCESS_KEY ?? '');
 
 async function createStripeSession(req: Request) {
   try {
-    const { item, qty, price,email } = await req.json();
+    const { item, qty, price, email } = await req.json();
     const quantity = parseInt(qty);
     
     const session = await stripe.checkout.sessions.create({
@@ -32,10 +32,18 @@ async function createStripeSession(req: Request) {
       success_url: `https://travel-agency-2.vercel.app/booking/confirmed/${item.id}?email=${email}&hotelName=${encodeURIComponent(item.hotelName)}&hotelCity=${encodeURIComponent(item.hotelCity)}`,
       cancel_url: "https://travel-agency-2.vercel.app/cancelled",
     });
-    return new Response(JSON.stringify(session));
+
+    // Add CORS headers to allow requests from any origin
+    const headers = new Headers();
+    headers.append('Access-Control-Allow-Origin', '*');
+    headers.append('Content-Type', 'application/json');
+
+    return new Response(JSON.stringify(session), {
+      headers,
+    });
   } catch (error) {
     console.error("Error creating Stripe session:", error);
-    return new Response();
+    return new Response(null, { status: 500 });
   }
 }
 
