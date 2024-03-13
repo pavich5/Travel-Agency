@@ -1,8 +1,8 @@
 import Stripe from 'stripe';
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY ?? '');
 
 
 async function createStripeSession(req: Request) {
-  const stripe = new Stripe(process.env.STRIPE_SECRET_KEY ?? '');
   try {
     const { item, qty, price, email } = await req.json();
     const quantity = parseInt(qty);
@@ -29,8 +29,8 @@ async function createStripeSession(req: Request) {
         },
       ],
       mode: "payment",
-      success_url: `https://travel-agency-mauve-zeta.vercel.app/confirmed/${item.id}?email=${email}&hotelName=${encodeURIComponent(item.hotelName)}&hotelCity=${encodeURIComponent(item.hotelCity)}`,
-      cancel_url: "https://travel-agency-mauve-zeta.vercel.app/cancelled",
+      success_url: `https://travel-agency-plum.vercel.app/confirmed/${item.id}?email=${email}&hotelName=${encodeURIComponent(item.hotelName)}&hotelCity=${encodeURIComponent(item.hotelCity)}`,
+      cancel_url: "https://travel-agency-plum.vercel.app/cancelled",
     });
 
     const headers = new Headers();
