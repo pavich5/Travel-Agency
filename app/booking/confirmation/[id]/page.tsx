@@ -1,17 +1,18 @@
 "use client"
-import { STRIPE_PAYMENT_LINK, vacationsCategories } from '@/app/Data/data';
-import { Button, Input } from 'antd';
+import { vacationsCategories } from '@/app/Data/data';
+import { Button, Input, notification } from 'antd';
 import React, { useEffect, useState } from 'react';
 import styles from './page.module.css';
-import { useRouter } from 'next/navigation';
+import { useUser } from '@clerk/nextjs';
+import { loadStripe } from "@stripe/stripe-js";
 
 const Page = ({ params }: any) => {
+  const { user } = useUser();
   const [offerDetails, setOfferDetails] = useState<any>();
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
-  const router = useRouter()
   useEffect(() => {
     const foundOffer = vacationsCategories.categories.flatMap((oneVacationType) =>
       oneVacationType.countrys.flatMap((oneCountry) =>
@@ -26,26 +27,46 @@ const Page = ({ params }: any) => {
       setOfferDetails(null);
     }
   }, [params.id]);
-  const idToPaymentLinkMap = new Map([
-    [2, 'https://example.com/page2'],
-    [3, 'https://example.com/page3'],
-  ]);
-  const handlePayWithStripe = () => {
-    const dataToSave = {
-      firstName,
-      lastName,
-      email,
-      phoneNumber,
-      offerDetails
-    };
-    localStorage.setItem("bookingData", JSON.stringify(dataToSave));
-    const paymentLink = idToPaymentLinkMap.get(offerDetails.id);
-    if (paymentLink) {
-      router.push(`${paymentLink}?prefilled_email=${email}`);
-    } else {
-      console.error("Payment link not found for offer ID:", offerDetails.id);
+  const handlePayWithStripe = async () => {
+    if (!email) {
+      notification.warning({
+        message: 'Email Required',
+        description: 'Please enter your email before proceeding with the payment.',
+      });
+      return;
     }
-    console.log("Data saved in local storage:", dataToSave);
+  
+    try {
+      const response = await fetch("https://travel-agency-2.vercel.app/api/getStripeApi");
+      if (!response.ok) {
+        throw new Error(`Failed to fetch STRIPE_ACCESS_KEY! Status: ${response.status}`);
+      }
+      const data = await response.json();
+      if (data) {
+        const stripePromise = await loadStripe(data);
+  
+        const createSessionResponse = await fetch(
+          "https://travel-agency-2.vercel.app/api/createlink",
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ item: offerDetails, qty: "1", price: offerDetails.totalCost * 100, email }),
+          }
+        );
+        if (!createSessionResponse.ok) {
+          throw new Error(`Failed to create Stripe session! Status: ${createSessionResponse.status}`);
+        }
+        const session = await createSessionResponse.json();
+  
+        stripePromise?.redirectToCheckout({
+          sessionId: session.id,
+        });
+      } else {
+        console.error("Stripe Access Key is undefined");
+      }
+    } catch (error) {
+      console.error("Error handling payment:", error);
+    }
   };
 
   const handleContactUsOnViber = () => {
@@ -55,7 +76,7 @@ const Page = ({ params }: any) => {
   return (
     <div className={styles.page}>
       <div className={styles.container}>
-        <h1 className={styles.title}>Book your trip</h1>
+        <h1 className={styles.title}>Book your trip to {offerDetails?.hotelCity}</h1>
         <div className={styles.inputGroup}>
           <Input className={styles.firstNameInput} placeholder='First name' value={firstName} onChange={(e) => setFirstName(e.target.value)} />
           <Input className={styles.input} placeholder='Last Name' value={lastName} onChange={(e) => setLastName(e.target.value)} />
@@ -66,9 +87,30 @@ const Page = ({ params }: any) => {
         <div className={styles.inputGroup}>
           <Input className={styles.input} placeholder='Phone Number' type='number' value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
         </div>
-        <Button onClick={() =>
-          handlePayWithStripe()
-        } className={styles.payButton} type='primary'>Pay with stripe</Button>
+        <Button
+          onClick={async () => {
+             handlePayWithStripe();
+             user?.update({
+              unsafeMetadata: {
+                firstName,
+                lastName,
+                email,
+                phoneNumber,
+                payedOffers: [
+                  {
+                    id: offerDetails.id,
+                    name: offerDetails.name
+                  }
+                ]
+              }
+            });
+          }}
+          className={styles.payButton}
+          type='primary'
+        >
+          Pay with Stripe
+        </Button>
+
         <Button onClick={handleContactUsOnViber} className={styles.payButton} type='default'>Contact us on Viber</Button>
         <p className={styles.agreement}>By continuing, you agree with Globetortters's Terms and Conditions, Payments <br />
           Terms of services,Privace Policy,and Nondiscrimination Policy

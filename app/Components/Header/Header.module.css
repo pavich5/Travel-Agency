@@ -111,4 +111,10 @@
     border-radius: 12px;
   }
 
-  
+  .dropdownButton{
+    cursor: pointer;
+  }
+
+  .menuItem {
+    cursor: pointer;
+  }
