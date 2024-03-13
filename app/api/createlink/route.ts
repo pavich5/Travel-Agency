@@ -1,8 +1,8 @@
 import Stripe from 'stripe';
 
-const stripe = new Stripe(process.env.STRIPE_ACCESS_KEY ?? '');
 
 async function createStripeSession(req: Request) {
+  const stripe = new Stripe(process.env.STRIPE_SECRET_KEY ?? '');
   try {
     const { item, qty, price, email } = await req.json();
     const quantity = parseInt(qty);
@@ -33,15 +33,13 @@ async function createStripeSession(req: Request) {
       cancel_url: "https://travel-agency-mauve-zeta.vercel.app/cancelled",
     });
 
-    // Add CORS headers to allow requests from any origin
     const headers = new Headers();
     headers.append('Access-Control-Allow-Origin', '*');
     headers.append('Content-Type', 'application/json');
 
     return new Response(JSON.stringify(session), {
       headers,
-    });
-  } catch (error) {
+    });  } catch (error) {
     console.error("Error creating Stripe session:", error);
     return new Response(null, { status: 500 });
   }
