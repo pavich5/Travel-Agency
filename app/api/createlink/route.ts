@@ -29,8 +29,8 @@ async function createStripeSession(req: Request) {
         },
       ],
       mode: "payment",
-      success_url: `https://travel-agency-2.vercel.app/booking/confirmed/${item.id}?email=${email}&hotelName=${encodeURIComponent(item.hotelName)}&hotelCity=${encodeURIComponent(item.hotelCity)}`,
-      cancel_url: "https://travel-agency-2.vercel.app/cancelled",
+      success_url: `https://travel-agency-mauve-zeta.vercel.app/confirmed/${item.id}?email=${email}&hotelName=${encodeURIComponent(item.hotelName)}&hotelCity=${encodeURIComponent(item.hotelCity)}`,
+      cancel_url: "https://travel-agency-mauve-zeta.vercel.app/cancelled",
     });
 
     // Add CORS headers to allow requests from any origin

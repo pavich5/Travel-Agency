@@ -37,7 +37,7 @@ const Page = ({ params }: any) => {
     }
   
     try {
-      const response = await fetch("https://travel-agency-2.vercel.app/api/getStripeApi");
+      const response = await fetch("https://travel-agency-mauve-zeta.vercel.app/api/getStripeApi");
       if (!response.ok) {
         throw new Error(`Failed to fetch STRIPE_ACCESS_KEY! Status: ${response.status}`);
       }
@@ -46,7 +46,7 @@ const Page = ({ params }: any) => {
         const stripePromise = await loadStripe(data);
   
         const createSessionResponse = await fetch(
-          "https://travel-agency-2.vercel.app/api/createlink",
+          "https://travel-agency-mauve-zeta.vercel.app/api/createlink",
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },
