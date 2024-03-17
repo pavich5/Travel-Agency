@@ -3,9 +3,16 @@ users anything they need with travel, they can search thorought countrys,summer 
 Also in future l will add ai that helps you find locations, for ex you input image from street in spain and it will give you the exact location
 
 
-You can try the app demo here : https://travel-agency-2.vercel.app/
+You can try the app demo here : https://travel-agency-plum.vercel.app/
 The app is still on developent but here is video of how it works:  https://jam.dev/c/cffa4ddc-4ead-4524-a506-c2de4516da71
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+Tech Stack: 
+NextJS Frontend/backend
+Stripe: payment systems
+TravelAi: OpenAI api
+Stripe Webhooks for listening for payments
+Clerk: User authorization
 
 
