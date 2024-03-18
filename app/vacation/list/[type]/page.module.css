@@ -12,7 +12,7 @@
 
 .mainSection {
   width: 67vw;
-  height: 60vh;
+  height: 70vh;
   border-radius: 16px;
   margin-top: 10px;
   display: flex;
@@ -180,6 +180,11 @@
 @media screen and (max-width: 768px) {
   .mainSection{
     width: 100vw;
+    height: 70vh;
+    margin-top: 0;
+    border-radius: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
   }
   .availableList{
     display: flex;
