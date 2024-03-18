@@ -37,7 +37,7 @@ const Page = ({ params }: any) => {
     }
   
     try {
-      const response = await fetch("https://travel-agency-plum.vercel.app/api/getStripeApi");
+      const response = await fetch("http://localhost:3000/api/getStripeApi");
       if (!response.ok) {
         throw new Error(`Failed to fetch STRIPE_ACCESS_KEY! Status: ${response.status}`);
       }
@@ -46,7 +46,7 @@ const Page = ({ params }: any) => {
         const stripePromise = await loadStripe(data);
   
         const createSessionResponse = await fetch(
-          "https://travel-agency-plum.vercel.app/api/createlink",
+          "http://localhost:3000/api/createlink",
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -76,6 +76,7 @@ const Page = ({ params }: any) => {
   return (
     <div className={styles.page}>
       <div className={styles.container}>
+        <div className={styles.wrapper}>
         <h1 className={styles.title}>Book your trip to {offerDetails?.hotelCity}</h1>
         <div className={styles.inputGroup}>
           <Input className={styles.firstNameInput} placeholder='First name' value={firstName} onChange={(e) => setFirstName(e.target.value)} />
@@ -115,6 +116,7 @@ const Page = ({ params }: any) => {
         <p className={styles.agreement}>By continuing, you agree with Globetortters's Terms and Conditions, Payments <br />
           Terms of services,Privace Policy,and Nondiscrimination Policy
         </p>
+      </div>
       </div>
     </div>
   );

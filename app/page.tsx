@@ -110,6 +110,7 @@ const LandingPage = () => {
             ))}
           </div>
           <div className={styles.vacationCardsWrapper}>
+          <h2>Vaication Types</h2>
             {vacationsCategories.categories.map((category, index) => (
               <div onClick={() => {
                 router.push(`vacation/list/${category.name.split(' ')[0]}`);

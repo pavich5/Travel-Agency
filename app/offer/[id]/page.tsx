@@ -107,7 +107,7 @@ const Page = ({ params }: any) => {
   return (
     <div className={styles.offerDetailsContainer}>
       {offerDetails && (
-        <div style={{ width: "55%" }}>
+        <div className={styles.wrapper}>
           <div className={styles.hotelCoverImage}>
             <img src={offerDetails.offerImage} alt="hotel cover image" />
           </div>

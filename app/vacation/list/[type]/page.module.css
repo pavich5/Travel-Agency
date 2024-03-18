@@ -176,3 +176,32 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
+
+@media screen and (max-width: 768px) {
+  .mainSection{
+    width: 100vw;
+  }
+  .availableList{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    padding: 25px;
+  }
+  .availableVacationsWrapper h3 {
+    text-align: center;
+  }
+  .oneVacationCard{
+    width: 100%;
+  }
+  .allOffers h3{
+    text-align: center;
+  }
+  .allOfferList{
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+  }
+  .oneOfferCard{
+    width: 100%;
+  }
+}

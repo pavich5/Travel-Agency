@@ -133,3 +133,13 @@
     flex-grow: 1;
     font-size: 12px;
   }
+  @media screen and (max-width: 768px) {
+    .hotelStar{
+        width: 19vw;
+        margin-right: 3px;
+    }
+    .defaultStar{
+        width: 19vw;
+        margin-right: 3px;
+    }
+  }

@@ -118,3 +118,14 @@
     height: 200px;
     border-radius: 5px;
 }
+.wrapper{
+    width: 55% !important;
+}
+@media screen and (max-width: 768px) {
+    .offerDetailsContainer{
+        padding: 0;
+    }
+    .wrapper{
+        width: 95% !important;
+    }
+}
