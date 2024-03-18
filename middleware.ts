@@ -1,10 +1,11 @@
-// Remove import statement for authMiddleware
-
-// Export an empty middleware function
-export default function(req: any, res: any, next: () => void) {
-  // No authentication logic, just pass control to the next middleware
-  next();
-}
+import { authMiddleware } from "@clerk/nextjs";
+ 
+export default authMiddleware({
+  // Empty array for publicRoutes makes every route public
+  publicRoutes: [],
+  // Corrected syntax for ignoredRoutes
+  ignoredRoutes: ['/no-auth-in-this-route'],
+});
  
 export const config = {
   // Protects all routes, including api/trpc.
