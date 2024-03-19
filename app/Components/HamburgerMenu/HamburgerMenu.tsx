@@ -71,7 +71,7 @@ const items: MenuItem[] = [
   {
     key: '121',
     label: (
-      <Link href="/ai">AI Link</Link>
+      <Link href="/ai">Travel AI</Link>
     )
   }
 ];
