@@ -128,7 +128,7 @@ const Page = ({ params }: any) => {
               <DetailItem title="Nights" value={`${offerDetails.duration}, ${offerDetails.person} adult`} />
               <DetailItem title="Departure Time" value={offerDetails.startDate} />
               <DetailItem title="Arrival Time" value={offerDetails.arrivalTime} />
-              <DetailItem title="Cancellation Policy" value={offerDetails.cancellationPolicy} />
+              <DetailItem title="Cancellation Policy" value={offerDetails.cancellationPolicy.slice(0,30)} />
             </div>
             <div className={styles.dividerSection}>
               <h2>Price Breakdown</h2>
