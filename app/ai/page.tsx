@@ -50,14 +50,6 @@ export default function TravelAI() {
 
   useEffect(() => {
     localStorage.setItem("chatMessages", JSON.stringify(messages));
-    if (messegeRef.current) {
-      // @ts-ignore
-      messegeRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-        inline: "center"
-      });
-    }
   }, [messages]);
 
   return (

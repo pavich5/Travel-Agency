@@ -143,3 +143,31 @@
   }
 }
 
+@media screen and (max-width: 767px) {
+  .chatContainer {
+    min-height: calc();
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .chatMessages {
+    max-height: calc(100vh - 130px);
+    width: 100%; 
+    overflow-y: auto; 
+    scroll-behavior: smooth; 
+  }
+
+  .inputContainer {
+    margin-top: 15px; 
+    width: 100%; 
+  }
+
+  .textarea {
+    max-width: 80%; 
+  }
+
+  .sendButton {
+    max-height: 45px;
+  }
+}

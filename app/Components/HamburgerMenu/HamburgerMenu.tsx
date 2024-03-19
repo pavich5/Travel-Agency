@@ -17,16 +17,16 @@ const items: MenuItem[] = [
       <Dropdown
         overlay={
           <Menu>
-            <Menu.Item key="0" style={{padding: '15px', width: '200px'}}>
+            <Menu.Item key="0" style={{ padding: '15px', width: '200px' }}>
               <Link href="/vacation/list/summer">Summer Vaications</Link>
             </Menu.Item>
-            <Menu.Item key="1" style={{padding: '15px', width: '200px'}}>
+            <Menu.Item key="1" style={{ padding: '15px', width: '200px' }}>
               <Link href="/vacation/list/winter">Winter Vaications</Link>
-            </Menu.Item >
-            <Menu.Item key="2" style={{padding: '15px', width: '200px'}}>
+            </Menu.Item>
+            <Menu.Item key="2" style={{ padding: '15px', width: '200px' }}>
               <Link href="/vacation/list/easter">Easter Vaications</Link>
             </Menu.Item>
-            <Menu.Item key="3" style={{padding: '15px', width: '200px'}}>
+            <Menu.Item key="3" style={{ padding: '15px', width: '200px' }}>
               <Link href="/vacation/list/Spring">Spring Vaications</Link>
             </Menu.Item>
           </Menu>
@@ -48,11 +48,13 @@ const items: MenuItem[] = [
       <Dropdown
         overlay={
           <Menu>
-            {vacationsCategories.categories.map((category) => category.countrys.map((country) => (
-              <Menu.Item  key={country.countryName} style={{padding: '8px', width: '200px'}}>
-                <Link href={`/vacation/${country.countryName}`}>{country.countryName}</Link>
-              </Menu.Item>
-            )))}
+            {vacationsCategories.categories.map((category) =>
+              category.countrys.map((country) => (
+                <Menu.Item key={country.countryName} style={{ padding: '8px', width: '200px' }}>
+                  <Link href={`/vacation/${country.countryName}`}>{country.countryName}</Link>
+                </Menu.Item>
+              ))
+            )}
           </Menu>
         }
         trigger={['click']}
@@ -66,6 +68,12 @@ const items: MenuItem[] = [
       </Dropdown>
     ),
   },
+  {
+    key: '121',
+    label: (
+      <Link href="/ai">AI Link</Link>
+    )
+  }
 ];
 
 const HamburgerMenu: React.FC = () => {
@@ -93,15 +101,12 @@ const HamburgerMenu: React.FC = () => {
         onClose={handleDrawerClose}
         open={drawerVisible}
         closeIcon
+        maskClosable
       >
         <Menu>
           {items.map((item) => (
             <Menu.Item key={item.key}>
-              {React.cloneElement(item.label, {
-                overlay: React.cloneElement(item.label.props.overlay, {
-                  onClick: handleSubMenuItemClick,
-                }),
-              })}
+              {item.label}
             </Menu.Item>
           ))}
         </Menu>
@@ -111,3 +116,4 @@ const HamburgerMenu: React.FC = () => {
 };
 
 export default HamburgerMenu;
+
