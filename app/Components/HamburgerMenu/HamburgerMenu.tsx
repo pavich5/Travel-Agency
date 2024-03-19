@@ -91,7 +91,8 @@ const HamburgerMenu: React.FC = () => {
         placement="left"
         closable={false}
         onClose={handleDrawerClose}
-        visible={drawerVisible}
+        open={drawerVisible}
+        closeIcon
       >
         <Menu>
           {items.map((item) => (
