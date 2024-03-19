@@ -18,24 +18,24 @@ const items: MenuItem[] = [
         overlay={
           <Menu>
             <Menu.Item key="0" style={{ padding: '15px', width: '200px' }}>
-              <Link href="/vacation/list/summer">Summer Vaications</Link>
+              <Link href="/vacation/list/summer">Summer Vacations</Link>
             </Menu.Item>
             <Menu.Item key="1" style={{ padding: '15px', width: '200px' }}>
-              <Link href="/vacation/list/winter">Winter Vaications</Link>
+              <Link href="/vacation/list/winter">Winter Vacations</Link>
             </Menu.Item>
             <Menu.Item key="2" style={{ padding: '15px', width: '200px' }}>
-              <Link href="/vacation/list/easter">Easter Vaications</Link>
+              <Link href="/vacation/list/easter">Easter Vacations</Link>
             </Menu.Item>
             <Menu.Item key="3" style={{ padding: '15px', width: '200px' }}>
-              <Link href="/vacation/list/Spring">Spring Vaications</Link>
+              <Link href="/vacation/list/Spring">Spring Vacations</Link>
             </Menu.Item>
           </Menu>
         }
         trigger={['click']}
       >
-        <a onClick={(e) => e.preventDefault()}>
+        <a onClick={(e) => e.stopPropagation()}>
           <Space>
-            Vaication Seasons
+            Vacation Seasons
             <DownOutlined />
           </Space>
         </a>
@@ -49,7 +49,7 @@ const items: MenuItem[] = [
         overlay={
           <Menu>
             {vacationsCategories.categories.map((category) =>
-              category.countrys.map((country) => (
+              category?.countrys.map((country) => (
                 <Menu.Item key={country.countryName} style={{ padding: '8px', width: '200px' }}>
                   <Link href={`/vacation/${country.countryName}`}>{country.countryName}</Link>
                 </Menu.Item>
@@ -59,9 +59,9 @@ const items: MenuItem[] = [
         }
         trigger={['click']}
       >
-        <a onClick={(e) => e.preventDefault()}>
+        <a onClick={(e) => e.stopPropagation()}>
           <Space>
-            Contrys
+            Countries
             <DownOutlined />
           </Space>
         </a>
@@ -88,7 +88,7 @@ const HamburgerMenu: React.FC = () => {
   };
 
   const handleSubMenuItemClick = () => {
-    setDrawerVisible(false);
+    setDrawerVisible(false); // Close the drawer when any menu item is clicked
   };
 
   return (
@@ -99,14 +99,13 @@ const HamburgerMenu: React.FC = () => {
         placement="left"
         closable={false}
         onClose={handleDrawerClose}
-        open={drawerVisible}
-        closeIcon
-        maskClosable
+        visible={drawerVisible} // Changed open to visible to match Ant Design API
+        closeIcon={false}
       >
         <Menu>
           {items.map((item) => (
             <Menu.Item key={item.key}>
-              {item.label}
+              <div onClick={handleSubMenuItemClick}>{item.label}</div> {/* Added onClick to each menu item */}
             </Menu.Item>
           ))}
         </Menu>
@@ -116,4 +115,3 @@ const HamburgerMenu: React.FC = () => {
 };
 
 export default HamburgerMenu;
-
