@@ -1,5 +1,5 @@
 "use client"
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './page.module.css';
 import { LeftOutlined, RightOutlined } from '@ant-design/icons';
 import { Select, Button } from 'antd';
@@ -9,6 +9,7 @@ import { useRouter } from 'next/navigation';
 
 const LandingPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
+  const [isMobile, setIsMobile] = useState(false);
   const [searchValue, setSearchValue] = useState('')
   const [filteredData, setFilteredData] = useState(vacationsCategories.categories.flatMap(category =>
     category.countrys.flatMap(country =>
@@ -68,10 +69,24 @@ const LandingPage = () => {
     handleSearch();
   };
 
+  
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    handleResize();
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   return (
     <div className={styles.homePageWrapper}>
       <div>
-        <div className={styles.mainSection}>
+      <div className={styles.mainSection} style={{backgroundImage: isMobile ? 'url(https://images.unsplash.com/photo-1561571994-3c61c554181a?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8c3VtbWVyJTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D)' : ''}}>
           <div className={styles.wrapper}>
             <div className={styles.textTitle}>
               <h1>Discover the world with Globetrotter</h1>

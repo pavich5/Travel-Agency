@@ -73,6 +73,12 @@ const items: MenuItem[] = [
     label: (
       <Link href="/ai">Travel AI</Link>
     )
+  },
+  {
+    key: '125',
+    label: (
+      <Link href="/about">About Us</Link>
+    )
   }
 ];
 
@@ -88,7 +94,7 @@ const HamburgerMenu: React.FC = () => {
   };
 
   const handleSubMenuItemClick = () => {
-    setDrawerVisible(false); // Close the drawer when any menu item is clicked
+    setDrawerVisible(false);
   };
 
   return (
@@ -97,10 +103,10 @@ const HamburgerMenu: React.FC = () => {
       <Drawer
         title="Menu"
         placement="left"
-        closable={false}
+        closable
         onClose={handleDrawerClose}
-        visible={drawerVisible} // Changed open to visible to match Ant Design API
-        closeIcon={false}
+        visible={drawerVisible}
+        closeIcon
       >
         <Menu>
           {items.map((item) => (

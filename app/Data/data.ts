@@ -1129,6 +1129,57 @@ export const vacationsCategories = {
               ]
             },
             {
+              id: 73,
+              hotelName: "Ocean Breeze Resort",
+              startDate: "03-02-2023",
+              endDate: "10-03-2023",
+              totalCost: 1000,
+              location: "400 Cannery Row, Canada, CA 93121",
+              hotelStars: 2,
+              hotelCity: "Berlin",
+              person: 2,
+              offerImage: "https://www.internationalcitizens.com/wp-content/uploads/2018/06/Berlin-Germany.jpg",
+              amenities: ["Free Wi-Fi", "Spa", "Fitness Center", "Restaurant", "Room Service"],
+              duration: "2 nights",
+              roomImage: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWwlMjByb29tfGVufDB8fDB8fHww",
+              arrivalTime: "21-02-2023 14:00",
+              hotelCoverImage: "https://media.istockphoto.com/id/119926339/photo/resort-swimming-pool.jpg?s=612x612&w=0&k=20&c=9QtwJC2boq3GFHaeDsKytF4-CavYKQuy1jBD2IRfYKc=",
+              hotelDescription: "Germany Hotel 1 is a luxurious 5-star hotel located in the heart of Berlin. With its sleek modern design and world-class amenities, it offers discerning travelers a sophisticated urban retreat. The hotel features spacious rooms, a rooftop infinity pool with panoramic views of the city skyline, a Michelin-starred restaurant, and a wellness spa offering a range of treatments.",
+              roomType: "Executive Suite",
+              mealPlan: "Half Board",
+              transportation: "Limousine Service",
+              activities: [
+                {
+                  img: "https://www.altachalets.com/wp-content/uploads/2022/11/snowboarder-1920x1000-min.jpg",
+                  name: "Berlin Wall Tour",
+                  description: "Explore the iconic Berlin Wall and learn about its history with a guided tour. Visit famous sites such as Checkpoint Charlie, East Side Gallery, and the Berlin Wall Memorial."
+                },
+                {
+                  img: "https://www.altachalets.com/wp-content/uploads/2022/11/snowboarder-1920x1000-min.jpg",
+                  name: "Museum Island Visit",
+                  description: "Discover the cultural treasures of Berlin with a visit to Museum Island, home to world-renowned museums and galleries showcasing art, history, and archaeology."
+                }
+              ],
+              cancellationPolicy: "Free cancellation up to 7 days before arrival. Cancellations made within 7 days of arrival are subject to a penalty fee equivalent to one night's stay.",
+              reviews: [
+                {
+                  username: "Explorer123",
+                  rating: 5,
+                  comment: "An exceptional stay at Germany Hotel 1. The accommodations were top-notch, and the service was impeccable. The rooftop pool and views of Berlin were breathtaking. Highly recommended!"
+                },
+                {
+                  username: "Traveler567",
+                  rating: 4,
+                  comment: "Great experience overall. The hotel's central location made it easy to explore Berlin's attractions. The staff were friendly and attentive, and the room was spacious and comfortable."
+                }
+              ],
+              additionalImages: [
+                "https://media.istockphoto.com/id/1390233984/photo/modern-luxury-bedroom.jpg?s=612x612&w=0&k=20&c=po91poqYoQTbHUpO1LD1HcxCFZVpRG-loAMWZT7YRe4=",
+                "https://cdn.pixabay.com/photo/2016/11/18/17/20/living-room-1835923_1280.jpg",
+                "https://media.istockphoto.com/id/655973354/photo/interior-of-studio-apartment.jpg?s=612x612&w=0&k=20&c=cvXEAyBIqDlyZPp0OQUhny2bH0zTVsBbLJeJlrQeh2E="
+              ]
+            },
+            {
               id: 7321,
               hotelName: "Breeze Resort",
               startDate: "21-02-2023",

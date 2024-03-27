@@ -1,0 +1,62 @@
+/* styles/page.module.css */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.content {
+  padding: 20px;
+}
+
+.imageContainer {
+  text-align: center;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.text {
+  line-height: 1.6;
+}
+
+.subtitle {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.valuesList {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.additionalText {
+  margin-top: 20px;
+}
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 768px) {
+  .container {
+    margin: 10px;
+  }
+  .title {
+    font-size: 20px;
+  }
+  .text {
+    font-size: 14px;
+  }
+  .subtitle {
+    font-size: 18px;
+  }
+}
