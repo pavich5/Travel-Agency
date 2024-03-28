@@ -1,6 +1,7 @@
 .countryOffersWrapper {
     padding: 60px 150px;
     min-height: 80vh;
+    overflow: hidden;
   }
   
   .tableHotelImage {
@@ -8,6 +9,9 @@
     height: 50px;
     border-radius: 50px;
     cursor: pointer;
+  }
+  .ant-table{
+    overflow: auto !important;
   }
   
   .tableButton, .tableButtonBook {
