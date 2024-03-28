@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Button, Drawer, Menu, Dropdown, Space } from 'antd';
 import { MenuOutlined, DownOutlined } from '@ant-design/icons';
 import Link from 'next/link';
-import { vacationsCategories } from '@/app/Data/data';
+import { CountryLists } from '@/app/Data/data';
 import React from 'react';
 
 export interface MenuItem {
@@ -48,12 +48,11 @@ const items: MenuItem[] = [
       <Dropdown
         overlay={
           <Menu>
-            {vacationsCategories.categories.map((category) =>
-              category?.countrys.map((country) => (
-                <Menu.Item key={country.countryName} style={{ padding: '8px', width: '200px' }}>
-                  <Link href={`/vacation/${country.countryName}`}>{country.countryName}</Link>
+            {CountryLists.map((country) =>
+                <Menu.Item key={country} style={{ padding: '8px', width: '200px' }}>
+                  <Link href={`/vacation/${country}`}>{country}</Link>
                 </Menu.Item>
-              ))
+              
             )}
           </Menu>
         }

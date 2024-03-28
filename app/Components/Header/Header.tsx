@@ -7,7 +7,7 @@ import { Dropdown, Space, Menu } from 'antd';
 import { LeftOutlined,DownOutlined } from '@ant-design/icons';
 import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
 import { useRouter,usePathname } from 'next/navigation';
-import { vacationsCategories } from '@/app/Data/data';
+import { CountryLists } from '@/app/Data/data';
 const Header = () => {
   const [isMobile, setIsMobile] = useState(false);
   const router = useRouter();
@@ -66,12 +66,11 @@ const Header = () => {
             <Dropdown
               overlay={
                 <Menu>
-                  {vacationsCategories.categories.map((category) =>
-                    category?.countrys.map((country) => (
-                      <Menu.Item key={country.countryName} style={{ padding: '8px', width: '200px' }}>
-                        <Link href={`/vacation/${country.countryName}`}>{country.countryName}</Link>
+                  {CountryLists.map((country) =>
+                      <Menu.Item key={country} style={{ padding: '8px', width: '200px' }}>
+                        <Link href={`/vacation/${country}`}>{country}</Link>
                       </Menu.Item>
-                    ))
+                    
                   )}
                 </Menu>
               }
