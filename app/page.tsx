@@ -124,8 +124,8 @@ const LandingPage = () => {
               <button onClick={() => router.push(`vacation/list/${vacation.name.split(' ')[0]}`)} key={index}>{vacation.name}</button>
             ))}
           </div>
+          <h2 className={styles.travelSeasonsTitle}>Travel Seasons</h2>
           <div className={styles.vacationCardsWrapper}>
-            <h2>Travel Seasons</h2>
             {vacationsCategories.categories.map((category, index) => (
               <div onClick={() => {
                 router.push(`vacation/list/${category.name.split(' ')[0]}`);
