@@ -106,6 +106,7 @@ const HamburgerMenu: React.FC = () => {
         onClose={handleDrawerClose}
         visible={drawerVisible}
         closeIcon
+        width={300}
       >
         <Menu>
           {items.map((item) => (
