@@ -3,6 +3,7 @@
     display: flex;
     justify-content: center;
     padding-top: 0px;
+    overflow: hidden;
 }
 
 .foundHotelWrapper {
@@ -141,5 +142,28 @@
     .defaultStar{
         width: 19vw;
         margin-right: 3px;
+    }
+    .amentediesList{
+        flex-direction: column;
+    }
+    .amentedie{
+        width: 100%;
+        padding: 12px;
+        margin-top: 5px;
+    }
+  
+    .hotelName{
+        margin-top: 10px;
+    }
+    .bottomLayer{
+        width: 100vw;
+        padding: 5px;
+    }
+
+    .foundHotelWrapper{
+        margin-top: 5px;
+    }
+    .mainPageWrapper{
+        padding-bottom: 0;
     }
   }

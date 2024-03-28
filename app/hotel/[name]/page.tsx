@@ -54,7 +54,7 @@ const FoundHotel = ({ foundHotel, findCountryName }: { foundHotel: Offer, findCo
     <div className={styles.foundHotelWrapper}>
         <img
             style={{
-                minWidth: '63vw',
+                minWidth: '60vw',
                 height: '300px',
                 borderRadius: '24px',
                 objectFit: 'cover'
@@ -65,23 +65,7 @@ const FoundHotel = ({ foundHotel, findCountryName }: { foundHotel: Offer, findCo
         <div className={styles.bottomLayer}>
             <h3 className={styles.hotelName}>{foundHotel.hotelName} {foundHotel.hotelCity}</h3>
             <small className={styles.hotelPlace}>{findCountryName()}, {foundHotel.hotelCity} - {foundHotel.hotelStars} stars</small>
-            <div className={styles.startsList}>
-                <div className={styles.hotelStar}>
-                    <p>{foundHotel.hotelStars}</p>
-                    <p>Excellent</p>
-                </div>
-                {startsList.map((starObj) => (
-                    <div key="star-ratings" className={styles.defaultStars}>
-                        {Object.entries(starObj).map(([stars, description]) => (
-                            <div className={styles.defaultStar} key={stars}>
-                                <p>{stars} </p>
-                                <p>{description}</p>
-                            </div>
-                        ))}
-                    </div>
-                ))}
-            </div>
-            <h3>Amenities</h3>
+            <h3 style={{marginTop: '30px'}}>Amenities</h3>
             <div className={styles.amentediesList}>
                 {foundHotel?.amenities?.map((amentedie: string) => (
                     <div className={styles.amentedie} key={amentedie}>

@@ -14,7 +14,7 @@ const Reviews = ({ offerDetails } : ReviewsProps) => {
     {offerDetails.reviews.map((review: Review, index) => (
       <div key={index} className={styles.review}>
         <div className={styles.user}> 
-          <img src="https://www.investopedia.com/thmb/t9ptoLnvjFl1qlVWhXIrnL17LGA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1205198865-48d9cf94a766422796067c893ef272e8.jpg" alt="" className={styles.userImg} /> {/* Use the userImg class */}
+          <img src="https://hips.hearstapps.com/hmg-prod/images/kanye-west-attends-the-christian-dior-show-as-part-of-the-paris-fashion-week-womenswear-fall-winter-2015-2016-on-march-6-2015-in-paris-france-photo-by-dominique-charriau-wireimage-square.jpg" alt="" className={styles.userImg} /> 
           <div>
             <p>{review.username}</p>
             <p>21-12-2023</p>
