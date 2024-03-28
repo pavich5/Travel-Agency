@@ -293,8 +293,8 @@ const Page = ({ params }: any) => {
         <div>
           <h2>{params.name} Trips</h2>
         </div>
-        <div>
-          <Tabs activeKey={activeTabKey ? activeTabKey : "0"} onChange={handleTabChange}>
+        <div className={styles.tableWrapper}>
+          <Tabs activeKey={activeTabKey ? activeTabKey : "0"} onChange={handleTabChange} className='antdTable' style={{overflow:'auto'}}>
             {countryVacations?.offers?.reduce((uniqueCities: string[], offer: any) => {
               if (!uniqueCities.includes(offer.hotelCity)) {
                 uniqueCities.push(offer.hotelCity);

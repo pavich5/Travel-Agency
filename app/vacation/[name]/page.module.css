@@ -10,9 +10,7 @@
     border-radius: 50px;
     cursor: pointer;
   }
-  .ant-table{
-    overflow: auto !important;
-  }
+
   
   .tableButton, .tableButtonBook {
     border: none;
@@ -44,5 +42,8 @@
       text-align: center;
       margin-top: 35px;
       margin-bottom: 20px;
+    }
+    .ant-table-content{
+      overflow: auto !important;
     }
   }
