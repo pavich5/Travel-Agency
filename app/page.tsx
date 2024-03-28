@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import styles from './page.module.css';
 import { LeftOutlined, RightOutlined } from '@ant-design/icons';
 import { Select, Button } from 'antd';
-import { vacationsCategories } from './Data/data';
+import { blogPosts, vacationsCategories } from './Data/data';
 import { useRouter } from 'next/navigation';
 
 
@@ -69,7 +69,7 @@ const LandingPage = () => {
     handleSearch();
   };
 
-  
+
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
@@ -86,7 +86,7 @@ const LandingPage = () => {
   return (
     <div className={styles.homePageWrapper}>
       <div>
-      <div className={styles.mainSection} style={{backgroundImage: isMobile ? 'url(https://images.unsplash.com/photo-1561571994-3c61c554181a?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8c3VtbWVyJTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D)' : ''}}>
+        <div className={styles.mainSection} style={{ backgroundImage: isMobile ? 'url(https://images.unsplash.com/photo-1561571994-3c61c554181a?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8c3VtbWVyJTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D)' : '' }}>
           <div className={styles.wrapper}>
             <div className={styles.textTitle}>
               <h1>Discover the world with Globetrotter</h1>
@@ -125,7 +125,7 @@ const LandingPage = () => {
             ))}
           </div>
           <div className={styles.vacationCardsWrapper}>
-          <h2>Vaication Types</h2>
+            <h2>Vaication Types</h2>
             {vacationsCategories.categories.map((category, index) => (
               <div onClick={() => {
                 router.push(`vacation/list/${category.name.split(' ')[0]}`);
@@ -154,6 +154,26 @@ const LandingPage = () => {
           ))}
           <RightOutlined onClick={handleNextPage} className={indexOfLastItem >= totalItems ? styles.disabled : ''} />
         </div>
+        <div className={styles.blogSection}>
+          <div className={styles.blogPosts}>
+          <h2>Latest Blog Posts</h2>
+            {blogPosts.map((post, index) => (
+              <div key={index} className={styles.blogPost}>
+                <img src={post.image} alt={post.title} />
+                <div className={styles.blogPostContent}>
+                  <div>
+                  <h3>{post.title}</h3>
+                  <p>{post.excerpt}</p>
+                  </div>       
+                  <div style={{padding:'15px'}}>
+                  <Button type='primary'>Read more</Button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
       </div>
     </div>
   );
