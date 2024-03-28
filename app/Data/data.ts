@@ -1461,5 +1461,5 @@ export const blogPosts =[
 
 
 export const CountryLists = [
-  'Swizerland','Canada', 'Bulgaria','Cuba','Greece','Portugal','France','Italy','Austria','Germany','Greece','Germany','Mexico'
+  'Switzerland','Canada', 'Bulgaria','Cuba','Greece','Portugal','France','Italy','Austria','Germany','Greece','Germany','Mexico'
 ]

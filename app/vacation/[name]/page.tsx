@@ -239,7 +239,7 @@ const Page = ({ params }: any) => {
       title: 'Room Type',
       dataIndex: 'roomType',
       key: 'roomType',
-      render: (text) => <div>{text}</div>,
+      render: (text) => <div style={{width: '105px'}}>{text}</div>,
     },
     {
       title: '',
