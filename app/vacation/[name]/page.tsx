@@ -294,7 +294,7 @@ const Page = ({ params }: any) => {
           <h2>{params.name} Trips</h2>
         </div>
         <div className={styles.tableWrapper}>
-          <Tabs activeKey={activeTabKey ? activeTabKey : "0"} onChange={handleTabChange} className='antdTable' style={{overflow:'auto'}}>
+          <Tabs activeKey={activeTabKey ? activeTabKey : "0"} onChange={handleTabChange}>
             {countryVacations?.offers?.reduce((uniqueCities: string[], offer: any) => {
               if (!uniqueCities.includes(offer.hotelCity)) {
                 uniqueCities.push(offer.hotelCity);
@@ -302,7 +302,7 @@ const Page = ({ params }: any) => {
               return uniqueCities;
             }, []).map((city: string, index: number) => (
               <TabPane tab={city} key={index.toString()}>
-                  <Table pagination={{ pageSize: 5 }}
+                  <Table style={{overflow:'auto'}} pagination={{ pageSize: 5 }}
                     columns={columns} dataSource={data.filter(offer => offer.City === city)} />
               </TabPane>
             ))}
