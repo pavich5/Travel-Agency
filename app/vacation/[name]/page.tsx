@@ -163,6 +163,7 @@ const Page = ({ params }: any) => {
             format="DD-MM-YYYY"
             onChange={(date) => setSelectedKeys(date ? [date.format('DD-MM-YYYY')] : [])}
             style={{ marginBottom: 8, display: 'block' }}
+            readOnly
           />
           <Button
             type="primary"
@@ -200,6 +201,7 @@ const Page = ({ params }: any) => {
             format="DD-MM-YYYY"
             onChange={(date) => setSelectedKeys(date ? [date.format('DD-MM-YYYY')] : [])}
             style={{ marginBottom: 8, display: 'block' }}
+            readOnly
           />
           <Button
             type="primary"
