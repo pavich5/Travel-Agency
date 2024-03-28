@@ -125,7 +125,7 @@ const LandingPage = () => {
             ))}
           </div>
           <div className={styles.vacationCardsWrapper}>
-            <h2>Vaication Types</h2>
+            <h2>Travel Seasons</h2>
             {vacationsCategories.categories.map((category, index) => (
               <div onClick={() => {
                 router.push(`vacation/list/${category.name.split(' ')[0]}`);
@@ -137,7 +137,7 @@ const LandingPage = () => {
         </div>
 
         <div className={styles.availableVacationsWrapper}>
-          <h2>Available Countrys</h2>
+          <h2>Travel Destinations</h2>
           <div className={styles.availableList}>
             {currentItems.map((vacation: any, index) => (
               <div onClick={() => router.push(`vacation/${vacation.countryName}`)} key={index} className={styles.oneVacationCard} style={{ backgroundImage: `url(${vacation.image})` }}>

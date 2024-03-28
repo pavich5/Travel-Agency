@@ -91,7 +91,7 @@ const Page = ({ params }: any) => {
 
           <Select 
             placeholder="Filter by Price"
-            style={{ width: 200, marginBottom: 16 }}
+            style={{ width: 200, marginBottom: 1 }}
             onChange={handlePriceFilterChange}
             value={priceFilter}
           >

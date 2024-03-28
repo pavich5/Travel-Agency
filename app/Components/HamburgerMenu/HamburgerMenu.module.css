@@ -1,0 +1,48 @@
+/* Add this CSS to your stylesheet */
+
+.drawerContentWrapper {
+    background-color: #f0f2f5;
+  }
+  
+  .drawerContent {
+    padding: 20px;
+  }
+  
+  .menu {
+    border: none;
+  }
+  
+  .menuItem {
+    padding: 12px 0;
+  }
+  
+  .menuItem:hover {
+    background-color: #e6f7ff;
+  }
+  
+  .submenuTitle {
+    padding: 12px 0;
+  }
+  
+  .submenuArrow {
+    top: 16px;
+  }
+  
+  .submenu {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .submenuPopup {
+    padding: 8px 0;
+  }
+  
+  .submenuItem {
+    padding: 12px 0;
+  }
+  
+  .submenuItem:hover {
+    background-color: #f5f5f5;
+  }
+  

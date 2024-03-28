@@ -128,4 +128,10 @@
     .wrapper{
         width: 95% !important;
     }
+    .card{
+        min-width: 90vw !important;
+    }
+    .roomType{
+        width: 80vw !important;
+    }
 }
