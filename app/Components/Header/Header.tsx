@@ -92,7 +92,7 @@ const Header = () => {
               <UserButton afterSignOutUrl='/' showName />
             </SignedIn>
             <SignedOut>
-              <Link href='sign-in' className={styles.menuItemText}>Login</Link>
+              <Link href='/sign-in' className={styles.menuItemText}>Login</Link>
             </SignedOut>
           </div>
         </div>
