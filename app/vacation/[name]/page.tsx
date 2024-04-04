@@ -8,7 +8,6 @@ import type { TableProps } from 'antd';
 import { StarOutlined } from '@ant-design/icons';
 import { useRouter } from 'next/navigation';
 import moment from 'moment';
-import {  useBoolean } from '@chakra-ui/react';
 
 interface Offer {
   id: any;
@@ -41,7 +40,6 @@ const Page = ({ params }: any) => {
     mealPlan: [],
     roomType: []
   });
-  const [filterFlag, setFilterFlag] = useBoolean(false)
   useEffect(() => {
     const foundCountry = vacationsCategories.categories.flatMap((vacationType) =>
       vacationType.countrys.find((oneVacation) => oneVacation.countryName === params.name)
@@ -61,7 +59,7 @@ const Page = ({ params }: any) => {
       dataIndex: 'Hotel',
       key: 'Hotel',
       render: (text, record) => (
-        <a href={`/hotel/${record.hotelName}`}>
+        <a href={`/hotel/${record.HotelName}`}>
           <Tooltip title="Click to see hotel details">
             <img className={styles.tableHotelImage} src={text} alt="Hotel" />
           </Tooltip>
@@ -250,7 +248,7 @@ const Page = ({ params }: any) => {
       title: 'Room Type',
       dataIndex: 'roomType',
       key: 'roomType',
-      render: (text) => <div style={{ width: '105px' }}>{text}</div>,
+      render: (text) => <div style={{width: '105px'}}>{text}</div>,
     },
     {
       title: '',
@@ -296,8 +294,8 @@ const Page = ({ params }: any) => {
       transportation: offer.transportation,
       mealPlan: offer.mealPlan,
       roomType: offer.roomType
-    }))
-    ;
+    }));
+    
   const handleApplyFilters = () => {
     const filteredData = data.filter((offer: any) => {
       if ((filters.minPrice && offer.Price < filters.minPrice) || (filters.maxPrice && offer.Price > filters.maxPrice)) {
