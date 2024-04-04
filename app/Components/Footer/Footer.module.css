@@ -75,3 +75,9 @@
     background-positon-x: 0px;
   }
 }
+
+@media screen and (max-width: 767px) {
+.footer{
+  margin-top: 80px;
+}
+}

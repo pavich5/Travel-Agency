@@ -1,13 +1,14 @@
 "use client"
 import React, { useEffect, useState } from 'react';
 import styles from './page.module.css';
-import { Button, Tabs, Tooltip,DatePicker } from "antd";
+import { Button, Tabs, Tooltip, DatePicker, InputNumber, Select } from "antd";
 import { vacationsCategories } from '@/app/Data/data';
 import { Table } from 'antd';
 import type { TableProps } from 'antd';
 import { StarOutlined } from '@ant-design/icons';
 import { useRouter } from 'next/navigation';
 import moment from 'moment';
+import {  useBoolean } from '@chakra-ui/react';
 
 interface Offer {
   id: any;
@@ -30,7 +31,17 @@ const Page = ({ params }: any) => {
   const [activeTabKey, setActiveTabKey] = useState<string | null>(params.id);
   const [countryVacations, setCountryVacations] = useState<any>();
   const [selectedCityOffers, setSelectedCityOffers] = useState<any[]>([]);
-  
+  const [tableData, setTableData] = useState<Offer[] | undefined>()
+  const [filters, setFilters] = useState<any>({
+    minPrice: null,
+    maxPrice: null,
+    starRating: [],
+    nights: null,
+    transportation: [],
+    mealPlan: [],
+    roomType: []
+  });
+  const [filterFlag, setFilterFlag] = useBoolean(false)
   useEffect(() => {
     const foundCountry = vacationsCategories.categories.flatMap((vacationType) =>
       vacationType.countrys.find((oneVacation) => oneVacation.countryName === params.name)
@@ -50,7 +61,7 @@ const Page = ({ params }: any) => {
       dataIndex: 'Hotel',
       key: 'Hotel',
       render: (text, record) => (
-        <a href={`/hotel/${record.HotelName}`}>
+        <a href={`/hotel/${record.hotelName}`}>
           <Tooltip title="Click to see hotel details">
             <img className={styles.tableHotelImage} src={text} alt="Hotel" />
           </Tooltip>
@@ -81,7 +92,7 @@ const Page = ({ params }: any) => {
         { text: '800', value: 800 },
         { text: '900', value: 900 },
         { text: '1000', value: 1000 },
-        { text: '1000+', value: 1001 }, 
+        { text: '1000+', value: 1001 },
       ],
       onFilter: (value, record) => {
         if (value === 1001) {
@@ -91,7 +102,7 @@ const Page = ({ params }: any) => {
         }
       },
     },
-    
+
     {
       title: 'Stars',
       dataIndex: 'Stars',
@@ -121,9 +132,9 @@ const Page = ({ params }: any) => {
       dataIndex: 'Nights',
       key: 'Nights',
       sorter: (a, b) => {
-                // @ts-ignore
+        // @ts-ignore
         const numA = parseInt(a.Nights.split(' ')[0]);
-                // @ts-ignore
+        // @ts-ignore
         const numB = parseInt(b.Nights.split(' ')[0]);
         return numA - numB;
       },
@@ -136,10 +147,10 @@ const Page = ({ params }: any) => {
         { text: '4 nights', value: 4 },
         { text: '5 nights', value: 5 },
         { text: '6 nights', value: 6 },
-        { text: '7+ nights', value: 7 }, 
+        { text: '7+ nights', value: 7 },
       ],
       onFilter: (value, record) => {
-              // @ts-ignore
+        // @ts-ignore
         const numNights = parseInt(record.Nights.split(' ')[0]);
         if (value === 7) {
           return numNights >= value; // Filter for 7 or more nights
@@ -158,7 +169,7 @@ const Page = ({ params }: any) => {
       filterDropdown: ({ setSelectedKeys, selectedKeys, confirm, clearFilters }) => (
         <div style={{ padding: 8 }}>
           <DatePicker
-                  // @ts-ignore
+            // @ts-ignore
             value={selectedKeys && selectedKeys.length ? moment(selectedKeys[0], 'DD-MM-YYYY') : null}
             format="DD-MM-YYYY"
             onChange={(date) => setSelectedKeys(date ? [date.format('DD-MM-YYYY')] : [])}
@@ -179,13 +190,13 @@ const Page = ({ params }: any) => {
         </div>
       ),
       onFilter: (value, record) => {
-                // @ts-ignore
+        // @ts-ignore
         const startDate = moment(value, 'DD-MM-YYYY');
         const recordDate = moment(record.Start, 'DD-MM-YYYY');
         return recordDate.isSame(startDate, 'day');
       },
     },
-    
+
     {
       title: 'End',
       dataIndex: 'End',
@@ -196,7 +207,7 @@ const Page = ({ params }: any) => {
       filterDropdown: ({ setSelectedKeys, selectedKeys, confirm, clearFilters }) => (
         <div style={{ padding: 8 }}>
           <DatePicker
-                  // @ts-ignore
+            // @ts-ignore
             value={selectedKeys && selectedKeys.length ? moment(selectedKeys[0], 'DD-MM-YYYY') : null}
             format="DD-MM-YYYY"
             onChange={(date) => setSelectedKeys(date ? [date.format('DD-MM-YYYY')] : [])}
@@ -217,7 +228,7 @@ const Page = ({ params }: any) => {
         </div>
       ),
       onFilter: (value, record) => {
-                // @ts-ignore
+        // @ts-ignore
         const endDate = moment(value, 'DD-MM-YYYY');
         const recordDate = moment(record.End, 'DD-MM-YYYY');
         return recordDate.isSame(endDate, 'day');
@@ -239,7 +250,7 @@ const Page = ({ params }: any) => {
       title: 'Room Type',
       dataIndex: 'roomType',
       key: 'roomType',
-      render: (text) => <div style={{width: '105px'}}>{text}</div>,
+      render: (text) => <div style={{ width: '105px' }}>{text}</div>,
     },
     {
       title: '',
@@ -252,14 +263,14 @@ const Page = ({ params }: any) => {
       ),
     },
   ];
-  
+
   const data: Offer[] = selectedCityOffers.length
     ? selectedCityOffers.map((offer: any) => ({
       key: offer.hotelName,
       Date: `${offer.startDate} - ${offer.endDate}`,
       Price: offer.totalCost,
       Hotel: offer.hotelCoverImage,
-      HotelName: offer.hotelName, 
+      HotelName: offer.hotelName,
       City: offer.hotelCity,
       Stars: offer.hotelStars,
       Nights: offer.duration,
@@ -275,7 +286,7 @@ const Page = ({ params }: any) => {
       Date: `${offer.startDate} - ${offer.endDate}`,
       Price: offer.totalCost,
       Hotel: offer.hotelCoverImage,
-      HotelName: offer.hotelName, 
+      HotelName: offer.hotelName,
       City: offer.hotelCity,
       Stars: offer.hotelStars,
       Nights: offer.duration,
@@ -285,31 +296,144 @@ const Page = ({ params }: any) => {
       transportation: offer.transportation,
       mealPlan: offer.mealPlan,
       roomType: offer.roomType
-    })) || [];
-  
+    }))
+    ;
+  const handleApplyFilters = () => {
+    const filteredData = data.filter((offer: any) => {
+      if ((filters.minPrice && offer.Price < filters.minPrice) || (filters.maxPrice && offer.Price > filters.maxPrice)) {
+        return false;
+      }
+      if (filters.starRating.length > 0 && !filters.starRating.includes(offer.Stars.toString())) {
+        return false;
+      }
+      if (filters.nights && parseInt(offer.Nights.split(' ')[0]) !== filters.nights) {
+        return false;
+      }
+      if (filters.mealPlan.length > 0 && !filters.mealPlan.includes(offer.mealPlan)) {
+        return false;
+      }
+      if (filters.roomType.length > 0 && !filters.roomType.includes(offer.roomType)) {
+        return false;
+      }
+      if (filters.transportation.length > 0 && !filters.transportation.includes(offer.transportation)) {
+        return false;
+      }
+      if (filters.startDate && filters.endDate) {
+        const offerStartDate = moment(offer.Start, 'DD-MM-YYYY');
+        const offerEndDate = moment(offer.End, 'DD-MM-YYYY');
+        const selectedStartDate = moment(filters.startDate, 'DD-MM-YYYY');
+        const selectedEndDate = moment(filters.endDate, 'DD-MM-YYYY');
+        if (!(offerStartDate.isSameOrAfter(selectedStartDate, 'day') && offerEndDate.isSameOrBefore(selectedEndDate, 'day'))) {
+          return false;
+        }
+      }
+      return true;
+    }).map((filteredOffer, index) => ({
+      ...filteredOffer,
+      key: index.toString(),
+    }));
+    setTableData(filteredData);
+  };
 
-    return (
-      <div className={styles.countryOffersWrapper}>
-        <div>
-          <h2>{params.name} Trips</h2>
-        </div>
-        <div className={styles.tableWrapper}>
-          <Tabs activeKey={activeTabKey ? activeTabKey : "0"} onChange={handleTabChange}>
-            {countryVacations?.offers?.reduce((uniqueCities: string[], offer: any) => {
-              if (!uniqueCities.includes(offer.hotelCity)) {
-                uniqueCities.push(offer.hotelCity);
-              }
-              return uniqueCities;
-            }, []).map((city: string, index: number) => (
-              <TabPane tab={city} key={index.toString()}>
-                  <Table style={{overflow:'auto'}} pagination={{ pageSize: 5 }}
-                    columns={columns} dataSource={data.filter(offer => offer.City === city)} />
-              </TabPane>
-            ))}
-          </Tabs>
-        </div>
+  return (
+    <div className={styles.countryOffersWrapper}>
+      <div>
+        <h2>{params.name} Trips</h2>
       </div>
-    );
+      <div className={styles.filters}>
+        <span className="filter-label">Filter by Date:</span>
+        <DatePicker.RangePicker
+          style={{ marginRight: '20px' }}
+          onChange={(dates, dateStrings) => setFilters({ ...filters, startDate: dateStrings[0], endDate: dateStrings[1] })}
+        />
+        <span className="filter-label">Min Price:</span>
+        <InputNumber
+          style={{ marginRight: '20px' }}
+          placeholder="Min Price"
+          onChange={(value) => setFilters({ ...filters, minPrice: value })}
+        />
+        <span className="filter-label">Max Price:</span>
+        <InputNumber
+          style={{ marginRight: '20px' }}
+          placeholder="Max Price"
+          onChange={(value) => setFilters({ ...filters, maxPrice: value })}
+        />
+        <span className="filter-label">Star Rating:</span>
+        <Select
+          mode="multiple"
+          style={{ minWidth: '150px', marginRight: '20px' }}
+          placeholder="Star Rating"
+          onChange={(value: string[]) => setFilters({ ...filters, starRating: value })}
+        >
+          <Select.Option value="1">1 Star</Select.Option>
+          <Select.Option value="2">2 Stars</Select.Option>
+          <Select.Option value="3">3 Stars</Select.Option>
+          <Select.Option value="4">4 Stars</Select.Option>
+          <Select.Option value="5">5 Stars</Select.Option>
+        </Select>
+        <span className="filter-label">Nights:</span>
+        <InputNumber
+          style={{ marginRight: '20px' }}
+          placeholder="Nights"
+          onChange={(value) => setFilters({ ...filters, nights: value })}
+        />
+        <span className="filter-label">Meal Plan:</span>
+        <Select
+          mode="multiple"
+          style={{ minWidth: '150px', marginRight: '20px' }}
+          placeholder="Meal Plan"
+          onChange={(value: string[]) => setFilters({ ...filters, mealPlan: value })}
+        >
+          <Select.Option value="Breakfast Included">Breakfast</Select.Option>
+          <Select.Option value="Half Board">Half Board</Select.Option>
+          <Select.Option value="Full Board">Full Board</Select.Option>
+          <Select.Option value="All-Inclusive">All Inclusive</Select.Option>
+        </Select>
+        <span className="filter-label">Transportation:</span>
+        <Select
+          mode="multiple"
+          style={{ minWidth: '150px', marginRight: '20px' }}
+          placeholder="Transportation"
+          onChange={(value: string[]) => setFilters({ ...filters, transportation: value })}
+        >
+          <Select.Option value="Private Chauffeur Service">Private Chauffeur Service</Select.Option>
+          <Select.Option value="Complimentary Airport Transfers">Airplane</Select.Option>
+          <Select.Option value="Private Car Transfer">Private Car Transfer</Select.Option>
+          <Select.Option value="Limousine Service">Limousine Service</Select.Option>
+        </Select>
+        <span className="filter-label">Room Type:</span>
+        <Select
+          mode="multiple"
+          style={{ minWidth: '150px', marginRight: '20px' }}
+          placeholder="Room Type"
+          onChange={(value: string[]) => setFilters({ ...filters, roomType: value })}
+        >
+          <Select.Option value="Deluxe Room">Deluxe Room</Select.Option>
+          <Select.Option value="Executive Suite">Executive Suite</Select.Option>
+          <Select.Option value="Standard Double Room">Standard Double Room</Select.Option>
+          <Select.Option value="Ocean View Suite">Ocean View Suite</Select.Option>
+        </Select>
+        <Button type='primary' onClick={handleApplyFilters}>Apply</Button>
+        <Button type='default' onClick={() => setFilters({})}>Reset</Button>
+      </div>
+
+      <div className={styles.tableWrapper}>
+        <Tabs activeKey={activeTabKey ? activeTabKey : "0"} onChange={handleTabChange}>
+          {countryVacations?.offers?.reduce((uniqueCities: string[], offer: any) => {
+            if (!uniqueCities.includes(offer.hotelCity)) {
+              uniqueCities.push(offer.hotelCity);
+            }
+            return uniqueCities;
+          }, []).map((city: string, index: number) => (
+            <TabPane tab={city} key={index.toString()}>
+              <Table style={{ overflow: 'auto' }} pagination={{ pageSize: 5 }}
+                columns={columns} dataSource={tableData ? tableData.filter(offer => offer.City === city) : data.filter(offer => offer.City === city)} />
+            </TabPane>
+          ))}
+        </Tabs>
+      </div>
+    </div>
+  );
 }
 
 export default Page;

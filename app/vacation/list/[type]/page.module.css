@@ -206,4 +206,7 @@
   .oneOfferCard{
     width: 100%;
   }
+  .pageWrapper{
+    margin-bottom: 100px;
+  }
 }
