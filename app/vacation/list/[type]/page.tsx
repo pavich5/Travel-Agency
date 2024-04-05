@@ -1,17 +1,20 @@
 "use client"
 import React, { useState, useRef } from 'react';
-import styles from './page.module.css';
-import { Button, Input, Select } from 'antd'; 
-import { vacationsCategories } from '@/app/Data/data';
+import { Button, Input, Select } from 'antd';
 import { useRouter } from 'next/navigation';
 import { SearchOutlined } from '@ant-design/icons';
+import { vacationsCategories } from '@/app/Data/data';
+import styles from './page.module.css';
+import AllOffersList from '@/app/Components/AllOffersList/AllOffersList';
 
-const { Option } = Select; 
+const { Option } = Select;
 
 const Page = ({ params }: any) => {
   const router = useRouter();
+  const allOffersRef = useRef<HTMLDivElement>(null);
+  const topPicksRef = useRef<HTMLDivElement>(null);
   const [searchQuery, setSearchQuery] = useState('');
-  const [priceFilter, setPriceFilter] = useState<number | undefined>(undefined); 
+  const [priceFilter, setPriceFilter] = useState<number | undefined>(undefined);
   const [cityFilter, setCityFilter] = useState<string | undefined>(undefined);
 
   const vacationType = vacationsCategories.categories.find(category =>
@@ -24,28 +27,11 @@ const Page = ({ params }: any) => {
     )
   ) : [];
 
-  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchQuery(e.target.value);
-  };
-
-  const handlePriceFilterChange = (value: number | undefined) => {
-    setPriceFilter(value);
-  };
-
-  const handleCityFilterChange = (value: string | undefined) => {
-    setCityFilter(value);
-  };
-
-  const allOffersRef = useRef<HTMLDivElement>(null);
-  const topPicksRef = useRef<HTMLDivElement>(null);
-
-  const handleViewAllClick = () => {
-    allOffersRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const handleExploreClick = () => {
-    topPicksRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
+  const handleViewAllClick = () => allOffersRef.current?.scrollIntoView({ behavior: 'smooth' });
+  const handleExploreClick = () => topPicksRef.current?.scrollIntoView({ behavior: 'smooth' });
+  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => setSearchQuery(e.target.value);
+  const handlePriceFilterChange = (value: number | undefined) => setPriceFilter(value);
+  const handleCityFilterChange = (value: string | undefined) => setCityFilter(value);
 
   return (
     <div className={styles.pageWrapper}>
@@ -69,11 +55,9 @@ const Page = ({ params }: any) => {
         <div className={styles.availableVacationsWrapper} ref={topPicksRef}>
           <h3>{params.type} vacation countries</h3>
           <div className={styles.availableList}>
-            {vacationType && vacationType.countrys.slice(0, 4).map((vacation, index) => (
-              <div onClick={() => {
-                // @ts-ignore
-                router.push(`/vacation/${vacation.countryName}`, { shallow: true });
-              }} key={index} className={styles.oneVacationCard} style={{ backgroundImage: `url(${vacation.image})` }}>
+            {vacationType && vacationType.countrys.map((vacation, index) => (
+              // @ts-ignore
+              <div onClick={() => router.push(`/vacation/${vacation.countryName}`, { shallow: true })} key={index} className={styles.oneVacationCard} style={{ backgroundImage: `url(${vacation.image})` }}>
                 <p className={styles.vacationName}>{vacation.countryName}</p>
                 <p>{vacation.description}</p>
               </div>
@@ -88,25 +72,18 @@ const Page = ({ params }: any) => {
             value={searchQuery}
             onChange={handleSearch}
           />
-
-          <Select 
+          <Select
             placeholder="Filter by Price"
             style={{ width: 200, marginBottom: 1 }}
             onChange={handlePriceFilterChange}
             value={priceFilter}
           >
-            <Option value={100}>100$</Option>
-            <Option value={200}>200$</Option>
-            <Option value={300}>300$</Option>
-            <Option value={400}>400$</Option>
-            <Option value={500}>500$</Option>
-            <Option value={600}>600$</Option>
-            <Option value={700}>700$</Option>
-            <Option value={800}>800$</Option>
-            <Option value={900}>900$</Option>
-            <Option value={1000}>1000+</Option>
+            {[100, 200, 300, 400, 500, 600, 700, 800, 900, 1000].map(price => (
+              <Option key={price} value={price}>{`${price}$`}</Option>
+            ))}
+            <Option value={1000}>$1000+</Option>
           </Select>
-          <Select 
+          <Select
             placeholder="Filter by City"
             style={{ width: 200, marginBottom: 16 }}
             onChange={handleCityFilterChange}
@@ -116,28 +93,7 @@ const Page = ({ params }: any) => {
               <Option key={index} value={city}>{city}</Option>
             ))}
           </Select>
-          <div className={styles.allOfferList}>
-            {vacationType && filteredVacations.map((vacation, index) => (
-              vacation.offers.map((offer, offerIndex) => {
-                if ((priceFilter === undefined || offer.totalCost <= priceFilter) &&
-                    (cityFilter === undefined || offer.hotelCity === cityFilter)) {
-                  return (
-                    // @ts-ignore
-                    <div onClick={() => router.push(`/offer/${offer.id}`, { shallow: true })} className={styles.oneOfferCard} key={offerIndex} style={{ backgroundImage: `url(${offer.offerImage})` }}>
-                      <div>
-                        <p className={styles.offerName}>{offer.hotelName}</p>
-                        <p style={{ fontSize: '15px', marginTop: '10px', fontWeight: 600 }}>Price: ${offer.totalCost}</p>
-                        <p style={{ fontSize: '15px', marginTop: '2px', fontWeight: 600 }}>City: {offer.hotelCity}</p>
-                        <button className={styles.viewOfferButton}>View Offer</button>
-                      </div>
-                    </div>
-                  );
-                } else {
-                  return null;
-                }
-              })
-            ))}
-          </div>
+        <AllOffersList filteredVacations={filteredVacations} vacationType={vacationType} cityFilter={cityFilter} priceFilter={priceFilter} />
         </div>
       </div>
     </div >

@@ -56,3 +56,16 @@ export interface Offer {
     categories: VacationCategory[];
   }
   
+  export interface OfferColumn {
+    id: any;
+    City: string;
+    key: string;
+    Date: string;
+    Price: number;
+    Hotel: string;
+    HotelName: string;
+    Stars: number;
+    Nights: number;
+    Start: string;
+    End: string;
+  }

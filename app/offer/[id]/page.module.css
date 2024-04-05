@@ -34,7 +34,9 @@
     justify-content: flex-end;
     margin-top: 20px;
 }
-
+.dividerSection:nth-child(2){
+    margin-top: 35px;
+}
 .buttonsContainer button {
     margin-left: 10px !important;
     border-radius: 14px;
@@ -44,6 +46,7 @@
 .detailItem {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 50px;
 }
 
 .detailItem p:first-child {

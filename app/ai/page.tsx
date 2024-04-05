@@ -1,5 +1,5 @@
 "use client"
-import React, { useState, useEffect, useRef } from "react";
+import  { useState, useEffect, useRef } from "react";
 import styles from './page.module.css';
 import { Input, Button } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
@@ -22,7 +22,6 @@ export default function TravelAI() {
     setIsLoading(true);
     messages.push({ role: "user", content: input });
     setTheInput("");
-    console.log(messages);
     try {
       const response = await fetch("/api", {
         method: "POST",
@@ -34,11 +33,8 @@ export default function TravelAI() {
       if (!response.ok) {
         throw new Error("Failed to fetch response from ChatGPT API");
       }
-
       const data = await response.json();
       const { output } = data;
-      console.log("OpenAI replied...", output.content);
-
       setMessages((prevMessages: string[]) => [...prevMessages, output]);
     } catch (error) {
       console.error("Error:", error);
@@ -46,7 +42,6 @@ export default function TravelAI() {
       setIsLoading(false);
     }
   };
-
 
   useEffect(() => {
     localStorage.setItem("chatMessages", JSON.stringify(messages));

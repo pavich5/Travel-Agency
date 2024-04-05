@@ -282,6 +282,7 @@
     height: 89vh;
     border-radius: 0;
     margin-top: 0;
+    background-image: url('https://images.unsplash.com/photo-1561571994-3c61c554181a?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8c3VtbWVyJTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D');
   }
   .travelSeasonsTitle{
     text-align: center;
