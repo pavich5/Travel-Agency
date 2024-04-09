@@ -13,7 +13,7 @@ const AllOffersList = ({ vacationType, filteredVacations, priceFilter, cityFilte
     return (
         <div className={styles.allOfferList}>
             {vacationType &&
-                filteredVacations.map((vacation: any, vacationIndex: number) =>
+                filteredVacations.map((vacation: any) =>
                     vacation.offers.map((offer: any, offerIndex: number) => {
                         const isPriceFiltered = priceFilter === undefined || offer.totalCost <= priceFilter;
                         const isCityFiltered = cityFilter === undefined || offer.hotelCity === cityFilter;

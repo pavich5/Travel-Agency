@@ -8,8 +8,8 @@ import DetailItem from '@/app/Components/DetailsItem/DetailItem';
 import PriceDetail from '@/app/Components/PriceDetails/PriceDetail';
 import Reviews from '@/app/Components/ReviewsComponent/Reviews';
 import offerDetailsTabs from '@/app/Components/OfferDetailsTabs';
-const { TabPane } = Tabs;
 
+const { TabPane } = Tabs;
 const Page = ({ params }: any) => {
   const router = useRouter()
   const [offerDetails, setOfferDetails] = useState<any>();

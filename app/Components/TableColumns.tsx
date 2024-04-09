@@ -23,7 +23,7 @@ const useTableColumns = (): TableProps<any>['columns'] => {
       dataIndex: 'Hotel',
       key: 'Hotel',
       render: (text, record) => (
-        <a href={`/hotel/${record.hotelName}`}>
+        <a href={`/hotel/${record.HotelName}`}>
           <Tooltip title="Click to see hotel details">
             <img style={{ width: '50px', height: '50px', borderRadius: '50px' }} src={text} alt="Hotel" />
           </Tooltip>

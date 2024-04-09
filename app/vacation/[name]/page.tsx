@@ -1,13 +1,13 @@
 "use client"
 import { useEffect, useState } from 'react';
 import styles from './page.module.css';
-import { Tabs,Table } from "antd";
+import { Tabs, Table } from "antd";
 import { vacationsCategories } from '@/app/Data/data';
 import moment from 'moment';
 import OfferFilters from '@/app/Components/OfferFilters/OfferFilters';
 import { transformOffersData } from '@/app/utils/helper';
 import useTableColumns from '@/app/Components/TableColumns';
-import { OfferColumn } from '@/app/types';
+import { OfferColumn, Filters } from '@/app/types';
 const { TabPane } = Tabs;
 
 
@@ -16,7 +16,9 @@ const Page = ({ params }: any) => {
   const [countryVacations, setCountryVacations] = useState<any>();
   const [selectedCityOffers, setSelectedCityOffers] = useState<any[]>([]);
   const [tableData, setTableData] = useState<OfferColumn[] | undefined>()
-  const [filters, setFilters] = useState<any>({
+  const [filters, setFilters] = useState<Filters>({
+    startDate: null,
+    endDate: null,
     minPrice: null,
     maxPrice: null,
     starRating: [],

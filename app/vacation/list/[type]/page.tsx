@@ -8,7 +8,6 @@ import styles from './page.module.css';
 import AllOffersList from '@/app/Components/AllOffersList/AllOffersList';
 
 const { Option } = Select;
-
 const Page = ({ params }: any) => {
   const router = useRouter();
   const allOffersRef = useRef<HTMLDivElement>(null);
@@ -30,8 +29,8 @@ const Page = ({ params }: any) => {
   const handleViewAllClick = () => allOffersRef.current?.scrollIntoView({ behavior: 'smooth' });
   const handleExploreClick = () => topPicksRef.current?.scrollIntoView({ behavior: 'smooth' });
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => setSearchQuery(e.target.value);
-  const handlePriceFilterChange = (value: number | undefined) => setPriceFilter(value);
-  const handleCityFilterChange = (value: string | undefined) => setCityFilter(value);
+  const handlePriceFilterChange = (value?: number) => setPriceFilter(value);
+  const handleCityFilterChange = (value?: string) => setCityFilter(value);
 
   return (
     <div className={styles.pageWrapper}>
