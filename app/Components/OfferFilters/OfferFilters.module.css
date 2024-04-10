@@ -16,13 +16,27 @@
 }
 
 
-@media screen and (max-width: 768px) {
-    .filters {
-        grid-template-columns: repeat(1, 1fr);
-        min-width: 100vw;
-    }
+.mobileFilters {
+    display: none;
+}
 
-    .ant-input-number {
-        margin-bottom: 5px;
+.collapse{
+    display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+    .mobileFilters {
+        display: block;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+        grid-gap: 5px;
+        max-width: 60vw;
+    }
+    .filters {
+        display: none;
+    }
+    .collapse{
+        display: block;
     }
 }

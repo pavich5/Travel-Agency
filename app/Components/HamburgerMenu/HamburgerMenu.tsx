@@ -4,8 +4,7 @@ import { MenuOutlined, DownOutlined } from '@ant-design/icons';
 import Link from 'next/link';
 import { CountryLists } from '@/app/Data/data';
 import React from 'react';
-import styles from './HamburgerMenu.module.css'
-
+import './HamburgerMenu.css'
 export interface MenuItem {
   key: string;
   label: JSX.Element;
@@ -93,37 +92,31 @@ const HamburgerMenu: React.FC = () => {
     setDrawerVisible(false);
   };
 
-  const handleSubMenuItemClick = () => {
-    setDrawerVisible(false);
-  };
-
   return (
     <>
-      <Button onClick={handleMenuClick} icon={<MenuOutlined />} />
+      <Button onClick={handleMenuClick} icon={<MenuOutlined />} className='hamburgerMenu' />
       <Drawer
-  title="Menu"
-  placement="left"
-  closable
-  onClose={handleDrawerClose}
-  visible={drawerVisible}
-  width={300}
-  bodyStyle={{ backgroundColor: '#ffffff', borderRight: '1px solid #f0f0f0' }}
-  style={{ borderTop: '1px solid #f0f0f0' }}
->
-  <Menu
-    mode="inline"
-    style={{ backgroundColor: '#ffffff', border: 'none' }}
-    onClick={handleDrawerClose}
-  >
-    {items.map((item) => (
-      <Menu.Item key={item.key} style={{ padding: '23px 27px', borderBottom: '1px solid #f0f0f0', boxShadow: 'box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 1px, rgba(0, 0, 0, 0.2) 0px 2px 2px, rgba(0, 0, 0, 0.2) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;' }}>
-        <div style={{ color: 'black', fontSize: '16px', cursor: 'pointer' }}>{item.label}</div>
-      </Menu.Item>
-    ))}
-  </Menu>
-</Drawer>
-
-
+        title="Menu"
+        placement="left"
+        closable
+        onClose={handleDrawerClose}
+        open={drawerVisible}
+        width={300}
+        bodyStyle={{ backgroundColor: '#ffffff', borderRight: '1px solid #f0f0f0' }}
+        style={{ borderTop: '1px solid #f0f0f0' }}
+      >
+        <Menu
+          mode="inline"
+          style={{ backgroundColor: '#ffffff', border: 'none' }}
+          onClick={handleDrawerClose}
+        >
+          {items.map((item) => (
+            <Menu.Item key={item.key} style={{ padding: '23px 27px', borderBottom: '1px solid #f0f0f0', boxShadow: 'box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 1px, rgba(0, 0, 0, 0.2) 0px 2px 2px, rgba(0, 0, 0, 0.2) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;' }}>
+              <div style={{ color: 'black', fontSize: '16px', cursor: 'pointer' }}>{item.label}</div>
+            </Menu.Item>
+          ))}
+        </Menu>
+      </Drawer>
     </>
   );
 };

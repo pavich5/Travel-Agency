@@ -72,7 +72,7 @@ const Page = ({ params }: any) => {
       </div>
       <OfferFilters filters={filters} handleApplyFilters={handleApplyFilters} setFilters={setFilters} />
       <div className={styles.tableWrapper}>
-        <Tabs activeKey={activeTabKey ? activeTabKey : "0"} onChange={handleTabChange}>
+        <Tabs style={{padding: '5px'}} activeKey={activeTabKey ? activeTabKey : "0"} onChange={handleTabChange}>
           {countryVacations?.offers?.reduce((uniqueCities: string[], offer: any) => {
             if (!uniqueCities.includes(offer.hotelCity)) {
               uniqueCities.push(offer.hotelCity);

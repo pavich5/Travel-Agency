@@ -125,9 +125,12 @@
     justify-content: space-between;
   }
 
-  .hamburgerMenu{
-    padding: 25px;
-    padding-bottom: 0;
-    padding-top: 0;
+
+  @media screen and (max-width: 768px) {
+    .navMenu{
+      display: none;
+    }
+    .hamburgerMenu{
+      display: block;
+    }
   }
-  
