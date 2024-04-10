@@ -1,20 +1,23 @@
 .mainPageWrapper {
-    display: flex;
-    justify-content: center;
-    padding-top: 0px;
-    overflow: hidden;
+  display: flex;
+  justify-content: center;
+  padding-top: 0px;
+  overflow: hidden;
 }
 
-
-.skeletonWrapper{
+.skeletonWrapper {
   width: 100vw;
-    height: 73vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 73vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-  @media screen and (max-width: 768px) {
-    .mainPageWrapper{
-        padding-bottom: 0;
-    }
+.spinner {
+  width: 100px;
+  height: 100px;
+}
+@media screen and (max-width: 768px) {
+  .mainPageWrapper {
+    padding-bottom: 0;
   }
+}

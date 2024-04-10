@@ -1,4 +1,3 @@
-import React from 'react';
 import { Offer } from '@/app/types';
 import Reviews from '@/app/Components/ReviewsComponent/Reviews';
 import styles from './HotelDetails.module.css'

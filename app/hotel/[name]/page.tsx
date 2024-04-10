@@ -5,7 +5,7 @@ import { vacationsCategories } from "@/app/Data/data";
 import styles from "./page.module.css";
 import HotelDetails from "@/app/Components/HotelDetails/HotelDetails";
 import { findCountryName } from "@/app/utils/helper";
-import { Spin } from "antd";
+import { Spinner } from "@chakra-ui/react";
 const Page = ({ params }: any) => {
   const [foundHotel, setFoundHotel] = useState<Offer | undefined>();
   const decodedName = decodeURIComponent(params.name);
@@ -30,7 +30,7 @@ const Page = ({ params }: any) => {
         />
       ) : (
         <div className={styles.skeletonWrapper}>
-          <Spin size="large" />
+          <Spinner className={styles.spinner} />
         </div>
       )}
     </div>
