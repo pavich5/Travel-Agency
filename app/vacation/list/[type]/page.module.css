@@ -20,9 +20,12 @@
   justify-content: flex-end;
   align-items: flex-start;
   background-size: cover;
-  background-position: center; 
+  background-position: center;
 }
 
+.noData {
+  text-align: center;
+}
 .sectionHeading {
   color: white;
   text-transform: capitalize;
@@ -47,8 +50,8 @@
 }
 
 .oneVacationCard {
-  width: 26%; 
-  height: 200px; 
+  width: 26%;
+  height: 200px;
   background-size: cover;
   background-position: center;
   border-radius: 10px;
@@ -58,9 +61,9 @@
   color: white;
   padding: 20px;
   box-sizing: border-box;
-  color: white; 
+  color: white;
   padding: 20px;
-  display: flex; 
+  display: flex;
   flex-direction: column;
   justify-content: flex-end;
   cursor: pointer;
@@ -113,8 +116,8 @@
 }
 
 .oneOfferCard {
-  width: 21vw; 
-  height: 190px; 
+  width: 21vw;
+  height: 190px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -124,15 +127,14 @@
   color: white;
   padding: 20px;
   box-sizing: border-box;
-  color: white; 
+  color: white;
   padding: 20px;
-  display: flex; 
+  display: flex;
   flex-direction: column;
   justify-content: flex-end;
   cursor: pointer;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
-
 
 .offerWrapper {
   display: flex;
@@ -177,13 +179,13 @@
 }
 
 @media screen and (max-width: 768px) {
-  .mainSection{
+  .mainSection {
     width: 100vw;
     height: 90.7vh;
     margin-top: 0;
     border-radius: 0;
   }
-  .availableList{
+  .availableList {
     display: flex;
     flex-direction: column;
     width: 100vw;
@@ -192,21 +194,21 @@
   .availableVacationsWrapper h3 {
     text-align: center;
   }
-  .oneVacationCard{
+  .oneVacationCard {
     width: 100%;
   }
-  .allOffers h3{
+  .allOffers h3 {
     text-align: center;
   }
-  .allOfferList{
+  .allOfferList {
     display: flex;
     flex-direction: column;
     padding: 25px;
   }
-  .oneOfferCard{
+  .oneOfferCard {
     width: 100%;
   }
-  .pageWrapper{
+  .pageWrapper {
     margin-bottom: 100px;
   }
 }

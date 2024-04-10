@@ -1437,25 +1437,25 @@ export const blogPosts =[
     title: "10 Must-Visit Beach Destinations Around the World",
     excerpt: "Explore the most breathtaking beach destinations that you should add to your travel bucket list.",
     image: "https://deih43ym53wif.cloudfront.net/large_amalfi-italy-shutterstock_759048709_bdda191300.jpeg",
-    slug: "must-visit-beach-destinations"
+    slug: "https://glorne.com/2023/12/02/top-10-paradise-vacation-destination-for-introverts-travelers/?gad_source=1&gclid=CjwKCAjw8diwBhAbEiwA7i_sJZfxsEq3RPYN2r7cYH-81WWpFb1n7sUpb7JaohT_bpUQupgQs5p_dhoCZqAQAvD_BwE"
   },
   {
     title: "A Guide to Hiking Trails for Beginners",
     excerpt: "Discover beginner-friendly hiking trails with stunning views and rewarding experiences.",
     image: "https://images.nationalgeographic.org/image/upload/t_edhub_resource_key_image/v1652340658/EducationHub/photos/colosseum.jpg",
-    slug: "hiking-trails-for-beginners"
+    slug: "https://floridatrail.org/day-hike/?gad_source=1&gclid=CjwKCAjw8diwBhAbEiwA7i_sJVrl9fxjQkpm2w_-nJTvOUHT_SB4Jb8DRRUcxYzgereSm__LytIiVhoCnzEQAvD_BwE"
   },
   {
     title: "The Ultimate Foodie's Guide to European Cuisine",
     excerpt: "Indulge in the diverse and delicious cuisines of Europe with our comprehensive guide to must-try dishes and culinary experiences.",
     image: "https://cdn.kimkim.com/files/a/images/55d7ea8718fda7b5b1c4c3a68f239c128e5b29a6/original-3e27ca9d22872719551bce400ed6a7db.jpg",
-    slug: "foodies-guide-to-european-cuisine"
+    slug: "https://www.celebritycruises.com/blog/european-food"
   },
   {
     title: "Exploring Ancient Ruins: A Journey Through History",
     excerpt: "Embark on a fascinating journey through time as we explore ancient ruins from civilizations around the world.",
     image: "https://media.cntraveler.com/photos/64823876d19bbdf5ed1d10d1/16:9/w_1280,c_limit/Italy%20Destination%20landing%20page_GettyImages-1258117204.jpg",
-    slug: "exploring-ancient-ruins"
+    slug: "https://www.youtube.com/watch?v=fq70UHD8DrM&ab_channel=touropia"
   }
 ];
 

@@ -1,11 +1,13 @@
-import { Button } from 'antd';
-import styles from '../../page.module.css';
-import { ReactElement, JSXElementConstructor, ReactNode, Key } from 'react';
+import { Button } from "antd";
+import styles from "../../page.module.css";
+import {  Key } from "react";
+import Link from "next/link";
 
 interface BlogPost {
   image: string;
   title: string;
   excerpt: string;
+  slug: string;
 }
 
 interface BlogSectionProps {
@@ -25,8 +27,10 @@ const BlogSection = ({ blogPosts }: BlogSectionProps): JSX.Element => {
                 <h3>{post.title}</h3>
                 <p>{post.excerpt}</p>
               </div>
-              <div style={{ padding: '15px' }}>
-                <Button type='primary'>Read more</Button>
+              <div style={{ padding: "15px" }}>
+                <Link target="_blank" href={post.slug}>
+                  <Button type="primary">Read more</Button>
+                </Link>
               </div>
             </div>
           </div>
