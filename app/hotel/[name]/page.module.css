@@ -5,6 +5,14 @@
     overflow: hidden;
 }
 
+
+.skeletonWrapper{
+  width: 100vw;
+    height: 73vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
   @media screen and (max-width: 768px) {
     .mainPageWrapper{
         padding-bottom: 0;
