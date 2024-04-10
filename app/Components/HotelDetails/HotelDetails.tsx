@@ -5,14 +5,9 @@ import styles from './HotelDetails.module.css'
 const HotelDetails = ({ foundHotel, findCountryName }: { foundHotel: Offer, findCountryName: () => string }) => (
   <div className={styles.foundHotelWrapper}>
     <img
-      style={{
-        minWidth: '60vw',
-        height: '300px',
-        borderRadius: '24px',
-        objectFit: 'cover'
-      }}
       src={foundHotel.hotelCoverImage}
       alt="hotel image"
+      className={styles.hotelCoverImage}
     />
     <div className={styles.bottomLayer}>
       <h3 className={styles.hotelName}>{foundHotel.hotelName} {foundHotel.hotelCity}</h3>
