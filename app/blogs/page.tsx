@@ -62,7 +62,7 @@ const Blogs = () => {
 
   const getAllPosts = async () => {
     try {
-      const response = await axios.get("https://travel-agency-plum.vercel.app/api/getAllPosts");
+      const response = await axios.get("http://localhost:3000/api/getAllPosts");
       setPosts(response.data);
       setOriginalPosts(response.data);
     } catch (error) {
