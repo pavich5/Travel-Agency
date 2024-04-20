@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "./Components/Header/Header";
 import { ClerkProvider } from '@clerk/nextjs'
 import Footer from "./Components/Footer/Footer";
+import { EdgeStoreProvider } from './lib/edgestore';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +23,9 @@ export default function RootLayout({
       <html lang="en">
         <body className={inter.className}>
           <Header />
+          <EdgeStoreProvider>
           {children}
+          </EdgeStoreProvider>
           <Footer />
         </body>
       </html>

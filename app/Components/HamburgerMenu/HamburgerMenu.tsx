@@ -1,10 +1,11 @@
-import { useState } from 'react';
-import { Button, Drawer, Menu, Dropdown, Space } from 'antd';
-import { MenuOutlined, DownOutlined } from '@ant-design/icons';
-import Link from 'next/link';
-import { CountryLists } from '@/app/Data/data';
-import React from 'react';
-import './HamburgerMenu.css'
+import { useState } from "react";
+import { Button, Drawer, Menu, Dropdown, Space } from "antd";
+import { MenuOutlined, DownOutlined } from "@ant-design/icons";
+import Link from "next/link";
+import { CountryLists } from "@/app/Data/data";
+import React from "react";
+import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import "./HamburgerMenu.css";
 export interface MenuItem {
   key: string;
   label: JSX.Element;
@@ -12,26 +13,26 @@ export interface MenuItem {
 
 const items: MenuItem[] = [
   {
-    key: '1',
+    key: "1",
     label: (
       <Dropdown
         overlay={
           <Menu>
-            <Menu.Item key="0" style={{ padding: '15px', width: '200px' }}>
+            <Menu.Item key="0" style={{ padding: "15px", width: "200px" }}>
               <Link href="/vacation/list/summer">Summer Vacations</Link>
             </Menu.Item>
-            <Menu.Item key="1" style={{ padding: '15px', width: '200px' }}>
+            <Menu.Item key="1" style={{ padding: "15px", width: "200px" }}>
               <Link href="/vacation/list/winter">Winter Vacations</Link>
             </Menu.Item>
-            <Menu.Item key="2" style={{ padding: '15px', width: '200px' }}>
+            <Menu.Item key="2" style={{ padding: "15px", width: "200px" }}>
               <Link href="/vacation/list/easter">Easter Vacations</Link>
             </Menu.Item>
-            <Menu.Item key="3" style={{ padding: '15px', width: '200px' }}>
+            <Menu.Item key="3" style={{ padding: "15px", width: "200px" }}>
               <Link href="/vacation/list/Spring">Spring Vacations</Link>
             </Menu.Item>
           </Menu>
         }
-        trigger={['click']}
+        trigger={["click"]}
       >
         <a onClick={(e) => e.stopPropagation()}>
           <Space>
@@ -43,20 +44,22 @@ const items: MenuItem[] = [
     ),
   },
   {
-    key: '2',
+    key: "2",
     label: (
       <Dropdown
         overlay={
           <Menu>
-            {CountryLists.map((country) =>
-              <Menu.Item key={country} style={{ padding: '8px', width: '200px' }}>
+            {CountryLists.map((country) => (
+              <Menu.Item
+                key={country}
+                style={{ padding: "8px", width: "200px" }}
+              >
                 <Link href={`/vacation/${country}`}>{country}</Link>
               </Menu.Item>
-
-            )}
+            ))}
           </Menu>
         }
-        trigger={['click']}
+        trigger={["click"]}
       >
         <a onClick={(e) => e.stopPropagation()}>
           <Space>
@@ -68,17 +71,30 @@ const items: MenuItem[] = [
     ),
   },
   {
-    key: '121',
-    label: (
-      <Link href="/ai">Travel AI</Link>
-    )
+    key: "121",
+    label: <Link href="/ai">Travel AI</Link>,
   },
   {
-    key: '125',
+    key: "1231",
+    label: <Link href="/blogs">Travel Experiences</Link>,
+  },
+  {
+    key: "125",
+    label: <Link href="/about">About Us</Link>,
+  },
+  {
+    key: "123331",
     label: (
-      <Link href="/about">About Us</Link>
-    )
-  }
+      <>
+        <SignedIn>
+          <UserButton afterSignOutUrl="/" showName />
+        </SignedIn>
+        <SignedOut>
+          <Link href="/sign-in">Login</Link>
+        </SignedOut>
+      </>
+    ),
+  },
 ];
 
 const HamburgerMenu: React.FC = () => {
@@ -94,7 +110,11 @@ const HamburgerMenu: React.FC = () => {
 
   return (
     <>
-      <Button onClick={handleMenuClick} icon={<MenuOutlined />} className='hamburgerMenu' />
+      <Button
+        onClick={handleMenuClick}
+        icon={<MenuOutlined />}
+        className="hamburgerMenu"
+      />
       <Drawer
         title="Menu"
         placement="left"
@@ -102,17 +122,32 @@ const HamburgerMenu: React.FC = () => {
         onClose={handleDrawerClose}
         open={drawerVisible}
         width={300}
-        bodyStyle={{ backgroundColor: '#ffffff', borderRight: '1px solid #f0f0f0' }}
-        style={{ borderTop: '1px solid #f0f0f0' }}
+        bodyStyle={{
+          backgroundColor: "#ffffff",
+          borderRight: "1px solid #f0f0f0",
+        }}
+        style={{ borderTop: "1px solid #f0f0f0" }}
       >
         <Menu
           mode="inline"
-          style={{ backgroundColor: '#ffffff', border: 'none' }}
+          style={{ backgroundColor: "#ffffff", border: "none" }}
           onClick={handleDrawerClose}
         >
           {items.map((item) => (
-            <Menu.Item key={item.key} style={{ padding: '23px 27px', borderBottom: '1px solid #f0f0f0', boxShadow: 'box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 1px, rgba(0, 0, 0, 0.2) 0px 2px 2px, rgba(0, 0, 0, 0.2) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;' }}>
-              <div style={{ color: 'black', fontSize: '16px', cursor: 'pointer' }}>{item.label}</div>
+            <Menu.Item
+              key={item.key}
+              style={{
+                padding: "23px 27px",
+                borderBottom: "1px solid #f0f0f0",
+                boxShadow:
+                  "box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 1px, rgba(0, 0, 0, 0.2) 0px 2px 2px, rgba(0, 0, 0, 0.2) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;",
+              }}
+            >
+              <div
+                style={{ color: "black", fontSize: "16px", cursor: "pointer" }}
+              >
+                {item.label}
+              </div>
             </Menu.Item>
           ))}
         </Menu>

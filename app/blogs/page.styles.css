@@ -1,0 +1,143 @@
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.page-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.new-post {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .headerWrapperBlogs {
+    flex-direction: column;
+  }
+}
+
+.spinnerDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+}
+
+.spinner{
+  width: 200px;
+  height: 200px;
+}
+
+.post {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.post img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.post-content p {
+  margin-bottom: 10px;
+  font-size: 14px;
+  padding: 5px;
+}
+
+.post-images {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.post-images img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.post-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.post-actions input {
+  flex: 1;
+  margin-right: 8px;
+}
+
+.comments {
+  margin-top: 5px;
+}
+
+.comment {
+  border: 1px solid #eee;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.comment p {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.imageInputWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.createPostImg {
+  width: 300px;
+  height: 200px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.headerWrapperBlogs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.post-header img,
+.comment img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-left: 6px;
+}
+
+.usernameWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.commentFooter {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}

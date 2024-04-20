@@ -81,3 +81,33 @@ export interface Filters {
   mealPlan: string[];
   roomType: string[];
 }
+
+export interface Comment {
+  _id: Number;
+  userName: string;
+  userId: string;
+  userImage: string;
+  content: string;
+}
+export interface Author {
+  userName: string;
+  userId: string;
+  userImage: string;
+}
+export interface Post {
+  _id: string;
+  title: string;
+  description: string;
+  author: Author;
+  likes: number;
+  comments?: Comment[];
+  images?: string[];
+}
+
+export type NotificationType = "success" | "error";
+
+export interface FormData {
+  title: string;
+  description: string;
+  images: string;
+}

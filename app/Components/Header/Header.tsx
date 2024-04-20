@@ -51,7 +51,7 @@ const Header = () => {
           <Link href='/ai' className={styles.menuItemText}>Travel AI</Link>
         </div>
         <div className={styles.menuItem}>
-          <Link href='/about' className={styles.menuItemText}>About us</Link>
+          <Link href='/blogs' className={styles.menuItemText}>Travel Experiences</Link>
         </div>
         <div className={styles.menuItem}>
           <Dropdown
