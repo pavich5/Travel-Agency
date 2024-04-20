@@ -7,7 +7,10 @@ global.mongoose = {
 
 export async function dbConnect() {
   try {
-    {
+    if (global.mongoose && global.mongoose.conn) {
+      console.log("Connected from previous");
+      return global.mongoose.conn;
+    } else {
       const conString = process.env.MONGODB_URL;
 
       const promise = mongoose.connect(conString, {
