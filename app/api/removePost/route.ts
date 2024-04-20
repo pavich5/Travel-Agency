@@ -4,6 +4,9 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function DELETE(req: NextRequest) {
   try {
+    const headers = new Headers();
+    headers.append('Access-Control-Allow-Origin', 'https://travel-agency-mauve-zeta.vercel.app');
+    headers.append('Content-Type', 'application/json');
     await dbConnect();
 
     const postId = req.url.split('?')[1]?.split('=')[1];
