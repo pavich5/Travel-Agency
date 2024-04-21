@@ -77,40 +77,45 @@ const Blogs = () => {
 
   const handleCreatePost = async () => {
     try {
-      const response = await axios.post(
-        "https://travel-agency-plum.vercel.app/api/createPost",
-        {
-          ...formData,
-          author: {
-            userName: user?.fullName,
-            userId: user?.id,
-            userImage: user?.imageUrl,
-          },
+        const response = await axios.post(
+            "https://travel-agency-plum.vercel.app/api/createPost",
+            {
+                ...formData,
+                author: {
+                    userName: user?.fullName,
+                    userId: user?.id,
+                    userImage: user?.imageUrl,
+                },
+            }
+        );
+
+        const data = response.data;
+        console.log("pavic", data);
+
+        if (response.status === 201) {
+            openNotificationWithIcon("success", "Successfully created post");
+            setFormData({
+                title: "",
+                description: "",
+                images: "",
+            });
+            setPostImageUrl({
+                thumbmailUrl: "",
+                url: "",
+            });
+            getAllPosts();
+            setIsModalOpen(false);
         }
-      );
-      if (response.status === 201) {
-        openNotificationWithIcon("success", "Successfully created post");
-        setFormData({
-          title: "",
-          description: "",
-          images: "",
-        });
-        setPostImageUrl({
-          thumbmailUrl: "",
-          url: "",
-        });
-        getAllPosts();
-        setIsModalOpen(false);
-      }
     } catch (error) {
-      console.error("Error creating post:", error);
-      openNotificationWithIcon(
-        "error",
-        "Failed to create post",
-        error as string
-      );
+        console.error("Error creating post:", error);
+        openNotificationWithIcon(
+            "error",
+            "Failed to create post",
+            error as string
+        );
     }
-  };
+};
+
 
   const removePost = async (postId: string) => {
     try {
