@@ -54,6 +54,9 @@ const Header = () => {
           <Link href='/blogs' className={styles.menuItemText}>Travel Experiences</Link>
         </div>
         <div className={styles.menuItem}>
+          <Link href='/about' className={styles.menuItemText}>About us</Link>
+        </div>
+        <div className={styles.menuItem}>
           <Dropdown
             overlay={
               <Menu>
