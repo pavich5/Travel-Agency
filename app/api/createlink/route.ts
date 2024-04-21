@@ -4,6 +4,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY ?? '');
 
 async function createStripeSession(req: Request) {
   try {
+    
     const { item, qty, price, email } = await req.json();
     const quantity = parseInt(qty);
     

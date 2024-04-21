@@ -4,9 +4,6 @@ import PostModel from '../models/PostModel';
 
 export async function POST(req: NextRequest) {
   try {
-    const headers = new Headers();
-    headers.append('Access-Control-Allow-Origin', 'https://travel-agency-plum.vercel.app');
-    headers.append('Content-Type', 'application/json');
     await dbConnect();
 
     const { title, description, author, images } = await req.json();
