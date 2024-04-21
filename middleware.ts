@@ -1,7 +1,37 @@
 import { authMiddleware } from "@clerk/nextjs";
- 
-export default authMiddleware({
+import { NextRequest, NextFetchEvent, NextMiddleware } from "next/server";
 
-  publicRoutes: ["/",'/api','/successfully','/api/createlink','/api/getStripeApi','/cancelled','/vacation/list/:type','/vacation/:name', '/hotel/:name','/offer/:id', '/ai','/booking/confirmation/:id','/booking/confirmed/:id','/about','/api/checkdb','/blogs','/api/createPost','/api/getAllPosts','/api/getPostById','/api/removePost','/api/likePost','/api/addComment','/api/edgestore/request-upload'],
+// Define authentication middleware (if needed)
+const auth = authMiddleware({
+  publicRoutes: [
+    "/",
+    "/api",
+    "/successfully",
+    "/api/createlink",
+    "/api/getStripeApi",
+    "/cancelled",
+    "/vacation/list/:type",
+    "/vacation/:name",
+    "/hotel/:name",
+    "/offer/:id",
+    "/ai",
+    "/booking/confirmation/:id",
+    "/booking/confirmed/:id",
+    "/about",
+    "/api/checkdb",
+    "/blogs",
+    "/api/createPost",
+    "/api/getAllPosts",
+    "/api/getPostById",
+    "/api/removePost",
+    "/api/likePost",
+    "/api/addComment",
+    "/api/edgestore/request-upload",
+  ],
 });
- 
+
+// Middleware function to apply authentication
+const middleware: NextMiddleware = (request: NextRequest, event: NextFetchEvent) =>
+  auth(request, event);
+
+export default middleware;
