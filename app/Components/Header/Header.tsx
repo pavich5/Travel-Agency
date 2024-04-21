@@ -38,6 +38,9 @@ const Header = () => {
       </div>
       <HamburgerMenu />
       <div className={styles.navMenu}>
+      <div className={styles.menuItem}>
+          <Link href='/about' className={styles.menuItemText}>About us</Link>
+        </div>
         <div className={styles.menuItem}>
           <Dropdown overlay={<Menu>{menuItems}</Menu>}>
             <a onClick={(e) => e.preventDefault()}>
@@ -50,11 +53,9 @@ const Header = () => {
         <div className={styles.menuItem}>
           <Link href='/ai' className={styles.menuItemText}>Travel AI</Link>
         </div>
+       
         <div className={styles.menuItem}>
           <Link href='/blogs' className={styles.menuItemText}>Travel Experiences</Link>
-        </div>
-        <div className={styles.menuItem}>
-          <Link href='/about' className={styles.menuItemText}>About us</Link>
         </div>
         <div className={styles.menuItem}>
           <Dropdown

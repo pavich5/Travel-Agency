@@ -29,7 +29,7 @@ const LandingSection: React.FC<LandingSectionProps> = ({ handleInputChange, filt
       <div className={styles.inputWrapper}>
         <Select
           mode="tags"
-          placeholder="Search destination, trips, or experiences"
+          placeholder="Search for destination or trips"
           style={{ width: '100%', height: '37px' }}
           onSearch={handleInputChange}
           tokenSeparators={[',']}
