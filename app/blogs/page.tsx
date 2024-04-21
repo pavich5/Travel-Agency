@@ -89,9 +89,6 @@ const Blogs = () => {
             }
         );
 
-        const data = response.data;
-        console.log("pavic", data);
-
         if (response.status === 201) {
             openNotificationWithIcon("success", "Successfully created post");
             setFormData({
@@ -103,7 +100,7 @@ const Blogs = () => {
                 thumbmailUrl: "",
                 url: "",
             });
-            getAllPosts();
+            setPosts((prevPosts:any) => [...prevPosts, response.data]);
             setIsModalOpen(false);
         }
     } catch (error) {
@@ -115,6 +112,7 @@ const Blogs = () => {
         );
     }
 };
+
 
 
   const removePost = async (postId: string) => {
