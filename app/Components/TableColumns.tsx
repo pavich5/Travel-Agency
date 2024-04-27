@@ -79,9 +79,7 @@ const useTableColumns = (): TableProps<any>['columns'] => {
         { text: '5 stars', value: 5 },
       ],
       onFilter: (value, record) => {
-        // @ts-ignore
-        const numNights = parseInt(record.Nights.split(' ')[0]);
-        return numNights === value;
+        return record.Stars === value;
       },
       render: (text) => (
         <p style={{ textAlign: 'center'}}>
