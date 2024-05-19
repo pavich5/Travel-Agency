@@ -4,9 +4,10 @@ import { Button, Input, notification } from 'antd';
 import styles from './page.module.css';
 import { loadStripe } from "@stripe/stripe-js";
 import { vacationsCategories } from '@/app/Data/data';
+import { useUser } from '@clerk/nextjs';
 
 const Page = ({ params }: any) => {
-  // const { user } = useUser();
+  const { user } = useUser();
   const [offerDetails, setOfferDetails] = useState<any>();
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -40,7 +41,7 @@ const Page = ({ params }: any) => {
     }
 
     try {
-      const stripeKeyResponse = await fetch("https://travel-agency-plum.vercel.app/api/getStripeApi");
+      const stripeKeyResponse = await fetch("http://localhost:3000/api/getStripeApi");
       if (!stripeKeyResponse.ok) {
         throw new Error(`Failed to fetch STRIPE_ACCESS_KEY! Status: ${stripeKeyResponse.status}`);
       }
@@ -48,7 +49,7 @@ const Page = ({ params }: any) => {
       const stripe = await loadStripe(stripeKeyData);
 
       const createSessionResponse = await fetch(
-        "https://travel-agency-plum.vercel.app/api/createlink",
+        "http://localhost:3000/api/createlink",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -71,22 +72,7 @@ const Page = ({ params }: any) => {
   const handleContactUsOnViber = () => {
     window.location.href = "viber://add?number=1234567890";
   };
-  // const updateUserMetadata = () => {
-  //   user?.update({
-  //     unsafeMetadata: {
-  //       firstName,
-  //       lastName,
-  //       email,
-  //       phoneNumber,
-  //       payedOffers: [
-  //         {
-  //           id: offerDetails.id,
-  //           name: offerDetails.name
-  //         }
-  //       ]
-  //     }
-  //   });
-  // };
+
 
   return (
     <div className={styles.page}>

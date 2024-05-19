@@ -11,13 +11,13 @@ import { useUser } from "@clerk/clerk-react";
 import { Spinner } from "@chakra-ui/react";
 
 const Blogs = () => {
+  const { isSignedIn, user } = useUser();
+  const [api, contextHolder] = notification.useNotification();
   const [formData, setFormData] = useState<FormData>({
     title: "",
     description: "",
     images: "",
   });
-  const { isSignedIn, user } = useUser();
-  const [api, contextHolder] = notification.useNotification();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [posts, setPosts] = useState<Post[] | undefined>([]);
   const [originalPosts, setOriginalPosts] = useState<Post[]>([]);
@@ -62,7 +62,9 @@ const Blogs = () => {
 
   const getAllPosts = async () => {
     try {
-      const response = await axios.get("https://travel-agency-plum.vercel.app/api/getAllPosts");
+      const response = await axios.get(
+        "https://travel-agency-plum.vercel.app/api/getAllPosts"
+      );
       setPosts(response.data);
       setOriginalPosts(response.data);
     } catch (error) {
@@ -77,49 +79,50 @@ const Blogs = () => {
 
   const handleCreatePost = async () => {
     try {
-        const response = await axios.post(
-            "https://travel-agency-plum.vercel.app/api/createPost",
-            {
-                ...formData,
-                author: {
-                    userName: user?.fullName,
-                    userId: user?.id,
-                    userImage: user?.imageUrl,
-                },
-            }
-        );
-
-        if (response.status === 201) {
-            openNotificationWithIcon("success", "Successfully created post");
-            setFormData({
-                title: "",
-                description: "",
-                images: "",
-            });
-            setPostImageUrl({
-                thumbmailUrl: "",
-                url: "",
-            });
-            setPosts((prevPosts:any) => [...prevPosts, response.data]);
-            setIsModalOpen(false);
+      const response = await axios.post(
+        "https://travel-agency-plum.vercel.app/api/createPost",
+        {
+          ...formData,
+          author: {
+            userName: user?.fullName,
+            userId: user?.id,
+            userImage: user?.imageUrl,
+          },
         }
+      );
+
+      if (response.status === 201) {
+        openNotificationWithIcon("success", "Successfully created post");
+        setFormData({
+          title: "",
+          description: "",
+          images: "",
+        });
+        setPostImageUrl({
+          thumbmailUrl: "",
+          url: "",
+        });
+        setPosts((prevPosts: any) => [...prevPosts, response.data]);
+        setIsModalOpen(false);
+      }
     } catch (error) {
-        console.error("Error creating post:", error);
-        openNotificationWithIcon(
-            "error",
-            "Failed to create post",
-            error as string
-        );
+      console.error("Error creating post:", error);
+      openNotificationWithIcon(
+        "error",
+        "Failed to create post",
+        error as string
+      );
     }
-};
-
-
+  };
 
   const removePost = async (postId: string) => {
     try {
-      await axios.delete(`https://travel-agency-plum.vercel.app/api/removePost`, {
-        params: { postId },
-      });
+      await axios.delete(
+        `https://travel-agency-plum.vercel.app/api/removePost`,
+        {
+          params: { postId },
+        }
+      );
       getAllPosts();
       openNotificationWithIcon("success", "Post deleted successfully");
     } catch (error) {
@@ -204,10 +207,13 @@ const Blogs = () => {
       return;
     }
     try {
-      const response = await axios.patch(`https://travel-agency-plum.vercel.app/api/likePost`, {
-        _id: postId,
-        likes: likes,
-      });
+      const response = await axios.patch(
+        `https://travel-agency-plum.vercel.app/api/likePost`,
+        {
+          _id: postId,
+          likes: likes,
+        }
+      );
       if (response.status === 200) {
         setLikedPosts((prevLikedPosts) =>
           prevLikedPosts.includes(postId)

@@ -30,7 +30,7 @@ async function createStripeSession(req: Request) {
         },
       ],
       mode: "payment",
-      success_url: `https://travel-agency-plum.vercel.app/booking/confirmed/${item.id}?email=${email}&hotelName=${encodeURIComponent(item.hotelName)}&hotelCity=${encodeURIComponent(item.hotelCity)}`,
+      success_url: `https://travel-agency-plum.vercel.app/booking/confirmed/${item.id}?email=${email}&hotelName=${encodeURIComponent(item.hotelName)}&hotelCity=${encodeURIComponent(item.hotelCity)}&bookingId=${item.id}`,
       cancel_url: "https://travel-agency-plum.vercel.app/cancelled",
     });
 

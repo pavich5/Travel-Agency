@@ -111,6 +111,17 @@
     border-radius: 12px;
   }
 
+  .userImage{
+    display: flex;
+    align-items: center;
+  }
+  .userImage img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    margin-right: 8px;
+  }
+
   .dropdownButton{
     cursor: pointer;
   }

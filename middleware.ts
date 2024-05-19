@@ -27,6 +27,7 @@ const auth = authMiddleware({
     "/api/likePost",
     "/api/addComment",
     "/api/edgestore/request-upload",
+    "/api/webhook"
   ],
 });
 

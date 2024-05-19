@@ -1,7 +1,7 @@
 "use client"
 import styles from './Header.module.css';
 import Link from 'next/link';
-import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
+import { SignedIn, SignedOut, UserButton, useUser } from '@clerk/nextjs';
 import { Dropdown, Space, Menu } from 'antd';
 import { LeftOutlined, DownOutlined } from '@ant-design/icons';
 import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
@@ -10,6 +10,7 @@ import { CountryLists } from '@/app/Data/data';
 const Header = () => {
   const router = useRouter();
   const pathname = usePathname()
+  const { user } = useUser();
 
 
   const handleBack = () => {
@@ -84,7 +85,10 @@ const Header = () => {
         </div>
         <div className={styles.menuItem} style={{ marginLeft: '0px' }}>
           <SignedIn>
-            <UserButton afterSignOutUrl='/' showName />
+            <div className={styles.userImage} onClick={()=> {router.push(`/user/${user?.id}`)}}>
+              <img src={user?.imageUrl} alt="" />
+              <p>My Profile</p>
+            </div>
           </SignedIn>
           <SignedOut>
             <Link href='/sign-in' className={styles.menuItemText}>Login</Link>
