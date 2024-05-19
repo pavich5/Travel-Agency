@@ -53,7 +53,7 @@ const Page = ({ params }: any) => {
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ item: offerDetails, qty: "1", price: offerDetails.totalCost * 100, email }),
+          body: JSON.stringify({ item: offerDetails, qty: "1", price: offerDetails.totalCost * 100, email,userId:user?.id }),
         }
       );
       if (!createSessionResponse.ok) {
