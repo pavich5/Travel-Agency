@@ -38,7 +38,7 @@ async function createStripeSession(req: Request) {
         price:price,
         offerImage:item.offerImage
       },
-      success_url: `http://localhost:3000/booking/confirmed/${
+      success_url: `https://travel-agency-plum.vercel.app/booking/confirmed/${
         item.id
       }?email=${email}&hotelName=${encodeURIComponent(
         item.hotelName
