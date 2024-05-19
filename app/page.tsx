@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import styles from "./page.module.css";
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 import { blogPosts, vacationsCategories } from "./Data/data";
@@ -32,25 +32,6 @@ const LandingPage = () => {
   const currentItems = vacationsCategories.categories.flatMap(
     (category) => category.countrys
   );
-  useEffect(() => {
-    const filteredResults = vacationsCategories.categories.flatMap((category) =>
-      category.countrys.flatMap((country) =>
-        country.offers
-          .filter((offer) =>
-            offer.hotelName.toLowerCase().includes(searchValue.toLowerCase())
-          )
-          .map((offer) => ({
-            id: offer.id,
-            hotelName: offer.hotelName,
-            location: offer.location,
-            image: offer.hotelCoverImage,
-            duration: offer.duration,
-            totalCost: offer.totalCost,
-          }))
-      )
-    );
-    setFilteredData(filteredResults);
-  }, [searchValue]);
 
   const handleNextPage = () => {
     const totalItems = vacationsCategories.categories.flatMap(
@@ -66,9 +47,6 @@ const LandingPage = () => {
     setCurrentPage((prevPage) => prevPage - 1);
   };
 
-  const handleInputChange = (value: string) => {
-    setSearchValue(value);
-  };
 
   const renderPageNumbers = () => {
     const totalItems = vacationsCategories.categories.flatMap(
@@ -97,7 +75,6 @@ const LandingPage = () => {
         <div className={styles.mainSection}>
           <LandingSection
             filteredData={filteredData}
-            handleInputChange={handleInputChange}
             searchValue={searchValue}
           />
         </div>

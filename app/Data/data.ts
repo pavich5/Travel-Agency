@@ -16,6 +16,7 @@ export const vacationsCategories = {
               id: 1,
               location: "400 Cannery Row, Zurich, CA 93121",
               hotelName: "Serene Haven Hotel",
+              countryName: "Switzerland",
               pickUpLocation: "400 Zurich Row 12:00 PM",
               hotelRoom: "2 Persons",
               startDate: "19-02-2023",
@@ -87,6 +88,7 @@ export const vacationsCategories = {
               pickUpLocation: "Geneva Airport 12:30 PM",
               hotelRoom: "2 Persons",
               startDate: "15-04-2023",
+              countryName: "Switzerland",
               endDate: "22-04-2023",
               totalCost: 1200,
               arrivalTime: "15-04-2023 15:00",
@@ -150,11 +152,12 @@ export const vacationsCategories = {
             },
             {
               id: 229999,
-              location: "400 Cannery Row, Canada, CA 93121",
+              location: "400 Cannery Row, Switzerland, CA 93121",
               hotelName: "Azure Bay Resort",
               pickUpLocation: "400 London Row 12:00 PM",
               hotelRoom: "2 Persons",
               startDate: "21-02-2023",
+              countryName: "Switzerland",
               offerImage:
                 "https://digital.ihg.com/is/image/ihg/crowne-plaza-zurich-9242232841-2x1",
               endDate: "29-03-2023",
@@ -227,6 +230,7 @@ export const vacationsCategories = {
           offers: [
             {
               id: 9999,
+              countryName: "Canada",
               amenities: [
                 "Free Wi-Fi",
                 "Spa",
@@ -294,6 +298,7 @@ export const vacationsCategories = {
             {
               id: 1236671,
               hotelName: "Banff Beach Resort",
+              countryName: "Canada",
               amenities: [
                 "Free Wi-Fi",
                 "Pool",
@@ -364,6 +369,7 @@ export const vacationsCategories = {
               pickUpLocation: "400 London Row 12:00 PM",
               hotelRoom: "2 Persons",
               startDate: "19-02-2023",
+              countryName: "Canada",
               endDate: "31-03-2023",
               totalCost: 1000,
               arrivalTime: "21-02-2023 14:00",
@@ -435,6 +441,7 @@ export const vacationsCategories = {
                 "Room Service",
               ],
               hotelName: "Northern Lights Lodge",
+              countryName: "Canada",
               location: "600 Jasper Avenue, Vancouver, BC V6C 2T5, Canada",
               startDate: "15-03-2023",
               arrivalTime: "15-03-2023 15:00",
@@ -494,6 +501,7 @@ export const vacationsCategories = {
             {
               id: 18,
               hotelName: "Tranquil Oasis Lodge",
+              countryName: "Canada",
               amenities: [
                 "Free Wi-Fi",
                 "Spa",
@@ -573,6 +581,7 @@ export const vacationsCategories = {
               endDate: "29-03-2023",
               totalCost: 950,
               hotelStars: 5,
+              countryName: "Canada",
               offerImage:
                 "https://d3dqioy2sca31t.cloudfront.net/Projects/cms/production/000/030/077/original/4f38465b563cbfb25f179fd1b19e2d1e/article-bulgaria-veliko-tarnovo.jpg",
               hotelCity: "Toronto",
@@ -653,8 +662,9 @@ export const vacationsCategories = {
               ],
               startDate: "21-02-2023",
               endDate: "29-03-2023",
-              location: "400 Cannery Row, Canada, CA 93121",
+              location: "400 Cannery Row, Greece, CA 93121",
               totalCost: 1000,
+              countryName: "Greece",
               offerImage:
                 "https://www.schimiggy.com/wp-content/uploads/2021/07/Greece-Travel-Guide-by-Alex-Tran.jpg",
               hotelStars: 4,
@@ -710,6 +720,7 @@ export const vacationsCategories = {
             {
               id: 25,
               hotelName: "Palms",
+              countryName: "Greece",
               amenities: [
                 "Free Wi-Fi",
                 "Spa",
@@ -719,7 +730,7 @@ export const vacationsCategories = {
               ],
               startDate: "21-02-2023",
               endDate: "29-03-2023",
-              location: "400 Cannery Row, Canada, CA 93121",
+              location: "400 Cannery Row, Greece, CA 93121",
               totalCost: 1000,
               offerImage:
                 "https://iconicsantorini.com/wp-content/uploads/2023/02/IconicAlexandraAdonis-19.jpg",
@@ -776,6 +787,7 @@ export const vacationsCategories = {
             {
               id: 222,
               hotelName: "Santorini Palms Retreat",
+              countryName: "Greece",
               amenities: [
                 "Free Wi-Fi",
                 "Spa",
@@ -785,7 +797,7 @@ export const vacationsCategories = {
               ],
               startDate: "21-02-2023",
               endDate: "29-03-2023",
-              location: "400 Cannery Row, Canada, CA 93121",
+              location: "400 Cannery Row, Greece, CA 93121",
               totalCost: 1000,
               offerImage:
                 "https://a.cdn-hotels.com/gdcs/production109/d262/bd38cd57-bbd8-441a-80b6-6465c035d8db.jpg?impolicy=fcrop&w=800&h=533&q=medium",
@@ -853,6 +865,7 @@ export const vacationsCategories = {
               id: 1111,
               hotelName: "Emerald Shores Hotel",
               startDate: "21-02-2023",
+              countryName: "Portugal",
               amenities: [
                 "Free Wi-Fi",
                 "Spa",
@@ -864,7 +877,7 @@ export const vacationsCategories = {
               totalCost: 950,
               offerImage:
                 "https://www.thetinybook.com/wp-content/uploads/2023/08/Lagos-Portugal.jpg",
-              location: "400 Cannery Row, Canada, CA 93121",
+              location: "400 Cannery Row, Portugal, CA 93121",
               hotelStars: 4,
               hotelCity: "Lisbon",
               arrivalTime: "21-02-2023 14:00",
@@ -918,6 +931,7 @@ export const vacationsCategories = {
             {
               id: 11121,
               hotelName: "Shores Hotel",
+              countryName: "Portugal",
               startDate: "21-02-2023",
               amenities: [
                 "Free Wi-Fi",
@@ -930,7 +944,7 @@ export const vacationsCategories = {
               totalCost: 950,
               offerImage:
                 "https://bubo.sk//uploads/galleries/784/lisabon-sunset.jpg",
-              location: "400 Cannery Row, Canada, CA 93121",
+              location: "400 Cannery Row, Portugal, CA 93121",
               hotelStars: 4,
               hotelCoverImage:
                 "https://cf.bstatic.com/xdata/images/hotel/max1024x768/492106100.jpg?k=e5094f3f7d90049f7afda56b1e4756a152dfe658b5731b5de61cd50bc04c0e33&o=&hp=1",
@@ -1003,6 +1017,7 @@ export const vacationsCategories = {
               ],
               endDate: "29-03-2023",
               totalCost: 950,
+              countryName: "France",
               arrivalTime: "21-02-2023 14:00",
               hotelStars: 4,
               offerImage:
@@ -1088,8 +1103,9 @@ export const vacationsCategories = {
                 "Restaurant",
                 "Room Service",
               ],
+              countryName: "Italy",
               totalCost: 1200,
-              location: "400 Cannery Row, Canada, CA 93121",
+              location: "400 Cannery Row, Italy, CA 93121",
               hotelStars: 5,
               person: 2,
               hotelCity: "Rome",
@@ -1147,6 +1163,7 @@ export const vacationsCategories = {
                 "https://www.italia.it/content/dam/tdh/en/interests/lombardia/milano/milano-in-48-ore/media/20220119115535-piazza-del-duomo-all-alba-milano-lombardia-shutterstock-1161075943-rid.jpg",
               arrivalTime: "21-02-2023 14:00",
               endDate: "29-03-2023",
+              countryName: "Italy",
               amenities: [
                 "Free Wi-Fi",
                 "Spa",
@@ -1155,7 +1172,7 @@ export const vacationsCategories = {
                 "Room Service",
               ],
               totalCost: 1200,
-              location: "400 Cannery Row, Canada, CA 93121",
+              location: "400 Cannery Row, Italy, CA 93121",
               hotelStars: 5,
               person: 2,
               hotelCity: "Milano",
@@ -1219,9 +1236,10 @@ export const vacationsCategories = {
               id: 70,
               hotelName: "Moonlight Manor Hotel",
               startDate: "21-02-2023",
+              countryName: "Austria",
               endDate: "29-03-2023",
               offerImage: "https://media.nomadicmatt.com/2018/austriaguide.jpg",
-              location: "400 Cannery Row, Canada, CA 93121",
+              location: "400 Cannery Row, Austria, CA 93121",
               totalCost: 1100,
               hotelStars: 4,
               person: 2,
@@ -1285,9 +1303,10 @@ export const vacationsCategories = {
               hotelName: "Moonlight Hotel",
               startDate: "21-02-2023",
               endDate: "29-03-2023",
+              countryName: "Austria",
               offerImage:
                 "https://static.independent.co.uk/2022/08/03/17/iStock-1176796753.jpg",
-              location: "400 Cannery Row, Canada, CA 93121",
+              location: "400 Cannery Row, Austria, CA 93121",
               totalCost: 1100,
               hotelStars: 4,
               person: 2,
@@ -1358,11 +1377,12 @@ export const vacationsCategories = {
           offers: [
             {
               id: 73,
+              countryName: "Germany",
               hotelName: "Ocean Breeze Resort",
               startDate: "21-02-2023",
               endDate: "29-03-2023",
               totalCost: 1200,
-              location: "400 Cannery Row, Canada, CA 93121",
+              location: "400 Cannery Row, Germany, CA 93121",
               hotelStars: 5,
               hotelCity: "Berlin",
               person: 2,
@@ -1425,10 +1445,11 @@ export const vacationsCategories = {
             {
               id: 7321,
               hotelName: "Breeze Resort",
+              countryName: "Germany",
               startDate: "21-02-2023",
               endDate: "29-03-2023",
               totalCost: 1200,
-              location: "400 Cannery Row, Canada, CA 93121",
+              location: "400 Cannery Row, Germany, CA 93121",
               hotelStars: 5,
               hotelCity: "Minhen",
               person: 2,
@@ -1512,6 +1533,7 @@ export const vacationsCategories = {
               startDate: "21-02-2023",
               endDate: "29-03-2023",
               totalCost: 1200,
+              countryName: "Mexico",
               arrivalTime: "21-02-2023 14:00",
               person: 2,
               offerImage:
@@ -1523,7 +1545,7 @@ export const vacationsCategories = {
                 "Restaurant",
                 "Room Service",
               ],
-              location: "400 Cannery Row, Canada, CA 93121",
+              location: "400 Cannery Row, Mexico, CA 93121",
               hotelStars: 5,
               roomImage:
                 "https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWwlMjByb29tfGVufDB8fDB8fHww",
@@ -1577,6 +1599,7 @@ export const vacationsCategories = {
               hotelName: "Trump Hotel",
               startDate: "13-06-2023",
               endDate: "29-06-2023",
+              countryName: "Mexico",
               totalCost: 400,
               arrivalTime: "13-06-2023 14:00",
               person: 1,
@@ -1641,6 +1664,7 @@ export const vacationsCategories = {
             {
               id: 3100001,
               hotelName: "Mexico Tour",
+              countryName: "Mexico",
               startDate: "11-06-2023",
               endDate: "22-06-2023",
               totalCost: 1300,
@@ -1708,6 +1732,7 @@ export const vacationsCategories = {
             {
               id: 32221,
               hotelName: "Retreat Hotel",
+              countryName: "Mexico",
               startDate: "28-02-2023",
               endDate: "11-03-2023",
               totalCost: 700,
@@ -1784,6 +1809,7 @@ export const vacationsCategories = {
               id: 313131,
               hotelName: "Thai Paradise Resort",
               startDate: "21-02-2023",
+              countryName: "Thailand",
               endDate: "29-03-2023",
               totalCost: 1500,
               arrivalTime: "21-02-2023 14:00",
@@ -1797,7 +1823,7 @@ export const vacationsCategories = {
                 "Restaurant",
                 "Room Service",
               ],
-              location: "400 Cannery Row, Canada, CA 93121",
+              location: "400 Cannery Row, Thailand, CA 93121",
               hotelStars: 5,
               roomImage:
                 "https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWwlMjByb29tfGVufDB8fDB8fHww",
@@ -1850,6 +1876,7 @@ export const vacationsCategories = {
               id: 31223131,
               hotelName: "Paradise",
               startDate: "27-02-2023",
+              countryName: "Thailand",
               endDate: "29-03-2023",
               totalCost: 3000,
               arrivalTime: "27-02-2023 14:00",
@@ -1917,6 +1944,7 @@ export const vacationsCategories = {
               hotelName: "Thai underwater world",
               startDate: "27-02-2023",
               endDate: "29-03-2023",
+              countryName: "Thailand",
               totalCost: 3000,
               arrivalTime: "27-02-2023 14:00",
               person: 2,
@@ -1981,6 +2009,7 @@ export const vacationsCategories = {
             {
               id: 33333,
               hotelName: "Phuket Sands Resort",
+              countryName: "Thailand",
               startDate: "21-02-2023",
               endDate: "29-03-2023",
               totalCost: 1800,
@@ -1995,7 +2024,7 @@ export const vacationsCategories = {
                 "Restaurant",
                 "Room Service",
               ],
-              location: "400 Cannery Row, Canada, CA 93121",
+              location: "400 Cannery Row, Thailand, CA 93121",
               hotelStars: 4,
               roomImage:
                 "https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWwlMjByb29tfGVufDB8fDB8fHww",
@@ -2072,6 +2101,7 @@ export const vacationsCategories = {
               ],
               location: "400 Cannery Row, Paris, CA 93121",
               hotelStars: 5,
+              countryName: "France-Paris",
               roomImage:
                 "https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWwlMjByb29tfGVufDB8fDB8fHww",
               hotelCity: "Paris",
@@ -2124,6 +2154,7 @@ export const vacationsCategories = {
               hotelName: "Paris Love",
               startDate: "11-02-2023",
               endDate: "20-03-2023",
+              countryName: "France-Paris",
               totalCost: 3000,
               arrivalTime: "11-02-2023 14:00",
               person: 2,
