@@ -22,7 +22,7 @@ const OfferFilters = ({
         <div className={styles.mobileFilters}>
           <span className="filter-label">Filter by Date:</span>
           <DatePicker.RangePicker
-            style={{ marginRight: "20px", minWidth: '300px' }}
+            style={{ marginRight: "20px" }}
             onChange={(dates, dateStrings) =>
               setFilters({
                 ...filters,
@@ -163,7 +163,7 @@ const OfferFilters = ({
       <div className={styles.filters}>
         <span className="filter-label">Filter by Date:</span>
         <DatePicker.RangePicker
-          style={{ marginRight: "20px" }}
+          style={{ marginRight: "40px", minWidth: '220px' }}
           onChange={(dates, dateStrings) =>
             setFilters({
               ...filters,
