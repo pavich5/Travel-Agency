@@ -1,103 +1,22 @@
+"use client"
 import { useState } from "react";
 import { Button, Drawer, Menu, Dropdown, Space } from "antd";
 import { MenuOutlined, DownOutlined } from "@ant-design/icons";
 import Link from "next/link";
 import { CountryLists } from "@/app/Data/data";
 import React from "react";
-import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import { SignedIn, SignedOut, useUser } from "@clerk/nextjs";
 import "./HamburgerMenu.css";
+import { useRouter } from "next/navigation";
 export interface MenuItem {
   key: string;
   label: JSX.Element;
 }
 
-const items: MenuItem[] = [
-  {
-    key: "1",
-    label: (
-      <Dropdown
-        overlay={
-          <Menu>
-            <Menu.Item key="0" style={{ padding: "15px", width: "200px" }}>
-              <Link href="/vacation/list/summer">Summer Vacations</Link>
-            </Menu.Item>
-            <Menu.Item key="1" style={{ padding: "15px", width: "200px" }}>
-              <Link href="/vacation/list/winter">Winter Vacations</Link>
-            </Menu.Item>
-            <Menu.Item key="2" style={{ padding: "15px", width: "200px" }}>
-              <Link href="/vacation/list/easter">Easter Vacations</Link>
-            </Menu.Item>
-            <Menu.Item key="3" style={{ padding: "15px", width: "200px" }}>
-              <Link href="/vacation/list/Spring">Spring Vacations</Link>
-            </Menu.Item>
-          </Menu>
-        }
-        trigger={["click"]}
-      >
-        <a onClick={(e) => e.stopPropagation()}>
-          <Space>
-            Vacation Seasons
-            <DownOutlined />
-          </Space>
-        </a>
-      </Dropdown>
-    ),
-  },
-  {
-    key: "2",
-    label: (
-      <Dropdown
-        overlay={
-          <Menu>
-            {CountryLists.map((country) => (
-              <Menu.Item
-                key={country}
-                style={{ padding: "8px", width: "200px" }}
-              >
-                <Link href={`/vacation/${country}`}>{country}</Link>
-              </Menu.Item>
-            ))}
-          </Menu>
-        }
-        trigger={["click"]}
-      >
-        <a onClick={(e) => e.stopPropagation()}>
-          <Space>
-            Countries
-            <DownOutlined />
-          </Space>
-        </a>
-      </Dropdown>
-    ),
-  },
-  {
-    key: "121",
-    label: <Link href="/ai">Travel AI</Link>,
-  },
-  {
-    key: "1231",
-    label: <Link href="/blogs">Travel Experiences</Link>,
-  },
-  {
-    key: "125",
-    label: <Link href="/about">About Us</Link>,
-  },
-  {
-    key: "123331",
-    label: (
-      <>
-        <SignedIn>
-          <UserButton afterSignOutUrl="/" showName />
-        </SignedIn>
-        <SignedOut>
-          <Link href="/sign-in">Login</Link>
-        </SignedOut>
-      </>
-    ),
-  },
-];
 
 const HamburgerMenu: React.FC = () => {
+  const router = useRouter()
+  const {user} = useUser()
   const [drawerVisible, setDrawerVisible] = useState<boolean>(false);
 
   const handleMenuClick = () => {
@@ -107,6 +26,98 @@ const HamburgerMenu: React.FC = () => {
   const handleDrawerClose = () => {
     setDrawerVisible(false);
   };
+
+  const items: MenuItem[] = [
+    {
+      key: "1",
+      label: (
+        <Dropdown
+          overlay={
+            <Menu>
+              <Menu.Item key="0" style={{ padding: "15px", width: "200px" }}>
+                <Link href="/vacation/list/summer">Summer Vacations</Link>
+              </Menu.Item>
+              <Menu.Item key="1" style={{ padding: "15px", width: "200px" }}>
+                <Link href="/vacation/list/winter">Winter Vacations</Link>
+              </Menu.Item>
+              <Menu.Item key="2" style={{ padding: "15px", width: "200px" }}>
+                <Link href="/vacation/list/easter">Easter Vacations</Link>
+              </Menu.Item>
+              <Menu.Item key="3" style={{ padding: "15px", width: "200px" }}>
+                <Link href="/vacation/list/Spring">Spring Vacations</Link>
+              </Menu.Item>
+            </Menu>
+          }
+          trigger={["click"]}
+        >
+          <a onClick={(e) => e.stopPropagation()}>
+            <Space>
+              Vacation Seasons
+              <DownOutlined />
+            </Space>
+          </a>
+        </Dropdown>
+      ),
+    },
+    {
+      key: "2",
+      label: (
+        <Dropdown
+          overlay={
+            <Menu>
+              {CountryLists.map((country) => (
+                <Menu.Item
+                  key={country}
+                  style={{ padding: "8px", width: "200px" }}
+                >
+                  <Link href={`/vacation/${country}`}>{country}</Link>
+                </Menu.Item>
+              ))}
+            </Menu>
+          }
+          trigger={["click"]}
+        >
+          <a onClick={(e) => e.stopPropagation()}>
+            <Space>
+              Countries
+              <DownOutlined />
+            </Space>
+          </a>
+        </Dropdown>
+      ),
+    },
+    {
+      key: "121",
+      label: <Link href="/ai">Travel AI</Link>,
+    },
+    {
+      key: "1231",
+      label: <Link href="/blogs">Travel Experiences</Link>,
+    },
+    {
+      key: "125",
+      label: <Link href="/about">About Us</Link>,
+    },
+    {
+      key: "123331",
+      label: (
+        <>
+          <SignedIn>
+            <div
+              onClick={() => {
+                router.push(`/user/${user?.id}`);
+              }}
+            >
+              <p>My Profile</p>
+            </div>
+          </SignedIn>
+          <SignedOut>
+            <Link href="/sign-in">Login</Link>
+          </SignedOut>
+        </>
+      ),
+    },
+  ];
 
   return (
     <>
