@@ -9,7 +9,6 @@ interface Vacation {
 
 const TravelDestinationList = ({ currentItems }: { currentItems: Vacation[] }): JSX.Element => {
   const router = useRouter();
-    console.log(currentItems)
   return (
     <div className={styles.availableVacationsWrapper}>
       <h2>Travel Destinations</h2>
