@@ -4,7 +4,6 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY ?? "");
 async function createStripeSession(req: Request) {
   try {
     const { item, qty, price, email, userId } = await req.json();
-    console.log("pavic item",item)
     const quantity = parseInt(qty);
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],

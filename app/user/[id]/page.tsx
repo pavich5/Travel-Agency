@@ -24,6 +24,7 @@ const UserDetails: React.FC = () => {
     const { user } = useUser();
     const { signOut } = useClerk();
 
+    //@ts-ignore
     const payments: Payment[] = user?.unsafeMetadata?.allPayments || [];
 
     return (
