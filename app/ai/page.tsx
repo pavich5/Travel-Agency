@@ -1,11 +1,10 @@
 "use client"
-import  { useState, useEffect, useRef } from "react";
-import styles from './page.module.css';
+import { useState } from "react";
 import { Input, Button } from 'antd';
-import { SearchOutlined } from '@ant-design/icons';
+import { SendOutlined } from '@ant-design/icons';
+import styles from './page.module.css';
 
 export default function TravelAI() {
-  const messegeRef = useRef(null);
   const [theInput, setTheInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [messages, setMessages] = useState(() => {
@@ -18,9 +17,9 @@ export default function TravelAI() {
     ];
   });
 
-  const callGetResponse = async (input: string) => {
+  const callGetResponse = async (input:string) => {
     setIsLoading(true);
-    messages.push({ role: "user", content: input });
+    setMessages([...messages, { role: "user", content: input }]);
     setTheInput("");
     try {
       const response = await fetch("/api", {
@@ -28,14 +27,14 @@ export default function TravelAI() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ messages }),
+        body: JSON.stringify({ messages: [...messages, { role: "user", content: input }] }),
       });
       if (!response.ok) {
         throw new Error("Failed to fetch response from ChatGPT API");
       }
       const data = await response.json();
       const { output } = data;
-      setMessages((prevMessages: string[]) => [...prevMessages, output]);
+      setMessages((prevMessages:any) => [...prevMessages, output]);
     } catch (error) {
       console.error("Error:", error);
     } finally {
@@ -43,22 +42,19 @@ export default function TravelAI() {
     }
   };
 
-  useEffect(() => {
-    localStorage.setItem("chatMessages", JSON.stringify(messages));
-  }, [messages]);
+
 
   return (
-    <main>
+    <div className={styles.container}>
       <h1 className={styles.heading}>Travel AI</h1>
-      <div className={styles.chatContainer} >
+      <div className={styles.chatContainer}>
         <div className={styles.chatMessages}>
-          {messages.map((e: any, index: number) => (
-            <div key={index} className={`${styles.chatMessage} ${e.role === "assistant" ? styles.assistant : styles.user}`} ref={index === messages.length - 1 ? messegeRef : null}>
-              {e.role === "assistant" ? (
-                <div className={styles.typingChat}>{e.content}</div>
-              ) : (
-                e.content
-              )}
+          {messages?.map((msg:any, index:number) => (
+            <div
+              key={index}
+              className={`${styles.chatMessage} ${msg.role === "assistant" ? styles.assistant : styles.user}`}
+            >
+              {msg.content}
             </div>
           ))}
           {isLoading && (
@@ -74,20 +70,22 @@ export default function TravelAI() {
         <div className={styles.inputContainer}>
           <Input
             value={theInput}
-            onChange={(event: React.ChangeEvent<HTMLInputElement>) => setTheInput(event.target.value)}
+            onChange={(e) => setTheInput(e.target.value)}
             className={styles.textarea}
             placeholder="Type your message here..."
-            prefix={<SearchOutlined />}
-            suffix={<Button
-              type='primary'
-              className={styles.sendButton}
-              onClick={() => callGetResponse(theInput)}
-            >
-              Send
-            </Button>}
+            prefix={<SendOutlined />}
+            suffix={
+              <Button
+                type="primary"
+                className={styles.sendButton}
+                onClick={() => callGetResponse(theInput)}
+              >
+                Send
+              </Button>
+            }
           />
         </div>
       </div>
-    </main>
+    </div>
   );
 }

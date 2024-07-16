@@ -95,7 +95,7 @@ export const vacationsCategories = {
               hotelStars: 5,
               hotelCity: "Geneva",
               offerImage:
-                "https://www.nationsonline.org/gallery/Switzerland/Sunrise-on-the-Matterhorn.jpg",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/409564048.jpg?k=ecd33c866927f3fd6c43041c469d7efb5e9171848c471f09f6d733fe47fd422f&o=&hp=1",
               duration: "7 nights",
               amenities: [
                 "Free Wi-Fi",
@@ -2238,7 +2238,7 @@ export const blogPosts = [
       "Explore the most breathtaking beach destinations that you should add to your travel bucket list.",
     image:
       "https://deih43ym53wif.cloudfront.net/large_amalfi-italy-shutterstock_759048709_bdda191300.jpeg",
-    slug: "https://glorne.com/2023/12/02/top-10-paradise-vacation-destination-for-introverts-travelers/?gad_source=1&gclid=CjwKCAjw8diwBhAbEiwA7i_sJZfxsEq3RPYN2r7cYH-81WWpFb1n7sUpb7JaohT_bpUQupgQs5p_dhoCZqAQAvD_BwE",
+    slug: "https://travel.usnews.com/rankings/best-beaches-in-the-world/",
   },
   {
     title: "A Guide to Hiking Trails for Beginners",

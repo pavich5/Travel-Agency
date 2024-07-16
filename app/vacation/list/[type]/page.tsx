@@ -6,7 +6,6 @@ import { SearchOutlined } from "@ant-design/icons";
 import { vacationsCategories } from "@/app/Data/data";
 import styles from "./page.module.css";
 import AllOffersList from "@/app/Components/AllOffersList/AllOffersList";
-import { useDebounce } from "use-debounce";
 const { Option } = Select;
 const Page = ({ params }: any) => {
   const router = useRouter();
@@ -15,19 +14,19 @@ const Page = ({ params }: any) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [priceFilter, setPriceFilter] = useState<number | undefined>(undefined);
   const [cityFilter, setCityFilter] = useState<string | undefined>(undefined);
-  const [debouncedValue] = useDebounce(searchQuery, 300);
 
   const vacationType = vacationsCategories.categories.find((category) =>
     category.name.toLowerCase().includes(params.type.toLowerCase())
   );
 
   const filteredVacations = vacationType
-    ? vacationType.countrys.filter((vacation) =>
-        vacation.offers.some((offer) =>
-          offer.hotelName.toLowerCase().includes(debouncedValue.toLowerCase())
-        )
+  ? vacationType.countrys.filter((vacation) =>
+      vacation.offers.some((offer) =>
+        offer.hotelName.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        offer.hotelCity.toLowerCase().includes(searchQuery.toLowerCase())
       )
-    : [];
+    )
+  : [];
 
   const handleViewAllClick = () =>
     allOffersRef.current?.scrollIntoView({ behavior: "smooth" });
