@@ -84,7 +84,7 @@ const UserDetails: React.FC = () => {
             {foundPayments?.map((payment, index) => (
               <div key={index} className={styles.paymentItem}>
                 <img
-                  src={payment.offerImage}
+                  src={payment?.offerImage}
                   alt="Offer Image"
                   className={styles.offerImage}
                 />
