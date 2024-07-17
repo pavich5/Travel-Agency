@@ -1079,7 +1079,7 @@ export const vacationsCategories = {
       name: "Easter Holidays",
       description: "Celebrate Easter in exciting destinations.",
       image:
-        "https://www.redasiainsurance.com/wp-content/uploads/2025/03/Asia-Travel-easter-holiday-1-scaled.jpg",
+        "https://cdn-imgix.headout.com/media/images/118ec1459cd87c8dc6cd03b0099e8b43-Attending%20Vatican%20Mass.jpg",
       countrys: [
         {
           id: 6,
@@ -1518,7 +1518,7 @@ export const vacationsCategories = {
       description:
         "Have a memorable spring break in these fantastic destinations.",
       image:
-        "https://wanderlustpulse.com/wp-content/uploads/2025/04/Guide-Amalfi-Coast-Map.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnxs8eNeJtoOVyfnno0hbMfb4pMCDJMpItww&s",
       countrys: [
         {
           id: 7,
