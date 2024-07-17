@@ -26,13 +26,13 @@ const UserDetails: React.FC = () => {
     .flatMap((country) => country.offers)
     .map((offer) => {
       const payment = userPayments?.find(
-        (payment: UserPayment) => Number(payment.offerId) === offer.id
+        (payment: UserPayment) => Number(payment?.offerId) === offer.id
       );
       return payment
         ? {
             ...offer,
-            created: payment.created,
-            payment_method_types: payment.payment_method_types,
+            created: payment?.created,
+            payment_method_types: payment?.payment_method_types,
           }
         : null;
     })
@@ -90,25 +90,25 @@ const UserDetails: React.FC = () => {
                 />
                 <div className={styles.paymentDetails}>
                   <p>
-                    <strong>Hotel Name:</strong> {payment.hotelName}
+                    <strong>Hotel Name:</strong> {payment?.hotelName}
                   </p>
                   <p>
-                    <strong>City:</strong> {payment.hotelCity}
+                    <strong>City:</strong> {payment?.hotelCity}
                   </p>
                   <p>
-                    <strong>Payed Amount:</strong> {payment.totalCost}$
+                    <strong>Payed Amount:</strong> {payment?.totalCost}$
                   </p>
                   <p>
                     <strong>Payment Date:</strong>{" "}
-                    {new Date(payment.created * 1000).toLocaleString()}
+                    {new Date(payment?.created * 1000).toLocaleString()}
                   </p>
                   <p>
                     <strong>Payment Method:</strong>{" "}
-                    {payment.payment_method_types?.join(", ")}
+                    {payment?.payment_method_types?.join(", ")}
                   </p>
 
                   <Button
-                    onClick={() => handleViewOfferDetails(payment.id)}
+                    onClick={() => handleViewOfferDetails(payment?.id)}
                     className={styles.viewDetailsButton}
                     type="primary"
                   >
