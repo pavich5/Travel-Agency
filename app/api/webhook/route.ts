@@ -1,6 +1,28 @@
 import { NextRequest, NextResponse } from "next/server";
 import { clerkClient } from "@clerk/clerk-sdk-node";
+import { Resend } from "resend";
+import PaymentConfirmationEmail from "../../Components/emails/PaymentConfirmationEmail";
 
+// const resend = new Resend(process.env.RESEND_API_KEY);
+// try {
+//   await resend.emails.send({
+//     from: 'Acme <onboarding@resend.dev>',
+//     to: [String(user.primaryEmailAddress?.emailAddress)],
+//     subject: 'Booking Confirmation Globetrotter',
+//     react: PaymentConfirmationEmail({
+//       emailAddress:String(user.primaryEmailAddress?.emailAddress),
+//       fullName: String(user.fullName)
+//     }, {
+//       amount: `$${(paymentIntent.amount_total / 100).toFixed(2)}`,
+//       destination: event.data.object.metadata.hotelCity,
+//       checkinDate: event.data.object.metadata.startDate,
+//       checkoutDate: event.data.object.metadata.endDate,
+//     }),
+//   });
+//   console.log('Email sent successfully to',String(user.primaryEmailAddress?.emailAddress))
+// } catch (error) {
+//   console.error('Failed to send email:', error);
+// }
 export async function POST(req: NextRequest) {
   if (req.method === "POST") {
     try {
@@ -17,50 +39,12 @@ export async function POST(req: NextRequest) {
 
             //@ts-ignore
             allPayments.push({
-              amount: paymentIntent.amount_total,
-              currency: paymentIntent.currency,
+              offerId:event.data.object.metadata.offerId,
               created: paymentIntent.created,
-              paymentIntentId: paymentIntent.id,
               payment_method_types: paymentIntent.payment_method_types,
-              price: event.data.object.metadata.price,
-              hotelName: event.data.object.metadata.hotelName,
-              countryName: event.data.object.metadata.countryName,
-              startDate: event.data.object.metadata.startDate,
-              location: event.data.object.metadata.location,
-              endDate: event.data.object.metadata.endDate,
-              hotelCity: event.data.object.metadata.hotelCity,
-              duration: event.data.object.metadata.duration,
-              qty: event.data.object.metadata.qty,
-              offerImage: event.data.object.metadata.offerImage,
             });
-            const SibApiV3Sdk = require("sib-api-v3-sdk");
-            const defaultClient = SibApiV3Sdk.ApiClient.instance;
-
-            let apiKey = defaultClient.authentications["api-key"];
-            apiKey.apiKey = process.env.BREVO_API_KEY;
-
-            const apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();
-
-            const sendSmtpEmail = new SibApiV3Sdk.SendSmtpEmail({
-              to: [
-                {
-                  email: user.emailAddresses,
-                  name: user.fullName,
-                },
-              ],
-              sender: {
-                email: "pavic.antonio969@gmail.com",
-                name: "Globetrotter",
-              },
-              subject: "Booking Confirmation",
-              htmlContent:
-                "<html><body><h1>Booking Confirmation</h1><p>Thank you for booking with us!</p></body></html>",
-            });
-
-            apiInstance.sendTransacEmail(sendSmtpEmail)
-
             await clerkClient.users.updateUser(userId, {
-              unsafeMetadata: { ...currentUnsafeMetadata, allPayments },
+              unsafeMetadata: { allPayments },
             });
 
             response = paymentIntent;

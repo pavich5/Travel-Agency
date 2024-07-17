@@ -1,6 +1,6 @@
 "use client";
-import  { useEffect, useState } from 'react';
-import { Button, Image,Tabs } from 'antd';
+import { useEffect, useState } from 'react';
+import { Button, Image, Tabs, Tooltip } from 'antd';
 import styles from './page.module.css';
 import { vacationsCategories } from '@/app/Data/data';
 import { useRouter } from 'next/navigation';
@@ -32,6 +32,12 @@ const Page = ({ params }: any) => {
   const onChange = (key: string) => {
     setActiveTab(key);
   };
+
+  const isOfferOver = (startDate: string) => {
+    const offerStartDate = new Date(startDate.split("-").reverse().join("-"));
+    return offerStartDate < new Date();
+  };
+
   return (
     <div className={styles.offerDetailsContainer}>
       {offerDetails && (
@@ -47,15 +53,22 @@ const Page = ({ params }: any) => {
             <Button onClick={() => router.push(`/hotel/${offerDetails.hotelName}`)} className={styles.primaryButton} type='primary'>
               View Hotel
             </Button>
-            <Button onClick={() => router.push(`/booking/confirmation/${offerDetails.id}`)} className={styles.primaryButton} type='primary'>
-              Book Now
-            </Button>
+            <Tooltip title={isOfferOver(offerDetails.startDate) ? "This offer is over" : "Book this offer"}>
+              <Button 
+                onClick={() => router.push(`/booking/confirmation/${offerDetails.id}`)} 
+                className={styles.primaryButton} 
+                type='primary' 
+                disabled={isOfferOver(offerDetails.startDate)}>
+                Book Now
+              </Button>
+            </Tooltip>
           </div>
           <div className={styles.offerDetailsContainerWrapper}>
             <div className={styles.dividerSection}>
               <DetailItem title="Nights" value={`${offerDetails.duration}, ${offerDetails.person} adult`} />
               <DetailItem title="Departure Time" value={offerDetails.startDate} />
               <DetailItem title="Arrival Time" value={offerDetails.arrivalTime} />
+              <DetailItem title="Return Date" value={offerDetails.endDate} />
               <DetailItem title="Cancellation Policy" value={offerDetails.cancellationPolicy.slice(0,30)} />
             </div>
             <div className={styles.dividerSection}>

@@ -1,4 +1,4 @@
-import { Card } from "antd";
+import { Card, Image } from "antd";
 import styles from '../offer/[id]/page.module.css';
 import { ReactElement } from "react";
 
@@ -23,7 +23,7 @@ const offerDetailsTabs = (offerDetails: {
         <Card title="Room Type" className={styles.card}>
           <div className={styles.roomType}>
             <div>
-              <img src={offerDetails?.roomImage} alt="roomImage" />
+              <Image src={offerDetails?.roomImage} alt="roomImage"  width={350} />
             </div>
             <div>
               <h3>{offerDetails?.roomType}</h3>

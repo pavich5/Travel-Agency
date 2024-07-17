@@ -1,38 +1,49 @@
-"use client"
+"use client";
 import { useUser, useClerk } from "@clerk/nextjs";
 import styles from "./page.module.css";
-import React, { useState } from 'react';
-import { DownOutlined,RightOutlined } from '@ant-design/icons';
+import React, { useState } from "react";
+import { vacationsCategories } from "../../Data/data";
+import { DownOutlined, RightOutlined } from "@ant-design/icons";
+import { useRouter } from "next/navigation";
+import { Button } from "antd";
 
-interface Payment {
-  amount: number;
-  currency: string;
+interface UserPayment {
+  offerId: number;
   created: number;
-  paymentIntentId: string;
-  payment_method_types: string[];
-  price: string;
-  hotelName: string;
-  countryName: string;
-  startDate: string;
-  location: string;
-  endDate: string;
-  hotelCity: string;
-  duration: string;
-  qty: string;
-  offerImage: string;
+  payment_method_types?: string[];
 }
 
 const UserDetails: React.FC = () => {
   const { user } = useUser();
   const { signOut } = useClerk();
+  const router = useRouter();
 
   const [showPayments, setShowPayments] = useState(true);
 
-  // @ts-ignore
-  const payments: Payment[] = user?.unsafeMetadata?.allPayments || [];
+  const userPayments: any = user?.unsafeMetadata?.allPayments;
+  const foundPayments = vacationsCategories.categories
+    .flatMap((category) => category.countrys)
+    .flatMap((country) => country.offers)
+    .map((offer) => {
+      const payment = userPayments?.find(
+        (payment: UserPayment) => Number(payment.offerId) === offer.id
+      );
+      return payment
+        ? {
+            ...offer,
+            created: payment.created,
+            payment_method_types: payment.payment_method_types,
+          }
+        : null;
+    })
+    .filter((offer) => offer !== null);
 
   const togglePayments = () => {
     setShowPayments(!showPayments);
+  };
+
+  const handleViewOfferDetails = (id: number) => {
+    router.push(`/offer/${id}`);
   };
 
   return (
@@ -52,24 +63,25 @@ const UserDetails: React.FC = () => {
             <p>
               <strong>Username:</strong> {user?.fullName}
             </p>
-            <button onClick={() => signOut()} className={styles.signOutButton}>
+            <Button onClick={() => {
+              signOut()
+              router.replace('/sign-in')
+            }} 
+            type="primary">
               Sign Out
-            </button>
+            </Button>
           </div>
         </div>
       </div>
 
       <div className={styles.paymentsSection}>
         <h2 onClick={togglePayments} className={styles.paymentsHeader}>
-          Payment History ({payments.length}) {showPayments ? (
-            <DownOutlined />
-          ): (
-            <RightOutlined />
-          )}
+          Payment History ({foundPayments.length})
+          {showPayments ? <DownOutlined /> : <RightOutlined />}
         </h2>
-        {showPayments && payments.length > 0 && (
+        {showPayments && foundPayments.length > 0 && (
           <div className={styles.paymentsList}>
-            {payments.map((payment, index) => (
+            {foundPayments?.map((payment, index) => (
               <div key={index} className={styles.paymentItem}>
                 <img
                   src={payment.offerImage}
@@ -78,50 +90,36 @@ const UserDetails: React.FC = () => {
                 />
                 <div className={styles.paymentDetails}>
                   <p>
-                    <strong>Amount:</strong> {payment.amount / 100}{" "}
-                    {payment.currency.toUpperCase()}
-                  </p>
-                  <p>
-                    <strong>Date:</strong>{" "}
-                    {new Date(payment.created * 1000).toLocaleString()}
-                  </p>
-                  <p>
-                    <strong>Payment ID:</strong> {payment.paymentIntentId}
-                  </p>
-                  <p>
-                    <strong>Payment Method Types:</strong>{" "}
-                    {payment.payment_method_types?.join(", ")}
-                  </p>
-                  <p>
                     <strong>Hotel Name:</strong> {payment.hotelName}
                   </p>
                   <p>
-                    <strong>Country Name:</strong> {payment.countryName}
+                    <strong>City:</strong> {payment.hotelCity}
                   </p>
                   <p>
-                    <strong>Start Date:</strong> {payment.startDate}
+                    <strong>Payed Amount:</strong> {payment.totalCost}$
                   </p>
                   <p>
-                    <strong>Location:</strong> {payment.location}
+                    <strong>Payment Date:</strong>{" "}
+                    {new Date(payment.created * 1000).toLocaleString()}
                   </p>
                   <p>
-                    <strong>End Date:</strong> {payment.endDate}
+                    <strong>Payment Method:</strong>{" "}
+                    {payment.payment_method_types?.join(", ")}
                   </p>
-                  <p>
-                    <strong>Hotel City:</strong> {payment.hotelCity}
-                  </p>
-                  <p>
-                    <strong>Duration:</strong> {payment.duration}
-                  </p>
-                  <p>
-                    <strong>Quantity:</strong> {payment.qty}
-                  </p>
+
+                  <Button
+                    onClick={() => handleViewOfferDetails(payment.id)}
+                    className={styles.viewDetailsButton}
+                    type="primary"
+                  >
+                    View Offer Details
+                  </Button>
                 </div>
               </div>
             ))}
           </div>
         )}
-        {showPayments && payments.length === 0 && (
+        {showPayments && foundPayments.length === 0 && (
           <p>No payments found.</p>
         )}
       </div>

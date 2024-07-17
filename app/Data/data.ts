@@ -19,10 +19,10 @@ export const vacationsCategories = {
               countryName: "Switzerland",
               pickUpLocation: "400 Zurich Row 12:00 PM",
               hotelRoom: "2 Persons",
-              startDate: "19-02-2023",
-              endDate: "29-03-2023",
+              startDate: "19-02-2025",
+              endDate: "29-03-2025",
               totalCost: 1900,
-              arrivalTime: "21-02-2023 14:00",
+              arrivalTime: "21-02-2025 14:00",
               hotelStars: 3,
               hotelCity: "Zurich",
               offerImage:
@@ -87,11 +87,11 @@ export const vacationsCategories = {
               hotelName: "Alpine View Resort",
               pickUpLocation: "Geneva Airport 12:30 PM",
               hotelRoom: "2 Persons",
-              startDate: "15-04-2023",
+              startDate: "15-04-2025",
               countryName: "Switzerland",
-              endDate: "22-04-2023",
+              endDate: "22-04-2025",
               totalCost: 1200,
-              arrivalTime: "15-04-2023 15:00",
+              arrivalTime: "15-04-2025 15:00",
               hotelStars: 5,
               hotelCity: "Geneva",
               offerImage:
@@ -105,7 +105,7 @@ export const vacationsCategories = {
                 "Fitness Club",
               ],
               hotelCoverImage:
-                "https://www.swissqualityhotels.com/wp-content/uploads/2023/11/Eiger-Murren-1280x640.jpg",
+                "https://www.swissqualityhotels.com/wp-content/uploads/2025/11/Eiger-Murren-1280x640.jpg",
               person: 2,
               hotelDescription:
                 "Alpine View Resort is a luxurious 5-star hotel nestled in the picturesque landscapes of Geneva. With unparalleled views of the Alps and impeccable service, it offers guests a truly unforgettable experience. The resort features elegantly appointed rooms, a world-class spa, fine dining options, and recreational facilities for guests of all ages.",
@@ -156,15 +156,15 @@ export const vacationsCategories = {
               hotelName: "Azure Bay Resort",
               pickUpLocation: "400 London Row 12:00 PM",
               hotelRoom: "2 Persons",
-              startDate: "21-02-2023",
+              startDate: "21-02-2025",
               countryName: "Switzerland",
               offerImage:
                 "https://digital.ihg.com/is/image/ihg/crowne-plaza-zurich-9242232841-2x1",
-              endDate: "29-03-2023",
+              endDate: "29-03-2025",
               totalCost: 1000,
               roomImage:
                 "https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWwlMjByb29tfGVufDB8fDB8fHww",
-              arrivalTime: "21-02-2023 14:00",
+              arrivalTime: "21-02-2025 14:00",
               hotelStars: 4,
               hotelCity: "Zurich",
               duration: "6 nights",
@@ -240,9 +240,9 @@ export const vacationsCategories = {
               ],
               hotelName: "Sunset Vista Inn",
               location: "400 Cannery Row, Canada, CA 93121",
-              startDate: "28-02-2023",
-              arrivalTime: "28-02-2023 14:00",
-              endDate: "04-04-2023",
+              startDate: "28-02-2025",
+              arrivalTime: "28-02-2025 14:00",
+              endDate: "04-04-2025",
               offerImage:
                 "https://cdn.apartmenttherapy.info/image/upload/v1582903821/at/real-estate/toronto-ontario-canada.jpg",
               totalCost: 1900,
@@ -368,11 +368,11 @@ export const vacationsCategories = {
               hotelName: "Serene Hotel",
               pickUpLocation: "400 London Row 12:00 PM",
               hotelRoom: "2 Persons",
-              startDate: "19-02-2023",
+              startDate: "19-02-2025",
               countryName: "Canada",
-              endDate: "31-03-2023",
+              endDate: "31-03-2025",
               totalCost: 1000,
-              arrivalTime: "21-02-2023 14:00",
+              arrivalTime: "21-02-2025 14:00",
               hotelStars: 4,
               hotelCity: "Toronto",
               offerImage:
@@ -443,8 +443,8 @@ export const vacationsCategories = {
               hotelName: "Northern Lights Lodge",
               countryName: "Canada",
               location: "600 Jasper Avenue, Vancouver, BC V6C 2T5, Canada",
-              startDate: "15-03-2023",
-              arrivalTime: "15-03-2023 15:00",
+              startDate: "15-03-2025",
+              arrivalTime: "15-03-2025 15:00",
               endDate: "22-03-2023",
               offerImage:
                 "https://d3hne3c382ip58.cloudfront.net/files/uploads/bookmundi/resized/cmsfeatured/canada-in-march-1689932772-785X440.jpg",
@@ -728,15 +728,15 @@ export const vacationsCategories = {
                 "Restaurant",
                 "Room Service",
               ],
-              startDate: "21-02-2023",
-              endDate: "29-03-2023",
+              startDate: "21-02-2025",
+              endDate: "29-03-2025",
               location: "400 Cannery Row, Greece, CA 93121",
               totalCost: 1000,
               offerImage:
-                "https://iconicsantorini.com/wp-content/uploads/2023/02/IconicAlexandraAdonis-19.jpg",
+                "https://iconicsantorini.com/wp-content/uploads/2025/02/IconicAlexandraAdonis-19.jpg",
               hotelStars: 4,
               hotelCity: "Kalithea",
-              arrivalTime: "21-02-2023 14:00",
+              arrivalTime: "21-02-2025 14:00",
               roomImage:
                 "https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWwlMjByb29tfGVufDB8fDB8fHww",
               duration: "7 nights",
@@ -795,15 +795,15 @@ export const vacationsCategories = {
                 "Restaurant",
                 "Room Service",
               ],
-              startDate: "21-02-2023",
-              endDate: "29-03-2023",
+              startDate: "21-02-2025",
+              endDate: "29-03-2025",
               location: "400 Cannery Row, Greece, CA 93121",
               totalCost: 1000,
               offerImage:
                 "https://a.cdn-hotels.com/gdcs/production109/d262/bd38cd57-bbd8-441a-80b6-6465c035d8db.jpg?impolicy=fcrop&w=800&h=533&q=medium",
               hotelStars: 4,
               hotelCity: "Santorini",
-              arrivalTime: "21-02-2023 14:00",
+              arrivalTime: "21-02-2025 14:00",
               roomImage:
                 "data:image/jpeg;base64,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",
               duration: "7 nights",
@@ -864,7 +864,7 @@ export const vacationsCategories = {
             {
               id: 1111,
               hotelName: "Emerald Shores Hotel",
-              startDate: "21-02-2023",
+              startDate: "21-02-2025",
               countryName: "Portugal",
               amenities: [
                 "Free Wi-Fi",
@@ -873,14 +873,14 @@ export const vacationsCategories = {
                 "Restaurant",
                 "Room Service",
               ],
-              endDate: "29-03-2023",
+              endDate: "29-03-2025",
               totalCost: 950,
               offerImage:
-                "https://www.thetinybook.com/wp-content/uploads/2023/08/Lagos-Portugal.jpg",
+                "https://www.thetinybook.com/wp-content/uploads/2025/08/Lagos-Portugal.jpg",
               location: "400 Cannery Row, Portugal, CA 93121",
               hotelStars: 4,
               hotelCity: "Lisbon",
-              arrivalTime: "21-02-2023 14:00",
+              arrivalTime: "21-02-2025 14:00",
               duration: "7 nights",
               hotelCoverImage:
                 "https://cf.bstatic.com/xdata/images/hotel/max1024x768/492106100.jpg?k=e5094f3f7d90049f7afda56b1e4756a152dfe658b5731b5de61cd50bc04c0e33&o=&hp=1",
@@ -932,7 +932,7 @@ export const vacationsCategories = {
               id: 11121,
               hotelName: "Shores Hotel",
               countryName: "Portugal",
-              startDate: "21-02-2023",
+              startDate: "21-02-2025",
               amenities: [
                 "Free Wi-Fi",
                 "Spa",
@@ -940,7 +940,7 @@ export const vacationsCategories = {
                 "Restaurant",
                 "Room Service",
               ],
-              endDate: "29-03-2023",
+              endDate: "29-03-2025",
               totalCost: 950,
               offerImage:
                 "https://bubo.sk//uploads/galleries/784/lisabon-sunset.jpg",
@@ -949,7 +949,7 @@ export const vacationsCategories = {
               hotelCoverImage:
                 "https://cf.bstatic.com/xdata/images/hotel/max1024x768/492106100.jpg?k=e5094f3f7d90049f7afda56b1e4756a152dfe658b5731b5de61cd50bc04c0e33&o=&hp=1",
               hotelCity: "Lisa",
-              arrivalTime: "21-02-2023 14:00",
+              arrivalTime: "21-02-2025 14:00",
               duration: "7 nights",
               person: 1,
               hotelDescription:
@@ -1007,7 +1007,7 @@ export const vacationsCategories = {
             {
               id: 50,
               hotelName: "Whispering Pines Resort",
-              startDate: "21-02-2023",
+              startDate: "21-02-2025",
               amenities: [
                 "Free Wi-Fi",
                 "Spa",
@@ -1015,10 +1015,10 @@ export const vacationsCategories = {
                 "Restaurant",
                 "Room Service",
               ],
-              endDate: "29-03-2023",
+              endDate: "29-03-2025",
               totalCost: 950,
               countryName: "France",
-              arrivalTime: "21-02-2023 14:00",
+              arrivalTime: "21-02-2025 14:00",
               hotelStars: 4,
               offerImage:
                 "https://nypost.com/wp-content/uploads/sites/2/2015/09/pra-a_do_com-rcio_h-000179_by_turismo_de_lisboaa.jpg?quality=75&strip=all",
@@ -1079,7 +1079,7 @@ export const vacationsCategories = {
       name: "Easter Holidays",
       description: "Celebrate Easter in exciting destinations.",
       image:
-        "https://www.redasiainsurance.com/wp-content/uploads/2023/03/Asia-Travel-easter-holiday-1-scaled.jpg",
+        "https://www.redasiainsurance.com/wp-content/uploads/2025/03/Asia-Travel-easter-holiday-1-scaled.jpg",
       countrys: [
         {
           id: 6,
@@ -1091,11 +1091,11 @@ export const vacationsCategories = {
             {
               id: 61,
               hotelName: "Paradise Cove Inn",
-              startDate: "21-02-2023",
+              startDate: "21-02-2025",
               offerImage:
                 "https://www.thetrainline.com/cms/media/1365/italy-venice-basilica-di-santa-maria-della-salute-and-grand-canal.jpg?mode=crop&width=860&height=574&quality=70",
-              arrivalTime: "21-02-2023 14:00",
-              endDate: "29-03-2023",
+              arrivalTime: "21-02-2025 14:00",
+              endDate: "29-03-2025",
               amenities: [
                 "Free Wi-Fi",
                 "Spa",
@@ -1158,11 +1158,11 @@ export const vacationsCategories = {
             {
               id: 621,
               hotelName: "Cove Inn",
-              startDate: "21-02-2023",
+              startDate: "21-02-2025",
               offerImage:
                 "https://www.italia.it/content/dam/tdh/en/interests/lombardia/milano/milano-in-48-ore/media/20220119115535-piazza-del-duomo-all-alba-milano-lombardia-shutterstock-1161075943-rid.jpg",
-              arrivalTime: "21-02-2023 14:00",
-              endDate: "29-03-2023",
+              arrivalTime: "21-02-2025 14:00",
+              endDate: "29-03-2025",
               countryName: "Italy",
               amenities: [
                 "Free Wi-Fi",
@@ -1235,9 +1235,9 @@ export const vacationsCategories = {
             {
               id: 70,
               hotelName: "Moonlight Manor Hotel",
-              startDate: "21-02-2023",
+              startDate: "21-02-2025",
               countryName: "Austria",
-              endDate: "29-03-2023",
+              endDate: "29-03-2025",
               offerImage: "https://media.nomadicmatt.com/2018/austriaguide.jpg",
               location: "400 Cannery Row, Austria, CA 93121",
               totalCost: 1100,
@@ -1253,7 +1253,7 @@ export const vacationsCategories = {
               hotelCity: "Vienna",
               roomImage:
                 "https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWwlMjByb29tfGVufDB8fDB8fHww",
-              arrivalTime: "21-02-2023 14:00",
+              arrivalTime: "21-02-2025 14:00",
               duration: "6 nights",
               hotelCoverImage:
                 "https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -1301,8 +1301,8 @@ export const vacationsCategories = {
             {
               id: 720,
               hotelName: "Moonlight Hotel",
-              startDate: "21-02-2023",
-              endDate: "29-03-2023",
+              startDate: "21-02-2025",
+              endDate: "29-03-2025",
               countryName: "Austria",
               offerImage:
                 "https://static.independent.co.uk/2022/08/03/17/iStock-1176796753.jpg",
@@ -1320,7 +1320,7 @@ export const vacationsCategories = {
               hotelCity: "Concre",
               roomImage:
                 "https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWwlMjByb29tfGVufDB8fDB8fHww",
-              arrivalTime: "21-02-2023 14:00",
+              arrivalTime: "21-02-2025 14:00",
               duration: "6 nights",
               hotelCoverImage:
                 "https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -1379,8 +1379,8 @@ export const vacationsCategories = {
               id: 73,
               countryName: "Germany",
               hotelName: "Ocean Breeze Resort",
-              startDate: "21-02-2023",
-              endDate: "29-03-2023",
+              startDate: "21-02-2025",
+              endDate: "29-03-2025",
               totalCost: 1200,
               location: "400 Cannery Row, Germany, CA 93121",
               hotelStars: 5,
@@ -1398,7 +1398,7 @@ export const vacationsCategories = {
               duration: "6 nights",
               roomImage:
                 "https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWwlMjByb29tfGVufDB8fDB8fHww",
-              arrivalTime: "21-02-2023 14:00",
+              arrivalTime: "21-02-2025 14:00",
               hotelCoverImage:
                 "https://www.trumphotels.com/uploads/17563/16/cloudinary/trump-hotels-cloudinary/image/upload/x_0,y_544,w_1333,h_1456,c_crop/c_fill,w_1666,ar_119:73/v1523482784/asmdgqtm6i3zvbd8d3g5.jpg",
               hotelDescription:
@@ -1446,15 +1446,15 @@ export const vacationsCategories = {
               id: 7321,
               hotelName: "Breeze Resort",
               countryName: "Germany",
-              startDate: "21-02-2023",
-              endDate: "29-03-2023",
+              startDate: "21-02-2025",
+              endDate: "29-03-2025",
               totalCost: 1200,
               location: "400 Cannery Row, Germany, CA 93121",
               hotelStars: 5,
               hotelCity: "Minhen",
               person: 2,
               offerImage:
-                "https://cdn.mappr.co/wp-content/uploads/2023/05/capital-of-austria-vienna.jpg",
+                "https://cdn.mappr.co/wp-content/uploads/2025/05/capital-of-austria-vienna.jpg",
               amenities: [
                 "Free Wi-Fi",
                 "Spa",
@@ -1465,7 +1465,7 @@ export const vacationsCategories = {
               duration: "6 nights",
               roomImage:
                 "https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWwlMjByb29tfGVufDB8fDB8fHww",
-              arrivalTime: "21-02-2023 14:00",
+              arrivalTime: "21-02-2025 14:00",
               hotelCoverImage:
                 "https://www.trumphotels.com/uploads/17563/16/cloudinary/trump-hotels-cloudinary/image/upload/x_0,y_544,w_1333,h_1456,c_crop/c_fill,w_1666,ar_119:73/v1523482784/asmdgqtm6i3zvbd8d3g5.jpg",
               hotelDescription:
@@ -1518,7 +1518,7 @@ export const vacationsCategories = {
       description:
         "Have a memorable spring break in these fantastic destinations.",
       image:
-        "https://wanderlustpulse.com/wp-content/uploads/2023/04/Guide-Amalfi-Coast-Map.jpg",
+        "https://wanderlustpulse.com/wp-content/uploads/2025/04/Guide-Amalfi-Coast-Map.jpg",
       countrys: [
         {
           id: 7,
@@ -1530,11 +1530,11 @@ export const vacationsCategories = {
             {
               id: 1331,
               hotelName: "Silver Lake Retreat",
-              startDate: "21-02-2023",
-              endDate: "29-03-2023",
+              startDate: "21-02-2025",
+              endDate: "29-03-2025",
               totalCost: 1200,
               countryName: "Mexico",
-              arrivalTime: "21-02-2023 14:00",
+              arrivalTime: "21-02-2025 14:00",
               person: 2,
               offerImage:
                 "https://cdn.britannica.com/60/92960-050-327CF926/pyramid-Mayan-Chichen-Itza-Mex.jpg",
@@ -1597,14 +1597,14 @@ export const vacationsCategories = {
             {
               id: 1222,
               hotelName: "Trump Hotel",
-              startDate: "13-06-2023",
-              endDate: "29-06-2023",
+              startDate: "13-06-2025",
+              endDate: "29-06-2025",
               countryName: "Mexico",
               totalCost: 400,
-              arrivalTime: "13-06-2023 14:00",
+              arrivalTime: "13-06-2025 14:00",
               person: 1,
               offerImage:
-                "https://res.cloudinary.com/enchanting/q_70,f_auto,c_fill,g_face/enchanting-web/2023/09/Enchanting-Travels-Asia-Tours-Woman-swimming-with-snorkel-surrounded-by-fish-Andaman-Sea-Thailand-2.jpg",
+                "https://res.cloudinary.com/enchanting/q_70,f_auto,c_fill,g_face/enchanting-web/2025/09/Enchanting-Travels-Asia-Tours-Woman-swimming-with-snorkel-surrounded-by-fish-Andaman-Sea-Thailand-2.jpg",
               amenities: [
                 "Free Wi-Fi",
                 "Spa",
@@ -1665,10 +1665,10 @@ export const vacationsCategories = {
               id: 3100001,
               hotelName: "Mexico Tour",
               countryName: "Mexico",
-              startDate: "11-06-2023",
-              endDate: "22-06-2023",
+              startDate: "11-06-2025",
+              endDate: "22-06-2025",
               totalCost: 1300,
-              arrivalTime: "11-06-2023 14:00",
+              arrivalTime: "11-06-2025 14:00",
               person: 2,
               offerImage:
                 "https://img.taste.com.au/jUGIU1GJ/taste/2020/07/landmark-pagoda-in-doi-inthanon-national-park-at-chiang-mai-thailand-163355-1.jpg",
@@ -1733,10 +1733,10 @@ export const vacationsCategories = {
               id: 32221,
               hotelName: "Retreat Hotel",
               countryName: "Mexico",
-              startDate: "28-02-2023",
-              endDate: "11-03-2023",
+              startDate: "28-02-2025",
+              endDate: "11-03-2025",
               totalCost: 700,
-              arrivalTime: "28-02-2023 14:00",
+              arrivalTime: "28-02-2025 14:00",
               person: 1,
               offerImage:
                 "https://assets3.thrillist.com/v1/image/2788561/1200x630/flatten;crop_down;webp=auto;jpeg_quality=70",
@@ -1808,11 +1808,11 @@ export const vacationsCategories = {
             {
               id: 313131,
               hotelName: "Thai Paradise Resort",
-              startDate: "21-02-2023",
+              startDate: "21-02-2025",
               countryName: "Thailand",
-              endDate: "29-03-2023",
+              endDate: "29-03-2025",
               totalCost: 1500,
-              arrivalTime: "21-02-2023 14:00",
+              arrivalTime: "21-02-2025 14:00",
               person: 2,
               offerImage:
                 "https://a.cdn-hotels.com/gdcs/production172/d459/3af9262b-3d8b-40c6-b61d-e37ae1aa90aa.jpg?impolicy=fcrop&w=800&h=533&q=medium",
@@ -1875,11 +1875,11 @@ export const vacationsCategories = {
             {
               id: 31223131,
               hotelName: "Paradise",
-              startDate: "27-02-2023",
+              startDate: "27-02-2025",
               countryName: "Thailand",
-              endDate: "29-03-2023",
+              endDate: "29-03-2025",
               totalCost: 3000,
-              arrivalTime: "27-02-2023 14:00",
+              arrivalTime: "27-02-2025 14:00",
               person: 2,
               offerImage:
                 "https://cdn.britannica.com/06/96306-050-DFE8AFDC/Khao-Tapu-Ao-Phang-na-Thailand-National-Park.jpg",
@@ -1942,11 +1942,11 @@ export const vacationsCategories = {
             {
               id: 31223213331,
               hotelName: "Thai underwater world",
-              startDate: "27-02-2023",
-              endDate: "29-03-2023",
+              startDate: "27-02-2025",
+              endDate: "29-03-2025",
               countryName: "Thailand",
               totalCost: 3000,
-              arrivalTime: "27-02-2023 14:00",
+              arrivalTime: "27-02-2025 14:00",
               person: 2,
               offerImage:
                 "https://img.etimg.com/thumb/width-1200,height-900,imgsize-1885718,resizemode-75,msid-107744324/nri/visit/visa-free-thailand-is-now-offering-tourists-up-to-14000-in-medical-coverage.jpg",
@@ -2010,10 +2010,10 @@ export const vacationsCategories = {
               id: 33333,
               hotelName: "Phuket Sands Resort",
               countryName: "Thailand",
-              startDate: "21-02-2023",
-              endDate: "29-03-2023",
+              startDate: "21-02-2025",
+              endDate: "29-03-2025",
               totalCost: 1800,
-              arrivalTime: "21-02-2023 14:00",
+              arrivalTime: "21-02-2025 14:00",
               person: 2,
               offerImage:
                 "https://deih43ym53wif.cloudfront.net/large_phra-nang-cave-beach-krabi-thailand-shutterstock_1536886961.jpg_f3f119614e.jpg",
@@ -2031,7 +2031,7 @@ export const vacationsCategories = {
               hotelCity: "Bankog",
               duration: "7 nights",
               hotelCoverImage:
-                "https://www.hollywoodreporter.com/wp-content/uploads/2023/04/verandah_004-H-2023.jpg?w=1296",
+                "https://www.hollywoodreporter.com/wp-content/uploads/2025/04/verandah_004-H-2025.jpg?w=1296",
               hotelDescription:
                 "Phuket Sands Resort is a stylish 4-star hotel located in the heart of Phuket, just steps away from the pristine beaches of Patong. The hotel offers contemporary accommodations, modern amenities, and personalized service to ensure a comfortable and memorable stay. Guests can relax by the pool, indulge in spa treatments, or explore the vibrant nightlife of Patong Beach.",
               roomType: "Deluxe Room",
@@ -2080,15 +2080,15 @@ export const vacationsCategories = {
           countryName: "France-Paris",
           description: "Experience the romance and culture of France.",
           image:
-            "https://www.state.gov/wp-content/uploads/2023/07/shutterstock_1048826978v2-2313x1406.jpg",
+            "https://www.state.gov/wp-content/uploads/2025/07/shutterstock_1048826978v2-2313x1406.jpg",
           offers: [
             {
               id: 8233,
               hotelName: "Parisian Charm Hotel",
-              startDate: "21-02-2023",
-              endDate: "29-03-2023",
+              startDate: "21-02-2025",
+              endDate: "29-03-2025",
               totalCost: 1800,
-              arrivalTime: "21-02-2023 14:00",
+              arrivalTime: "21-02-2025 14:00",
               person: 2,
               offerImage:
                 "https://www.cleanenergywire.org/sites/default/files/adaptation_france_eiffel_gustafson_porterbowman.jpg",
@@ -2152,11 +2152,11 @@ export const vacationsCategories = {
             {
               id: 8111,
               hotelName: "Paris Love",
-              startDate: "11-02-2023",
-              endDate: "20-03-2023",
+              startDate: "11-02-2025",
+              endDate: "20-03-2025",
               countryName: "France-Paris",
               totalCost: 3000,
-              arrivalTime: "11-02-2023 14:00",
+              arrivalTime: "11-02-2025 14:00",
               person: 2,
               offerImage:
                 "https://images.adsttc.com/media/images/5d44/14fa/284d/d1fd/3a00/003d/large_jpg/eiffel-tower-in-paris-151-medium.jpg?1564742900",

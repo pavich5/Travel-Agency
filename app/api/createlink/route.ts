@@ -27,16 +27,7 @@ async function createStripeSession(req: Request) {
       mode: "payment",
       metadata: {
         userId: userId,
-        hotelName:item.hotelName,
-        countryName:item.countryName,
-        startDate:item.startDate,
-        location:item.location,
-        endDate:item.endDate,
-        hotelCity:item.hotelCity,
-        duration:item.duration,
-        qty: qty,
-        price:price,
-        offerImage:item.offerImage
+        offerId: item.id
       },
       success_url: `https://travel-agency-plum.vercel.app/booking/confirmed/${
         item.id

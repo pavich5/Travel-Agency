@@ -1,6 +1,6 @@
 "use client"
 import  { useEffect, useState } from 'react';
-import { Button, Input, notification } from 'antd';
+import { Button, Input, notification, Tooltip } from 'antd';
 import styles from './page.module.css';
 import { loadStripe } from "@stripe/stripe-js";
 import { vacationsCategories } from '@/app/Data/data';
@@ -11,7 +11,6 @@ const Page = ({ params }: any) => {
   const [offerDetails, setOfferDetails] = useState<any>();
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
 
   useEffect(() => {
@@ -32,14 +31,14 @@ const Page = ({ params }: any) => {
     }
   };
   const handlePayWithStripe = async () => {
-    if (!email) {
+    if (!user?.primaryEmailAddress?.emailAddress) {
       notification.warning({
         message: 'Email Required',
-        description: 'Please enter your email before proceeding with the payment.',
+        description: 'To proceed with the payment via Stripe, please log in with your email.',
       });
       return;
     }
-
+    
     try {
       const stripeKeyResponse = await fetch("https://travel-agency-plum.vercel.app/api/getStripeApi");
       if (!stripeKeyResponse.ok) {
@@ -53,7 +52,7 @@ const Page = ({ params }: any) => {
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ item: offerDetails, qty: "1", price: offerDetails.totalCost * 100, email,userId:user?.id }),
+          body: JSON.stringify({ item: offerDetails, qty: "1", price: offerDetails.totalCost * 100, email: user?.primaryEmailAddress?.emailAddress,userId:user?.id }),
         }
       );
       if (!createSessionResponse.ok) {
@@ -84,7 +83,9 @@ const Page = ({ params }: any) => {
             <Input className={styles.input} placeholder='Last Name' value={lastName} onChange={(e) => setLastName(e.target.value)} />
           </div>
           <div className={styles.inputGroup}>
-            <Input className={styles.input} placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)} />
+          <Tooltip title="To change the email, please log in with your preferred email.">
+          <Input className={styles.input} placeholder='Email' value={user?.primaryEmailAddress?.emailAddress} disabled />
+            </Tooltip>
           </div>
           <div className={styles.inputGroup}>
             <Input className={styles.input} placeholder='Phone Number' type='number' value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />

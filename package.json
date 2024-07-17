@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "test": "jest",
-    "test:watch": "jest-watchAll"
+    "test:watch": "jest-watchAll",
+    "email": "email dev --dir ./app/Components"
   },
   "dependencies": {
     "@chakra-ui/media-query": "^3.3.0",
@@ -19,6 +20,7 @@
     "@edgestore/server": "^0.1.6",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.0",
+    "@react-email/components": "^0.0.21",
     "@stripe/stripe-js": "^3.0.8",
     "antd": "^5.15.1",
     "axios": "^1.6.7",
@@ -30,7 +32,8 @@
     "openai": "^4.28.4",
     "react": "^18",
     "react-dom": "^18",
-    "sib-api-v3-sdk": "^8.5.0",
+    "react-email": "2.1.5",
+    "resend": "^3.4.0",
     "stripe": "^14.20.0",
     "use-debounce": "^10.0.0",
     "zod": "^3.22.5"
