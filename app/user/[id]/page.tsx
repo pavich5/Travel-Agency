@@ -42,7 +42,7 @@ const UserDetails: React.FC = () => {
     setShowPayments(!showPayments);
   };
 
-  const handleViewOfferDetails = (id: number) => {
+  const handleViewOfferDetails = (id?: number) => {
     router.push(`/offer/${id}`);
   };
 
