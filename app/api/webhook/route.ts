@@ -1,28 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { clerkClient } from "@clerk/clerk-sdk-node";
-import { Resend } from "resend";
-import PaymentConfirmationEmail from "../../Components/emails/PaymentConfirmationEmail";
-
-// const resend = new Resend(process.env.RESEND_API_KEY);
-// try {
-//   await resend.emails.send({
-//     from: 'Acme <onboarding@resend.dev>',
-//     to: [String(user.primaryEmailAddress?.emailAddress)],
-//     subject: 'Booking Confirmation Globetrotter',
-//     react: PaymentConfirmationEmail({
-//       emailAddress:String(user.primaryEmailAddress?.emailAddress),
-//       fullName: String(user.fullName)
-//     }, {
-//       amount: `$${(paymentIntent.amount_total / 100).toFixed(2)}`,
-//       destination: event.data.object.metadata.hotelCity,
-//       checkinDate: event.data.object.metadata.startDate,
-//       checkoutDate: event.data.object.metadata.endDate,
-//     }),
-//   });
-//   console.log('Email sent successfully to',String(user.primaryEmailAddress?.emailAddress))
-// } catch (error) {
-//   console.error('Failed to send email:', error);
-// }
+import { sendEmail } from "../sendEmail";
 export async function POST(req: NextRequest) {
   if (req.method === "POST") {
     try {
@@ -39,13 +17,16 @@ export async function POST(req: NextRequest) {
 
             //@ts-ignore
             allPayments.push({
-              offerId:event.data.object.metadata.offerId,
+              offerId: event.data.object.metadata.offerId,
               created: paymentIntent.created,
               payment_method_types: paymentIntent.payment_method_types,
             });
             await clerkClient.users.updateUser(userId, {
               unsafeMetadata: { allPayments },
             });
+
+            await sendEmail('antonioclash319@gmail.com', 'Payment Confirmation', 'Your payment was successful.');
+
 
             response = paymentIntent;
           }
