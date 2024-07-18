@@ -24,11 +24,12 @@ export async function POST(req: NextRequest) {
             await clerkClient.users.updateUser(userId, {
               unsafeMetadata: { allPayments },
             });
-            console.log("event.data.object", event.data.object);
+            const amount = paymentIntent.amount / 100;
+            const date = new Date(paymentIntent.created * 1000);
             await sendEmail(
               user.primaryEmailAddress?.emailAddress ?? "",
               "Payment Confirmation for Globetrotter",
-              `You have paid 1000$ at 13/5/2005 14:00 for this booking`,
+              `You have paid $${amount} on ${date.toLocaleDateString()} at ${date.toLocaleTimeString()} for this booking`,
               user.fullName ?? "",
               event.data.object.metadata.offerId
             );
