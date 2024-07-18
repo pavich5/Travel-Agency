@@ -24,7 +24,7 @@ export async function POST(req: NextRequest) {
             await clerkClient.users.updateUser(userId, {
               unsafeMetadata: { allPayments },
             });
-            const amount = paymentIntent.amount / 100;
+            const amount = paymentIntent.amount_total ? paymentIntent.amount_total / 100 : 0; 
             const date = new Date(paymentIntent.created * 1000);
             await sendEmail(
               user.primaryEmailAddress?.emailAddress ?? "",
