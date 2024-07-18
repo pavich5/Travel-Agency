@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { clerkClient } from "@clerk/clerk-sdk-node";
+import { sendEmail } from "../sendEmail";
 export async function POST(req: NextRequest) {
   if (req.method === "POST") {
     try {
@@ -23,20 +24,14 @@ export async function POST(req: NextRequest) {
             await clerkClient.users.updateUser(userId, {
               unsafeMetadata: { allPayments },
             });
-            console.log("event.data.object",event.data.object)
-            await fetch('https://travel-agency-plum.vercel.app/api/send-email', {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-              },
-              body: JSON.stringify({
-                toEmail: user.primaryEmailAddress?.emailAddress,
-                subject: 'Payment Confirmation for Globetrotter',
-                text: `You have paid 1000$ at 13/5/2005 14:00 for this booking`,
-                userName: user.fullName,
-                offerId: event.data.object.metadata.offerId
-              }),
-            });
+            console.log("event.data.object", event.data.object);
+            await sendEmail(
+              user.primaryEmailAddress?.emailAddress ?? "",
+              "Payment Confirmation for Globetrotter",
+              `You have paid 1000$ at 13/5/2005 14:00 for this booking`,
+              user.fullName ?? "",
+              event.data.object.metadata.offerId
+            );
 
             response = paymentIntent;
           }
