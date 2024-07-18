@@ -24,7 +24,7 @@ export async function POST(req: NextRequest) {
               unsafeMetadata: { allPayments },
             });
             console.log("event.data.object",event.data.object)
-            await fetch('/api/send-email', {
+            await fetch('https://travel-agency-plum.vercel.app/api/send-email', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',

@@ -83,7 +83,7 @@ export const sendEmail = async (
                 <h3>Dear ${userName},</h3>
                 <p>Thank you for your payment. We have received your payment successfully.</p>
                 <p>${text}</p>
-                <a href="localhost:3000offer/${offerId}" class="button">Visit your booking</a>
+                <a href="https://travel-agency-plum.vercel.app/offer/${offerId}" class="button">Visit your booking</a>
             </div>
             <div class="footer">
                 <p>Thank you for choosing Globetrotter. If you have any questions, feel free to contact us.</p>
