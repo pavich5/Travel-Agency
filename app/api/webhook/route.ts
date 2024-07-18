@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
 import { clerkClient } from "@clerk/clerk-sdk-node";
-import { sendEmail } from "../sendEmail";
 export async function POST(req: NextRequest) {
   if (req.method === "POST") {
     try {
@@ -24,9 +23,20 @@ export async function POST(req: NextRequest) {
             await clerkClient.users.updateUser(userId, {
               unsafeMetadata: { allPayments },
             });
-
-            await sendEmail('antonioclash319@gmail.com', 'Payment Confirmation', 'Your payment was successful.');
-
+            console.log("event.data.object",event.data.object)
+            await fetch('/api/send-email', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                toEmail: user.primaryEmailAddress?.emailAddress,
+                subject: 'Payment Confirmation for Globetrotter',
+                text: `You have paid 1000$ at 13/5/2005 14:00 for this booking`,
+                userName: user.fullName,
+                offerId: event.data.object.metadata.offerId
+              }),
+            });
 
             response = paymentIntent;
           }
