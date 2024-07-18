@@ -29,6 +29,8 @@
     "mongodb": "^6.5.0",
     "mongoose": "^8.3.2",
     "next": "^14.2.5",
+    "next-cors": "^1.0.0",
+    "nextjs-cors": "^2.2.0",
     "node-mailjet": "^6.0.5",
     "openai": "^4.28.4",
     "react": "^18",
