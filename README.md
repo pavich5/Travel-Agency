@@ -1,18 +1,27 @@
-This is travel agency that let users find offers for traveling in diffrend countries, i implemented login auth with CLERK, and also added Travel AI that helps
-users anything they need with travel, they can search thorought countrys,summer offers winter offers and so on, for some components like tables l used ant desing 
-and also added Jest and react testing library test. Also in future l will add ai that helps you find locations, for ex you input image from street in spain and it will give you the exact location
+Travel Agency
+This travel agency web app helps users find travel offers across different countries and seasons. Below are the key features and tech stack used:
+
+Key Features
+User Authentication: Implemented login and authentication with Clerk.
+Travel AI: Assists users with travel-related questions using OpenAI API.
+Seasonal Offers: Users can search offers by countries and seasons, including summer and winter.
+Location Finder: Future feature - AI will identify locations from images, e.g., identifying a street in Spain.
+Payment System: Integrated Stripe for secure online bookings and email confirmations.
+Blog Section: Users can share experiences, post, and comment.
+UI Components: Utilized Ant Design for components like tables.
+Testing: Added Jest and React Testing Library for testing.
+
+Try the App : https://travel-agency-plum.vercel.app/
+
+For test payment for stripe you can use:
+Card Number: 4242 4242 4242 4242
+and for other fields any random numbers
 
 
-You can try the app demo here : https://travel-agency-plum.vercel.app/
-The app is still on developent but here is video of how it works:  https://jam.dev/c/cffa4ddc-4ead-4524-a506-c2de4516da71
-
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-Tech Stack: 
-NextJS Frontend/backend
-Stripe: payment systems
-TravelAi: OpenAI api
-Stripe Webhooks for listening for payments
-Clerk: User authorization
-
-
+Tech Stack
+Next.js: Frontend and Backend
+Stripe: Payment systems and webhooks for listening to payments
+Travel AI: OpenAI API integration
+Clerk: User authentication and Google login
+Ant Design: UI components
+Jest and React Testing Library: Testing
