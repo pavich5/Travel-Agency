@@ -3,7 +3,7 @@ import React, { useState, useRef } from "react";
 import { Button, Input, Select } from "antd";
 import { useRouter } from "next/navigation";
 import { SearchOutlined } from "@ant-design/icons";
-import { vacationsCategories } from "@/app/Data/data";
+import { vacationsCategories } from "@/app/mocks/data";
 import styles from "./page.module.css";
 import AllOffersList from "@/app/Components/AllOffersList/AllOffersList";
 const { Option } = Select;

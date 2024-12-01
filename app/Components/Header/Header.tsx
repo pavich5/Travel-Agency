@@ -6,7 +6,7 @@ import { Dropdown, Space, Menu } from 'antd';
 import { LeftOutlined, DownOutlined } from '@ant-design/icons';
 import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
 import { useRouter, usePathname } from 'next/navigation';
-import { CountryLists } from '@/app/Data/data';
+import { CountryLists } from '@/app/mocks/data';
 const Header = () => {
   const router = useRouter();
   const pathname = usePathname()

@@ -3,7 +3,7 @@ import  { useEffect, useState } from 'react';
 import { Button, Input, notification, Tooltip } from 'antd';
 import styles from './page.module.css';
 import { loadStripe } from "@stripe/stripe-js";
-import { vacationsCategories } from '@/app/Data/data';
+import { vacationsCategories } from '@/app/mocks/data';
 import { useUser } from '@clerk/nextjs';
 
 const Page = ({ params }: any) => {

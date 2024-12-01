@@ -2,7 +2,7 @@
 import { useUser, useClerk } from "@clerk/nextjs";
 import styles from "./page.module.css";
 import React, { useState } from "react";
-import { vacationsCategories } from "../../Data/data";
+import { vacationsCategories } from "../../mocks/data";
 import { DownOutlined, RightOutlined } from "@ant-design/icons";
 import { useRouter } from "next/navigation";
 import { Button } from "antd";

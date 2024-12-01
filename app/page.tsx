@@ -2,7 +2,7 @@
 import {  useState } from "react";
 import styles from "./page.module.css";
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
-import { blogPosts, vacationsCategories } from "./Data/data";
+import { blogPosts, vacationsCategories } from "./mocks/data";
 import TravelGuideSection from "./Components/TravelGuideSection/TravelGuideSection";
 import BlogSection from "./Components/BlogsSection/BlogSection";
 import TravelDestinationList from "./Components/TravelDestionationList/TravelDestinationList";

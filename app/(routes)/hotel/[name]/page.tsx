@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { Offer } from "@/app/types";
-import { vacationsCategories } from "@/app/Data/data";
+import { vacationsCategories } from "@/app/mocks/data";
 import styles from "./page.module.css";
 import HotelDetails from "@/app/Components/HotelDetails/HotelDetails";
 import { findCountryName } from "@/app/utils/helper";

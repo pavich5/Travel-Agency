@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import styles from './page.module.css';
 import { Tabs, Table } from "antd";
-import { vacationsCategories } from '@/app/Data/data';
+import { vacationsCategories } from '@/app/mocks/data';
 import moment from 'moment';
 import OfferFilters from '@/app/Components/OfferFilters/OfferFilters';
 import { transformOffersData } from '@/app/utils/helper';

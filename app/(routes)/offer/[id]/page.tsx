@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import { Button, Image, Tabs, Tooltip } from 'antd';
 import styles from './page.module.css';
-import { vacationsCategories } from '@/app/Data/data';
+import { vacationsCategories } from '@/app/mocks/data';
 import { useRouter } from 'next/navigation';
 import DetailItem from '@/app/Components/DetailsItem/DetailItem';
 import PriceDetail from '@/app/Components/PriceDetails/PriceDetail';
