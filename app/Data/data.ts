@@ -1518,7 +1518,7 @@ export const vacationsCategories = {
       description:
         "Have a memorable spring break in these fantastic destinations.",
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnxs8eNeJtoOVyfnno0hbMfb4pMCDJMpItww&s",
+        "https://i.imgur.com/sv14lS8.jpg",
       countrys: [
         {
           id: 7,
@@ -1604,7 +1604,7 @@ export const vacationsCategories = {
               arrivalTime: "13-06-2025 14:00",
               person: 1,
               offerImage:
-                "https://res.cloudinary.com/enchanting/q_70,f_auto,c_fill,g_face/enchanting-web/2025/09/Enchanting-Travels-Asia-Tours-Woman-swimming-with-snorkel-surrounded-by-fish-Andaman-Sea-Thailand-2.jpg",
+                "https://s1.1zoom.me/b3749/185/USA_Houses_Rivers_Coast_Miami_Night_517262_1920x1080.jpg",
               amenities: [
                 "Free Wi-Fi",
                 "Spa",
