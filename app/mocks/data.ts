@@ -641,7 +641,7 @@ export const vacationsCategories = {
       name: "Summer Escapes",
       description: "Enjoy sunny beaches and warm weather destinations.",
       image:
-        "https://www.onetravel.com/going-places/wp-content/uploads/2022/07/Summer-is-the-best-time-to-visit-Greece.jpg",
+        "https://images.alphacoders.com/997/997468.jpg",
       countrys: [
         {
           id: 5,
