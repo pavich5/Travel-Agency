@@ -19,10 +19,10 @@ export const vacationsCategories = {
               countryName: "Switzerland",
               pickUpLocation: "400 Zurich Row 12:00 PM",
               hotelRoom: "2 Persons",
-              startDate: "19-02-2025",
-              endDate: "29-03-2025",
+              startDate: "19-02-2026",
+              endDate: "29-03-2027",
               totalCost: 1900,
-              arrivalTime: "21-02-2025 14:00",
+              arrivalTime: "21-02-2026 14:00",
               hotelStars: 3,
               hotelCity: "Zurich",
               offerImage:
@@ -87,11 +87,11 @@ export const vacationsCategories = {
               hotelName: "Alpine View Resort",
               pickUpLocation: "Geneva Airport 12:30 PM",
               hotelRoom: "2 Persons",
-              startDate: "15-04-2025",
+              startDate: "15-04-2026",
               countryName: "Switzerland",
-              endDate: "22-04-2025",
+              endDate: "22-04-2027",
               totalCost: 1200,
-              arrivalTime: "15-04-2025 15:00",
+              arrivalTime: "15-04-2026 15:00",
               hotelStars: 5,
               hotelCity: "Geneva",
               offerImage:
@@ -156,15 +156,15 @@ export const vacationsCategories = {
               hotelName: "Azure Bay Resort",
               pickUpLocation: "400 London Row 12:00 PM",
               hotelRoom: "2 Persons",
-              startDate: "21-02-2025",
+              startDate: "21-02-2026",
               countryName: "Switzerland",
               offerImage:
                 "https://digital.ihg.com/is/image/ihg/crowne-plaza-zurich-9242232841-2x1",
-              endDate: "29-03-2025",
+              endDate: "29-03-2026",
               totalCost: 1000,
               roomImage:
                 "https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWwlMjByb29tfGVufDB8fDB8fHww",
-              arrivalTime: "21-02-2025 14:00",
+              arrivalTime: "21-02-2026 14:00",
               hotelStars: 4,
               hotelCity: "Zurich",
               duration: "6 nights",
@@ -176,7 +176,7 @@ export const vacationsCategories = {
                 "Room Service",
               ],
               hotelCoverImage:
-                "https://trumpadmin.trumphotels.com/uploads/5361/19/trump_international_hotel_&_tower.jpg",
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/27/58/5c/c3/piscina-y-mirador.jpg?w=1200&h=-1&s=1",
               person: 1,
               hotelDescription:
                 "Switzerland Hotel 1 is a luxurious 4-star hotel located in the heart of Zurich. With modern amenities and breathtaking views of the surrounding mountains, it offers a relaxing retreat for travelers. The hotel features spacious rooms, a state-of-the-art spa, fitness center, and gourmet restaurant serving delicious international cuisine.",
@@ -240,9 +240,9 @@ export const vacationsCategories = {
               ],
               hotelName: "Sunset Vista Inn",
               location: "400 Cannery Row, Canada, CA 93121",
-              startDate: "28-02-2025",
-              arrivalTime: "28-02-2025 14:00",
-              endDate: "04-04-2025",
+              startDate: "28-02-2026",
+              arrivalTime: "28-02-2026 14:00",
+              endDate: "04-04-2026",
               offerImage:
                 "https://cdn.apartmenttherapy.info/image/upload/v1582903821/at/real-estate/toronto-ontario-canada.jpg",
               totalCost: 1900,
@@ -252,7 +252,7 @@ export const vacationsCategories = {
               hotelCity: "Banff",
               duration: "9 nights",
               hotelCoverImage:
-                "https://www.trumphotels.com/uploads/17563/16/cloudinary/trump-hotels-cloudinary/image/upload/x_0,y_544,w_1333,h_1456,c_crop/c_fill,w_1666,ar_119:73/v1523482784/asmdgqtm6i3zvbd8d3g5.jpg",
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/27/58/5c/c3/piscina-y-mirador.jpg?w=1200&h=-1&s=1",
               person: 1,
               hotelDescription:
                 "Canada Hotel 1 is a luxurious 5-star hotel located in Banff, Canada. With stunning views of the surrounding mountains and pristine landscapes, it offers a tranquil and rejuvenating stay for guests. The hotel features world-class amenities including a spa, fitness center, gourmet restaurant, and attentive room service.",
@@ -306,9 +306,9 @@ export const vacationsCategories = {
                 "Restaurant",
                 "Bar",
               ],
-              startDate: "10-05-2024",
+              startDate: "10-05-2026",
               location: "Banff, Matanzas Province, Cuba",
-              endDate: "17-05-2024",
+              endDate: "17-05-2026",
               totalCost: 1200,
               hotelStars: 5,
               offerImage:
@@ -666,7 +666,7 @@ export const vacationsCategories = {
               totalCost: 1000,
               countryName: "Greece",
               offerImage:
-                "https://www.schimiggy.com/wp-content/uploads/2021/07/Greece-Travel-Guide-by-Alex-Tran.jpg",
+                "https://www.traveloffpath.com/wp-content/uploads/2022/10/Why-Portugal-Has-Become-One-Of-The-Most-Popular-Destinations-Of-The-Year-.jpg",
               hotelStars: 4,
               hotelCity: "Athens",
               arrivalTime: "21-02-2023 14:00",
@@ -862,77 +862,10 @@ export const vacationsCategories = {
             "https://www.traveloffpath.com/wp-content/uploads/2022/10/Why-Portugal-Has-Become-One-Of-The-Most-Popular-Destinations-Of-The-Year-.jpg",
           offers: [
             {
-              id: 1111,
-              hotelName: "Emerald Shores Hotel",
-              startDate: "21-02-2025",
-              countryName: "Portugal",
-              amenities: [
-                "Free Wi-Fi",
-                "Spa",
-                "Fitness Center",
-                "Restaurant",
-                "Room Service",
-              ],
-              endDate: "29-03-2025",
-              totalCost: 950,
-              offerImage:
-                "https://www.thetinybook.com/wp-content/uploads/2025/08/Lagos-Portugal.jpg",
-              location: "400 Cannery Row, Portugal, CA 93121",
-              hotelStars: 4,
-              hotelCity: "Lisbon",
-              arrivalTime: "21-02-2025 14:00",
-              duration: "7 nights",
-              hotelCoverImage:
-                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/492106100.jpg?k=e5094f3f7d90049f7afda56b1e4756a152dfe658b5731b5de61cd50bc04c0e33&o=&hp=1",
-              person: 1,
-              hotelDescription:
-                "Portugal Hotel 1221 is a luxurious 4-star hotel located in the vibrant city of Lisbon. Situated in a prime location, it offers easy access to major attractions, shopping centers, and dining options. The hotel features elegant rooms, modern amenities, and personalized service, ensuring a comfortable and memorable stay for guests.",
-              roomType: "Executive Suite",
-              mealPlan: "Half-Board",
-              roomImage:
-                "https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWwlMjByb29tfGVufDB8fDB8fHww",
-              transportation: "Shuttle Service",
-              activities: [
-                {
-                  img: "https://www.altachalets.com/wp-content/uploads/2022/11/snowboarder-1920x1000-min.jpg",
-                  name: "Historical Tour of Lisbon",
-                  description:
-                    "Explore the rich history and cultural heritage of Lisbon with a guided tour. Visit iconic landmarks such as Belem Tower, Jeronimos Monastery, and Sao Jorge Castle.",
-                },
-                {
-                  img: "https://www.altachalets.com/wp-content/uploads/2022/11/snowboarder-1920x1000-min.jpg",
-                  name: "Fado Music Night",
-                  description:
-                    "Experience the soulful melodies of Fado music, a traditional Portuguese music genre. Enjoy an evening of live performances in authentic Fado clubs.",
-                },
-              ],
-              cancellationPolicy:
-                "Free cancellation up to 7 days before arrival. Cancellations made within 7 days of arrival are subject to a penalty fee equivalent to one night's stay.",
-              reviews: [
-                {
-                  username: "Traveler789",
-                  rating: 4,
-                  comment:
-                    "Had a wonderful stay at Portugal Hotel 1221. The room was spacious and well-equipped, and the staff were friendly and helpful. Great location with easy access to public transportation.",
-                },
-                {
-                  username: "Vacationer234",
-                  rating: 5,
-                  comment:
-                    "Fantastic hotel with excellent amenities! The breakfast buffet was delicious, and the spa facilities were very relaxing. Highly recommend staying here.",
-                },
-              ],
-              additionalImages: [
-                "https://media.istockphoto.com/id/1390233984/photo/modern-luxury-bedroom.jpg?s=612x612&w=0&k=20&c=po91poqYoQTbHUpO1LD1HcxCFZVpRG-loAMWZT7YRe4=",
-                "https://cdn.pixabay.com/photo/2016/11/18/17/20/living-room-1835923_1280.jpg",
-                "https://media.istockphoto.com/id/655973354/photo/interior-of-studio-apartment.jpg?s=612x612&w=0&k=20&c=cvXEAyBIqDlyZPp0OQUhny2bH0zTVsBbLJeJlrQeh2E=",
-              ],
-            },
-            {
               id: 11121,
               hotelName: "Shores Hotel",
               countryName: "Portugal",
-              startDate: "21-02-2025",
+              startDate: "21-02-2026",
               amenities: [
                 "Free Wi-Fi",
                 "Spa",
@@ -940,7 +873,7 @@ export const vacationsCategories = {
                 "Restaurant",
                 "Room Service",
               ],
-              endDate: "29-03-2025",
+              endDate: "29-03-2026",
               totalCost: 950,
               offerImage:
                 "https://bubo.sk//uploads/galleries/784/lisabon-sunset.jpg",
@@ -949,7 +882,7 @@ export const vacationsCategories = {
               hotelCoverImage:
                 "https://cf.bstatic.com/xdata/images/hotel/max1024x768/492106100.jpg?k=e5094f3f7d90049f7afda56b1e4756a152dfe658b5731b5de61cd50bc04c0e33&o=&hp=1",
               hotelCity: "Lisa",
-              arrivalTime: "21-02-2025 14:00",
+              arrivalTime: "21-02-2026 14:00",
               duration: "7 nights",
               person: 1,
               hotelDescription:
@@ -1007,7 +940,7 @@ export const vacationsCategories = {
             {
               id: 50,
               hotelName: "Whispering Pines Resort",
-              startDate: "21-02-2025",
+              startDate: "21-02-2026",
               amenities: [
                 "Free Wi-Fi",
                 "Spa",
@@ -1015,10 +948,10 @@ export const vacationsCategories = {
                 "Restaurant",
                 "Room Service",
               ],
-              endDate: "29-03-2025",
+              endDate: "29-03-2026",
               totalCost: 950,
               countryName: "France",
-              arrivalTime: "21-02-2025 14:00",
+              arrivalTime: "21-02-2026 14:00",
               hotelStars: 4,
               offerImage:
                 "https://nypost.com/wp-content/uploads/sites/2/2015/09/pra-a_do_com-rcio_h-000179_by_turismo_de_lisboaa.jpg?quality=75&strip=all",
@@ -1028,7 +961,7 @@ export const vacationsCategories = {
               roomImage:
                 "https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWwlMjByb29tfGVufDB8fDB8fHww",
               hotelCoverImage:
-                "https://www.trumphotels.com/uploads/17563/16/cloudinary/trump-hotels-cloudinary/image/upload/x_0,y_544,w_1333,h_1456,c_crop/c_fill,w_1666,ar_119:73/v1523482784/asmdgqtm6i3zvbd8d3g5.jpg",
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/27/58/5c/c3/piscina-y-mirador.jpg?w=1200&h=-1&s=1",
               person: 1,
               hotelDescription:
                 "Portugal Hotel 1 is a luxurious 4-star hotel located in the vibrant city of Lisbon. Situated in a prime location, it offers easy access to major attractions, shopping centers, and dining options. The hotel features elegant rooms, modern amenities, and personalized service, ensuring a comfortable and memorable stay for guests.",
@@ -1091,11 +1024,11 @@ export const vacationsCategories = {
             {
               id: 61,
               hotelName: "Paradise Cove Inn",
-              startDate: "21-02-2025",
+              startDate: "21-02-2026",
               offerImage:
                 "https://www.thetrainline.com/cms/media/1365/italy-venice-basilica-di-santa-maria-della-salute-and-grand-canal.jpg?mode=crop&width=860&height=574&quality=70",
-              arrivalTime: "21-02-2025 14:00",
-              endDate: "29-03-2025",
+              arrivalTime: "21-02-2026 14:00",
+              endDate: "29-03-2026",
               amenities: [
                 "Free Wi-Fi",
                 "Spa",
@@ -1158,11 +1091,11 @@ export const vacationsCategories = {
             {
               id: 621,
               hotelName: "Cove Inn",
-              startDate: "21-02-2025",
+              startDate: "21-02-2026",
               offerImage:
                 "https://www.italia.it/content/dam/tdh/en/interests/lombardia/milano/milano-in-48-ore/media/20220119115535-piazza-del-duomo-all-alba-milano-lombardia-shutterstock-1161075943-rid.jpg",
-              arrivalTime: "21-02-2025 14:00",
-              endDate: "29-03-2025",
+              arrivalTime: "21-02-2026 14:00",
+              endDate: "29-03-2026",
               countryName: "Italy",
               amenities: [
                 "Free Wi-Fi",
@@ -1235,9 +1168,9 @@ export const vacationsCategories = {
             {
               id: 70,
               hotelName: "Moonlight Manor Hotel",
-              startDate: "21-02-2025",
+              startDate: "21-02-2026",
               countryName: "Austria",
-              endDate: "29-03-2025",
+              endDate: "29-03-2026",
               offerImage: "https://media.nomadicmatt.com/2018/austriaguide.jpg",
               location: "400 Cannery Row, Austria, CA 93121",
               totalCost: 1100,
@@ -1253,7 +1186,7 @@ export const vacationsCategories = {
               hotelCity: "Vienna",
               roomImage:
                 "https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWwlMjByb29tfGVufDB8fDB8fHww",
-              arrivalTime: "21-02-2025 14:00",
+              arrivalTime: "21-02-2026 14:00",
               duration: "6 nights",
               hotelCoverImage:
                 "https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -1301,8 +1234,8 @@ export const vacationsCategories = {
             {
               id: 720,
               hotelName: "Moonlight Hotel",
-              startDate: "21-02-2025",
-              endDate: "29-03-2025",
+              startDate: "21-02-2026",
+              endDate: "29-03-2026",
               countryName: "Austria",
               offerImage:
                 "https://static.independent.co.uk/2022/08/03/17/iStock-1176796753.jpg",
@@ -1320,7 +1253,7 @@ export const vacationsCategories = {
               hotelCity: "Concre",
               roomImage:
                 "https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWwlMjByb29tfGVufDB8fDB8fHww",
-              arrivalTime: "21-02-2025 14:00",
+              arrivalTime: "21-02-2026 14:00",
               duration: "6 nights",
               hotelCoverImage:
                 "https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -1379,15 +1312,15 @@ export const vacationsCategories = {
               id: 73,
               countryName: "Germany",
               hotelName: "Ocean Breeze Resort",
-              startDate: "21-02-2025",
-              endDate: "29-03-2025",
+              startDate: "21-02-2026",
+              endDate: "29-03-2027",
               totalCost: 1200,
               location: "400 Cannery Row, Germany, CA 93121",
               hotelStars: 5,
               hotelCity: "Berlin",
               person: 2,
               offerImage:
-                "https://www.internationalcitizens.com/wp-content/uploads/2018/06/Berlin-Germany.jpg",
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/27/58/5c/c3/piscina-y-mirador.jpg?w=1200&h=-1&s=1",
               amenities: [
                 "Free Wi-Fi",
                 "Spa",
@@ -1398,7 +1331,7 @@ export const vacationsCategories = {
               duration: "6 nights",
               roomImage:
                 "https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWwlMjByb29tfGVufDB8fDB8fHww",
-              arrivalTime: "21-02-2025 14:00",
+              arrivalTime: "21-02-2026 14:00",
               hotelCoverImage:
                 "https://www.trumphotels.com/uploads/17563/16/cloudinary/trump-hotels-cloudinary/image/upload/x_0,y_544,w_1333,h_1456,c_crop/c_fill,w_1666,ar_119:73/v1523482784/asmdgqtm6i3zvbd8d3g5.jpg",
               hotelDescription:
@@ -1446,15 +1379,15 @@ export const vacationsCategories = {
               id: 7321,
               hotelName: "Breeze Resort",
               countryName: "Germany",
-              startDate: "21-02-2025",
-              endDate: "29-03-2025",
+              startDate: "21-02-2026",
+              endDate: "29-03-2027",
               totalCost: 1200,
               location: "400 Cannery Row, Germany, CA 93121",
               hotelStars: 5,
               hotelCity: "Minhen",
               person: 2,
               offerImage:
-                "https://cdn.mappr.co/wp-content/uploads/2025/05/capital-of-austria-vienna.jpg",
+                "https://img.taste.com.au/jUGIU1GJ/taste/2020/07/landmark-pagoda-in-doi-inthanon-national-park-at-chiang-mai-thailand-163355-1.jpg",
               amenities: [
                 "Free Wi-Fi",
                 "Spa",
@@ -1465,7 +1398,7 @@ export const vacationsCategories = {
               duration: "6 nights",
               roomImage:
                 "https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWwlMjByb29tfGVufDB8fDB8fHww",
-              arrivalTime: "21-02-2025 14:00",
+              arrivalTime: "21-02-2026 14:00",
               hotelCoverImage:
                 "https://www.trumphotels.com/uploads/17563/16/cloudinary/trump-hotels-cloudinary/image/upload/x_0,y_544,w_1333,h_1456,c_crop/c_fill,w_1666,ar_119:73/v1523482784/asmdgqtm6i3zvbd8d3g5.jpg",
               hotelDescription:
@@ -1530,11 +1463,11 @@ export const vacationsCategories = {
             {
               id: 1331,
               hotelName: "Silver Lake Retreat",
-              startDate: "21-02-2025",
-              endDate: "29-03-2025",
+              startDate: "21-02-2026",
+              endDate: "29-03-2027",
               totalCost: 1200,
               countryName: "Mexico",
-              arrivalTime: "21-02-2025 14:00",
+              arrivalTime: "21-02-2026 14:00",
               person: 2,
               offerImage:
                 "https://cdn.britannica.com/60/92960-050-327CF926/pyramid-Mayan-Chichen-Itza-Mex.jpg",
@@ -1597,11 +1530,11 @@ export const vacationsCategories = {
             {
               id: 1222,
               hotelName: "Trump Hotel",
-              startDate: "13-06-2025",
-              endDate: "29-06-2025",
+              startDate: "13-06-2026",
+              endDate: "29-06-2027",
               countryName: "Mexico",
               totalCost: 400,
-              arrivalTime: "13-06-2025 14:00",
+              arrivalTime: "13-06-2026 14:00",
               person: 1,
               offerImage:
                 "https://s1.1zoom.me/b3749/185/USA_Houses_Rivers_Coast_Miami_Night_517262_1920x1080.jpg",
@@ -1665,10 +1598,10 @@ export const vacationsCategories = {
               id: 3100001,
               hotelName: "Mexico Tour",
               countryName: "Mexico",
-              startDate: "11-06-2025",
-              endDate: "22-06-2025",
+              startDate: "11-06-2026",
+              endDate: "22-06-2027",
               totalCost: 1300,
-              arrivalTime: "11-06-2025 14:00",
+              arrivalTime: "11-06-2026 14:00",
               person: 2,
               offerImage:
                 "https://img.taste.com.au/jUGIU1GJ/taste/2020/07/landmark-pagoda-in-doi-inthanon-national-park-at-chiang-mai-thailand-163355-1.jpg",
@@ -1733,10 +1666,10 @@ export const vacationsCategories = {
               id: 32221,
               hotelName: "Retreat Hotel",
               countryName: "Mexico",
-              startDate: "28-02-2025",
-              endDate: "11-03-2025",
+              startDate: "28-02-2026",
+              endDate: "11-03-2026",
               totalCost: 700,
-              arrivalTime: "28-02-2025 14:00",
+              arrivalTime: "28-02-2026 14:00",
               person: 1,
               offerImage:
                 "https://assets3.thrillist.com/v1/image/2788561/1200x630/flatten;crop_down;webp=auto;jpeg_quality=70",
@@ -1808,11 +1741,11 @@ export const vacationsCategories = {
             {
               id: 313131,
               hotelName: "Thai Paradise Resort",
-              startDate: "21-02-2025",
+              startDate: "21-02-2026",
               countryName: "Thailand",
-              endDate: "29-03-2025",
+              endDate: "29-03-2026",
               totalCost: 1500,
-              arrivalTime: "21-02-2025 14:00",
+              arrivalTime: "21-02-2026 14:00",
               person: 2,
               offerImage:
                 "https://a.cdn-hotels.com/gdcs/production172/d459/3af9262b-3d8b-40c6-b61d-e37ae1aa90aa.jpg?impolicy=fcrop&w=800&h=533&q=medium",
@@ -1830,7 +1763,7 @@ export const vacationsCategories = {
               hotelCity: "Phuket",
               duration: "7 nights",
               hotelCoverImage:
-                "https://www.trumphotels.com/uploads/17563/16/cloudinary/trump-hotels-cloudinary/image/upload/x_0,y_544,w_1333,h_1456,c_crop/c_fill,w_1666,ar_119:73/v1523482784/asmdgqtm6i3zvbd8d3g5.jpg",
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/27/58/5c/c3/piscina-y-mirador.jpg?w=1200&h=-1&s=1",
               hotelDescription:
                 "Thailand Hotel 1 is a luxurious 5-star resort located in the vibrant city of Phuket. Nestled along the pristine shores of the Andaman Sea, it offers guests a serene tropical paradise with world-class amenities and breathtaking ocean views. The resort features elegant accommodations, gourmet dining options, a full-service spa, and a range of recreational activities for guests of all ages.",
               roomType: "Ocean View Suite",
@@ -1875,11 +1808,11 @@ export const vacationsCategories = {
             {
               id: 31223131,
               hotelName: "Paradise",
-              startDate: "27-02-2025",
+              startDate: "27-02-2026",
               countryName: "Thailand",
-              endDate: "29-03-2025",
+              endDate: "29-03-2027",
               totalCost: 3000,
-              arrivalTime: "27-02-2025 14:00",
+              arrivalTime: "27-02-2026 14:00",
               person: 2,
               offerImage:
                 "https://cdn.britannica.com/06/96306-050-DFE8AFDC/Khao-Tapu-Ao-Phang-na-Thailand-National-Park.jpg",
@@ -1942,11 +1875,11 @@ export const vacationsCategories = {
             {
               id: 31223213331,
               hotelName: "Thai underwater world",
-              startDate: "27-02-2025",
-              endDate: "29-03-2025",
+              startDate: "27-02-2026",
+              endDate: "29-03-2027",
               countryName: "Thailand",
               totalCost: 3000,
-              arrivalTime: "27-02-2025 14:00",
+              arrivalTime: "27-02-2026 14:00",
               person: 2,
               offerImage:
                 "https://img.etimg.com/thumb/width-1200,height-900,imgsize-1885718,resizemode-75,msid-107744324/nri/visit/visa-free-thailand-is-now-offering-tourists-up-to-14000-in-medical-coverage.jpg",
@@ -1964,7 +1897,7 @@ export const vacationsCategories = {
               hotelCity: "Phuket",
               duration: "32 nights",
               hotelCoverImage:
-                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/518332246.jpg?k=852d9e83009ac082a7bb8366d5e27fb1f21801ea9cb6dde9c14e1aa99c49ea63&o=&hp=1",
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/27/58/5c/c3/piscina-y-mirador.jpg?w=1200&h=-1&s=1",
               hotelDescription:
                 "Thailand Hotel 1 is a luxurious 5-star resort located in the vibrant city of Phuket. Nestled along the pristine shores of the Andaman Sea, it offers guests a serene tropical paradise with world-class amenities and breathtaking ocean views. The resort features elegant accommodations, gourmet dining options, a full-service spa, and a range of recreational activities for guests of all ages.",
               roomType: "Executive Suite",
@@ -2010,10 +1943,10 @@ export const vacationsCategories = {
               id: 33333,
               hotelName: "Phuket Sands Resort",
               countryName: "Thailand",
-              startDate: "21-02-2025",
-              endDate: "29-03-2025",
+              startDate: "21-02-2026",
+              endDate: "29-03-2027",
               totalCost: 1800,
-              arrivalTime: "21-02-2025 14:00",
+              arrivalTime: "21-02-2026 14:00",
               person: 2,
               offerImage:
                 "https://deih43ym53wif.cloudfront.net/large_phra-nang-cave-beach-krabi-thailand-shutterstock_1536886961.jpg_f3f119614e.jpg",
@@ -2085,10 +2018,10 @@ export const vacationsCategories = {
             {
               id: 8233,
               hotelName: "Parisian Charm Hotel",
-              startDate: "21-02-2025",
-              endDate: "29-03-2025",
+              startDate: "21-02-2026",
+              endDate: "29-03-2027",
               totalCost: 1800,
-              arrivalTime: "21-02-2025 14:00",
+              arrivalTime: "21-02-2026 14:00",
               person: 2,
               offerImage:
                 "https://www.cleanenergywire.org/sites/default/files/adaptation_france_eiffel_gustafson_porterbowman.jpg",
@@ -2152,11 +2085,11 @@ export const vacationsCategories = {
             {
               id: 8111,
               hotelName: "Paris Love",
-              startDate: "11-02-2025",
-              endDate: "20-03-2025",
+              startDate: "11-02-2026",
+              endDate: "20-03-2027",
               countryName: "France-Paris",
               totalCost: 3000,
-              arrivalTime: "11-02-2025 14:00",
+              arrivalTime: "11-02-2026 14:00",
               person: 2,
               offerImage:
                 "https://images.adsttc.com/media/images/5d44/14fa/284d/d1fd/3a00/003d/large_jpg/eiffel-tower-in-paris-151-medium.jpg?1564742900",
