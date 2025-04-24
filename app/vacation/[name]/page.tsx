@@ -70,7 +70,7 @@ const Page = ({ params }: any) => {
       <div>
         <h2>{params.name} Trips</h2>
       </div>
-      <OfferFilters filters={filters} handleApplyFilters={handleApplyFilters} setFilters={setFilters} />
+      {/* <OfferFilters filters={filters} handleApplyFilters={handleApplyFilters} setFilters={setFilters} /> */}
       <div className={styles.tableWrapper}>
         <Tabs style={{padding: '5px'}} activeKey={activeTabKey ? activeTabKey : "0"} onChange={handleTabChange}>
           {countryVacations?.offers?.reduce((uniqueCities: string[], offer: any) => {
