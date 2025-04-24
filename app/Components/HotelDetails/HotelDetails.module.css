@@ -1,167 +1,209 @@
 .foundHotelWrapper {
-    display: flex;
-    margin-top: 40px;
-    flex-direction: column;
-    align-items: center;
-    width: 55vw;
+  display: flex;
+  margin-top: 40px;
+  flex-direction: column;
+  align-items: center;
+  width: 55vw;
 }
 
 .startsList {
-    display: flex;
-    min-width: 63vw;
-    margin-top: 30px;
-    margin-bottom: 20px;
+  display: flex;
+  min-width: 63vw;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
 
 .defaultStars {
-    display: flex;
+  display: flex;
 }
 
 .defaultStars p:first-child {
-    font-weight: 700;
-    margin-bottom: 5px;
+  font-weight: 700;
+  margin-bottom: 5px;
 }
 
 .defaultStar {
-    display: flex;
-    width: 10.9vw;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
-    margin-right: 30px;
-    border-radius: 8px;
-    padding: 0;
-    margin-bottom: 0;
-    height: 100px;
-    justify-content: center;
+  display: flex;
+  width: 10.9vw;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  margin-right: 30px;
+  border-radius: 8px;
+  padding: 0;
+  margin-bottom: 0;
+  height: 100px;
+  justify-content: center;
 }
 
 .defaultStar:last-child {
-    margin-right: 0;
+  margin-right: 0;
 }
 
 .hotelStar {
-    display: flex;
-    width: 10.9vw;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
-    margin-right: 30px;
-    border-radius: 8px;
-    padding: 0;
-    margin-bottom: 0;
-    height: 100px;
-    justify-content: center;
+  display: flex;
+  width: 10.9vw;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  margin-right: 30px;
+  border-radius: 8px;
+  padding: 0;
+  margin-bottom: 0;
+  height: 100px;
+  justify-content: center;
 }
 
 .hotelStar p:first-child {
-    margin-bottom: 5px;
-    font-weight: 700;
+  margin-bottom: 5px;
+  font-weight: 700;
 }
 
-.amentediesList{
-    max-width: 67vw;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    margin-top: 9px;
-    margin-bottom: 30px;
+.amentediesList {
+  max-width: 67vw;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 9px;
+  margin-bottom: 30px;
 }
 
-.amentedie{
-    padding: 7px;
-    background-color: rgb(228, 228, 228);
-    margin-right: 15px;
-    border-radius: 12px;
-    color: black;
+.amentedie {
+  padding: 7px;
+  background-color: rgb(228, 228, 228);
+  margin-right: 15px;
+  border-radius: 12px;
+  color: black;
 }
 
-
-.hotelName{
-    font-weight: 700;
-    margin-top: 20px;
-    font-size: 23px;margin-bottom: 2px;
+.hotelName {
+  font-weight: 700;
+  margin-top: 20px;
+  font-size: 23px;
+  margin-bottom: 2px;
 }
 
-.hotelPlace{
-    color: grey;
-    margin-bottom: 20px;
+.hotelPlace {
+  color: grey;
+  margin-bottom: 20px;
 }
 
 .hotelDescription p {
-    font-weight: 400;
-    margin-top: 7px;
-    margin-bottom: 20px;
+  font-weight: 400;
+  margin-top: 7px;
+  margin-bottom: 20px;
 }
 
 .reviewsWrapper {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .review {
-    display: flex;
-    margin-bottom: 20px;
-    padding: 10px;
-    border-radius: 5px;
-    flex-direction: column;
-    min-width: 65vw!important;
-  }
-  
-  .user {
-    display: flex;
-    align-items: flex-start;
-    margin-right: 20px;
-    flex-direction: row;
-  }
+  display: flex;
+  flex-direction: column;
+}
 
-  .user p {
-    font-size: 14px;
-  }
+.review {
+  display: flex;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  flex-direction: column;
+  min-width: 65vw !important;
+}
+
+.user {
+  display: flex;
+  align-items: flex-start;
+  margin-right: 20px;
+  flex-direction: row;
+}
+
+.user p {
+  font-size: 14px;
+}
+
+.review p:last-child {
+  flex-grow: 1;
+  font-size: 12px;
+}
+.hotelCoverImage {
+  width: 55vw;
+  height: 450px;
+  border-radius: 24px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+    .foundHotelWrapper {
+      width: 100vw;
+      padding: 16px 12px;
+      margin-top: 20px;
+    }
   
-  .review p:last-child {
-    flex-grow: 1;
-    font-size: 12px;
-  }
-  .hotelCoverImage{
-    width: 55vw;
-    height: 450px;
-    border-radius: 24px;
-    object-fit: cover;
-  }
- 
-  @media screen and (max-width: 768px) {
+    .startsList {
+      flex-wrap: wrap;
+      justify-content: center;
+      min-width: 100vw;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      gap: 8px;
+    }
+  
+    .defaultStar,
+    .hotelStar {
+      width: 28vw;
+      margin-right: 0;
+      height: 90px;
+    }
+  
+    .amentediesList {
+      flex-direction: column;
+      align-items: stretch;
+      width: 100%;
+      gap: 8px;
+      margin-top: 15px;
+      margin-bottom: 25px;
+    }
+  
+    .amentedie {
+      width: 100%;
+      padding: 12px;
+      margin: 0;
+      text-align: center;
+    }
+  
     .hotelCoverImage {
-        min-width: 100vw;
-        border-radius: 0;
-        height: 430px;
-    }
-    .hotelStar{
-        width: 19vw;
-        margin-right: 3px;
-    }
-    .defaultStar{
-        width: 19vw;
-        margin-right: 3px;
-    }
-    .amentediesList{
-        flex-direction: column;
-    }
-    .amentedie{
-        width: 100%;
-        padding: 12px;
-        margin-top: 5px;
+      width: 100vw;
+      height: 300px;
+      border-radius: 0;
     }
   
-    .hotelName{
-        margin-top: 10px;
+    .hotelName {
+      font-size: 20px;
+      text-align: center;
+      margin-top: 12px;
     }
-    .bottomLayer{
-        width: 100vw;
-        padding: 5px;
+  
+    .hotelPlace {
+      text-align: center;
+      margin-bottom: 15px;
     }
-
-    .foundHotelWrapper{
-        margin-top: 5px;
+  
+    .hotelDescription p {
+      font-size: 14px;
+      text-align: justify;
+      padding: 0 10px;
+    }
+  
+    .review {
+      min-width: 90vw !important;
+    }
+  
+    .user {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .bottomLayer {
+      width: 100%;
+      padding: 8px;
     }
   }
+  

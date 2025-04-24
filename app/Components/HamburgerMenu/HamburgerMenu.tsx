@@ -91,10 +91,6 @@ const HamburgerMenu: React.FC = () => {
       label: <Link href="/ai">Travel AI</Link>,
     },
     {
-      key: "1231",
-      label: <Link href="/blogs">Travel Experiences</Link>,
-    },
-    {
       key: "125",
       label: <Link href="/about">About Us</Link>,
     },

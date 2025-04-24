@@ -105,7 +105,7 @@ export const vacationsCategories = {
                 "Fitness Club",
               ],
               hotelCoverImage:
-                "https://www.swissqualityhotels.com/wp-content/uploads/2025/11/Eiger-Murren-1280x640.jpg",
+              "https://swiss-historic-hotels.ch/bilder/hotels/meisser-resort/_AUTOxAUTO_crop_center-center_none/portrait-hotel-meisser-guarda-swiss-historic-hotels-01.jpg",
               person: 2,
               hotelDescription:
                 "Alpine View Resort is a luxurious 5-star hotel nestled in the picturesque landscapes of Geneva. With unparalleled views of the Alps and impeccable service, it offers guests a truly unforgettable experience. The resort features elegantly appointed rooms, a world-class spa, fine dining options, and recreational facilities for guests of all ages.",
@@ -522,7 +522,7 @@ export const vacationsCategories = {
               arrivalTime: "21-02-2023 14:00",
               duration: "6 nights",
               hotelCoverImage:
-                "https://www.trumphotels.com/uploads/17563/16/cloudinary/trump-hotels-cloudinary/image/upload/x_0,y_544,w_1333,h_1456,c_crop/c_fill,w_1666,ar_119:73/v1523482784/asmdgqtm6i3zvbd8d3g5.jpg",
+              "https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg?cs=srgb&dl=pexels-donald-tong-189296.jpg&fm=jpg",
               person: 1,
               hotelDescription:
                 "Bulgaria Hotel 1 is a luxurious 4-star hotel located in Toronto, the capital city of Bulgaria. Nestled in the heart of the city, it offers convenient access to cultural attractions, shopping districts, and vibrant nightlife. The hotel features modern amenities including a spa, fitness center, gourmet restaurant, and spacious rooms with panoramic city views.",
@@ -718,73 +718,6 @@ export const vacationsCategories = {
               ],
             },
             {
-              id: 25,
-              hotelName: "Palms",
-              countryName: "Greece",
-              amenities: [
-                "Free Wi-Fi",
-                "Spa",
-                "Fitness Center",
-                "Restaurant",
-                "Room Service",
-              ],
-              startDate: "21-02-2025",
-              endDate: "29-03-2025",
-              location: "400 Cannery Row, Greece, CA 93121",
-              totalCost: 1000,
-              offerImage:
-                "https://iconicsantorini.com/wp-content/uploads/2025/02/IconicAlexandraAdonis-19.jpg",
-              hotelStars: 4,
-              hotelCity: "Kalithea",
-              arrivalTime: "21-02-2025 14:00",
-              roomImage:
-                "https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWwlMjByb29tfGVufDB8fDB8fHww",
-              duration: "7 nights",
-              hotelCoverImage:
-                "https://teneohg.com/wp-content/uploads/2014/02/Trump-Chicago-Terrace-at-dusk.webp",
-              person: 1,
-              hotelDescription:
-                "Greece Hotel 1 is a luxurious 4-star hotel located in Athens, the capital city of Greece. Situated in a prime location, it offers stunning views of the city skyline and easy access to major attractions. The hotel features elegant rooms, world-class amenities, and personalized service, ensuring a memorable stay for guests.",
-              roomType: "Executive Suite",
-              mealPlan: "Full-Board",
-              transportation: "Private Airport Transfer",
-              activities: [
-                {
-                  img: "https://www.altachalets.com/wp-content/uploads/2022/11/snowboarder-1920x1000-min.jpg",
-                  name: "Acropolis Tour",
-                  description:
-                    "Discover the rich history of Athens with a guided tour of the Acropolis. Marvel at ancient landmarks such as the Parthenon, Erechtheion, and Temple of Athena Nike.",
-                },
-                {
-                  img: "https://www.altachalets.com/wp-content/uploads/2022/11/snowboarder-1920x1000-min.jpg",
-                  name: "Greek Cuisine Cooking Class",
-                  description:
-                    "Learn to cook traditional Greek dishes with a hands-on cooking class. Experience the flavors of Greece and take home recipes to recreate the dishes.",
-                },
-              ],
-              cancellationPolicy:
-                "Free cancellation up to 7 days before arrival. Cancellations made within 7 days of arrival are subject to a penalty fee equivalent to one night's stay.",
-              reviews: [
-                {
-                  username: "Traveler567",
-                  rating: 5,
-                  comment:
-                    "Fantastic hotel with excellent service! The staff were friendly and attentive, and the room was spacious and comfortable. The hotel's location was convenient for exploring Athens.",
-                },
-                {
-                  username: "Vacationer890",
-                  rating: 4,
-                  comment:
-                    "Enjoyed my stay at Greece Hotel 1. The facilities were top-notch, and the food at the restaurant was delicious. Would definitely stay here again.",
-                },
-              ],
-              additionalImages: [
-                "https://media.istockphoto.com/id/1390233984/photo/modern-luxury-bedroom.jpg?s=612x612&w=0&k=20&c=po91poqYoQTbHUpO1LD1HcxCFZVpRG-loAMWZT7YRe4=",
-                "https://cdn.pixabay.com/photo/2016/11/18/17/20/living-room-1835923_1280.jpg",
-                "https://media.istockphoto.com/id/655973354/photo/interior-of-studio-apartment.jpg?s=612x612&w=0&k=20&c=cvXEAyBIqDlyZPp0OQUhny2bH0zTVsBbLJeJlrQeh2E=",
-              ],
-            },
-            {
               id: 222,
               hotelName: "Santorini Palms Retreat",
               countryName: "Greece",
@@ -808,7 +741,7 @@ export const vacationsCategories = {
                 "data:image/jpeg;base64,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",
               duration: "7 nights",
               hotelCoverImage:
-                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/459423896.jpg?k=1359393c84559e4aa500696c329391ab9a95e034fe028073e39f7b0f5317b15e&o=&hp=1",
+              "https://teneohg.com/wp-content/uploads/2014/02/Trump-Chicago-Terrace-at-dusk.webp",
               person: 1,
               hotelDescription:
                 "Greece Hotel 1 is a luxurious 4-star hotel located in Athens, the capital city of Greece. Situated in a prime location, it offers stunning views of the city skyline and easy access to major attractions. The hotel features elegant rooms, world-class amenities, and personalized service, ensuring a memorable stay for guests.",
@@ -1333,7 +1266,7 @@ export const vacationsCategories = {
                 "https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWwlMjByb29tfGVufDB8fDB8fHww",
               arrivalTime: "21-02-2026 14:00",
               hotelCoverImage:
-                "https://www.trumphotels.com/uploads/17563/16/cloudinary/trump-hotels-cloudinary/image/upload/x_0,y_544,w_1333,h_1456,c_crop/c_fill,w_1666,ar_119:73/v1523482784/asmdgqtm6i3zvbd8d3g5.jpg",
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/a6/ab/79/the-last-hotel-rooftop.jpg?w=1200&h=-1&s=1",
               hotelDescription:
                 "Germany Hotel 1 is a luxurious 5-star hotel located in the heart of Berlin. With its sleek modern design and world-class amenities, it offers discerning travelers a sophisticated urban retreat. The hotel features spacious rooms, a rooftop infinity pool with panoramic views of the city skyline, a Michelin-starred restaurant, and a wellness spa offering a range of treatments.",
               roomType: "Executive Suite",
@@ -1400,7 +1333,7 @@ export const vacationsCategories = {
                 "https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWwlMjByb29tfGVufDB8fDB8fHww",
               arrivalTime: "21-02-2026 14:00",
               hotelCoverImage:
-                "https://www.trumphotels.com/uploads/17563/16/cloudinary/trump-hotels-cloudinary/image/upload/x_0,y_544,w_1333,h_1456,c_crop/c_fill,w_1666,ar_119:73/v1523482784/asmdgqtm6i3zvbd8d3g5.jpg",
+              "https://www.trumphotels.com/uploads/17563/16/cloudinary/trump-hotels-cloudinary/image/upload/x_0,y_544,w_1333,h_1456,c_crop/c_fill,w_1666,ar_119:73/v1523482784/asmdgqtm6i3zvbd8d3g5.jpg",
               hotelDescription:
                 "Germany Hotel 1 is a luxurious 5-star hotel located in the heart of Berlin. With its sleek modern design and world-class amenities, it offers discerning travelers a sophisticated urban retreat. The hotel features spacious rooms, a rooftop infinity pool with panoramic views of the city skyline, a Michelin-starred restaurant, and a wellness spa offering a range of treatments.",
               roomType: "Executive Suite",
@@ -1687,7 +1620,7 @@ export const vacationsCategories = {
               hotelCity: "Mexico City",
               duration: "11 nights",
               hotelCoverImage:
-                "https://www.trumphotels.com/uploads/17563/16/cloudinary/trump-hotels-cloudinary/image/upload/x_0,y_544,w_1333,h_1456,c_crop/c_fill,w_1666,ar_119:73/v1523482784/asmdgqtm6i3zvbd8d3g5.jpg",
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/a6/ab/79/the-last-hotel-rooftop.jpg?w=1200&h=-1&s=1",
               hotelDescription:
                 "Retreat Hotel  is a luxurious 5-star resort located in the vibrant city of Puerto Vallarta. Nestled along the pristine shores of the Pacific Ocean, it offers guests a serene tropical paradise with world-class amenities and breathtaking ocean views. The resort features elegant accommodations, gourmet dining options, a full-service spa, and a range of recreational activities for guests of all ages.",
               roomType: "Ocean View Suite",
@@ -2040,7 +1973,7 @@ export const vacationsCategories = {
               hotelCity: "Paris",
               duration: "7 nights",
               hotelCoverImage:
-                "https://www.trumphotels.com/uploads/17563/16/cloudinary/trump-hotels-cloudinary/image/upload/x_0,y_544,w_1333,h_1456,c_crop/c_fill,w_1666,ar_119:73/v1523482784/asmdgqtm6i3zvbd8d3g5.jpg",
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/a6/ab/79/the-last-hotel-rooftop.jpg?w=1200&h=-1&s=1",
               hotelDescription:
                 "France Hotel 1 is a luxurious 5-star hotel located in the heart of Paris, just steps away from iconic landmarks such as the Eiffel Tower and the Louvre Museum. It offers guests a blend of Parisian elegance and modern luxury, with spacious accommodations, gourmet dining options, and personalized service. Whether you're exploring the city's rich cultural heritage or simply indulging in the fine art of French cuisine, France Hotel 1 promises an unforgettable experience.",
               roomType: "Deluxe Room",
