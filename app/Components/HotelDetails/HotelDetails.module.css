@@ -102,7 +102,6 @@
 .review {
   display: flex;
   margin-bottom: 20px;
-  padding: 10px;
   border-radius: 5px;
   flex-direction: column;
   min-width: 65vw !important;
@@ -181,7 +180,7 @@
     }
   
     .hotelPlace {
-      text-align: center;
+      text-align: left ;
       margin-bottom: 15px;
     }
   
@@ -193,7 +192,6 @@
     .review {
       min-width: 90vw !important;
       padding: 0px !important;
-
     }
   
     .user {
