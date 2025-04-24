@@ -134,7 +134,7 @@
     .foundHotelWrapper {
       width: 100vw;
       padding: 16px 12px;
-      margin-top: 20px;
+      margin-top: 5px;
     }
   
     .startsList {
@@ -166,18 +166,17 @@
       width: 100%;
       padding: 12px;
       margin: 0;
-      text-align: center;
+      text-align: left;
     }
   
     .hotelCoverImage {
-      width: 100vw;
+      width: 96vw;
       height: 300px;
-      border-radius: 0;
+      border-radius: 12px;
     }
   
     .hotelName {
       font-size: 20px;
-      text-align: center;
       margin-top: 12px;
     }
   
@@ -189,11 +188,12 @@
     .hotelDescription p {
       font-size: 14px;
       text-align: justify;
-      padding: 0 10px;
     }
   
     .review {
       min-width: 90vw !important;
+      padding: 0px !important;
+
     }
   
     .user {
@@ -203,7 +203,10 @@
   
     .bottomLayer {
       width: 100%;
-      padding: 8px;
+      padding: 0px;
+    }
+    .reviewsWrapper{
+      margin-top: 30px;
     }
   }
   
