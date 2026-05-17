@@ -40,7 +40,7 @@ const Page = ({ params }: any) => {
     }
     
     try {
-      const stripeKeyResponse = await fetch("https://travel-agency-plum.vercel.app/api/getStripeApi");
+      const stripeKeyResponse = await fetch("/api/getStripeApi");
       if (!stripeKeyResponse.ok) {
         throw new Error(`Failed to fetch STRIPE_ACCESS_KEY! Status: ${stripeKeyResponse.status}`);
       }
@@ -48,7 +48,7 @@ const Page = ({ params }: any) => {
       const stripe = await loadStripe(stripeKeyData);
 
       const createSessionResponse = await fetch(
-        "https://travel-agency-plum.vercel.app/api/createlink",
+        "/api/createlink",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

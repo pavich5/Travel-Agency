@@ -3,9 +3,11 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import styles from './page.module.css';
-import Lottie from 'lottie-react';
+import dynamic from 'next/dynamic';
 import cancelledAnimation from '../../public/cancelled.json';
 import { Button } from 'antd';
+
+const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 
 const CancelledPage = () => {
   const router = useRouter();

@@ -1,214 +1,283 @@
 .pageWrapper {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  align-items: center;
+  width: min(1200px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 24px 0 80px;
 }
 
-.sectionWrapper {
-  margin-bottom: 100px;
-  margin-left: 50px;
-}
-
-.mainSection {
-  width: 67vw;
-  height: 70vh;
-  border-radius: 16px;
-  margin-top: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start;
+.hero {
+  min-height: 76vh;
+  border-radius: 36px;
   background-size: cover;
   background-position: center;
-}
-
-.noData {
+  box-shadow: var(--shadow);
+  display: grid;
+  place-items: center;
   text-align: center;
-}
-.sectionHeading {
-  color: white;
-  text-transform: capitalize;
-  margin-bottom: 10px;
-  font-size: 44px;
+  overflow: hidden;
 }
 
-.mainSection p {
+.heroContent {
+  width: min(760px, calc(100% - 32px));
   color: white;
-  font-size: 18px;
 }
 
-.buttonsWrapper button {
-  margin-right: 10px;
-  margin-top: 20px;
-  width: 95px;
-  height: 35px;
+.eyebrow {
+  margin-bottom: 14px;
+  font-size: 0.78rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--accent);
 }
 
-.buttonsWrapper button:first-child {
-  background-color: #34ace0 !important;
+.heroContent h1 {
+  font-size: clamp(3.2rem, 6vw, 6rem);
+  line-height: 0.9;
 }
 
-.oneVacationCard {
-  width: 26%;
-  height: 200px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
-  position: relative;
-  margin: 10px;
-  margin-left: 0px;
-  color: white;
-  padding: 20px;
-  box-sizing: border-box;
-  color: white;
-  padding: 20px;
+.heroText {
+  max-width: 620px;
+  margin: 18px auto 0;
+  color: rgba(255, 246, 235, 0.88);
+  font-size: 1.05rem;
+}
+
+.heroStats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.heroStats div {
+  padding: 18px;
+  border-radius: 22px;
+  background: rgba(255, 249, 241, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+}
+
+.heroStats strong,
+.heroStats span {
+  display: block;
+}
+
+.heroStats strong {
+  font-size: 2rem;
+}
+
+.heroStats span {
+  color: rgba(255, 246, 235, 0.76);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+}
+
+.heroActions {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-
-.vacationName {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.vacationDescription {
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-.availableList {
-  display: flex;
-  width: 67vw;
-}
-
-.availableVacationsWrapper {
+  justify-content: center;
+  gap: 12px;
   margin-top: 30px;
 }
 
-.pageWrapper span {
-  cursor: pointer;
+.heroActions button {
+  min-width: 148px;
+  height: 46px;
+  border-radius: 999px;
 }
 
-.availableVacationsWrapper h3 {
-  font-size: 22px;
-  margin-left: 2px;
-  text-transform: capitalize;
+.destinationsSection,
+.offersSection {
+  margin-top: 72px;
 }
 
-.allOffers {
-  margin-top: 80px;
+.sectionHeading {
+  text-align: center;
+  margin-bottom: 28px;
 }
 
-.allOffers h3 {
-  font-size: 22px;
-  margin-left: 2px;
-  margin-bottom: 10px;
-  text-transform: capitalize;
+.sectionHeading h2 {
+  font-size: clamp(2.4rem, 4vw, 4.1rem);
+  line-height: 0.95;
 }
 
-.allOffers span {
-  color: black !important;
-}
-
-.oneOfferCard {
-  width: 21vw;
-  height: 190px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 10px;
-  margin: 10px;
-  margin-left: 0px;
-  color: white;
-  padding: 20px;
-  box-sizing: border-box;
-  color: white;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  cursor: pointer;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
-
-.offerWrapper {
-  display: flex;
-  align-items: flex-start;
-  margin-top: 20px;
-  border-radius: 16px;
-  cursor: pointer;
-  flex-direction: row;
-}
-
-.offerName {
-  color: white;
-  font-weight: 600;
-  margin-top: 10px;
-}
-
-.viewOfferButton {
-  width: 95px;
-  height: 31px;
-  border: none;
-  background-color: #34ace0;
-  border-radius: 4px;
-  color: white;
-  margin-top: 50px;
-  cursor: pointer;
-}
-
-.oneOfferCard,
-.oneVacationCard {
-  transition: transform 0.3s;
-}
-
-.oneOfferCard:hover,
-.oneVacationCard:hover {
-  transform: scale(1.025);
-}
-
-.allOfferList {
+.destinationGrid,
+.offerGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.destinationCard {
+  min-height: 340px;
+  border-radius: 28px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 18px 44px rgba(24, 38, 31, 0.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  align-items: flex-end;
+}
+
+.destinationCard:hover,
+.offerCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 58px rgba(24, 38, 31, 0.16);
+}
+
+.destinationCardContent {
+  padding: 24px;
+  color: white;
+}
+
+.destinationTitle {
+  font-size: 2rem;
+  font-family: var(--font-heading), serif;
+  margin-bottom: 8px;
+}
+
+.destinationCardContent span {
+  display: inline-block;
+  margin-top: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.8rem;
+  color: rgba(255, 246, 235, 0.86);
+}
+
+.filterBar {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr;
+  gap: 14px;
+  padding: 18px;
+  border-radius: 28px;
+  background: rgba(255, 251, 246, 0.84);
+  border: 1px solid rgba(24, 38, 31, 0.08);
+  box-shadow: 0 16px 40px rgba(24, 38, 31, 0.08);
+}
+
+.searchInput,
+.filterSelect {
+  width: 100%;
+}
+
+.resultsMeta {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 18px 4px 0;
+  color: var(--muted);
+}
+
+.offerCard {
+  overflow: hidden;
+  border-radius: 28px;
+  background: rgba(255, 251, 246, 0.88);
+  border: 1px solid rgba(24, 38, 31, 0.08);
+  box-shadow: 0 18px 44px rgba(24, 38, 31, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.offerImage {
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+}
+
+.offerCardBody {
+  padding: 22px;
+}
+
+.offerTopRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+
+.offerBadge {
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(15, 118, 110, 0.1);
+  color: var(--primary-strong);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+}
+
+.offerPrice {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.offerCardBody h3 {
+  font-size: 2rem;
+  margin-top: 14px;
+}
+
+.offerLocation,
+.offerMeta,
+.offerDescription {
+  color: var(--muted);
+}
+
+.offerLocation,
+.offerMeta {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.offerDescription {
+  margin-top: 14px;
+}
+
+.offerActions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.offerActions button {
+  height: 42px;
+  border-radius: 999px;
+}
+
+@media screen and (max-width: 1024px) {
+  .destinationGrid,
+  .offerGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .filterBar {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media screen and (max-width: 768px) {
-  .mainSection {
-    width: 100vw;
-    height: 90.7vh;
-    margin-top: 0;
-    border-radius: 0;
-  }
-  .availableList {
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    padding: 25px;
-  }
-  .availableVacationsWrapper h3 {
-    text-align: center;
-  }
-  .oneVacationCard {
-    width: 100%;
-  }
-  .allOffers h3 {
-    text-align: center;
-  }
-  .allOfferList {
-    display: flex;
-    flex-direction: column;
-    padding: 25px;
-  }
-  .oneOfferCard {
-    width: 100%;
-  }
   .pageWrapper {
-    margin-bottom: 100px;
+    width: calc(100% - 24px);
+    padding-top: 16px;
+  }
+
+  .hero {
+    min-height: 82vh;
+    border-radius: 28px;
+  }
+
+  .heroStats,
+  .destinationGrid,
+  .offerGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .heroActions,
+  .resultsMeta,
+  .offerActions {
+    flex-direction: column;
   }
 }

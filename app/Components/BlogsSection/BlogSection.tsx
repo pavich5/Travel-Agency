@@ -18,7 +18,10 @@ const BlogSection = ({ blogPosts }: BlogSectionProps): JSX.Element => {
   return (
     <div className={styles.blogSection}>
       <div className={styles.blogPosts}>
-        <h2>Latest Blog Posts</h2>
+        <div className={styles.sectionHeadingBlock}>
+          <p className={styles.eyebrow}>Journal</p>
+          <h2>Fresh reads for travelers planning with intent.</h2>
+        </div>
         {blogPosts.map((post: BlogPost, index: Key) => (
           <div key={index} className={styles.blogPost}>
             <img src={post.image} alt={post.title} />

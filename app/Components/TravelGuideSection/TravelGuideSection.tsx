@@ -5,7 +5,10 @@ import Link from "next/link";
 const TravelGuideSection = () => {
   return (
     <div className={styles.travelGuidesSection}>
-      <h2>Explore Our Travel Guides</h2>
+      <div className={styles.sectionHeadingBlock}>
+        <p className={styles.eyebrow}>Guides</p>
+        <h2>Helpful guides for the trip before the trip.</h2>
+      </div>
       <div className={styles.travelGuides}>
         <div className={styles.travelGuide}>
           <img
@@ -13,9 +16,9 @@ const TravelGuideSection = () => {
             alt="Travel Guide 1"
           />
           <div className={styles.travelGuideContent}>
-            <h3>City Breaks: Top Destinations for Weekend Getaways</h3>
+            <h3>City breaks with style, walkability, and better pacing</h3>
             <p>
-              Embark on thrilling adventures and adrenaline-pumping activities.
+              Learn how to plan a shorter trip that still feels layered and restorative.
             </p>
             <Link
               target="_blank"
@@ -31,9 +34,9 @@ const TravelGuideSection = () => {
             alt="Travel Guide 2"
           />
           <div className={styles.travelGuideContent}>
-            <h3>Adventure Travel: Thrilling Experiences for Adrenaline</h3>
+            <h3>Adventure itineraries that balance thrill with comfort</h3>
             <p>
-              Embark on thrilling adventures and adrenaline-pumping activities.
+              Build memorable activity days without turning the whole holiday into logistics.
             </p>
             <Link
               target="_blank"
@@ -49,9 +52,9 @@ const TravelGuideSection = () => {
             alt="Travel Guide 3"
           />
           <div className={styles.travelGuideContent}>
-            <h3>Adventure Travel: Thrilling Experiences for Adrenaline</h3>
+            <h3>Resort escapes that still leave room for discovery</h3>
             <p>
-              Embark on thrilling adventures and adrenaline-pumping activities.
+              Mix downtime, local culture, and practical planning in one itinerary.
             </p>
             <Link
               target="_blank"

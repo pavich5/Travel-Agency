@@ -24,7 +24,10 @@ const TravelSeasonSection: React.FC<TravelSeasonSectionProps> = ({ vacationsCate
           </button>
         ))}
       </div>
-      <h2 className={styles.travelSeasonsTitle}>Travel Seasons</h2>
+      <div className={styles.sectionHeadingBlock}>
+        <p className={styles.eyebrow}>Travel Seasons</p>
+        <h2 className={styles.travelSeasonsTitle}>Choose the mood before the map.</h2>
+      </div>
       <div className={styles.vacationCardsWrapper}>
         {vacationsCategories.categories.map((category: VacationCategory, index: number) => (
           <div
@@ -35,7 +38,10 @@ const TravelSeasonSection: React.FC<TravelSeasonSectionProps> = ({ vacationsCate
             className={styles.oneCategoryCard}
             style={{ backgroundImage: `url(${category.image})` }}
           >
-            <p className={styles.categoryName}>{category.name}</p>
+            <div className={styles.cardOverlay}>
+              <p className={styles.categoryName}>{category.name}</p>
+              <span>View collection</span>
+            </div>
           </div>
         ))}
       </div>

@@ -1,9 +1,9 @@
 .foundHotelWrapper {
   display: flex;
-  margin-top: 40px;
+  margin-top: 32px;
   flex-direction: column;
-  align-items: center;
-  width: 55vw;
+  align-items: stretch;
+  width: min(1100px, 100%);
 }
 
 .startsList {
@@ -60,38 +60,41 @@
 }
 
 .amentediesList {
-  max-width: 67vw;
   display: flex;
   align-items: center;
-  flex-direction: row;
-  margin-top: 9px;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
   margin-bottom: 30px;
 }
 
 .amentedie {
-  padding: 7px;
-  background-color: rgb(228, 228, 228);
-  margin-right: 15px;
-  border-radius: 12px;
-  color: black;
+  padding: 10px 14px;
+  background-color: rgba(255, 251, 246, 0.8);
+  border: 1px solid rgba(24, 38, 31, 0.08);
+  border-radius: 999px;
+  color: var(--text);
+  font-weight: 600;
 }
 
 .hotelName {
   font-weight: 700;
-  margin-top: 20px;
-  font-size: 23px;
+  margin-top: 24px;
+  font-size: clamp(2.4rem, 4vw, 4rem);
   margin-bottom: 2px;
 }
 
 .hotelPlace {
-  color: grey;
+  color: var(--muted);
   margin-bottom: 20px;
+  font-size: 1rem;
 }
 
 .hotelDescription p {
   font-weight: 400;
-  margin-top: 7px;
+  margin-top: 12px;
   margin-bottom: 20px;
+  color: var(--muted);
 }
 
 .reviewsWrapper {
@@ -123,17 +126,26 @@
   font-size: 12px;
 }
 .hotelCoverImage {
-  width: 55vw;
-  height: 450px;
-  border-radius: 24px;
+  width: 100%;
+  height: 520px;
+  border-radius: 32px;
   object-fit: cover;
+  box-shadow: var(--shadow);
+}
+
+.bottomLayer {
+  margin-top: 26px;
+  padding: 28px;
+  border-radius: 30px;
+  background: rgba(255, 251, 246, 0.76);
+  border: 1px solid rgba(24, 38, 31, 0.08);
 }
 
 @media screen and (max-width: 768px) {
     .foundHotelWrapper {
-      width: 100vw;
-      padding: 16px 12px;
-      margin-top: 5px;
+      width: 100%;
+      padding: 6px 4px 0;
+      margin-top: 0;
     }
   
     .startsList {
@@ -169,9 +181,9 @@
     }
   
     .hotelCoverImage {
-      width: 96vw;
-      height: 300px;
-      border-radius: 12px;
+      width: 100%;
+      height: 280px;
+      border-radius: 18px;
     }
   
     .hotelName {
@@ -201,10 +213,10 @@
   
     .bottomLayer {
       width: 100%;
-      padding: 0px;
+      padding: 12px 10px;
     }
     .reviewsWrapper{
-      margin-top: 30px;
+      margin-top: 18px;
     }
   }
   

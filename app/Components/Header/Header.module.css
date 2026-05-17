@@ -1,147 +1,129 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    color: black;
-    padding: 8px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 32px;
+  background: rgba(255, 250, 242, 0.78);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(24, 38, 31, 0.08);
+}
+
+.logoGroup {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.backButton {
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(24, 38, 31, 0.1);
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 999px;
+  cursor: pointer;
+  color: var(--primary-strong);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo img {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 18px;
+  padding: 6px;
+  background: linear-gradient(145deg, rgba(15, 118, 110, 0.12), rgba(214, 169, 95, 0.22));
+}
+
+.logoKicker {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.logoText {
+  font-size: 1.85rem;
+  font-family: var(--font-heading), serif;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.navMenu {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.menuItem {
+  position: relative;
+  padding: 10px 14px;
+  cursor: pointer;
+  border-radius: 999px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.menuItem:hover {
+  background: rgba(15, 118, 110, 0.08);
+  transform: translateY(-1px);
+}
+
+.menuItemText {
+  cursor: pointer;
+  transition: color 0.2s ease;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.menuItem:nth-child(3) .menuItemText {
+  background: linear-gradient(135deg, var(--primary), var(--primary-strong));
+  color: white;
+  padding: 12px 18px;
+  border-radius: 999px;
+  box-shadow: 0 16px 24px rgba(15, 118, 110, 0.22);
+}
+
+.userImage {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.userImage img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px solid rgba(15, 118, 110, 0.18);
+}
+
+.userImage p {
+  font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 14px 16px;
   }
-  
-  .logo {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo img {
-    width: 80px; 
-    height: 50px;
-    object-fit: cover;
-    margin-right: 0px;
-    padding: 5px;
-  }
-  
-  .logoText {
-    font-size: 1.2rem;
-    font-weight: 700;
-    text-decoration: none;
-    color: black;
-  }
-  
+
   .navMenu {
-    display: flex;
-    align-items: center;
-  }
-  
-  .menuItem {
-    margin-right: 15px;
-    position: relative;
-    padding: 7px;
-  }
-  
-  .menuItemText {
-    cursor: pointer;
-    transition: color 0.3s ease;
-    text-decoration: none;
-    color: black;
-  }
-  
-  .menuItem:hover .menuItemText {
-    color: #333;
-  }
-  
-  .menuItem:hover {
-    position: relative;
-  }
-  
-  .menuItem:hover::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #34ace0;
-    animation: fadeInOutBorder 1s ease forwards;
-  }
-  
-  @keyframes fadeInOutBorder {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-  
-  .dropdown {
     display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 1;
-    width: 200px;
-  }
-  
-  .menuItem:hover .dropdown {
-    display: block;
-  }
-  
-  .dropdown a {
-    display: block;
-    padding: 10px;
-    color: black;
-    text-decoration: none;
-    
-  }
-  
-  .dropdown a:hover {
-    background-color: #f0f0f0; 
-  }
-  
-  .menuItem:nth-child(3) .menuItemText {
-    background-color: #34ace0; 
-    color: white;
-    padding: 10px 15px;
-    border-radius: 12px;
   }
 
-  .userImage{
-    display: flex;
-    align-items: center;
-  }
-  .userImage img {
-    width: 30px;
-    height: 30px;
-    border-radius: 50px;
-    margin-right: 8px;
+  .logoKicker {
+    display: none;
   }
 
-  .dropdownButton{
-    cursor: pointer;
+  .logoText {
+    font-size: 1.45rem;
   }
-
-  .menuItem {
-    cursor: pointer;
-  }
-
-  .mobileHeader{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-
-  @media screen and (max-width: 768px) {
-    .navMenu{
-      display: none;
-    }
-    .hamburgerMenu{
-      display: block;
-    }
-  }
+}

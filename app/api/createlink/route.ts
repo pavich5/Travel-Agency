@@ -4,6 +4,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY ?? "");
 async function createStripeSession(req: Request) {
   try {
     const { item, qty, price, email, userId } = await req.json();
+    const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
     const quantity = parseInt(qty);
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
@@ -29,12 +30,12 @@ async function createStripeSession(req: Request) {
         userId: userId,
         offerId: item.id
       },
-      success_url: `https://travel-agency-plum.vercel.app/booking/confirmed/${
+      success_url: `${appUrl}/booking/confirmed/${
         item.id
       }?email=${email}&hotelName=${encodeURIComponent(
         item.hotelName
       )}&hotelCity=${encodeURIComponent(item.hotelCity)}&bookingId=${item.id}`,
-      cancel_url: "https://travel-agency-plum.vercel.app/cancelled",
+      cancel_url: `${appUrl}/cancelled`,
     });
 
     const headers = new Headers();

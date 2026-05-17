@@ -1,8 +1,60 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root {
+  --bg: #f4efe6;
+  --surface: rgba(255, 252, 247, 0.82);
+  --surface-strong: #fffaf2;
+  --card: rgba(255, 255, 255, 0.72);
+  --text: #18261f;
+  --muted: #5d6c64;
+  --line: rgba(24, 38, 31, 0.08);
+  --primary: #0f766e;
+  --primary-strong: #0a4f4a;
+  --accent: #d6a95f;
+  --shadow: 0 24px 60px rgba(33, 42, 36, 0.12);
+}
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--text);
+  font-family: var(--font-body), sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(214, 169, 95, 0.24), transparent 28%),
+    radial-gradient(circle at top right, rgba(15, 118, 110, 0.2), transparent 24%),
+    linear-gradient(180deg, #fbf6ee 0%, #f3ede2 42%, #efe8db 100%);
+}
+
+main {
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading), serif;
+  letter-spacing: -0.02em;
+}
+
+p {
+  line-height: 1.65;
 }

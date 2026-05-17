@@ -17,6 +17,9 @@ export const sendEmail = async (
   offerId: string
 ) => {
   try {
+    const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
+    const fromEmail = process.env.MAIL_FROM_EMAIL ?? "hello@example.com";
+    const fromName = process.env.MAIL_FROM_NAME ?? "Globetrotter";
     const htmlContent = `
     <!DOCTYPE html>
     <html>
@@ -83,7 +86,7 @@ export const sendEmail = async (
                 <h3>Dear ${userName},</h3>
                 <p>Thank you for your payment. We have received your payment successfully.</p>
                 <p>${text}</p>
-                <a href="https://travel-agency-plum.vercel.app/offer/${offerId}" class="button">Visit your booking</a>
+                <a href="${appUrl}/offer/${offerId}" class="button">Visit your booking</a>
             </div>
             <div class="footer">
                 <p>Thank you for choosing Globetrotter. If you have any questions, feel free to contact us.</p>
@@ -98,8 +101,8 @@ export const sendEmail = async (
       Messages: [
         {
           From: {
-            Email: "pavic.antonio969@gmail.com",
-            Name: "Globetrotter",
+            Email: fromEmail,
+            Name: fromName,
           },
           To: [
             {

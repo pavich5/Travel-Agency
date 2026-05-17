@@ -1,17 +1,18 @@
-import React from 'react';
 import styles from './Footer.module.css';
-import { FacebookOutlined, InstagramOutlined, TwitterOutlined, LinkedinOutlined } from '@ant-design/icons';
 
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <div className={styles.waves}>
-        <div className={styles.wave} id={styles.wave1}></div>
-        <div className={styles.wave} id={styles.wave2}></div>
-        <div className={styles.wave} id={styles.wave3}></div>
-        <div className={styles.wave} id={styles.wave4}></div>
+      <div className={styles.content}>
+        <div>
+          <p className={styles.kicker}>Globetrotter</p>
+          <h3>Designed for travelers who want more than a booking form.</h3>
+        </div>
+        <p className={styles.copy}>
+          Seasonal escapes, smart itineraries, and a calmer way to plan your next trip.
+        </p>
       </div>
-      <p>&copy;2024 Globetrotter | All Rights Reserved</p>
+      <p className={styles.rights}>&copy; {new Date().getFullYear()} Globetrotter. All rights reserved.</p>
     </footer>
   );
 }

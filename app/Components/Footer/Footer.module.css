@@ -1,83 +1,77 @@
 .footer {
   position: relative;
   width: 100%;
-  background: #3586ff;
-  padding: 15px 40px;
+  margin-top: 120px;
+  padding: 48px 24px 28px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 200px;
-  height: 10vh;
+  background:
+    radial-gradient(circle at top left, rgba(214, 169, 95, 0.2), transparent 30%),
+    linear-gradient(135deg, #103b39, #0b2c2b);
+  color: #f8f0e3;
+  overflow: hidden;
 }
 
-
-
-.footer p {
-  color: #fff;
-  margin: 15px 0 10px 0;
-  font-size: 1rem;
-  font-weight: 300;
-}
-
-.wave {
+.footer::before {
+  content: "";
   position: absolute;
-  top: -50px;
-  left: 0;
-  width: 100%;
-  height: 70px;
-  background: url("https://i.ibb.co/wQZVxxk/wave.png");
-  background-size: 1000px 100px;
+  inset: 0;
+  background:
+    linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.06), transparent),
+    radial-gradient(circle at bottom right, rgba(214, 169, 95, 0.22), transparent 28%);
+  pointer-events: none;
 }
 
-.wave {
-  z-index: 1000;
-  opacity: 1;
-  bottom: 0;
-  animation: animateWaves 4s linear infinite;
+.content {
+  position: relative;
+  z-index: 1;
+  width: min(1100px, 100%);
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: flex-end;
 }
 
-.wave {
-  z-index: 999;
-  opacity: 0.5;
-  bottom: 10px;
-  animation: animate 4s linear infinite !important;
+.kicker {
+  margin-bottom: 8px;
+  color: rgba(248, 240, 227, 0.72);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.78rem;
 }
 
-.wave {
-  z-index: 1000;
-  opacity: 0.2;
-  bottom: 15px;
-  animation: animateWaves 3s linear infinite;
+.content h3 {
+  max-width: 520px;
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  line-height: 0.95;
 }
 
-.wave#wave4 {
-  z-index: 999;
-  opacity: 0.7;
-  bottom: 20px;
-  animation: animate 3s linear infinite;
+.copy {
+  max-width: 340px;
+  color: rgba(248, 240, 227, 0.82);
+  font-size: 1rem;
 }
 
-@keyframes animateWaves {
-  0% {
-    background-position-x: 1000px;
-  }
-  100% {
-    background-positon-x: 0px;
-  }
-}
-
-@keyframes animate {
-  0% {
-    background-position-x: -1000px;
-  }
-  100% {
-    background-positon-x: 0px;
-  }
+.rights {
+  position: relative;
+  z-index: 1;
+  width: min(1100px, 100%);
+  padding-top: 24px;
+  margin-top: 28px;
+  border-top: 1px solid rgba(248, 240, 227, 0.12);
+  color: rgba(248, 240, 227, 0.72);
 }
 
 @media screen and (max-width: 767px) {
-.footer{
-  margin-top: 80px;
-}
+  .footer {
+    margin-top: 72px;
+    padding: 40px 16px 22px;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

@@ -1,7 +1,7 @@
 .offerDetailsContainer {
-    display: flex;
-    justify-content: center;
-    padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  padding: 28px 24px 0;
 }
 
 .hotelCoverImage {
@@ -11,36 +11,44 @@
 }
 
 .hotelCoverImage img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 12px;
-    background-size: cover;
-    background-position: center;
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 28px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: var(--shadow);
 }
 
 .hotelOffer {
-    margin-top: 30px;
+  margin-top: 28px;
 }
 
 .hotelOffer p {
-    margin-top: 8px;
-    color: rgb(167, 167, 167);
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.hotelOffer h2 {
+  font-size: clamp(2.2rem, 3.5vw, 3.4rem);
 }
 
 .buttonsContainer {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 24px;
+  gap: 12px;
 }
 .dividerSection:nth-child(2){
     margin-top: 35px;
 }
 .buttonsContainer button {
-    margin-left: 10px !important;
-    border-radius: 14px;
-    height: 35px;
+  margin-left: 0 !important;
+  border-radius: 999px;
+  height: 44px;
+  padding: 0 18px;
 }
 
 .detailItem {
@@ -84,8 +92,12 @@
 }
 
 .tabs {
-    margin-top: 50px;
-    margin-bottom: 30px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  padding: 18px 22px;
+  border-radius: 28px;
+  background: rgba(255, 251, 246, 0.82);
+  border: 1px solid rgba(24, 38, 31, 0.08);
 }
 
 .activity img {
@@ -112,29 +124,50 @@
 }
 
 .moreImages {
-    display: flex;
-    gap: 10px;
-    margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 36px;
 }
 
 .moreImages img {
-    height: 200px;
-    border-radius: 5px;
+  height: 220px;
+  border-radius: 18px;
 }
+
+.offerDetailsContainerWrapper {
+  margin-top: 30px;
+  padding: 28px;
+  border-radius: 30px;
+  background: rgba(255, 251, 246, 0.82);
+  border: 1px solid rgba(24, 38, 31, 0.08);
+}
+
 .wrapper{
-    width: 55% !important;
+    width: min(1100px, 100%) !important;
 }
 @media screen and (max-width: 768px) {
     .offerDetailsContainer{
-        padding: 0;
+        padding: 16px;
     }
     .wrapper{
-        width: 95% !important;
+        width: 100% !important;
+    }
+    .buttonsContainer {
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+    .offerDetailsContainerWrapper,
+    .tabs {
+      padding: 18px;
     }
     .card{
         min-width: 90vw !important;
     }
     .roomType{
         width: 80vw !important;
+    }
+    .moreImages {
+      grid-template-columns: 1fr;
     }
 }

@@ -21,14 +21,19 @@ const LandingSection: React.FC<LandingSectionProps> = ({ filteredData, searchVal
 
   return (
     <div className={styles.wrapper}>
+      <p className={styles.eyebrow}>Curated escapes for every season</p>
       <div className={styles.textTitle}>
-        <h1>Discover the world with Globetrotter</h1>
+        <h1>Discover more thoughtful ways to travel.</h1>
+        <p>
+          Explore city stays, alpine retreats, and sun-soaked coastlines with
+          smarter planning and clearer trip details.
+        </p>
       </div>
       <div className={styles.inputWrapper}>
         <Select
           showSearch
-          placeholder="Search for destination by country or city"
-          style={{ width: '100%', height: '37px' }}
+          placeholder="Search by hotel, city, or destination"
+          style={{ width: '100%', height: '56px' }}
           filterOption={(input, option) => (option?.value.toLowerCase() ?? '').includes(input.toLowerCase())}
           options={filteredData.map((item: HotelItem) => ({
             value: `${item.hotelName} ${item.location}`,
@@ -48,7 +53,7 @@ const LandingSection: React.FC<LandingSectionProps> = ({ filteredData, searchVal
               </div>
             ),
           }))}
-          suffixIcon={<Button onClick={() => router.push(`/search?searchValue=${searchValue}`)} type="primary">Search</Button>}
+          suffixIcon={<Button onClick={() => router.push(`/search?searchValue=${searchValue}`)} type="primary">Explore</Button>}
         />
       </div>
     </div>

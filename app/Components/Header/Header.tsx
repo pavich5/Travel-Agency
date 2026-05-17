@@ -7,6 +7,7 @@ import { LeftOutlined, DownOutlined } from "@ant-design/icons";
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
 import { useRouter, usePathname } from "next/navigation";
 import { CountryLists } from "@/app/mocks/data";
+
 const Header = () => {
   const router = useRouter();
   const pathname = usePathname();
@@ -31,15 +32,24 @@ const Header = () => {
 
   return (
     <header className={styles.header}>
-      <div className={styles.logo}>
-        {pathname !== "/" && <LeftOutlined onClick={handleBack} />}
+      <div className={styles.logoGroup}>
+        {pathname !== "/" && (
+          <button onClick={handleBack} className={styles.backButton} aria-label="Go back">
+            <LeftOutlined />
+          </button>
+        )}
+        <div className={styles.logo}>
         <img
           src="https://images-platform.99static.com/zudNWGHtYiWa-sqd5jqXyVt6wBE=/0x0:1773x1773/500x500/top/smart/99designs-contests-attachments/133/133463/attachment_133463156"
           alt="Logo"
         />
-        <Link href="/" className={styles.logoText}>
-          Globetrotter
-        </Link>
+          <div>
+            <p className={styles.logoKicker}>Modern travel studio</p>
+            <Link href="/" className={styles.logoText}>
+              Globetrotter
+            </Link>
+          </div>
+        </div>
       </div>
       <HamburgerMenu />
       <div className={styles.navMenu}>
@@ -63,11 +73,7 @@ const Header = () => {
 
         <div className={styles.menuItem}>
           <Link
-            style={{
-              cursor: "not-allowed",
-              textDecoration: "none",
-            }}
-            href="/"
+            href="/blogs"
             className={styles.menuItemText}
           >
             Travel Experiences

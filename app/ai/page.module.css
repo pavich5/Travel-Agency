@@ -4,16 +4,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
-  background-color: #f0f2f5;
-  height: 90vh;
+  padding: 28px 20px;
+  min-height: 88vh;
   box-sizing: border-box;
 }
 
 .heading {
-  font-size: 36px;
+  font-size: clamp(2.6rem, 4vw, 4rem);
   margin-bottom: 20px;
-  color: #1890ff;
+  color: var(--text);
   text-align: center;
 }
 
@@ -22,12 +21,13 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 800px;
+  max-width: 920px;
   flex: 1;
-  background-color: #fff;
+  background: rgba(255, 251, 246, 0.82);
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 32px;
+  border: 1px solid rgba(24, 38, 31, 0.08);
+  box-shadow: var(--shadow);
   overflow: hidden;
 }
 
@@ -36,7 +36,7 @@
   flex-direction: column;
   gap: 10px;
   padding: 20px;
-  background-color: #fff;
+  background-color: transparent;
   border-radius: 8px;
   overflow-y: auto;
   width: 100%;
@@ -62,21 +62,21 @@
 }
 
 .chatMessage {
-  padding: 10px 15px;
-  border-radius: 8px;
+  padding: 14px 18px;
+  border-radius: 20px;
   max-width: 70%;
   margin: 5px 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 24px rgba(24, 38, 31, 0.08);
 }
 
 .assistant {
-  background-color: #e6f7ff;
-  color: #000;
+  background-color: rgba(255, 255, 255, 0.94);
+  color: var(--text);
   align-self: flex-start;
 }
 
 .user {
-  background-color: #1890ff;
+  background: linear-gradient(135deg, var(--primary), var(--primary-strong));
   color: #fff;
   align-self: flex-end;
 }
@@ -97,12 +97,12 @@
 }
 
 .sendButton {
-  background-color: #1890ff;
+  background-color: var(--primary);
   color: #fff;
 }
 
 .chatBubble {
-  background-color: #E6F8F1;
+  background-color: rgba(230, 248, 241, 0.9);
   padding: 10px 18px;
   border-radius: 20px;
   display: inline-block;

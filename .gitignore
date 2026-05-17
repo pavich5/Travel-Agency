@@ -26,7 +26,12 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
-.env*.local
+.env
+.env.local
+.env.development.local
+.env.production.local
+.env.test.local
+!.env.example
 
 .DATA.TS
 # vercel
@@ -39,3 +44,8 @@ next-env.d.ts
 /app/Data/data.ts
 
 frontvariables.ts
+
+# local tooling
+.agents/
+.serena/
+skills-lock.json

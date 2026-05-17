@@ -1,0 +1,174 @@
+.page {
+  width: min(1200px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 24px 0 80px;
+}
+
+.topBar {
+  margin-bottom: 18px;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary-strong);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.storyCard {
+  overflow: hidden;
+  border-radius: 34px;
+  background: rgba(255, 251, 246, 0.9);
+  border: 1px solid rgba(24, 38, 31, 0.08);
+  box-shadow: var(--shadow);
+}
+
+.heroImageWrap {
+  position: relative;
+  height: 460px;
+}
+
+.heroImage {
+  object-fit: cover;
+}
+
+.storyBody {
+  padding: 30px;
+}
+
+.metaRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+
+.badge {
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(15, 118, 110, 0.1);
+  color: var(--primary-strong);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+
+.readTime {
+  color: var(--muted);
+}
+
+.storyBody h1 {
+  margin-top: 16px;
+  font-size: clamp(3rem, 5vw, 5rem);
+  line-height: 0.92;
+}
+
+.lead {
+  margin-top: 18px;
+  max-width: 760px;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.infoGrid div {
+  padding: 18px;
+  border-radius: 22px;
+  background: rgba(15, 118, 110, 0.06);
+}
+
+.infoGrid strong,
+.infoGrid span {
+  display: block;
+}
+
+.infoGrid span {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+.highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.highlights span {
+  padding: 9px 12px;
+  border-radius: 999px;
+  background: rgba(214, 169, 95, 0.14);
+  color: var(--text);
+  font-weight: 600;
+}
+
+.authorBlock {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+  font-weight: 800;
+}
+
+.authorBlock p {
+  color: var(--muted);
+}
+
+.storyContent {
+  margin-top: 28px;
+  max-width: 760px;
+}
+
+.storyContent p + p {
+  margin-top: 18px;
+}
+
+.actions {
+  margin-top: 30px;
+}
+
+.actions button {
+  height: 44px;
+  border-radius: 999px;
+}
+
+@media screen and (max-width: 768px) {
+  .page {
+    width: calc(100% - 24px);
+    padding-top: 16px;
+  }
+
+  .heroImageWrap {
+    height: 280px;
+  }
+
+  .storyBody {
+    padding: 20px;
+  }
+
+  .metaRow,
+  .infoGrid {
+    grid-template-columns: 1fr;
+  }
+}

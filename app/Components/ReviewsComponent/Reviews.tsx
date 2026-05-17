@@ -14,10 +14,12 @@ const Reviews = ({ offerDetails } : ReviewsProps) => {
     {offerDetails.reviews.map((review: Review, index) => (
       <div key={index} className={styles.review}>
         <div className={styles.user}> 
-          <img src="https://hips.hearstapps.com/hmg-prod/images/kanye-west-attends-the-christian-dior-show-as-part-of-the-paris-fashion-week-womenswear-fall-winter-2015-2016-on-march-6-2015-in-paris-france-photo-by-dominique-charriau-wireimage-square.jpg" alt="" className={styles.userImg} /> 
+          <div className={styles.userImg}>
+            {review.username.charAt(0).toUpperCase()}
+          </div>
           <div>
             <p>{review.username}</p>
-            <p>21-12-2023</p>
+            <p>Verified traveler</p>
           </div>
         </div>
         <div>

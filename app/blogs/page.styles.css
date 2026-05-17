@@ -1,143 +1,201 @@
-.container {
-  max-width: 900px;
+.experiencesPage {
+  width: min(1200px, calc(100% - 32px));
   margin: 0 auto;
-  padding: 20px;
+  padding: 24px 0 80px;
 }
 
-.page-title {
-  font-size: 24px;
-  margin-bottom: 20px;
+.experiencesHero {
+  min-height: 54vh;
+  padding: 48px 32px;
+  border-radius: 36px;
+  text-align: center;
+  background:
+    radial-gradient(circle at top left, rgba(214, 169, 95, 0.22), transparent 28%),
+    linear-gradient(135deg, #123936, #0e2928 62%, #123936);
+  color: white;
+  box-shadow: var(--shadow);
 }
 
-.new-post {
-  margin-bottom: 20px;
+.experiencesEyebrow {
+  margin-bottom: 14px;
+  font-size: 0.78rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--accent);
 }
 
-@media (max-width: 768px) {
-  .headerWrapperBlogs {
-    flex-direction: column;
-  }
+.experiencesHero h1 {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: clamp(3rem, 5vw, 5.6rem);
+  line-height: 0.92;
 }
 
-.spinnerDiv {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 60vh;
+.experiencesLead {
+  max-width: 680px;
+  margin: 18px auto 0;
+  color: rgba(255, 246, 235, 0.86);
 }
 
-.spinner{
-  width: 200px;
-  height: 200px;
+.experiencesStats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  max-width: 760px;
+  margin: 28px auto 0;
 }
 
-.post {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 16px;
-  margin-bottom: 20px;
+.experiencesStats div {
+  padding: 18px;
+  border-radius: 22px;
+  background: rgba(255, 249, 241, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-.post img {
-  width: 100%;
-  max-height: 300px;
+.experiencesStats strong,
+.experiencesStats span {
+  display: block;
+}
+
+.experiencesStats strong {
+  font-size: 1.8rem;
+}
+
+.experiencesStats span {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: rgba(255, 246, 235, 0.72);
+}
+
+.experiencesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.experienceCard {
+  overflow: hidden;
+  border-radius: 30px;
+  background: rgba(255, 251, 246, 0.88);
+  border: 1px solid rgba(24, 38, 31, 0.08);
+  box-shadow: 0 18px 44px rgba(24, 38, 31, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.experienceCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 56px rgba(24, 38, 31, 0.14);
+}
+
+.experienceImageWrap {
+  position: relative;
+  display: block;
+  height: 280px;
+}
+
+.experienceImage {
   object-fit: cover;
-  border-radius: 8px;
 }
 
-.post-header {
+.experienceBody {
+  padding: 24px;
+}
+
+.experienceMetaRow,
+.experienceFooter {
   display: flex;
   justify-content: space-between;
+  gap: 12px;
   align-items: center;
-  margin-bottom: 10px;
-  padding: 5px;
 }
 
-.post-content p {
-  margin-bottom: 10px;
-  font-size: 14px;
-  padding: 5px;
+.experienceBadge {
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(15, 118, 110, 0.1);
+  color: var(--primary-strong);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.74rem;
+  font-weight: 700;
 }
 
-.post-images {
+.experienceRead {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.experienceBody h2 {
+  margin-top: 14px;
+  font-size: 2.2rem;
+  line-height: 0.96;
+}
+
+.experienceExcerpt {
+  margin-top: 14px;
+  color: var(--muted);
+}
+
+.experienceAuthor {
   display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin-bottom: 12px;
-}
-
-.post-images img {
-  width: 100%;
-  max-height: 300px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.post-actions {
-  display: flex;
-  justify-content: space-between;
+  gap: 12px;
   align-items: center;
-  margin-top: 12px;
+  margin-top: 22px;
 }
 
-.post-actions input {
-  flex: 1;
-  margin-right: 8px;
-}
-
-.comments {
-  margin-top: 5px;
-}
-
-.comment {
-  border: 1px solid #eee;
-  border-radius: 5px;
-  padding: 5px;
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.comment p {
-  margin-bottom: 5px;
-  font-size: 14px;
-}
-
-.imageInputWrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.createPostImg {
-  width: 300px;
-  height: 200px;
-  margin-top: 20px;
-  text-align: left;
-}
-
-.headerWrapperBlogs {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.post-header img,
-.comment img {
-  width: 25px;
-  height: 25px;
+.experienceAvatar {
+  width: 46px;
+  height: 46px;
   border-radius: 50%;
-  margin-left: 6px;
-}
-
-.usernameWrapper {
   display: flex;
   align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+  font-weight: 800;
 }
 
-.commentFooter {
+.experienceAuthor span,
+.experienceSignals {
+  color: var(--muted);
+}
+
+.experienceSignals {
   display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.experienceFooter {
+  margin-top: 22px;
+}
+
+.experienceFooter button {
+  height: 42px;
+  border-radius: 999px;
+}
+
+@media screen and (max-width: 768px) {
+  .experiencesPage {
+    width: calc(100% - 24px);
+    padding-top: 16px;
+  }
+
+  .experiencesHero,
+  .experiencesGrid,
+  .experiencesStats {
+    grid-template-columns: 1fr;
+  }
+
+  .experiencesGrid {
+    display: grid;
+  }
+
+  .experienceFooter,
+  .experienceMetaRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
