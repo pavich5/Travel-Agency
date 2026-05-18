@@ -223,6 +223,10 @@
   margin-top: 64px;
 }
 
+.availableVacationsWrapper .sectionHeadingBlock {
+  margin-bottom: 18px;
+}
+
 .pagination {
   display: flex;
   justify-content: center;
@@ -430,6 +434,10 @@
   .oneCategoryCard,
   .oneVacationCard {
     min-height: 260px;
+  }
+
+  .availableVacationsWrapper .sectionHeadingBlock {
+    margin-bottom: 28px;
   }
 
   .blogPostContent,
