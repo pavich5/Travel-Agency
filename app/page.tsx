@@ -1,5 +1,5 @@
 "use client";
-import {  useState } from "react";
+import { useState } from "react";
 import styles from "./page.module.css";
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 import { blogPosts, vacationsCategories } from "./mocks/data";
@@ -13,30 +13,14 @@ import OurServices from "./Components/OurServicesSection/OurServices";
 
 const LandingPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [searchValue, setSearchValue] = useState("");
-  const [filteredData, setFilteredData] = useState(
-    vacationsCategories.categories.flatMap((category) =>
-      category.countrys.flatMap((country) =>
-        country.offers.map((offer) => ({
-          id: offer.id,
-          hotelName: offer.hotelName,
-          location: offer.location,
-          image: offer.hotelCoverImage,
-          duration: offer.duration,
-          totalCost: offer.totalCost,
-        }))
-      )
-    )
-  );
   const itemsPerPage = 4;
   const currentItems = vacationsCategories.categories.flatMap(
     (category) => category.countrys
   );
+  const totalItems = currentItems.length;
+  const totalPages = Math.ceil(totalItems / itemsPerPage);
 
   const handleNextPage = () => {
-    const totalItems = vacationsCategories.categories.flatMap(
-      (category) => category.countrys
-    ).length;
     const indexOfLastItem = Math.min(currentPage * itemsPerPage, totalItems);
     if (indexOfLastItem >= totalItems) return;
     setCurrentPage((prevPage) => prevPage + 1);
@@ -47,12 +31,7 @@ const LandingPage = () => {
     setCurrentPage((prevPage) => prevPage - 1);
   };
 
-
   const renderPageNumbers = () => {
-    const totalItems = vacationsCategories.categories.flatMap(
-      (category) => category.countrys
-    ).length;
-    const totalPages = Math.ceil(totalItems / itemsPerPage);
     const pageNumbers = Array.from(
       { length: totalPages },
       (_, index) => index + 1
@@ -73,10 +52,7 @@ const LandingPage = () => {
     <div className={styles.homePageWrapper}>
       <div>
         <div className={styles.mainSection}>
-          <LandingSection
-            filteredData={filteredData}
-            searchValue={searchValue}
-          />
+          <LandingSection />
         </div>
         <TravelSeasonSection vacationsCategories={vacationsCategories} />
         <TravelDestinationList
@@ -93,11 +69,7 @@ const LandingPage = () => {
           {renderPageNumbers()}
           <RightOutlined
             onClick={handleNextPage}
-            className={
-              currentPage * itemsPerPage >= filteredData.length
-                ? styles.disabled
-                : ""
-            }
+            className={currentPage >= totalPages ? styles.disabled : ""}
           />
         </div>
         <WhyTravelWithUs />
