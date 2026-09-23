@@ -1,42 +1,54 @@
-import React from 'react';
-import { render, fireEvent, waitFor, screen } from '@testing-library/react';
-
-import TravelAI from './page';
-
-describe('TravelAI component', () => {
-  beforeEach(() => {
-    Object.defineProperty(window, 'localStorage', {
-      value: {
-        getItem: jest.fn(() =>
-          JSON.stringify([
-            {
-              role: 'assistant',
-              content: "Hello! I'm Travel AI. How can I assist you with your travel plans today?",
-            },
-          ])
-        ),
-        setItem: jest.fn(),
-      },
-      writable: true,
+import { render, screen, fireEvent, waitFor } from "@testing-library/react";
+import TravelAI from "./page";
+beforeEach(() => {
+  localStorage.clear();
+});
+test("corrupt saved chat does not prevent rendering", () => {
+  localStorage.setItem("globetrotter-chat", "not-json");
+  render(<TravelAI />);
+  expect(screen.getByText(/Hello, curious traveler/)).toBeInTheDocument();
+  expect(screen.getByRole("button", { name: "Send" })).toBeDisabled();
+});
+test("a message renders the reply and stores the conversation", async () => {
+  global.fetch = jest
+    .fn()
+    .mockResolvedValue({
+      ok: true,
+      json: async () => ({
+        output: {
+          role: "assistant",
+          content: "Greece has two lovely escapes.",
+        },
+        mode: "catalog",
+      }),
     });
+  render(<TravelAI />);
+  fireEvent.change(screen.getByLabelText("Message your travel planner"), {
+    target: { value: "Greece" },
   });
-
-  test('renders initial message correctly', () => {
-    render(<TravelAI />);
-    expect(screen.getByText("Hello! I'm Travel AI. How can I assist you with your travel plans today?"))
-  });
-
-  test('allows user to type and send message', async () => {
-    render(<TravelAI />);
-
-    const input = screen.getByPlaceholderText('Type your message here...') as HTMLInputElement;
-    fireEvent.change(input, { target: { value: 'Test message' } });
-
-    const sendButton = screen.getByText('Send');
-    fireEvent.click(sendButton);
-
-    await waitFor(() => {
-      expect(input.value).toBe('');
-    });
-  });
+  fireEvent.click(screen.getByRole("button", { name: "Send" }));
+  await waitFor(() =>
+    expect(
+      screen.getByText(/Greece has two lovely escapes/),
+    ).toBeInTheDocument(),
+  );
+  expect(localStorage.getItem("globetrotter-chat")).toContain(
+    "Greece has two lovely escapes",
+  );
+  fireEvent.click(screen.getByRole("button", { name: "New conversation" }));
+  expect(
+    screen.queryByText(/Greece has two lovely escapes/),
+  ).not.toBeInTheDocument();
+});
+test("network errors are visible to travelers", async () => {
+  global.fetch = jest
+    .fn()
+    .mockRejectedValue(new Error("Connection unavailable"));
+  render(<TravelAI />);
+  fireEvent.click(screen.getByRole("button", { name: /A mountain getaway/ }));
+  await waitFor(() =>
+    expect(screen.getByRole("alert")).toHaveTextContent(
+      "Connection unavailable",
+    ),
+  );
 });

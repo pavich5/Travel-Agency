@@ -1,42 +1,37 @@
-"use client"
-import { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
-import Image from 'next/image';
-import styles from './page.module.css';
-import dynamic from 'next/dynamic';
-import cancelledAnimation from '../../public/cancelled.json';
-import { Button } from 'antd';
-
-const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
-
-const CancelledPage = () => {
-  const router = useRouter();
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      router.push('/');
-    }, 5000);
-
-    return () => clearTimeout(timeout);
-  }, [router]);
-
+import Link from "next/link";
+import Icon from "../Components/travel/Icon";
+import { findOffer } from "../lib/catalog";
+export default function CancelledPage({
+  searchParams,
+}: {
+  searchParams: { offerId?: string; packages?: string };
+}) {
+  const offer = findOffer(searchParams.offerId || "");
+  const packages = Number(searchParams.packages) || 1;
   return (
-    <div className={styles.container}>
-      <div className={styles.content}>
-        <div className={styles.text}>
-          <h1 className={styles.title}>Payment Cancelled</h1>
-          <p className={styles.message}>We're sorry to see you go. Your payment has been cancelled.</p>
-          <Button type='primary'onClick={() => router.push('/')}>Return to Homepage</Button>
-        </div>
-        <div className={styles.animation}>
-          <Lottie className={styles.lottieAnimation} animationData={cancelledAnimation} />
-        </div>
+    <main className="result-page">
+      <div className="success-icon">
+        <Icon name="bag" size={30} />
       </div>
-      <div className={styles.bgImage}>
-        <Image src="/background.jpg" alt="Background" layout="fill" objectFit="cover" />
+      <p className="eyebrow">NO RUSH. THE WORLD CAN WAIT.</p>
+      <h1>Your trip is still a possibility.</h1>
+      <p>
+        Checkout was cancelled. This trip hasn’t been booked. You can return to
+        your details whenever you’re ready.
+      </p>
+      <div className="result-actions">
+        {offer && (
+          <Link
+            className="button button-green"
+            href={`/booking/confirmation/${offer.id}?packages=${packages}`}
+          >
+            Return to booking <Icon name="arrow" size={17} />
+          </Link>
+        )}
+        <Link className="button button-outline" href="/offers">
+          Explore other trips
+        </Link>
       </div>
-    </div>
+    </main>
   );
-};
-
-export default CancelledPage;
+}

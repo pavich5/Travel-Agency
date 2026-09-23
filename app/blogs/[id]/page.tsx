@@ -1,95 +1,53 @@
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Button } from "antd";
-import { ArrowLeftOutlined, CalendarOutlined, CompassOutlined, HeartOutlined, MessageOutlined } from "@ant-design/icons";
 import { travelExperiences } from "@/app/mocks/data";
-import styles from "./page.module.css";
-
-const StoryPage = ({ params }: { params: { id: string } }) => {
-  const story = travelExperiences.find((item) => item.id === params.id);
-
-  if (!story) {
-    notFound();
-  }
-
+import TravelImage from "@/app/Components/travel/TravelImage";
+import Icon from "@/app/Components/travel/Icon";
+export default function StoryPage({ params }: { params: { id: string } }) {
+  const story = travelExperiences.find((s) => s.id === params.id);
+  if (!story) notFound();
   return (
-    <div className={styles.page}>
-      <div className={styles.topBar}>
-        <Link href="/blogs" className={styles.backLink}>
-          <ArrowLeftOutlined /> Back to stories
+    <main className="shell section">
+      <nav className="breadcrumbs" aria-label="Breadcrumb">
+        <Link href="/blogs">The travel journal</Link>
+        <Icon name="chevron" size={12} />
+        <span>{story.category}</span>
+      </nav>
+      <TravelImage
+        className="article-cover"
+        src={story.image}
+        alt={story.destination}
+        eager
+      />
+      <article className="article-content">
+        <p className="eyebrow">
+          {story.category} · {story.readTime}
+        </p>
+        <h1>{story.title}</h1>
+        <p style={{ fontSize: 18 }}>{story.excerpt}</p>
+        <div className="article-meta">
+          <strong>{story.author}</strong>
+          <span>{story.role}</span>
+          <span>{story.publishedAt}</span>
+        </div>
+        {story.story.map((paragraph, i) => (
+          <p key={i}>{paragraph}</p>
+        ))}
+        <div className="included-grid" style={{ marginBlock: 30 }}>
+          {story.highlights.map((highlight) => (
+            <span key={highlight}>
+              <Icon name="check" size={16} />
+              {highlight}
+            </span>
+          ))}
+        </div>
+        <Link href="/offers" className="button button-green">
+          Find your own story <Icon name="arrow" size={17} />
         </Link>
-      </div>
-
-      <article className={styles.storyCard}>
-        <div className={styles.heroImageWrap}>
-          <Image
-            src={story.image}
-            alt={story.title}
-            fill
-            priority
-            sizes="(max-width: 768px) 100vw, 1200px"
-            className={styles.heroImage}
-          />
-        </div>
-
-        <div className={styles.storyBody}>
-          <div className={styles.metaRow}>
-            <span className={styles.badge}>{story.category}</span>
-            <span className={styles.readTime}>{story.readTime}</span>
-          </div>
-
-          <h1>{story.title}</h1>
-          <p className={styles.lead}>{story.excerpt}</p>
-
-          <div className={styles.infoGrid}>
-            <div>
-              <strong>{story.destination}</strong>
-              <span><CompassOutlined /> Destination</span>
-            </div>
-            <div>
-              <strong>{story.publishedAt}</strong>
-              <span><CalendarOutlined /> Timing</span>
-            </div>
-            <div>
-              <strong>{story.likes} saves</strong>
-              <span><HeartOutlined /> Reader interest</span>
-            </div>
-            <div>
-              <strong>{story.comments} notes</strong>
-              <span><MessageOutlined /> Discussion</span>
-            </div>
-          </div>
-
-          <div className={styles.highlights}>
-            {story.highlights.map((highlight) => (
-              <span key={highlight}>{highlight}</span>
-            ))}
-          </div>
-
-          <div className={styles.authorBlock}>
-            <div className={styles.avatar}>{story.author.charAt(0)}</div>
-            <div>
-              <strong>{story.author}</strong>
-              <p>{story.role}</p>
-            </div>
-          </div>
-
-          <div className={styles.storyContent}>
-            {story.story.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
-          </div>
-
-          <div className={styles.actions}>
-            <Link href="/blogs">
-              <Button type="primary">More Stories</Button>
-            </Link>
-          </div>
-        </div>
+        <Link href="/blogs" className="text-link" style={{ marginLeft: 20 }}>
+          More from the journal
+        </Link>
       </article>
-    </div>
+    </main>
   );
-};
-
-export default StoryPage;
+}

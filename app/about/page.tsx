@@ -1,46 +1,77 @@
-import { Image } from 'antd';
-import styles from './page.module.css';
-
-const AboutMe = () => {
+import Link from "next/link";
+import Icon from "../Components/travel/Icon";
+import TravelImage from "../Components/travel/TravelImage";
+export const metadata = { title: "Our story" };
+export default function AboutPage() {
   return (
-    <div className={styles.container}>
-      <div className={styles.aboutSection}>
-        <div className={styles.imageContainer}>
-          <Image src='https://dailywildlifephoto.nathab.com/photography-guide/wp-content/uploads/2023/09/groupphoto1.jpg' alt="About Me" className={styles.image} />
+    <main className="shell">
+      <section className="about-hero">
+        <TravelImage
+          src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1600&q=85"
+          alt="A mountain landscape waiting to be explored"
+          eager
+        />
+        <div>
+          <p className="eyebrow light">FOR THE CURIOUS AT HEART</p>
+          <h1>
+            A little further from
+            <br />
+            <em>the everyday.</em>
+          </h1>
         </div>
-        <div className={styles.content}>
-          <p className={styles.kicker}>About us</p>
-          <h1 className={styles.title}>A travel agency rebuilt for how people plan trips now.</h1>
-          <p className={styles.description}>
-            Globetrotter helps travelers compare seasonal offers, understand what is actually included, and move from inspiration to booking with less friction.
+      </section>
+      <section className="why-section section">
+        <div>
+          <p className="eyebrow">HELLO. WE’RE GLOBETROTTER.</p>
+          <h2>
+            Travel should feel
+            <br />
+            like a possibility.
+            <br />
+            <em>Not a project.</em>
+          </h2>
+        </div>
+        <div>
+          <p style={{ color: "var(--muted)", fontSize: 16 }}>
+            We’re here for the first glimpse of a new city, the long lunch that
+            becomes the whole afternoon, and the view that makes you put your
+            phone away.
           </p>
-          <p className={styles.description}>
-            We focus on destination quality, useful details, and a calmer planning experience across city stays, beach escapes, and mountain retreats.
+          <p style={{ color: "var(--muted)", fontSize: 16, marginTop: 20 }}>
+            Globetrotter brings destinations, stays, and experiences together in
+            one place. Our aim is simple: make the planning feel lighter, so the
+            journey can mean more.
           </p>
+          <Link href="/offers" className="text-link" style={{ marginTop: 25 }}>
+            Find your kind of journey <Icon name="arrow" size={17} />
+          </Link>
         </div>
-      </div>
-      <div className={styles.teamSection}>
-        <h2 className={styles.teamTitle}>Meet Our Team</h2>
-        <div className={styles.teamMembers}>
-          <div className={styles.teamMember}>
-            <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbthSMwjfBnT4OA3CKIY2AKfZ2UsYZdut3JqPp_R7VrA&s" alt="Team Member 1" width={200} height={200} />
-            <h3 className={styles.memberName}>Elena Petrov</h3>
-            <p className={styles.memberRole}>Founder & Creative Director</p>
+      </section>
+      <section className="section about-values" style={{ paddingTop: 0 }}>
+        {[
+          {
+            icon: "compass",
+            title: "Chosen with curiosity",
+            text: "A collection of city breaks, coastlines, and mountain stays, with room for your own discoveries.",
+          },
+          {
+            icon: "shield",
+            title: "Clear from the start",
+            text: "See your stay, activities, transport, cancellation policy, and total price before you commit.",
+          },
+          {
+            icon: "heart",
+            title: "At your own pace",
+            text: "Save the trips you love, find inspiration in our journal, and book when the time feels right.",
+          },
+        ].map((value) => (
+          <div key={value.title}>
+            <Icon name={value.icon} size={28} />
+            <h3>{value.title}</h3>
+            <p>{value.text}</p>
           </div>
-          <div className={styles.teamMember}>
-            <Image src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg" alt="Team Member 2" width={200} height={200} />
-            <h3 className={styles.memberName}>Daniel Moore</h3>
-            <p className={styles.memberRole}>Lead Travel Specialist</p>
-          </div>
-          <div className={styles.teamMember}>
-            <Image src="https://media.istockphoto.com/id/1335941248/photo/shot-of-a-handsome-young-man-standing-against-a-grey-background.jpg?s=612x612&w=0&k=20&c=JSBpwVFm8vz23PZ44Rjn728NwmMtBa_DYL7qxrEWr38=" alt="Team Member 3" width={200} height={200} />
-            <h3 className={styles.memberName}>Sara Lindholm</h3>
-            <p className={styles.memberRole}>Customer Experience Manager</p>
-          </div>
-        </div>
-      </div>
-    </div>
+        ))}
+      </section>
+    </main>
   );
 }
-
-export default AboutMe;

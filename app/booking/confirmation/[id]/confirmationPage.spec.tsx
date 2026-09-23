@@ -1,42 +1,18 @@
-import { render, screen, fireEvent } from '@testing-library/react';
-import Page from './page';
-
-describe('Page component', () => {
-  describe('Rendering', () => {
-    it('should render all input fields and buttons', () => {
-      render(<Page params={{ id: '1' }} />);
-      
-      expect(screen.getByText(/Book your trip to/i)).toBeInTheDocument();
-      expect(screen.getByPlaceholderText('First name')).toBeInTheDocument();
-      expect(screen.getByPlaceholderText('Last Name')).toBeInTheDocument();
-      expect(screen.getByPlaceholderText('Email')).toBeInTheDocument();
-      expect(screen.getByPlaceholderText('Phone Number')).toBeInTheDocument();
-      expect(screen.getByText('Pay with Stripe')).toBeInTheDocument();
-      expect(screen.getByText('Contact us on Viber')).toBeInTheDocument();
-      expect(screen.getByText(/By continuing, you agree with/i)).toBeInTheDocument();
-    });
+import { render, screen, fireEvent } from "@testing-library/react";
+import Page from "./page";
+test("checkout shows consistent group pricing and setup state", () => {
+  render(<Page params={{ id: "222" }} searchParams={{ packages: "2" }} />);
+  expect(screen.getByLabelText("Your group")).toHaveValue("2");
+  expect(screen.getByText("€2,200")).toBeInTheDocument();
+  expect(
+    screen.getByRole("button", { name: "Continue to secure payment" }),
+  ).toBeDisabled();
+  fireEvent.change(screen.getByLabelText("Your group"), {
+    target: { value: "3" },
   });
-
-  describe('Interactions', () => {
-    it('should call handlePayWithStripe when "Pay with Stripe" button is clicked', () => {
-      const mockHandlePayWithStripe = jest.fn();
-      const mockUserUpdate = jest.fn();
-
-      render(<Page params={{ id: '1' }} />);
-
-      fireEvent.click(screen.getByText('Pay with Stripe'));
-      
-      expect(mockHandlePayWithStripe).toHaveBeenCalled();
-    });
-
-    it('should call handleContactUsOnViber when "Contact us on Viber" button is clicked', () => {
-      const mockHandleContactUsOnViber = jest.fn();
-
-      render(<Page params={{ id: '1' }} />);
-
-      fireEvent.click(screen.getByText('Contact us on Viber'));
-      
-      expect(mockHandleContactUsOnViber).toHaveBeenCalled();
-    });
-  });
+  expect(screen.getByText("€3,300")).toBeInTheDocument();
+});
+test("invalid group query falls back to one package", () => {
+  render(<Page params={{ id: "222" }} searchParams={{ packages: "-2" }} />);
+  expect(screen.getByLabelText("Your group")).toHaveValue("1");
 });

@@ -2,6 +2,8 @@ import { dbConnect } from "@/app/api/lib/db";
 import PostModel from "../models/PostModel";
 import { NextResponse } from "next/server";
 
+export const dynamic = "force-dynamic";
+
 export async function GET() {
   try {
     await dbConnect();
@@ -11,7 +13,7 @@ export async function GET() {
     return response;
   } catch (error) {
     console.error("Error creating post:", error);
-        const errorResponse = new NextResponse("Error", { status: 500 });
+    const errorResponse = new NextResponse("Error", { status: 500 });
     return errorResponse;
   }
 }

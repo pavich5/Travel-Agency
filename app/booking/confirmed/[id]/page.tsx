@@ -1,29 +1,12 @@
-"use client"
-import { useSearchParams } from 'next/navigation';
-import styles from './page.module.css'; 
-import Lottie from 'lottie-react';
-import successAnimation from '../../../../public/paid.json';
-
-const SuccessPage = () => {
-  const search = useSearchParams(); 
-  const email = search.get('email');
-  const hotelName = search.get('hotelName');
-  const hotelCity = search.get('hotelCity');
-
-  const handleEmailClick = () => {
-    window.location.href = `mailto:${email}`;
-  };
-
+import BookingResult from "@/app/Components/travel/BookingResult";
+export default function ConfirmedPage({
+  params,
+  searchParams,
+}: {
+  params: { id: string };
+  searchParams: { session_id?: string };
+}) {
   return (
-    <div className={styles.container}>
-      <Lottie animationData={successAnimation} className={styles.animation} />
-      <div className={styles.message}>
-        <p>Congratulations! You have successfully booked {hotelName} in {hotelCity}.</p>
-        <p>An email has been sent to <a href={`mailto:${email}`} onClick={handleEmailClick} className={styles.link}>{email}</a> with the details.</p>
-      </div>
-    </div>
+    <BookingResult offerId={params.id} sessionId={searchParams.session_id} />
   );
-};
-
-export default SuccessPage;
-
+}

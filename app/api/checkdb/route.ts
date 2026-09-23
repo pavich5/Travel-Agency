@@ -1,7 +1,9 @@
 import { dbConnect } from "@/app/api/lib/db";
 import { NextRequest, NextResponse } from "next/server";
 
-export async function GET(req:NextRequest) {
+export const dynamic = "force-dynamic";
+
+export async function GET(req: NextRequest) {
   try {
     await dbConnect();
     return new NextResponse("test");

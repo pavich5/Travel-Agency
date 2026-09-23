@@ -22,6 +22,14 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/api/webhook.js", "app/__tests__/successfully.test.jsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "app/api/webhook.js",
+    "app/__tests__/successfully.test.jsx",
+    ".next-production/types/**/*.ts"
+  ],
   "exclude": ["node_modules"]
 }

@@ -1,31 +1,18 @@
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import { useRouter } from 'next/navigation';
-import CancelledPage from './page';
-
-// Mock the useRouter hook
-jest.mock('next/navigation', () => ({
-  useRouter: jest.fn(),
-}));
-
-describe('CancelledPage component', () => {
-  it('should render cancellation message and return button', () => {
-    render(<CancelledPage />);
-    expect(screen.getByText('Payment Cancelled')).toBeInTheDocument();
-    expect(screen.getByText("We're sorry to see you go. Your payment has been cancelled.")).toBeInTheDocument();
-    expect(screen.getByRole('button', { name: 'Return to Homepage' })).toBeInTheDocument();
-  });
-
-  it('should navigate to homepage when return button is clicked', async () => {
-    const pushMock = jest.fn();
-    useRouter.mockReturnValue({
-      push: pushMock,
-    });
-
-    render(<CancelledPage />);
-    fireEvent.click(screen.getByRole('button', { name: 'Return to Homepage' }));
-
-    await waitFor(() => {
-      expect(pushMock).toHaveBeenCalledWith('/');
-    });
-  });
+import { render, screen } from "@testing-library/react";
+import Page from "./page";
+test("cancelled checkout can resume with the same package count", () => {
+  render(<Page searchParams={{ offerId: "222", packages: "2" }} />);
+  expect(
+    screen.getByRole("link", { name: "Return to booking" }),
+  ).toHaveAttribute("href", "/booking/confirmation/222?packages=2");
+  expect(screen.getByText(/hasn’t been booked/)).toBeInTheDocument();
+});
+test("unknown trip still has a usable exit", () => {
+  render(<Page searchParams={{ offerId: "-1" }} />);
+  expect(
+    screen.queryByRole("link", { name: "Return to booking" }),
+  ).not.toBeInTheDocument();
+  expect(
+    screen.getByRole("link", { name: "Explore other trips" }),
+  ).toHaveAttribute("href", "/offers");
 });

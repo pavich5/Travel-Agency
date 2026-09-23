@@ -1,12 +1,4 @@
-import { SignUp } from '@clerk/nextjs'
-import React from 'react'
-
-const SignUpPage = () => {
-    return (
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-            <SignUp />
-        </div>
-    )
+import AuthPage from "@/app/Components/travel/AuthPage";
+export default function SignUpPage() {
+  return <AuthPage signUp />;
 }
-
-export default SignUpPage

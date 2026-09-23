@@ -1,131 +1,109 @@
 "use client";
-import styles from "./Header.module.css";
 import Link from "next/link";
-import { SignedIn, SignedOut, UserButton, useUser } from "@clerk/nextjs";
-import { Dropdown, Space, Menu } from "antd";
-import { LeftOutlined, DownOutlined } from "@ant-design/icons";
-import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
-import { useRouter, usePathname } from "next/navigation";
-import { CountryLists } from "@/app/mocks/data";
+import { usePathname } from "next/navigation";
+import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import { useEffect, useState } from "react";
+import Icon from "../travel/Icon";
+import { useSavedTrips } from "../travel/TravelProvider";
+import { authConfigured } from "@/app/lib/config";
 
-const Header = () => {
-  const router = useRouter();
+export default function Header() {
   const pathname = usePathname();
-  const { user } = useUser();
-
-  const handleBack = () => {
-    router.back();
-  };
-
-  const items = [
-    { key: "1", label: "Summer Trips", href: "/vacation/list/Summer" },
-    { key: "2", label: "Winter Trips", href: "/vacation/list/Winter" },
-    { key: "3", label: "Easter Trips", href: "/vacation/list/Easter" },
-    { key: "4", label: "Spring Trips", href: "/vacation/list/Spring" },
+  const [open, setOpen] = useState(false);
+  const { saved } = useSavedTrips();
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+  useEffect(() => {
+    if (!open) return;
+    const close = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setOpen(false);
+    };
+    document.addEventListener("keydown", close);
+    return () => document.removeEventListener("keydown", close);
+  }, [open]);
+  const links = [
+    { href: "/offers", label: "Explore trips" },
+    { href: "/#destinations", label: "Destinations" },
+    { href: "/blogs", label: "Travel journal" },
+    { href: "/about", label: "Our story" },
   ];
-
-  const menuItems = items.map((item) => (
-    <Menu.Item key={item.key}>
-      <Link href={item.href}>{item.label}</Link>
-    </Menu.Item>
-  ));
-
   return (
-    <header className={styles.header}>
-      <div className={styles.logoGroup}>
-        {pathname !== "/" && (
-          <button onClick={handleBack} className={styles.backButton} aria-label="Go back">
-            <LeftOutlined />
-          </button>
-        )}
-        <div className={styles.logo}>
-        <img
-          src="https://images-platform.99static.com/zudNWGHtYiWa-sqd5jqXyVt6wBE=/0x0:1773x1773/500x500/top/smart/99designs-contests-attachments/133/133463/attachment_133463156"
-          alt="Logo"
-        />
-          <div>
-            <p className={styles.logoKicker}>Modern travel studio</p>
-            <Link href="/" className={styles.logoText}>
-              Globetrotter
-            </Link>
-          </div>
-        </div>
-      </div>
-      <HamburgerMenu />
-      <div className={styles.navMenu}>
-        <div className={styles.menuItem}>
-          <Link href="/about" className={styles.menuItemText}>
-            About us
-          </Link>
-        </div>
-        <div className={styles.menuItem}>
-          <Dropdown overlay={<Menu>{menuItems}</Menu>}>
-            <a onClick={(e) => e.preventDefault()}>
-              <Space>Trips</Space>
-            </a>
-          </Dropdown>
-        </div>
-        <div className={styles.menuItem}>
-          <Link href="/ai" className={styles.menuItemText}>
-            Travel AI
-          </Link>
-        </div>
-
-        <div className={styles.menuItem}>
+    <header className="site-header">
+      <Link href="/" className="brand" aria-label="Globetrotter home">
+        <span className="brand-mark">
+          <Icon name="globe" size={27} />
+        </span>
+        globetrotter<span className="brand-dot">.</span>
+      </Link>
+      <nav
+        className={`main-nav ${open ? "is-open" : ""}`}
+        id="main-navigation"
+        aria-label="Main navigation"
+      >
+        {links.map((link) => (
           <Link
-            href="/blogs"
-            className={styles.menuItemText}
+            key={link.href}
+            href={link.href}
+            onClick={() => setOpen(false)}
+            className={pathname === link.href ? "active" : ""}
+            aria-current={pathname === link.href ? "page" : undefined}
           >
-            Travel Experiences
+            {link.label}
           </Link>
-        </div>
-        <div className={styles.menuItem}>
-          <Dropdown
-            overlay={
-              <Menu>
-                {CountryLists.map((country) => (
-                  <Menu.Item
-                    key={country}
-                    style={{ padding: "8px", width: "200px" }}
-                  >
-                    <Link href={`/vacation/${country}`}>{country}</Link>
-                  </Menu.Item>
-                ))}
-              </Menu>
-            }
-            trigger={["click"]}
-          >
-            <a onClick={(e) => e.stopPropagation()}>
-              <Space>
-                <div>
-                  Countries
-                  <DownOutlined />
-                </div>
-              </Space>
-            </a>
-          </Dropdown>
-        </div>
-        <div className={styles.menuItem} style={{ marginLeft: "0px" }}>
-          <SignedIn>
-            <div
-              className={styles.userImage}
-              onClick={() => {
-                router.push(`/user/${user?.id}`);
-              }}
-            >
-              <img src={user?.imageUrl} alt="" />
-              <p>My Profile</p>
-            </div>
-          </SignedIn>
-          <SignedOut>
-            <Link href="/sign-in" className={styles.menuItemText}>
-              Login
-            </Link>
-          </SignedOut>
-        </div>
+        ))}
+        <Link href="/ai" onClick={() => setOpen(false)} className="mobile-only">
+          Travel AI
+        </Link>
+        <Link
+          href="/trips"
+          onClick={() => setOpen(false)}
+          className="mobile-only"
+        >
+          My bookings
+        </Link>
+      </nav>
+      <div className="header-actions">
+        <Link
+          href="/saved"
+          className="saved-link"
+          aria-label={`Saved trips${saved.length ? ` (${saved.length})` : ""}`}
+        >
+          <Icon name="heart" />
+          {saved.length > 0 && <span>{saved.length}</span>}
+        </Link>
+        {authConfigured ? (
+          <>
+            <SignedOut>
+              <Link href="/sign-in" className="login-link">
+                Log in
+              </Link>
+            </SignedOut>
+            <SignedIn>
+              <Link href="/trips" className="login-link">
+                My trips
+              </Link>
+              <UserButton afterSignOutUrl="/" />
+            </SignedIn>
+          </>
+        ) : (
+          <Link href="/sign-in" className="login-link">
+            Log in
+          </Link>
+        )}
+        <Link href="/offers" className="button button-dark header-cta">
+          Find my trip <Icon name="arrow" size={16} />
+        </Link>
+        <button
+          className="menu-toggle icon-button"
+          aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
+          aria-controls="main-navigation"
+          onClick={() => setOpen(!open)}
+        >
+          <Icon name={open ? "close" : "menu"} />
+        </button>
       </div>
     </header>
   );
-};
-
-export default Header;
+}
