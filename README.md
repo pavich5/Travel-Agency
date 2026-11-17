@@ -48,4 +48,4 @@ Booking history currently scans Stripe Checkout Session pages of 100 records, fi
 - Journal and stories: `/blogs`
 - Support and booking information: `/contact`, `/terms`, `/privacy`
 
-Tests cover search, saving/removing trips, package totals, checkout identity/price tampering, confirmation ownership, webhook signatures, missing routes, mobile navigation, and planner error recovery. External credentials are mocked in API tests; tests do not create live bookings or send emails.
+Tests cover search, saving/removing trips, package totals, checkout identity/price tampering, confirmation ownership, webhook signatures, missing routes, mobile navigation, and planner error recovery. External credentials are mocked in API tests; tests do not create live bookings or send emails
